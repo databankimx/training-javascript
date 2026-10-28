@@ -1,0 +1,13 @@
+{
+  "title": "S24 · Built-in objects and serialization limits",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S24 · Built-in objects and serialization limits",
+  "input": "",
+  "expected": "Expect 1 2 and true true.",
+  "prerequisites": [],
+  "verify": [
+    "1 2",
+    "true true"
+  ]
+}

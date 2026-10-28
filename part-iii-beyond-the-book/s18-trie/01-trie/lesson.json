@@ -1,0 +1,12 @@
+{
+  "title": "S18 · Tries and prefix lookup",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S18 · Tries and prefix lookup",
+  "input": "",
+  "expected": "Expect true false false. ca is a shared prefix but is not a stored word.",
+  "prerequisites": [],
+  "verify": [
+    "true false false"
+  ]
+}

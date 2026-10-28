@@ -1,0 +1,12 @@
+{
+  "title": "S20 · Cards and unbiased shuffling",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S20 · Cards and unbiased shuffling",
+  "input": "",
+  "expected": "The first line is 52 52. The five-card hand varies on each run.",
+  "prerequisites": [],
+  "verify": [
+    "52 52"
+  ]
+}

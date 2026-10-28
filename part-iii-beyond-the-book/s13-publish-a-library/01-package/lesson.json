@@ -1,0 +1,13 @@
+{
+  "title": "S13 · Design and package a library",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S13 · Design and package a library",
+  "input": "",
+  "expected": "Expect javascript-training and hello-world. Inspect package-example.json for packaging metadata.",
+  "prerequisites": [],
+  "verify": [
+    "javascript-training",
+    "hello-world"
+  ]
+}

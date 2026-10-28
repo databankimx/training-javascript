@@ -1,0 +1,9 @@
+{
+  "title": "23 · Conditional form sections",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "23 · Conditional form sections",
+  "input": "",
+  "expected": "Selecting Wire reveals a required reference field; selecting Check hides and disables it. Submit displays only enabled fields.",
+  "prerequisites": []
+}

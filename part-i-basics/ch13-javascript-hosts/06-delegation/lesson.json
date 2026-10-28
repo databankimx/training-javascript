@@ -1,0 +1,9 @@
+{
+  "title": "19 · Event delegation and handler semantics",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "19 · Event delegation and handler semantics",
+  "input": "",
+  "expected": "The initial and dynamically added buttons are removable. Clicking the nested label works too.",
+  "prerequisites": []
+}

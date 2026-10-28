@@ -1,0 +1,13 @@
+{
+  "title": "09 · Functions, scope, and pure logic",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "09 · Functions, scope, and pure logic",
+  "input": "",
+  "expected": "Expect 30 and 33. The function computes; the caller decides how to display the result.",
+  "prerequisites": [],
+  "verify": [
+    "30",
+    "33"
+  ]
+}

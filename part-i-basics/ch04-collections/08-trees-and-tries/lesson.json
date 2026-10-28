@@ -1,0 +1,10 @@
+{
+  "title": "Trees and tries",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Recognize tree-shaped data and the prefix-sharing idea behind tries",
+  "input": "",
+  "expected": "The output demonstrates parent-child data and a tiny prefix tree.",
+  "prerequisites": ["part-i-basics/ch04-collections/07-stacks-and-queues"],
+  "verify": ["root", "Ada", "true", "false"]
+}

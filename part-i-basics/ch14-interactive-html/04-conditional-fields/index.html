@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML and JavaScript lab</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+<h1>Payment method</h1>
+<form>
+<label>Method <select id="payment" name="payment">
+<option value="check">Check</option>
+<option value="wire">Wire</option>
+</select>
+</label>
+<fieldset id="wire-fields" hidden disabled>
+<legend>Wire details</legend>
+<label>Reference <input name="reference" required>
+</label>
+</fieldset>
+<button>Review</button>
+</form>
+<pre id="result" aria-live="polite">
+</pre>
+</main>
+<script type="module" src="./main.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "title": "25 · Dynamic tables with delegated events",
+  "runtime": "browser",
+  "minutes": 50,
+  "objective": "25 · Dynamic tables with delegated events",
+  "input": "",
+  "expected": "One row starts at 0.00. Add up to ten rows, enter amounts, and remove a middle row. The total updates without rebinding listeners.",
+  "prerequisites": []
+}

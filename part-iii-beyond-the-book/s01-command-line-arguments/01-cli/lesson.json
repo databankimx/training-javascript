@@ -1,0 +1,13 @@
+{
+  "title": "S01 · Command-line arguments",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S01 · Command-line arguments",
+  "input": "",
+  "expected": "Runner: Hello, learner and Arguments: 0. Terminal: node main.js Ada prints Hello, Ada and Arguments: 1.",
+  "prerequisites": [],
+  "verify": [
+    "Hello, learner",
+    "Arguments: 0"
+  ]
+}

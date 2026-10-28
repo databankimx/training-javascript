@@ -1,0 +1,9 @@
+{
+  "title": "S19 · Browser forms (Tkinter counterpart)",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "S19 · Browser forms (Tkinter counterpart)",
+  "input": "",
+  "expected": "Enter a name and submit using the keyboard or button. The greeting appears without navigation.",
+  "prerequisites": []
+}

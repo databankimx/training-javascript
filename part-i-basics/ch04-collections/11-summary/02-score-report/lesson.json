@@ -1,0 +1,12 @@
+{
+  "title": "Homework: nested score report",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Traverse nested arrays and calculate a report with collection methods",
+  "input": "",
+  "expected": "Print each student’s average and identify the highest average.",
+  "prerequisites": ["part-i-basics/ch04-collections/10-splice-and-flatten"],
+  "verify": ["Ada: 92.5", "Grace: 90", "Ada"]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Template literals",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Build readable strings with interpolation and template literals",
+  "input": "",
+  "expected": "The output includes the same greeting built with concatenation and interpolation.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/02-strings"],
+  "verify": ["My name is Bob and I am 30 years old.", "Hello Bob, you are 30 years old."]
+}

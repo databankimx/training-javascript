@@ -1,0 +1,12 @@
+{
+  "title": "Homework: message card",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 30,
+  "objective": "Combine interpolation, escaping, and raw path text in a small report",
+  "input": "",
+  "expected": "Print a two-line message and display an ordinary and raw file path.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/07-escapes-and-raw-strings"],
+  "verify": ["Hello, Grace!", "C:\\Users\\Grace\\notes.txt"]
+}

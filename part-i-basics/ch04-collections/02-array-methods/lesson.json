@@ -1,0 +1,10 @@
+{
+  "title": "Array methods",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Add, remove, and copy array items deliberately",
+  "input": "",
+  "expected": "The output demonstrates common mutating and non-mutating array operations.",
+  "prerequisites": ["part-i-basics/ch04-collections/01-arrays"],
+  "verify": ["red", "green", "blue", "2"]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "S09 · Enumerations and explicit states",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S09 · Enumerations and explicit states",
+  "input": "",
+  "expected": "Expect review and done.",
+  "prerequisites": [],
+  "verify": [
+    "review",
+    "done"
+  ]
+}

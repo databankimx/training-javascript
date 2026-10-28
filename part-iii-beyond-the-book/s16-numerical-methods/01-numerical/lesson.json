@@ -1,0 +1,12 @@
+{
+  "title": "S16 · Numerical methods (SciPy counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S16 · Numerical methods (SciPy counterpart)",
+  "input": "",
+  "expected": "Expect 1.414214, an approximation to the square root of 2.",
+  "prerequisites": [],
+  "verify": [
+    "1.414214"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "S22 · Rock, paper, scissors and rule tables",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S22 · Rock, paper, scissors and rule tables",
+  "input": "",
+  "expected": "Expect win, lose, draw.",
+  "prerequisites": [],
+  "verify": [
+    "win",
+    "lose",
+    "draw"
+  ]
+}

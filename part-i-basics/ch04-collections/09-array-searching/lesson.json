@@ -1,0 +1,10 @@
+{
+  "title": "Searching and testing arrays",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Find values and test whether array items meet a condition",
+  "input": "",
+  "expected": "The output compares membership, position, matching values, and collection-wide tests.",
+  "prerequisites": ["part-i-basics/ch04-collections/08-trees-and-tries"],
+  "verify": ["true", "1", "Grace", "true", "false"]
+}

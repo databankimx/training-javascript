@@ -1,0 +1,12 @@
+{
+  "title": "S04 · Complexity and data structures",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S04 · Complexity and data structures",
+  "input": "",
+  "expected": "Expect true 5 and true. Building the Set also visits all values once.",
+  "prerequisites": [],
+  "verify": [
+    "true 5"
+  ]
+}

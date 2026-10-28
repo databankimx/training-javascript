@@ -1,0 +1,9 @@
+{
+  "title": "13 · Testing behavior with node:test",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "13 · Testing behavior with node:test",
+  "input": "",
+  "expected": "Both tests pass. Node prints a test report even when this example is launched directly.",
+  "prerequisites": []
+}

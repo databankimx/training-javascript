@@ -1,0 +1,10 @@
+{
+  "title": "Nested arrays",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Read, traverse, and copy arrays that contain other arrays",
+  "input": "",
+  "expected": "The output demonstrates nested indexing and a shallow-copy boundary.",
+  "prerequisites": ["part-i-basics/ch04-collections/02-array-methods"],
+  "verify": ["Grace", "Linus", "changed"]
+}

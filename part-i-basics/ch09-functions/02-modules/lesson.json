@@ -1,0 +1,13 @@
+{
+  "title": "10 · ES modules and reusable code",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "10 · ES modules and reusable code",
+  "input": "",
+  "expected": "Expect 32 and 212. Select temperature.js in Source to inspect the exported function.",
+  "prerequisites": [],
+  "verify": [
+    "32",
+    "212"
+  ]
+}

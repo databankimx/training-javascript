@@ -1,0 +1,12 @@
+{
+  "title": "S08 · Closures and captured state",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S08 · Closures and captured state",
+  "input": "",
+  "expected": "Expect 11 12 1. a and b close over different value bindings.",
+  "prerequisites": [],
+  "verify": [
+    "11 12 1"
+  ]
+}

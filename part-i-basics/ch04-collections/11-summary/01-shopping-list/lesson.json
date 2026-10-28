@@ -1,0 +1,12 @@
+{
+  "title": "Homework: shopping list",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Combine array mutation, searching, and non-mutating changes",
+  "input": "",
+  "expected": "Add an item, remove an item, check membership, and print the final list.",
+  "prerequisites": ["part-i-basics/ch04-collections/10-splice-and-flatten"],
+  "verify": ["milk", "bread", "coffee", "true"]
+}

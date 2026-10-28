@@ -1,0 +1,9 @@
+{
+  "title": "S17 · Document queries (MongoDB counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S17 · Document queries (MongoDB counterpart)",
+  "input": "",
+  "expected": "Expect one projected record containing name Ada.",
+  "prerequisites": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "S05 · Bitwise flags",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S05 · Bitwise flags",
+  "input": "",
+  "expected": "Expect true, false, and 1.",
+  "prerequisites": [],
+  "verify": [
+    "true",
+    "false"
+  ]
+}

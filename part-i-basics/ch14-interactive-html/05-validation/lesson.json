@@ -1,0 +1,9 @@
+{
+  "title": "24 · Form validation and computed values",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "24 · Form validation and computed values",
+  "input": "",
+  "expected": "For 100.00 total and 25.25 allocated, the result is 7475 unallocated cents. An allocation over the total is rejected.",
+  "prerequisites": []
+}

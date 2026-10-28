@@ -1,0 +1,9 @@
+{
+  "title": "27 · Templates, cloning, and unique identifiers",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "27 · Templates, cloning, and unique identifiers",
+  "input": "",
+  "expected": "Add several note controls. Clicking each label focuses its own input; any row can be removed.",
+  "prerequisites": []
+}

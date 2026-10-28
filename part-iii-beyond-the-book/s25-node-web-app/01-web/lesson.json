@@ -1,0 +1,12 @@
+{
+  "title": "S25 · Node HTTP routing (Flask counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S25 · Node HTTP routing (Flask counterpart)",
+  "input": "",
+  "expected": "Expect an object with status ok; the server then closes.",
+  "prerequisites": [],
+  "verify": [
+    "ok"
+  ]
+}

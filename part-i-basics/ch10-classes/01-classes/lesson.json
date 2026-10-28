@@ -1,0 +1,13 @@
+{
+  "title": "11 · Classes, prototypes, and private state",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "11 · Classes, prototypes, and private state",
+  "input": "",
+  "expected": "Expect 1 0 and true. The two counters share methods but keep separate state.",
+  "prerequisites": [],
+  "verify": [
+    "1 0",
+    "true"
+  ]
+}

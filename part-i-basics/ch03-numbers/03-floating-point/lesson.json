@@ -1,0 +1,10 @@
+{
+  "title": "Floating-point error and rounding strategy",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Recognize floating-point surprises and choose when to round",
+  "input": "",
+  "expected": "The output demonstrates a representation error and two safer comparison strategies.",
+  "prerequisites": ["part-i-basics/ch03-numbers/02-rounding-and-formatting"],
+  "verify": ["0.30000000000000004", "false", "true", "30"]
+}

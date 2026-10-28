@@ -1,0 +1,9 @@
+{
+  "title": "15 · DOM, events, and safe text",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "15 · DOM, events, and safe text",
+  "input": "",
+  "expected": "Run to open the preview. Each button click increments the visible count.",
+  "prerequisites": []
+}

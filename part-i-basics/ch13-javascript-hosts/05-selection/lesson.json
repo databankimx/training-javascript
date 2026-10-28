@@ -1,0 +1,9 @@
+{
+  "title": "18 · DOM elements versus jQuery collections",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "18 · DOM elements versus jQuery collections",
+  "input": "",
+  "expected": "Two paragraphs appear. Output reports Matches: 2 and true for the missing-element check.",
+  "prerequisites": []
+}

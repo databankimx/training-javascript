@@ -1,0 +1,9 @@
+{
+  "title": "Project 3.3 · Deletion, empty states, and review",
+  "runtime": "browser",
+  "minutes": 60,
+  "objective": "Project 3.3 · Deletion, empty states, and review",
+  "input": "",
+  "expected": "Add several entries and delete the middle one. Other entries remain unchanged; deleting all shows the empty state.",
+  "prerequisites": []
+}

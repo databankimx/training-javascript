@@ -1,0 +1,10 @@
+{
+  "title": "Tuples and destructuring",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use fixed-position arrays and unpack their values clearly",
+  "input": "",
+  "expected": "The output demonstrates tuple-like conventions and array destructuring.",
+  "prerequisites": ["part-i-basics/ch04-collections/05-collection-pipelines"],
+  "verify": ["Ada", "42", "10", "30"]
+}

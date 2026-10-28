@@ -1,0 +1,9 @@
+{
+  "title": "Project 2.2 · Draw a scaled bar chart",
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Project 2.2 · Draw a scaled bar chart",
+  "input": "",
+  "expected": "Four bars show 12, 18, 9, and 21 hours, with month and value labels and a textual summary.",
+  "prerequisites": []
+}

@@ -1,0 +1,9 @@
+{
+  "title": "S10 · DOM extraction and scraping boundaries",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "S10 · DOM extraction and scraping boundaries",
+  "input": "",
+  "expected": "The preview lists Notebook at 12 and Pen at 4. No network request occurs.",
+  "prerequisites": []
+}

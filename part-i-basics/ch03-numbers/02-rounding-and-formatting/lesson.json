@@ -1,0 +1,10 @@
+{
+  "title": "Rounding and formatting numbers",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Choose a rounding operation and format a number for display",
+  "input": "",
+  "expected": "The output compares rounding directions and fixed decimal formatting.",
+  "prerequisites": ["part-i-basics/ch03-numbers/01-number-basics"],
+  "verify": ["20", "19", "19.99", "string"]
+}

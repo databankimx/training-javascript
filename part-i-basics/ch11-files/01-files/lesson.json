@@ -1,0 +1,12 @@
+{
+  "title": "12 · Files, JSON, and error handling",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "12 · Files, JSON, and error handling",
+  "input": "",
+  "expected": "Expect hello. Run from a terminal to keep generated files in the lesson directory; runner output is temporary.",
+  "prerequisites": [],
+  "verify": [
+    "hello"
+  ]
+}

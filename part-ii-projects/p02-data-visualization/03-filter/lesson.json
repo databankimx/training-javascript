@@ -1,0 +1,9 @@
+{
+  "title": "Project 2.3 · Interactive filtering",
+  "runtime": "browser",
+  "minutes": 50,
+  "objective": "Project 2.3 · Interactive filtering",
+  "input": "",
+  "expected": "Set the threshold to 15 to see February and April; 30 produces No matching months.",
+  "prerequisites": []
+}

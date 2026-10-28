@@ -1,0 +1,9 @@
+{
+  "title": "S07 · Internationalized formatting",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S07 · Internationalized formatting",
+  "input": "",
+  "expected": "Expect 01/15/2026 and a German-formatted euro amount. Exact spacing can depend on the ICU version.",
+  "prerequisites": []
+}

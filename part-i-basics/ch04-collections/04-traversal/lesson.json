@@ -1,0 +1,10 @@
+{
+  "title": "Traversing collections",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Visit every value in flat and nested arrays",
+  "input": "",
+  "expected": "The output demonstrates value traversal, indexed traversal, and nested traversal.",
+  "prerequisites": ["part-i-basics/ch04-collections/03-nested-collections"],
+  "verify": ["Ada", "Grace", "0: Ada", "1,0: Linus"]
+}

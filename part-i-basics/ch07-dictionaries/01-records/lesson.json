@@ -1,0 +1,9 @@
+{
+  "title": "07 · Objects, maps, and sets",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "07 · Objects, maps, and sets",
+  "input": "",
+  "expected": "Ada is printed first; JS has count 2 and Python count 1; the Set keeps JS and SQL once each.",
+  "prerequisites": []
+}

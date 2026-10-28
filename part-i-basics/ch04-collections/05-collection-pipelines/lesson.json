@@ -1,0 +1,10 @@
+{
+  "title": "Collection pipelines",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Transform, select, combine, and sort array data",
+  "input": "",
+  "expected": "The output demonstrates map, filter, reduce, and numeric sorting.",
+  "prerequisites": ["part-i-basics/ch04-collections/04-traversal"],
+  "verify": ["100", "80", "18", "2,4,8,10"]
+}

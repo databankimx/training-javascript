@@ -1,0 +1,9 @@
+{
+  "title": "Project 2.1 · Validate and summarize data",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Project 2.1 · Validate and summarize data",
+  "input": "",
+  "expected": "Expect Total: 60, Mean: 15, Maximum: 21.",
+  "prerequisites": []
+}

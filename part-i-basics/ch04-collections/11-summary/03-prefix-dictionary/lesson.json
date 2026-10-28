@@ -1,0 +1,12 @@
+{
+  "title": "Homework: prefix dictionary",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 45,
+  "objective": "Represent a small trie and test complete words and prefixes",
+  "input": "",
+  "expected": "Store words with shared prefixes and report which complete words exist.",
+  "prerequisites": ["part-i-basics/ch04-collections/10-splice-and-flatten"],
+  "verify": ["true", "true", "false"]
+}

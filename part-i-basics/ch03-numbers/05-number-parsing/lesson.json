@@ -1,0 +1,10 @@
+{
+  "title": "Parsing numeric text",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Choose between whole-value conversion and character-by-character parsing",
+  "input": "",
+  "expected": "The output compares Number(), parseInt(), and parseFloat() on the same text.",
+  "prerequisites": ["part-i-basics/ch03-numbers/04-number-bases"],
+  "verify": ["12.5", "12", "NaN"]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "S02 · Recursion and termination",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S02 · Recursion and termination",
+  "input": "",
+  "expected": "Expect 120 and 1. The upper bound keeps the example within a conservative exact-number range.",
+  "prerequisites": [],
+  "verify": [
+    "120",
+    "1"
+  ]
+}

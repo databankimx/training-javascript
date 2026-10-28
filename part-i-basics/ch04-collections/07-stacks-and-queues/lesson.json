@@ -1,0 +1,10 @@
+{
+  "title": "Stacks and queues",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Model last-in-first-out and first-in-first-out collections",
+  "input": "",
+  "expected": "The output demonstrates stack and queue removal order.",
+  "prerequisites": ["part-i-basics/ch04-collections/06-tuples-and-destructuring"],
+  "verify": ["third", "second", "first"]
+}

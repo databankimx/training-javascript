@@ -1,0 +1,9 @@
+{
+  "title": "Project 3.1 · A Learning Log model and view",
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Project 3.1 · A Learning Log model and view",
+  "input": "",
+  "expected": "Add entries using the form. The list updates; re-running resets this stage.",
+  "prerequisites": []
+}

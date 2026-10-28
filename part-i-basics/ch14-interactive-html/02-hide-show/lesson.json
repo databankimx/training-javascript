@@ -1,0 +1,9 @@
+{
+  "title": "21 · Hide and show a section",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "21 · Hide and show a section",
+  "input": "",
+  "expected": "Details start hidden. The button toggles the content and its expanded state together.",
+  "prerequisites": []
+}

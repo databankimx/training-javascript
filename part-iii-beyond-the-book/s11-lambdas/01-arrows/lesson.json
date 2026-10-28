@@ -1,0 +1,9 @@
+{
+  "title": "S11 · Arrow functions and higher-order behavior",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S11 · Arrow functions and higher-order behavior",
+  "input": "",
+  "expected": "Expect [2,4,6] and a record with id 1 and active true.",
+  "prerequisites": []
+}

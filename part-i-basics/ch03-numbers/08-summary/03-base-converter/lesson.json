@@ -1,0 +1,12 @@
+{
+  "title": "Homework: base converter",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 30,
+  "objective": "Convert a decimal value to several bases and parse one back",
+  "input": "",
+  "expected": "Display one value in decimal, binary, octal, and hexadecimal.",
+  "prerequisites": ["part-i-basics/ch03-numbers/05-number-parsing"],
+  "verify": ["42", "101010", "52", "2a"]
+}

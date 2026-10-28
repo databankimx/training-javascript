@@ -1,0 +1,10 @@
+{
+  "title": "Hello with variables",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Introduce variables with var, let, and const",
+  "input": "",
+  "expected": "The output is Hello, JavaScript! on one line.",
+  "prerequisites": ["part-i-basics/ch01-hello/01-runtime"],
+  "verify": ["Hello, JavaScript!"]
+}

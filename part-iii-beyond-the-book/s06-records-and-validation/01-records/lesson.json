@@ -1,0 +1,12 @@
+{
+  "title": "S06 · Records and validation (dataclasses counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S06 · Records and validation (dataclasses counterpart)",
+  "input": "",
+  "expected": "Expect Ada 36 and true.",
+  "prerequisites": [],
+  "verify": [
+    "Ada 36"
+  ]
+}

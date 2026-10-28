@@ -1,0 +1,12 @@
+{
+  "title": "08 · Interactive input and validation",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "08 · Interactive input and validation",
+  "input": "3\n",
+  "expected": "The program waits at How many lessons?. Enter 3 in the input box and press Send; expect Plan: 3 lessons.",
+  "prerequisites": [],
+  "verify": [
+    "Plan: 3 lessons"
+  ]
+}

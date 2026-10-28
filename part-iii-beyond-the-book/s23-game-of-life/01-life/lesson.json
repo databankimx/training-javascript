@@ -1,0 +1,12 @@
+{
+  "title": "S23 · Game of Life and simultaneous updates",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S23 · Game of Life and simultaneous updates",
+  "input": "",
+  "expected": "Expect three rows of 010: a horizontal blinker becomes vertical.",
+  "prerequisites": [],
+  "verify": [
+    "010\n010\n010"
+  ]
+}

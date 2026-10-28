@@ -1,0 +1,9 @@
+{
+  "title": "22 · Accessible accordions",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "22 · Accessible accordions",
+  "input": "",
+  "expected": "Open either section with a mouse or keyboard. Opening one closes the other.",
+  "prerequisites": []
+}

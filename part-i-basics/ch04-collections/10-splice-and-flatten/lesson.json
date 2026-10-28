@@ -1,0 +1,10 @@
+{
+  "title": "Splicing and flattening arrays",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Insert and remove items while choosing whether to mutate or copy",
+  "input": "",
+  "expected": "The output compares splice, toSpliced, and flattening nested arrays.",
+  "prerequisites": ["part-i-basics/ch04-collections/09-array-searching"],
+  "verify": ["red,blue,green", "red,green", "red,green", "1,2,3,4"]
+}

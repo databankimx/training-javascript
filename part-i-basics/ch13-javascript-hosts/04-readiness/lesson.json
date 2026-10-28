@@ -1,0 +1,9 @@
+{
+  "title": "17 · DOM readiness and page load",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "17 · DOM readiness and page load",
+  "input": "",
+  "expected": "The preview initializes when its DOM is available. A load message follows if the listener was attached before load. This module is injected at the end of body, so the DOM may already be parsed.",
+  "prerequisites": []
+}

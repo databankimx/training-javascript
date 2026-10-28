@@ -1,0 +1,21 @@
+{
+  "name": "training-javascript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-paced JavaScript developer training with a local lesson runner",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node lesson-runner/server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-curriculum.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "katex": "^0.19.1",
+    "markdown-it": "^15.0.3",
+    "markdown-it-texmath": "^1.0.0"
+  }
+}

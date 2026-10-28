@@ -1,0 +1,9 @@
+{
+  "title": "S15 · Tabular transformations (pandas counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S15 · Tabular transformations (pandas counterpart)",
+  "input": "",
+  "expected": "Expect {A:6,B:3} and 2.",
+  "prerequisites": []
+}

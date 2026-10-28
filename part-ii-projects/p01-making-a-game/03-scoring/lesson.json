@@ -1,0 +1,9 @@
+{
+  "title": "Project 1.3 · Scoring and restart",
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Project 1.3 · Scoring and restart",
+  "input": "",
+  "expected": "Each alien scores 10. Clear all five for 50 points, then press R to restore the game.",
+  "prerequisites": []
+}

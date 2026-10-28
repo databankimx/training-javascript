@@ -1,0 +1,9 @@
+{
+  "title": "28 · Dialogs, focus, and note entry",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "28 · Dialogs, focus, and note entry",
+  "input": "",
+  "expected": "Open the note dialog, save a note, or cancel with the button or Escape. Notes are inserted as text.",
+  "prerequisites": []
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Homework: string report",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 30,
+  "objective": "Clean, inspect, and format text with string methods",
+  "input": "",
+  "expected": "Report the cleaned name, its length, and whether a note contains JavaScript.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/07-escapes-and-raw-strings"],
+  "verify": ["Ada Lovelace", "12", "JavaScript"]
+}

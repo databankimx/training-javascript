@@ -1,0 +1,10 @@
+{
+  "title": "String methods and formatting",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Search, replace, pad, and format string and numeric data",
+  "input": "",
+  "expected": "The output demonstrates string searching, replacement, padding, currency formatting, and console placeholders.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/03-template-literals"],
+  "verify": ["true", "Grace", "09:05", "42****", "$1,234.50", "Error code: 500 - Internal Server Error"]
+}

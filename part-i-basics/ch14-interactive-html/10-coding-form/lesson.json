@@ -1,0 +1,9 @@
+{
+  "title": "29 · Coding form integration lab",
+  "runtime": "browser",
+  "minutes": 75,
+  "objective": "29 · Coding form integration lab",
+  "input": "",
+  "expected": "Enter an invoice total and matching allocations. Review reports readiness only when the totals match; no server submission occurs.",
+  "prerequisites": []
+}

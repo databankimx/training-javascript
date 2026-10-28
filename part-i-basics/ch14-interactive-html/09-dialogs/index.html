@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML and JavaScript lab</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+<h1>Invoice notes</h1>
+<button id="open" type="button">Add note</button>
+<ul id="notes">
+</ul>
+<dialog aria-labelledby="note-title">
+<h2 id="note-title">Add a note</h2>
+<form method="dialog">
+<label>Note <textarea name="note" required autofocus>
+</textarea>
+</label>
+<button value="save">Save</button>
+<button value="cancel" formnovalidate>Cancel</button>
+</form>
+</dialog>
+</main>
+<script type="module" src="./main.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "title": "Project 1.2 · Bullets and collisions",
+  "runtime": "browser",
+  "minutes": 50,
+  "objective": "Project 1.2 · Bullets and collisions",
+  "input": "",
+  "expected": "Arrow keys move; Space fires. Aliens disappear when hit. The previous stage had movement only; inspect bullets, aliens, and overlaps for the new behavior.",
+  "prerequisites": []
+}

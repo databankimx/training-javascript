@@ -1,0 +1,12 @@
+{
+  "title": "Homework: invoice rounding",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Calculate a total with a deliberate rounding strategy",
+  "input": "",
+  "expected": "Calculate tax and a total, then display both to two decimal places.",
+  "prerequisites": ["part-i-basics/ch03-numbers/05-number-parsing"],
+  "verify": ["Tax: $2.10", "Total: $27.09"]
+}

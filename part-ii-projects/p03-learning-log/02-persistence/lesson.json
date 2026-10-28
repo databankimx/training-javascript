@@ -1,0 +1,9 @@
+{
+  "title": "Project 3.2 · Export and import persistence",
+  "runtime": "browser",
+  "minutes": 50,
+  "objective": "Project 3.2 · Export and import persistence",
+  "input": "",
+  "expected": "Add entries, export a file, re-run the preview, then import the file to restore them. The sandbox may restrict downloads; open the lesson with the standalone preview instructions if necessary.",
+  "prerequisites": []
+}

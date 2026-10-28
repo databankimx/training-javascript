@@ -1,0 +1,9 @@
+{
+  "title": "20 · Connect HTML, CSS, and JavaScript",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "20 · Connect HTML, CSS, and JavaScript",
+  "input": "",
+  "expected": "The HTML contains a button and status paragraph before JavaScript runs. Click Greet to update the paragraph.",
+  "prerequisites": []
+}

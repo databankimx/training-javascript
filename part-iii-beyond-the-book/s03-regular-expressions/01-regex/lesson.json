@@ -1,0 +1,13 @@
+{
+  "title": "S03 · Regular expressions",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S03 · Regular expressions",
+  "input": "",
+  "expected": "Expect 1042, 2048 and true.",
+  "prerequisites": [],
+  "verify": [
+    "1042, 2048",
+    "true"
+  ]
+}

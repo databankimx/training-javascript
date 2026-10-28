@@ -1,0 +1,12 @@
+{
+  "title": "S26 · Iterators and generators (itertools counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S26 · Iterators and generators (itertools counterpart)",
+  "input": "",
+  "expected": "Expect [1,4,9,16], then values 10 and 11 with done false, followed by done true.",
+  "prerequisites": [],
+  "verify": [
+    "1, 4, 9, 16"
+  ]
+}

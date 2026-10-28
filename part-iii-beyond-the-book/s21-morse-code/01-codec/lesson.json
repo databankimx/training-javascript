@@ -1,0 +1,12 @@
+{
+  "title": "S21 · Morse code and codecs",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S21 · Morse code and codecs",
+  "input": "",
+  "expected": "Expect ... --- ... . Only S, O, A, and T are supported in this starter.",
+  "prerequisites": [],
+  "verify": [
+    "... --- ..."
+  ]
+}

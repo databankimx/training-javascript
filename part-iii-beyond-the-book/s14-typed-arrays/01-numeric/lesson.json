@@ -1,0 +1,13 @@
+{
+  "title": "S14 · Typed arrays (NumPy counterpart)",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S14 · Typed arrays (NumPy counterpart)",
+  "input": "",
+  "expected": "Expect [10,2,3] and 5. The view changes the original buffer.",
+  "prerequisites": [],
+  "verify": [
+    "10, 2, 3",
+    "5"
+  ]
+}

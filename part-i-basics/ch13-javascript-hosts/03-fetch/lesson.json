@@ -1,0 +1,12 @@
+{
+  "title": "16 · HTTP, fetch, and response validation",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "16 · HTTP, fetch, and response validation",
+  "input": "",
+  "expected": "Expect 16, then the process exits after closing the server.",
+  "prerequisites": [],
+  "verify": [
+    "16"
+  ]
+}

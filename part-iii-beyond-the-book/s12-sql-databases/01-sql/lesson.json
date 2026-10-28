@@ -1,0 +1,9 @@
+{
+  "title": "S12 · Relational databases and parameterized SQL",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S12 · Relational databases and parameterized SQL",
+  "input": "",
+  "expected": "Expect an array containing Grace. The database exists only in memory.",
+  "prerequisites": []
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Project 1.1 · Canvas movement",
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Project 1.1 · Canvas movement",
+  "input": "",
+  "expected": "A blue ship moves left and right and stays inside the canvas. Output is graphical.",
+  "prerequisites": []
+}

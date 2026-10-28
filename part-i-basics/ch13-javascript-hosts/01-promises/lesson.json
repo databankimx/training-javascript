@@ -1,0 +1,15 @@
+{
+  "title": "14 · Promises, async/await, and the event loop",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "14 · Promises, async/await, and the event loop",
+  "input": "",
+  "expected": "Expect start, sync, microtask, then A, B. Promise.all preserves input order, not completion order.",
+  "prerequisites": [],
+  "verify": [
+    "start",
+    "sync",
+    "microtask",
+    "A, B"
+  ]
+}
