@@ -15,7 +15,7 @@ const report = error => {
 };
 const guarded = fn => (...args) => Promise.resolve().then(() => fn(...args)).catch(report);
 let catalog = [], current = null, selectedPart = null, selectedChapter = null, tab = 'lesson', poll = null, generation = 0, busy = false;
-let completed = new Set(), revealed = new Set(), drafts = {}, theme = '';
+let completed = new Set(), revealed = new Set(), drafts = {}, readingState = {}, viewedLessons = new Set(), theme = '';
 const resumeCookie = 'js-training-last-lesson';
 const getResumeLesson = () => {
   const entry = document.cookie.split('; ').find(value => value.startsWith(`${resumeCookie}=`));
@@ -26,6 +26,8 @@ try {
   completed = new Set(JSON.parse(localStorage.getItem('js-training-complete') || '[]'));
   revealed = new Set(JSON.parse(localStorage.getItem('js-training-revealed') || '[]'));
   drafts = JSON.parse(localStorage.getItem('js-training-drafts') || '{}');
+  readingState = JSON.parse(localStorage.getItem('js-training-reading-state') || '{}');
+  viewedLessons = new Set(JSON.parse(localStorage.getItem('js-training-viewed') || '[]'));
   theme = localStorage.getItem('js-training-theme');
 }catch {
   
@@ -36,6 +38,8 @@ const save = () => {
     localStorage.setItem('js-training-complete', JSON.stringify([...completed]));
     localStorage.setItem('js-training-revealed', JSON.stringify([...revealed]));
     localStorage.setItem('js-training-drafts', JSON.stringify(drafts));
+    localStorage.setItem('js-training-reading-state', JSON.stringify(readingState));
+    localStorage.setItem('js-training-viewed', JSON.stringify([...viewedLessons]));
   }catch {
     $('status').textContent = 'Browser storage full or unavailable; download edits to keep them.';
   }
@@ -96,6 +100,21 @@ function addCopyButtons() {
       }
     };
     pre.append(button);
+  });
+}
+function colorTruthTables() {
+  $('reading').querySelectorAll('table').forEach(table => {
+    const headers = [...table.querySelectorAll('thead th')].map(cell => cell.textContent.trim());
+    const operatorIndex = headers.findIndex(header => ['&&', '||', '!p', 'XOR', 'xor'].includes(header));
+    if (operatorIndex < 0) return;
+    table.classList.add('truth-table');
+    table.querySelectorAll('tbody tr').forEach(row => {
+      const cell = row.children[operatorIndex];
+      if (!cell) return;
+      const value = cell.textContent.trim().toLowerCase();
+      cell.classList.toggle('truth-true', value === 't' || value === 'true');
+      cell.classList.toggle('truth-false', value === 'f' || value === 'false');
+    });
   });
 }
 function makeSplitter(id, target, minimum, maximum) {
@@ -190,15 +209,18 @@ function navigation() {
   $('progress').textContent = `${catalog.filter(l => completed.has(l.id)).length} / ${catalog.length} lessons complete`;
 }
 function reading() {
+  const wasViewed = Boolean(current && viewedLessons.has(current.id));
   const blocked = Boolean(current?.spoiler && !revealed.has(current.id));
   $('reading').innerHTML = blocked && tab === 'solution'
     ? '<div class="spoiler-reading"><p>The worked solution is behind the spoiler gate. Try the assignment first, then use <strong>Show example (spoiler)</strong> beside the editor when you are ready.</p></div>'
     : current?.[tab === 'lesson' ? 'html' : 'solution'] || '<p>No material yet.</p>';
-  $('reading').scrollTop = 0;
+  $('reading').scrollTop = wasViewed ? Number(readingState[current.id]?.[tab] || 0) : 0;
   $('reading').querySelectorAll('code.language-javascript').forEach(code => {
     code.innerHTML = highlightSource(code.textContent);
   });
   addCopyButtons();
+  colorTruthTables();
+  if (current) viewedLessons.add(current.id);
   document.querySelectorAll('[data-tab]').forEach(button => button.setAttribute('aria-selected', String(button.dataset.tab === tab)));
 }
 function updateSpoiler() {
@@ -231,6 +253,12 @@ async function stop() {
   $('status').textContent = 'Stopped';
 }
 async function select(id) {
+  if (current) {
+    readingState[current.id] ||= {};
+    readingState[current.id][tab] = $('reading').scrollTop;
+    viewedLessons.add(current.id);
+    save();
+  }
   await stop();
   tab = 'lesson';
   current = await api(`/api/lesson?id=${encodeURIComponent(id)}`);
@@ -363,9 +391,22 @@ $('reveal').onclick = () => {
 for (const [id, delta] of [['previous', -1], ['next', 1]]) $(id).onclick = guarded(() => select(catalog[catalog.findIndex(item => item.id === current.id) + delta].id));
 document.querySelectorAll('[data-tab]').forEach(button => {
   button.onclick = () => {
+    if (current) {
+      readingState[current.id] ||= {};
+      readingState[current.id][tab] = $('reading').scrollTop;
+      viewedLessons.add(current.id);
+      save();
+    }
     tab = button.dataset.tab;
      reading();
   };
+});
+$('reading').addEventListener('scroll', () => {
+  if (!current) return;
+  readingState[current.id] ||= {};
+  readingState[current.id][tab] = $('reading').scrollTop;
+  viewedLessons.add(current.id);
+  save();
 });
 $('input-form').onsubmit = guarded(async event => {
   event.preventDefault();

@@ -1,0 +1,10 @@
+{
+  "title": "while loops",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Repeat a block while a condition remains true",
+  "input": "",
+  "expected": "The loop prints the values from 1 through 3.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/05-switch"],
+  "verify": ["1", "2", "3"]
+}

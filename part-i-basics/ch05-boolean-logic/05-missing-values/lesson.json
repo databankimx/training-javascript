@@ -1,0 +1,10 @@
+{
+  "title": "Missing values and defaults",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Distinguish nullish values from other falsy values",
+  "input": "",
+  "expected": "The output compares ||, ??, and optional chaining.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/04-logical-operators"],
+  "verify": ["3", "0", "Guest", "Ada"]
+}

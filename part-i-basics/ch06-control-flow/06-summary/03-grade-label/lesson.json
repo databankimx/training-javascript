@@ -1,0 +1,12 @@
+{
+  "title": "Homework: grade label",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Use ordered conditional branches to label a score",
+  "input": "",
+  "expected": "Print the appropriate label for a numeric score.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/03-if-else-if-else"],
+  "verify": ["B"]
+}

@@ -11,7 +11,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 test('catalog has complete tracks and rejects paths outside a lesson', async () => {
   const lessons = await discover(root);
-  assert.equal(lessons.length,96);
+  assert.equal(lessons.length,120);
   assert.equal(lessons.filter(l => l.part === 'part-ii-projects').length,9);
   assert.equal(lessons.filter(l => l.part === 'part-iii-beyond-the-book').length,27);
   await assert.rejects(within(lessons[0].folder, path.join(root,'package.json')), /outside/);

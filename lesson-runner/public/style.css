@@ -65,8 +65,8 @@ article pre:hover .copy-code, article pre:focus-within .copy-code { opacity: 1; 
 article blockquote { margin: 1.2em 0; padding: .65em 1em; border-left: 3px solid var(--accent); background: var(--raised); color: var(--fg); }
 article blockquote p { margin: 0 0 1em; }
 article blockquote p:last-child { margin-bottom: 0; }
-article table { width: 100%; border-collapse: collapse; margin: 1.2em 0; }
-article th, article td { padding: .55em .7em; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+article table { width: max-content; max-width: 100%; border-collapse: collapse; margin: 1.2em 0; }
+article th, article td { padding: .55em .7em; border: 1px solid var(--line); text-align: center; vertical-align: top; }
 article th { background: var(--raised); color: var(--fg); }
 article code:not([class]) { color: #d4ba72; background: #333; }
 body.light article code:not([class]) { color: #795e26; background: #e8e8e8; }
@@ -92,3 +92,7 @@ body.light nav button.active { color: #fff; }
 .spoiler { padding: 28px; background: var(--panel); border: 1px solid var(--line); margin: 0; }
 .spoiler p { max-width: 58rem; }
 .spoiler-reading { padding: 1rem; border-left: 3px solid var(--accent); background: var(--panel); }
+.truth-table td.truth-true { color: #55bd78; font-weight: 700; }
+.truth-table td.truth-false { color: #e0a0a0; font-weight: 700; }
+body.light .truth-table td.truth-true { color: #267a45; }
+body.light .truth-table td.truth-false { color: #b76565; }

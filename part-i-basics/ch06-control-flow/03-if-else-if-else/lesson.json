@@ -1,0 +1,10 @@
+{
+  "title": "if, else if, and else",
+  "runtime": "node",
+  "minutes": 45,
+  "objective": "Choose among branches with if, else if, and else, and distinguish a chain from independent checks",
+  "input": "",
+  "expected": "The output demonstrates a basic alternative, one and several else if branches, an optional else, and independent checks.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/02-if"],
+  "verify": ["Access denied", "Pass", "B", "Discount applied", "true"]
+}

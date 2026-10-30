@@ -1,0 +1,10 @@
+{
+  "title": "Complex conditions and evaluation order",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Read compound conditions by following grouping, negation, and short-circuit evaluation",
+  "input": "",
+  "expected": "The output shows how grouped comparisons and logical operators resolve.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/07-summary/03-grade-label"],
+  "verify": ["true", "false", "approved"]
+}

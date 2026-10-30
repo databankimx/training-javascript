@@ -1,0 +1,10 @@
+{
+  "title": "Control flow with if",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use if statements to run a block only when a condition is truthy",
+  "input": "",
+  "expected": "The output demonstrates an if statement running when its condition is true.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/01-complex-conditionals"],
+  "verify": ["Access granted"]
+}

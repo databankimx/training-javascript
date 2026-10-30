@@ -5,7 +5,7 @@ Validated on Windows with Node.js 24.16.0 and installed Microsoft Edge on Octobe
 ## Automated checks
 
 - npm test: all three test groups passed. Assertions cover curriculum discovery, path containment, Markdown escaping, session/Origin rejection, source isolation, stdin, errors, active-run rejection, and cancellation.
-- npm run check: all 96 lesson packages validated; every JavaScript source parsed and all 72 Node examples executed successfully. Selected deterministic results are also checked against expected output fragments.
+- npm run check: all 120 lesson packages validated; every JavaScript source parsed and all 96 Node examples executed successfully. Selected deterministic results are also checked against expected output fragments.
 - Browser harness: all 24 browser lessons loaded and ran without page errors. Functional assertions covered hide/show and ARIA state, accordions, conditional disabled fields, validation, row add/remove and 0.10+0.20 currency totals, sorting/filtering, unique template IDs, note dialogs, literal HTML-looking text, invoice reconciliation, delegation, Learning Log deletion/import/export, HTML/CSS edits and per-file reset, editable Node support modules, terminal input, and completion persistence.
 - Desktop and narrow-viewport screenshots were inspected. Narrow layout did not introduce document horizontal overflow.
 

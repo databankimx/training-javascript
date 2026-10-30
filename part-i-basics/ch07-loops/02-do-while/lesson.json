@@ -1,0 +1,10 @@
+{
+  "title": "do...while loops",
+  "runtime": "node",
+  "minutes": 20,
+  "objective": "Use a do...while loop when the block must run at least once",
+  "input": "",
+  "expected": "The loop prints the prompt count once even though the condition is initially false.",
+  "prerequisites": ["part-i-basics/ch07-loops/01-while"],
+  "verify": ["Prompt shown", "1"]
+}

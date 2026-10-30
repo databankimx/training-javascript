@@ -1,0 +1,10 @@
+{
+  "title": "Running totals and collected results",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Build a result while a loop visits each value",
+  "input": "",
+  "expected": "The loop prints a total and a list of passing scores.",
+  "prerequisites": ["part-i-basics/ch07-loops/07-nested-loops"],
+  "verify": ["Total: 22", "Passing: 8, 7"]
+}

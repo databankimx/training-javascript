@@ -1,0 +1,10 @@
+{
+  "title": "Boolean values and comparisons",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Compare values and work with true and false",
+  "input": "",
+  "expected": "The output demonstrates comparisons and boolean values.",
+  "prerequisites": ["part-i-basics/ch04-collections/11-summary/03-prefix-dictionary"],
+  "verify": ["true", "false"]
+}

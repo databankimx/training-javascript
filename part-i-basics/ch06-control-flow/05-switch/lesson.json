@@ -1,0 +1,10 @@
+{
+  "title": "Control flow with switch",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Select a branch with switch, case, default, and break",
+  "input": "",
+  "expected": "The output shows a matching case and the default branch.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/04-conditional-operator"],
+  "verify": ["Weekday", "Unknown day"]
+}

@@ -10,15 +10,15 @@ The Python repository was inspected as the structural reference. Topic intent is
 | ch02 Fundamentals | ch02-fundamentals | Bindings, conversion, strings |
 | ch03 Numbers | ch03-numbers | Numeric checks, rounding, floating-point behavior, bases, and parsing |
 | ch04 Collections | ch04-collections | Arrays, nesting, traversal, tuples, stacks, queues, trees, and tries |
-| ch06 Boolean logic | ch06-boolean-logic | Strict equality, truthiness, nullish values |
-| ch07 Dictionaries | ch07-dictionaries | Objects, Map, Set |
-| ch08 More functionality | ch08-more-functionality | Asynchronous terminal input |
-| ch09 Functions | ch09-functions | Scope, functions, ESM |
-| ch10 Classes | ch10-classes | Prototypes, classes, private fields |
-| ch11 Files | ch11-files | Promises, JSON, errors |
-| ch12 Testing | ch12-testing | node:test and assertions |
+| ch05 Boolean logic | ch05-boolean-logic | Strict equality, truthiness, nullish values |
+| ch20 Dictionaries | ch20-dictionaries | Objects, Map, Set |
+| ch21 More functionality | ch21-more-functionality | Asynchronous terminal input |
+| ch22 Functions | ch22-functions | Scope, functions, ESM |
+| ch23 Classes | ch23-classes | Prototypes, classes, private fields |
+| ch24 Files | ch24-files | Promises, JSON, errors |
+| ch25 Testing | ch25-testing | node:test and assertions |
 
-JavaScript-specific additions: ch13 covers promises, DOM/events, fetch, readiness, collection differences, and delegation. ch14 teaches HTML/CSS/JS integration and interactive form components. Pair these browser labs with the earlier language lessons during a browser-focused lecture series.
+JavaScript-specific additions: ch12 covers promises, DOM/events, fetch, readiness, collection differences, and delegation. ch13 teaches HTML/CSS/JS integration and interactive form components. Pair these browser labs with the earlier language lessons during a browser-focused lecture series.
 
 ## Guided projects
 

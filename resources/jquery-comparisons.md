@@ -12,20 +12,20 @@ window.onload = function () {...} waits for page resources and replaces an earli
 
 ## Where to find comparisons
 
-- 15 · DOM, events, and safe text  -  part-i-basics/ch13-javascript-hosts/02-dom
-- 16 · HTTP, fetch, and response validation  -  part-i-basics/ch13-javascript-hosts/03-fetch
-- 17 · DOM readiness and page load  -  part-i-basics/ch13-javascript-hosts/04-readiness
-- 18 · DOM elements versus jQuery collections  -  part-i-basics/ch13-javascript-hosts/05-selection
-- 19 · Event delegation and handler semantics  -  part-i-basics/ch13-javascript-hosts/06-delegation
-- 21 · Hide and show a section  -  part-i-basics/ch14-interactive-html/02-hide-show
-- 22 · Accessible accordions  -  part-i-basics/ch14-interactive-html/03-accordion
-- 23 · Conditional form sections  -  part-i-basics/ch14-interactive-html/04-conditional-fields
-- 24 · Form validation and computed values  -  part-i-basics/ch14-interactive-html/05-validation
-- 25 · Dynamic tables with delegated events  -  part-i-basics/ch14-interactive-html/06-dynamic-tables
-- 26 · Sort and filter a dynamic table  -  part-i-basics/ch14-interactive-html/07-sort-filter
-- 27 · Templates, cloning, and unique identifiers  -  part-i-basics/ch14-interactive-html/08-templates
-- 28 · Dialogs, focus, and note entry  -  part-i-basics/ch14-interactive-html/09-dialogs
-- 29 · Coding form integration lab  -  part-i-basics/ch14-interactive-html/10-coding-form
+- 15 · DOM, events, and safe text  -  part-i-basics/ch26-javascript-hosts/02-dom
+- 16 · HTTP, fetch, and response validation  -  part-i-basics/ch26-javascript-hosts/03-fetch
+- 17 · DOM readiness and page load  -  part-i-basics/ch26-javascript-hosts/04-readiness
+- 18 · DOM elements versus jQuery collections  -  part-i-basics/ch26-javascript-hosts/05-selection
+- 19 · Event delegation and handler semantics  -  part-i-basics/ch26-javascript-hosts/06-delegation
+- 21 · Hide and show a section  -  part-i-basics/ch27-interactive-html/02-hide-show
+- 22 · Accessible accordions  -  part-i-basics/ch27-interactive-html/03-accordion
+- 23 · Conditional form sections  -  part-i-basics/ch27-interactive-html/04-conditional-fields
+- 24 · Form validation and computed values  -  part-i-basics/ch27-interactive-html/05-validation
+- 25 · Dynamic tables with delegated events  -  part-i-basics/ch27-interactive-html/06-dynamic-tables
+- 26 · Sort and filter a dynamic table  -  part-i-basics/ch27-interactive-html/07-sort-filter
+- 27 · Templates, cloning, and unique identifiers  -  part-i-basics/ch27-interactive-html/08-templates
+- 28 · Dialogs, focus, and note entry  -  part-i-basics/ch27-interactive-html/09-dialogs
+- 29 · Coding form integration lab  -  part-i-basics/ch27-interactive-html/10-coding-form
 - Project 3.1 · A Learning Log model and view  -  part-ii-projects/p03-learning-log/01-model
 - Project 3.2 · Export and import persistence  -  part-ii-projects/p03-learning-log/02-persistence
 - Project 3.3 · Deletion, empty states, and review  -  part-ii-projects/p03-learning-log/03-deletion

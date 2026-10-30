@@ -72,6 +72,13 @@
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
+    "step": "08-objects",
+    "title": "Objects and name/value pairs",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch02-fundamentals",
     "step": "08-summary/01-temperature-converter",
     "title": "Homework: temperature converter",
     "runtime": "node"
@@ -253,168 +260,329 @@
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch06-boolean-logic",
-    "step": "01-conditions",
-    "title": "06 · Conditions, equality, and missing values",
+    "chapter": "ch05-boolean-logic",
+    "step": "01-boolean-values",
+    "title": "Boolean values and comparisons",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch07-dictionaries",
+    "chapter": "ch05-boolean-logic",
+    "step": "02-strict-equality",
+    "title": "Strict and loose equality",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch05-boolean-logic",
+    "step": "03-truthiness",
+    "title": "Truthiness",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch05-boolean-logic",
+    "step": "04-logical-operators",
+    "title": "Logical operators and short-circuiting",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch05-boolean-logic",
+    "step": "05-missing-values",
+    "title": "Missing values and defaults",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch06-control-flow",
+    "step": "01-complex-conditionals",
+    "title": "Complex conditions and evaluation order",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch06-control-flow",
+    "step": "02-if",
+    "title": "Control flow with if",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch06-control-flow",
+    "step": "03-if-else-if-else",
+    "title": "if, else if, and else",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch06-control-flow",
+    "step": "04-conditional-operator",
+    "title": "The conditional operator",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch06-control-flow",
+    "step": "05-switch",
+    "title": "Control flow with switch",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch05-boolean-logic",
+    "step": "07-summary/01-access-check",
+    "title": "Homework: access check",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch05-boolean-logic",
+    "step": "07-summary/02-default-settings",
+    "title": "Homework: default settings",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch06-control-flow",
+    "step": "06-summary/03-grade-label",
+    "title": "Homework: grade label",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "01-while",
+    "title": "while loops",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "02-do-while",
+    "title": "do...while loops",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "03-for",
+    "title": "for loops",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "04-for-of",
+    "title": "for...of and array values",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "05-for-in",
+    "title": "for...in and object properties",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "06-break-continue",
+    "title": "break and continue",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "07-nested-loops",
+    "title": "Nested loops",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "08-running-results",
+    "title": "Running totals and collected results",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "09-summary/01-tally",
+    "title": "Homework: tally values",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "09-summary/02-search",
+    "title": "Homework: search a list",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch07-loops",
+    "step": "09-summary/03-grid",
+    "title": "Homework: print a grid",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch20-dictionaries",
     "step": "01-records",
     "title": "07 · Objects, maps, and sets",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch08-more-functionality",
+    "chapter": "ch21-more-functionality",
     "step": "01-input",
     "title": "08 · Interactive input and validation",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch09-functions",
+    "chapter": "ch22-functions",
     "step": "01-functions",
     "title": "09 · Functions, scope, and pure logic",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch09-functions",
+    "chapter": "ch22-functions",
     "step": "02-modules",
     "title": "10 · ES modules and reusable code",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch10-classes",
+    "chapter": "ch23-classes",
     "step": "01-classes",
     "title": "11 · Classes, prototypes, and private state",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch11-files",
+    "chapter": "ch24-files",
     "step": "01-files",
     "title": "12 · Files, JSON, and error handling",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch12-testing",
+    "chapter": "ch25-testing",
     "step": "01-tests",
     "title": "13 · Testing behavior with node:test",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch13-javascript-hosts",
+    "chapter": "ch26-javascript-hosts",
     "step": "01-promises",
     "title": "14 · Promises, async/await, and the event loop",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch13-javascript-hosts",
+    "chapter": "ch26-javascript-hosts",
     "step": "02-dom",
     "title": "15 · DOM, events, and safe text",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch13-javascript-hosts",
+    "chapter": "ch26-javascript-hosts",
     "step": "03-fetch",
     "title": "16 · HTTP, fetch, and response validation",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch13-javascript-hosts",
+    "chapter": "ch26-javascript-hosts",
     "step": "04-readiness",
     "title": "17 · DOM readiness and page load",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch13-javascript-hosts",
+    "chapter": "ch26-javascript-hosts",
     "step": "05-selection",
     "title": "18 · DOM elements versus jQuery collections",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch13-javascript-hosts",
+    "chapter": "ch26-javascript-hosts",
     "step": "06-delegation",
     "title": "19 · Event delegation and handler semantics",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "01-script-integration",
     "title": "20 · Connect HTML, CSS, and JavaScript",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "02-hide-show",
     "title": "21 · Hide and show a section",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "03-accordion",
     "title": "22 · Accessible accordions",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "04-conditional-fields",
     "title": "23 · Conditional form sections",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "05-validation",
     "title": "24 · Form validation and computed values",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "06-dynamic-tables",
     "title": "25 · Dynamic tables with delegated events",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "07-sort-filter",
     "title": "26 · Sort and filter a dynamic table",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "08-templates",
     "title": "27 · Templates, cloning, and unique identifiers",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "09-dialogs",
     "title": "28 · Dialogs, focus, and note entry",
     "runtime": "browser"
   },
   {
     "part": "part-i-basics",
-    "chapter": "ch14-interactive-html",
+    "chapter": "ch27-interactive-html",
     "step": "10-coding-form",
     "title": "29 · Coding form integration lab",
     "runtime": "browser"

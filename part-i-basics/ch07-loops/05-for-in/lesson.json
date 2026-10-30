@@ -1,0 +1,10 @@
+{
+  "title": "for...in and object properties",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Iterate through the enumerable property names of an object",
+  "input": "",
+  "expected": "The loop prints object property names and values.",
+  "prerequisites": ["part-i-basics/ch07-loops/04-for-of"],
+  "verify": ["name Ada", "role analyst"]
+}
