@@ -1,0 +1,12 @@
+{
+  "title": "Homework: build a math module",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Export and import several related functions",
+  "input": "",
+  "expected": "The imported functions produce 7, 12, and -1.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-modules/02-export-forms"],
+  "verify": ["7", "12", "-1"]
+}

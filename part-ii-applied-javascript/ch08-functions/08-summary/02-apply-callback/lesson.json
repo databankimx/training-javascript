@@ -1,0 +1,12 @@
+{
+  "title": "Homework: apply a callback",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Use a callback to customize a loop",
+  "input": "",
+  "expected": "The callback prints each name in uppercase.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/07-callbacks"],
+  "verify": ["ADA", "GRACE", "LINUS"]
+}

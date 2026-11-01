@@ -1,0 +1,10 @@
+{
+  "title": "Designing a small module boundary",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Keep module responsibilities small and explicit",
+  "input": "",
+  "expected": "The report module formats the supplied data.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-modules/02-export-forms"],
+  "verify": ["Ada: 3 tasks"]
+}

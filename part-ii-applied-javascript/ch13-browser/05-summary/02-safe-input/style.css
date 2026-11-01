@@ -1,0 +1,10 @@
+:root { font-family: system-ui, sans-serif; color: #243447; background: #eef3f7; }
+body { margin: 0; padding: 2rem; }
+main { max-width: 42rem; margin: auto; padding: 2rem; background: white; border: 1px solid #d5dee7; border-radius: .8rem; box-shadow: 0 8px 24px #1d33441a; }
+h1 { margin-top: 0; }
+label { display: block; margin-bottom: .45rem; font-weight: 600; }
+.form-row { display: flex; gap: .6rem; }
+input { flex: 1; min-width: 0; padding: .65rem .75rem; border: 1px solid #aebdca; border-radius: .4rem; font: inherit; }
+button { padding: .65rem 1rem; border: 0; border-radius: .4rem; background: #1769aa; color: white; font: inherit; cursor: pointer; }
+#output { min-height: 2rem; margin-top: 1.5rem; padding: .8rem; background: #eef5fb; border-left: .25rem solid #1769aa; }
+@media (max-width: 32rem) { .form-row { flex-direction: column; } }

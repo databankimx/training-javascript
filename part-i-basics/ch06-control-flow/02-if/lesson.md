@@ -1,6 +1,8 @@
 # Control flow with `if`
 
-Conditions become useful when they control which statements run. An `if` statement checks a condition and runs its block only when that condition is truthy.
+Conditions become useful when they control which statements run. An `if` statement lets the program do something only when a condition is true enough to matter. That is the basic shape behind permission checks, validation messages, optional calculations, and a considerable number of buttons that seem to have developed opinions.
+
+Start with one condition and one possible action:
 
 ```javascript
 const signedIn = true;
@@ -20,7 +22,9 @@ if (signedIn) {
 Access granted
 ```
 
-Because `signedIn` is `true`, JavaScript runs the `console.log` statement inside the block. If we change it to `false`, the program reaches the end without printing anything. That is perfectly valid, although not always helpful to the person using the program.
+Because `signedIn` is `true`, JavaScript runs the `console.log` statement inside the block. If we change it to `false`, JavaScript skips the block and continues after it. The program is still valid, although silently doing nothing is not always helpful to the person using it.
+
+The braces define the block controlled by the `if`. Keep that boundary clear as examples grow. JavaScript permits the one-line version `if (signedIn) console.log("Access granted");`, but braces are still recommended in most code because they make future edits safer and easier to scan.
 
 ---
 

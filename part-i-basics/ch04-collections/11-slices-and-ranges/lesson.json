@@ -1,0 +1,10 @@
+{
+  "title": "Slices and ranges",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Copy array ranges and generate sequences of values",
+  "input": "",
+  "expected": "The example prints slices and generated ranges.",
+  "prerequisites": ["part-i-basics/ch04-collections/10-splice-and-flatten"],
+  "verify": ["green, blue", "orange, yellow, green", "0,1,2,3,4", "1,3,5,7,9"]
+}

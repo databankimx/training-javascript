@@ -1,0 +1,10 @@
+{
+  "title": "Form validation and formatting",
+  "runtime": "browser",
+  "minutes": 40,
+  "objective": "Read form values, validate them, and format a visible result",
+  "input": "",
+  "expected": "Submit a valid name and see a formatted greeting.",
+  "prerequisites": ["part-ii-applied-javascript/ch14-forms/01-debug-channel"],
+  "verify": []
+}

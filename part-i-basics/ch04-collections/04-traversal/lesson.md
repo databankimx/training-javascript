@@ -1,6 +1,6 @@
 # Traversing collections
 
-Reading one item by index is useful, but real work usually means visiting every item. JavaScript gives us an indexed loop when the position matters and a `for...of` loop when the value is the important part. Nested arrays need nested traversal so we visit each inner array as well.
+Reading one item by index is useful, but real work usually means visiting every item. Rendering a search result, checking every imported record, or calculating a total all require traversal. JavaScript gives us an indexed loop when the position matters and a `for...of` loop when the value is the important part. Nested arrays need nested traversal so we visit each inner array as well.
 
 ```javascript
 const names = ["Ada", "Grace", "Linus"];
@@ -45,6 +45,18 @@ Linus
 Use `for...of` when the position is irrelevant. Use an indexed loop when we need to update a position, compare neighbors, or report the index. For a nested collection, the inner loop runs once for each item in the current outer item.
 
 A file system is another useful example of a tree. Folders are branches, and files are leaves. To visit every file, an algorithm can inspect a folder, visit its files, and then repeat the same work for each child folder. That is a natural use of recursion, which we will cover later. For now, the important idea is that the shape of the data determines the shape of the traversal.
+
+The nested loops in this lesson work because we know the shape: one outer array contains rows, and each row contains values. Real data is not always so cooperative. An irregular collection might contain values and arrays at several different depths:
+
+```javascript
+const fileTree = [
+  "readme.txt",
+  ["images", ["logo.svg", "photo.jpg"]],
+  ["scripts", ["main.js"]]
+];
+```
+
+There is no single pair of loops that can visit every value in that structure. We would need to inspect each item, determine whether it is another array, and repeat the same operation whenever the nesting continues. That is the problem recursion is designed to solve. We will use this shape again when we walk a folder tree later.
 
 ---
 

@@ -1,0 +1,12 @@
+{
+  "title": "Homework: guarantee cleanup",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Use finally for work that must happen after success or failure",
+  "input": "",
+  "expected": "Cleanup prints after both attempts.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-error-handling/02-try-catch"],
+  "verify": ["Cleanup complete"]
+}

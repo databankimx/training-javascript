@@ -1,6 +1,6 @@
 # Math constants
 
-The `Math` object also provides several named constants. `Math.PI` is the familiar one, but it has company. These values are approximations stored by the language, and they are properties, not methods, so there are no parentheses after their names.
+The `Math` object also provides several named constants. `Math.PI` is the familiar one, but it has company. These values turn up in geometry, graphics, statistics, and scientific formulas. They are approximations stored by the language, and they are properties, not methods, so there are no parentheses after their names.
 
 ```javascript
 console.log(Math.PI.toFixed(2));
@@ -27,6 +27,8 @@ console.log(Math.LOG10E.toFixed(2));
 1.44
 0.43
 ```
+
+Here is a brief explanation of the constants in the example:
 
 | Constant | Meaning | Output here |
 | --- | --- | --- |

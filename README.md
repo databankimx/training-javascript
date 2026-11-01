@@ -27,12 +27,12 @@ The editor saves drafts in this browser's storage for this local origin. Reset r
 
 ## Curriculum
 
-There are 120 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
+There are 170 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
 
 | Track | Coverage |
 |---|---|
-| Part I  -  Fundamentals (84) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, loops, input, functions, modules, classes, files, tests, promises, HTTP, DOM readiness, selection, delegation, and practical HTML interaction |
-| Part II  -  Guided projects (9 stages) | Canvas game, data visualization, and Learning Log; independently runnable stages with extension exercises |
+| Part I  -  Fundamentals (94) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, loops, functions, input, modules, classes, files, tests, promises, HTTP, DOM readiness, selection, delegation, and practical HTML interaction |
+| Part II  -  Applied JavaScript (57 lessons) | Functions, modules, error handling, asynchronous JavaScript, HTTP, browser JavaScript, forms, troubleshooting, reusable patterns, Canvas game, data visualization, and Learning Log; independently runnable stages with extension exercises |
 | Part III  -  Beyond the Book (27) | CLI, recursion, regex, complexity, bitwise flags, records, formatting, closures, states, extraction, arrow functions, SQL, packaging, numeric/tabular methods, documents, tries, browser forms, games, codecs, built-ins, HTTP, generators, composition |
 
 The HTML chapter covers script integration, hide/show, accordions, conditional controls, validation, dynamic tables, sorting/filtering, templates, dialogs, and an invoice coding form. It draws on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.

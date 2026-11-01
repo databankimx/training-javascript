@@ -1,4 +1,6 @@
-# Rounding and formatting numbers - exercise solution
+# Exercise solution
+
+Here is one reasonable way to round a price to the nearest cent and then format it for display.
 
 ```javascript
 const price = 7.456;
@@ -13,6 +15,6 @@ console.log(roundedPrice.toFixed(2));
 7.46
 ```
 
-Multiplying by 100 moves the cents into the integer position, `Math.round()` chooses the nearest cent, and dividing by 100 moves the decimal point back. `toFixed(2)` then produces the display text with exactly two decimal places.
+Multiplying by 100 moves the cents into the integer position, `Math.round()` chooses the nearest cent, and dividing by 100 moves the decimal point back. `toFixed(2)` then produces the display text with exactly two decimal places. The arithmetic remains numeric until the final line, which is exactly where we want formatting to happen.
 
 ---

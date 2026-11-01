@@ -1,6 +1,6 @@
 # Array methods
 
-Once we have an array, the next question is usually how to change it without losing track of what changed. Some methods mutate the original array. Others return a new array. That difference is more important than memorizing the names, although the names are unfortunately still required.
+Once we have an array, the next question is usually how to change it without losing track of what changed. Adding the next item to a work queue is different from making a report from the first five items. Some methods mutate the original array. Others return a new array. That difference is more important than memorizing the names, although the names are unfortunately still required.
 
 ```javascript
 const colors = ["red", "green"];
@@ -32,6 +32,8 @@ red, green
 2
 2
 ```
+
+Here is the practical distinction between the methods in the example:
 
 | Method | Purpose | Mutates the original? |
 | --- | --- | --- |

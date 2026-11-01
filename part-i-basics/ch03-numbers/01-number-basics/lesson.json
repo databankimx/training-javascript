@@ -5,6 +5,6 @@
   "objective": "Recognize numeric values and check what kind of number you have",
   "input": "",
   "expected": "The output demonstrates number values, integer checks, finite checks, and failed conversion checks.",
-  "prerequisites": ["part-i-basics/ch02-fundamentals/08-summary/03-message-card"],
+  "prerequisites": ["part-i-basics/ch02-fundamentals/10-homework/03-message-card"],
   "verify": ["number", "true", "false"]
 }

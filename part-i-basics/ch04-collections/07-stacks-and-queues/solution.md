@@ -1,4 +1,6 @@
-# Stacks and queues - exercise solution
+# Exercise solution
+
+Here is one way to model browser history as a stack and waiting work as a queue.
 
 ```javascript
 const history = [];
@@ -15,6 +17,6 @@ details
 request 1
 ```
 
-Browser history behaves like a stack because the most recent page is the first one we leave. Waiting requests behave like a queue because the oldest request should be handled first.
+Browser history behaves like a stack because the most recent page is the first one we leave. Waiting requests behave like a queue because the oldest request should be handled first. The same array methods produce different behavior because the data structure is defined by the add-and-remove contract we choose.
 
 ---

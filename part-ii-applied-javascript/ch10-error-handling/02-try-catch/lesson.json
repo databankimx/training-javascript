@@ -1,0 +1,10 @@
+{
+  "title": "try, catch, and finally",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Catch a thrown error and run cleanup code",
+  "input": "",
+  "expected": "The error is reported and cleanup runs afterward.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-error-handling/01-failures"],
+  "verify": ["Could not read settings", "Cleanup complete"]
+}

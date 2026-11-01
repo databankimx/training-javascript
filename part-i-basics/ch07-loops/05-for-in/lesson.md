@@ -1,6 +1,6 @@
 # `for...in` and object properties
 
-`for...in` visits the enumerable property names of an object. That makes it useful when the names themselves are what we need to inspect.
+`for...in` visits the enumerable property names of an object. That makes it useful when the names themselves are what we need to inspect, such as displaying every field in a record or examining configuration settings.
 
 ```javascript
 const person = { name: "Ada", role: "analyst" };
@@ -21,7 +21,9 @@ name Ada
 role analyst
 ```
 
-The loop first receives `name`, then `role`. Bracket notation uses each name to retrieve its matching value.
+The loop first receives `name`, then `role`. Bracket notation uses each name to retrieve its matching value. The property name is data in this example, so dot notation cannot do the job: `person[propertyName]` means “look up the property whose name is stored in this variable.”
+
+This is not the same job as C# `foreach` over a collection's values or Python `for item in items`. `for...in` gives JavaScript object property names. When the values are what you want, use `for...of` for an iterable such as an array. The two keywords look like a matched set, but they answer different questions.
 
 ---
 

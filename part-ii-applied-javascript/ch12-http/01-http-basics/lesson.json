@@ -1,0 +1,10 @@
+{
+  "title": "HTTP requests and responses",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Describe the request and response sides of a web service call",
+  "input": "",
+  "expected": "The example reports a successful response and its status.",
+  "prerequisites": ["part-ii-applied-javascript/ch11-async/04-parallel"],
+  "verify": ["200", "OK"]
+}

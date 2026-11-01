@@ -1,0 +1,12 @@
+{
+  "title": "Homework: print a grid",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Use nested loops to print a rectangular grid",
+  "input": "",
+  "expected": "Print three rows of four symbols.",
+  "prerequisites": ["part-i-basics/ch07-loops/07-nested-loops"],
+  "verify": ["* * * *"]
+}

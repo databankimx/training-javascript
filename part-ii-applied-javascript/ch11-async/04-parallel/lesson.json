@@ -1,0 +1,10 @@
+{
+  "title": "Parallel work with Promise.all",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Wait for several independent promises together",
+  "input": "",
+  "expected": "Both independent results are printed in their promise order.",
+  "prerequisites": ["part-ii-applied-javascript/ch11-async/03-rejections"],
+  "verify": ["settings", "profile"]
+}

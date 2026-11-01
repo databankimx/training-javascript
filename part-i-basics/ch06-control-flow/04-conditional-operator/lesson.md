@@ -1,6 +1,8 @@
 # The conditional operator
 
-Sometimes a decision only needs to choose one value. The conditional operator puts that small choice in one expression. It is useful for a label or a fallback, but a full `if` statement is easier to read when each branch needs several statements.
+Sometimes a decision only needs to choose one value. A label, a short message, or a fallback value can often be selected without writing a whole statement block. The conditional operator puts that small choice in one expression.
+
+It is compact, but compact is not automatically clearer. Use it for a genuinely small choice. A full `if` statement is easier to read when each branch needs several statements or when the decision deserves room to explain itself.
 
 ```javascript
 const age = 21;
@@ -22,7 +24,9 @@ Adult
 Hello, guest
 ```
 
-The first expression chooses `Adult` because 21 is at least 18. The second expression chooses the guest greeting because an empty string is falsy.
+The first expression chooses `Adult` because 21 is at least 18. The second expression chooses the guest greeting because an empty string is falsy. Each expression produces one value, which is why we can assign the result directly to a `const` binding.
+
+Read `condition ? whenTrue : whenFalse` aloud as “choose this value when the condition is true, otherwise choose that value.” If you find yourself nesting several conditional operators, stop and consider whether an ordinary `if` statement would be kinder to the next reader.
 
 ---
 

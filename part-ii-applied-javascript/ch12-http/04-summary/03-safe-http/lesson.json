@@ -1,0 +1,12 @@
+{
+  "title": "Homework: safe HTTP wrapper",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 45,
+  "objective": "Wrap response validation and JSON parsing in a reusable async function",
+  "input": "",
+  "expected": "Return data for a successful response and a message for failure.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-http/02-fetch"],
+  "verify": ["Ada", "Request failed"]
+}

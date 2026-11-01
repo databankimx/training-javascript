@@ -1,4 +1,6 @@
-# Floating-point error and rounding strategy - exercise solution
+# Exercise solution
+
+Here is one way to compare the calculated value with a tolerance and keep the money example in whole cents.
 
 ```javascript
 const total = 0.1 + 0.2;
@@ -18,6 +20,6 @@ true
 22.49
 ```
 
-The decimal calculation is approximate, so the comparison uses a tolerance. The money example stores whole cents during arithmetic and converts to a two-decimal display only at the end.
+The decimal calculation is approximate, so the comparison uses a tolerance. `Math.abs()` turns the difference into a positive distance before we compare it with `Number.EPSILON`. The money example stores whole cents during arithmetic and converts to a two-decimal display only at the end.
 
 ---

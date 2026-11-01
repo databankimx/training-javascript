@@ -2,6 +2,8 @@
 
 There are several related forms of conditional control flow. We will build them one at a time, because putting every variation into one giant example is a fine way to make a beginner wonder whether the computer is being deliberately difficult.
 
+The central question is whether the choices are mutually exclusive. If exactly one outcome should happen, an `if` / `else if` chain is a good fit. If several independent facts need checking, use separate `if` statements instead. Those two shapes look similar, but they describe different decisions.
+
 ## `if` and `else`: two alternatives
 
 Use `else` when exactly one of two outcomes should happen.
@@ -46,6 +48,8 @@ Pass
 
 The score is not at least 90, so the first branch is skipped. It is at least 60, so the second branch runs. There is no final `else`, so a score below 60 produces no output. That is useful when the program has no fallback action to take.
 
+Notice that this is still one decision. Once a branch runs, JavaScript leaves the chain. It does not keep checking later branches just in case they also happen to be true.
+
 ---
 
 ## Multiple `else if` branches
@@ -71,6 +75,8 @@ B
 ```
 
 The score is not at least 90, but it is at least 80, so `B` prints and the remaining branches are ignored. The order matters. If the `score >= 70` branch came first, every score of 70 or higher would stop there, including scores that should receive an A or B.
+
+This top-to-bottom order is why range checks normally start with the highest boundary. The code is not sorting the tests for us. We have to give it the order that matches the policy.
 
 ---
 
@@ -123,6 +129,8 @@ true
 ```
 
 The two checks answer different questions. At age 42, `senior` remains false, while `adult` becomes true. These checks should not be written as one `if` / `else if` chain. An `else if` chain would stop after the first true branch and prevent later independent checks from updating their results.
+
+For a 70-year-old, both flags would become true. That is exactly what we want: being a senior does not stop the person from also being an adult. The code is expressing two facts, not choosing one label.
 
 ---
 

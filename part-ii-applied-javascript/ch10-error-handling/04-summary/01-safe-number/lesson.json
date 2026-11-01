@@ -1,0 +1,12 @@
+{
+  "title": "Homework: safe number conversion",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Convert input and report invalid numeric values",
+  "input": "",
+  "expected": "Print a number for valid text and an error message for invalid text.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-error-handling/01-failures"],
+  "verify": ["42", "Not a number"]
+}

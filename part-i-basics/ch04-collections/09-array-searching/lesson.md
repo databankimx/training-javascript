@@ -1,6 +1,6 @@
 # Searching and testing arrays
 
-After we have a collection, we often need to ask it questions. Is a value present? Where is it? Which item is the first match? Do any or all of the items meet a condition? JavaScript has a method for each question, because apparently one method would have been too relaxing.
+After we have a collection, we often need to ask it questions. Is a value present? Where is it? Which item is the first match? Do any or all of the items meet a condition? These are the questions behind filtering a user list, checking permissions, and validating imported data. JavaScript has a method for each question, because apparently one method would have been too relaxing.
 
 ```javascript
 const names = ["Ada", "Grace", "Linus"];
@@ -28,13 +28,35 @@ true
 false
 ```
 
+Here is a brief explanation of the search methods in the example:
+
 | Method | Purpose | Output here |
 | --- | --- | --- |
 | `includes()` | Check membership | `true` |
 | `indexOf()` | Find a position | `1` |
 | `find()` | Return the first matching value | `Grace` |
+| `findLast()` | Return the last matching value | The last match |
+| `filter()` | Return every matching value | A new array |
 | `some()` | Test whether any item matches | `true` |
 | `every()` | Test whether all items match | `false` |
+
+JavaScript does not provide a `findAll()` method for arrays. When we want every matching item, `filter()` provides the equivalent behavior:
+
+```javascript
+const scores = [62, 88, 91, 88];
+
+console.log(scores.find(score => score === 88));
+console.log(scores.filter(score => score === 88));
+```
+
+```text
+88
+[ 88, 88 ]
+```
+
+`find()` stops at the first match and returns one value. `filter()` checks the whole array and returns a new array containing every match. If nothing matches, `find()` returns `undefined`, while `filter()` returns an empty array.
+
+`findLast()` is the matching counterpart when the most recent match is the one we need. It searches from the end of the array and returns one value, or `undefined` when no item passes the test. It is a modern method, so older code may use a reversed copy or a manual loop instead.
 
 The callback in the example is an arrow function. Each method supplies an item to that callback, and the callback supplies the test result. We will study functions and callbacks in much greater detail later.
 

@@ -13,6 +13,6 @@ name Ada
 role analyst
 ```
 
-The loop variable contains each property name, and bracket notation retrieves the matching value.
+The loop variable contains each property name, and bracket notation retrieves the matching value. The variable contains a name, not the value itself, which is why bracket notation is the useful partner here.
 
 ---

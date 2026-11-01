@@ -1,6 +1,6 @@
 # Arrays
 
-When several values belong together, an array gives us one name for the collection and a position for each item. JavaScript arrays are ordered, start counting at zero, and can grow or shrink as the program runs.
+When several values belong together, an array gives us one name for the collection and a position for each item. We use arrays for search results, line items, names returned by a service, and the rows waiting to be displayed on a page. JavaScript arrays are ordered, start counting at zero, and can grow or shrink as the program runs.
 
 ```javascript
 const names = ["Ada", "Grace", "Linus"];
@@ -22,6 +22,8 @@ Ada
 3
 [ 'Ada', 'Grace', 'Linus', 'Margaret' ]
 ```
+
+Here is a quick explanation of the expressions in the example:
 
 | Expression | Purpose | Output here |
 | --- | --- | --- |

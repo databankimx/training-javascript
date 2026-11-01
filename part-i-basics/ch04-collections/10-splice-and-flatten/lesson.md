@@ -1,6 +1,6 @@
 # Splicing and flattening arrays
 
-Sometimes we need to insert or remove an item in the middle of an array. `splice()` does that by changing the original array. `toSpliced()` is the newer alternative when we want the changed result without mutating the original. `flat()` handles a different problem: removing one level of nesting.
+Sometimes we need to insert or remove an item in the middle of an array, such as removing a cancelled line item from an order. `splice()` does that by changing the original array. `toSpliced()` is the newer alternative when we want the changed result without mutating the original. `flat()` handles a different problem: removing one level of nesting from data assembled in groups.
 
 ```javascript
 const colors = ["red", "green"];
@@ -27,6 +27,8 @@ red,green
 red,blue,green
 1,2,3,4
 ```
+
+Here is the practical comparison:
 
 | Method | Purpose | Changes the original? |
 | --- | --- | --- |

@@ -1,0 +1,10 @@
+{
+  "title": "Return values",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Return a value from a function and use it in another expression",
+  "input": "",
+  "expected": "The returned total is printed by the caller.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/02-parameters"],
+  "verify": ["Total: 7"]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Function scope",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Distinguish local variables from values outside a function",
+  "input": "",
+  "expected": "The function uses its local label and the outer application name.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/03-return-values"],
+  "verify": ["Ada is reviewing JavaScript", "Training app"]
+}

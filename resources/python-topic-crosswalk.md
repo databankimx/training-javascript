@@ -20,7 +20,7 @@ The Python repository was inspected as the structural reference. Topic intent is
 
 JavaScript-specific additions: ch12 covers promises, DOM/events, fetch, readiness, collection differences, and delegation. ch13 teaches HTML/CSS/JS integration and interactive form components. Pair these browser labs with the earlier language lessons during a browser-focused lecture series.
 
-## Guided projects
+## Applied JavaScript
 
 | Python project | JavaScript project | Scope |
 |---|---|---|

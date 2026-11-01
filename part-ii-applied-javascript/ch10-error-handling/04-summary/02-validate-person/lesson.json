@@ -1,0 +1,12 @@
+{
+  "title": "Homework: validate a person",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Throw and catch validation errors for object data",
+  "input": "",
+  "expected": "Valid data is welcomed and invalid data reports a message.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-error-handling/03-throw-validation"],
+  "verify": ["Welcome, Ada", "Age is required"]
+}

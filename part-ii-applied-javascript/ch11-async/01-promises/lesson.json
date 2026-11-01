@@ -1,0 +1,10 @@
+{
+  "title": "Promises and future values",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Create and consume a promise representing future work",
+  "input": "",
+  "expected": "The promise eventually provides the loaded message.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-error-handling/02-try-catch"],
+  "verify": ["Loaded settings"]
+}

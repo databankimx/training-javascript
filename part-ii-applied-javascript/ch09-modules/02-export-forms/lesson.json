@@ -1,0 +1,10 @@
+{
+  "title": "Named and default exports",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Distinguish named exports from a module's default export",
+  "input": "",
+  "expected": "Both imported functions produce the same kind of result.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-modules/01-export-import"],
+  "verify": ["12", "12"]
+}

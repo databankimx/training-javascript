@@ -1,0 +1,12 @@
+{
+  "title": "Homework: safe division",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Return a useful result from a function while handling an invalid input",
+  "input": "",
+  "expected": "Return the quotient for valid division and a message for zero.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/03-return-values"],
+  "verify": ["5", "Cannot divide by zero"]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Homework: compare AJAX styles",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Describe the difference between callback-based XHR and promise-based fetch",
+  "input": "",
+  "expected": "Print one callback result and one promise result.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-http/03-xhr-ajax"],
+  "verify": ["XHR result", "fetch result"]
+}

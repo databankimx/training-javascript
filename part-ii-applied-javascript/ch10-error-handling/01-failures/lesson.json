@@ -1,0 +1,10 @@
+{
+  "title": "Errors and failure paths",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Recognize the difference between an ordinary result and a runtime error",
+  "input": "",
+  "expected": "The program reports a valid result and an invalid result separately.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-modules/03-module-design"],
+  "verify": ["12", "Invalid number"]
+}

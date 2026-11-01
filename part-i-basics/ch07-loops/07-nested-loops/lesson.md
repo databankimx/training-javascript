@@ -1,6 +1,6 @@
 # Nested loops
 
-A nested loop is a loop inside another loop. For every pass of the outer loop, the inner loop runs through all of its passes. This is useful for grids, tables, and nested arrays.
+A nested loop is a loop inside another loop. For every pass of the outer loop, the inner loop runs through all of its passes. This is useful for grids, tables, and nested arrays, where one dimension naturally contains another.
 
 ```javascript
 const rows = 2;
@@ -28,7 +28,9 @@ row 2, column 3
 
 The inner loop finishes all three columns for row 1 before the outer loop advances to row 2. Nested loops multiply the work: two loops that each grow with the input can turn a task into roughly rows multiplied by columns. That may be exactly what a grid requires, but it can become expensive quickly. Before nesting loops, ask whether the data really has two dimensions or whether a single pass, a lookup, or a later array method would solve the problem more directly.
 
-For a small grid, the cost is trivial. For thousands of rows and thousands of columns, the inner loop may run millions of times. The point is not to fear nested loops. It is to recognize the cost and choose the structure deliberately.
+## The cost of nesting
+
+For a small grid, the cost is trivial. For thousands of rows and thousands of columns, the inner loop may run millions of times. The point is not to fear nested loops. It is to recognize the cost and choose the structure deliberately. A data structure with two dimensions may justify the work; a data structure that only looks complicated may not.
 
 ---
 

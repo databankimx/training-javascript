@@ -1,0 +1,12 @@
+{
+  "title": "Homework: debug a form",
+  "section": "Chapter summary · Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 45,
+  "objective": "Add a visible debug channel to a form interaction",
+  "input": "",
+  "expected": "Form diagnostics appear on the page and in the console.",
+  "prerequisites": ["part-ii-applied-javascript/ch14-forms/01-debug-channel"],
+  "verify": []
+}

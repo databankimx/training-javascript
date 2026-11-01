@@ -1,0 +1,10 @@
+{
+  "title": "XSS: the fixed pattern",
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Display untrusted input as text instead of executable markup",
+  "input": "",
+  "expected": "The demo displays angle brackets as ordinary text.",
+  "prerequisites": ["part-ii-applied-javascript/ch14-forms/04-xss-vulnerable"],
+  "verify": []
+}

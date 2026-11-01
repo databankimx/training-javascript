@@ -1,0 +1,10 @@
+{
+  "title": "Arithmetic operators",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use JavaScript arithmetic operators and explain their results",
+  "input": "",
+  "expected": "The example prints arithmetic results and a remainder.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/01-values"],
+  "verify": ["17", "9", "52", "3.25", "1", "169", "21"]
+}

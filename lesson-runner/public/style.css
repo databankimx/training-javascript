@@ -37,6 +37,16 @@ article { max-height: calc(100vh - 240px); }
 #source { height: 420px; }
 .runbar { background: #202020; }
 #output { flex: 1; min-height: 130px; }
+#console-label { padding: 9px 15px 5px; color: var(--muted); background: var(--panel); border-top: 1px solid var(--line); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+#preview { order: 4; }
+#console-label, #output { order: 3; }
+.lab[data-runtime="browser"] #preview { height: 360px; margin-top: 8px; border-top: 1px solid var(--line); }
+.lab[data-runtime="browser"] #output { min-height: 130px; max-height: 190px; flex: 0 0 150px; }
+#input-form { order: 5; }
+.lab[data-runtime="browser"] { height: calc(100vh - 210px); min-height: 520px; }
+.lab[data-runtime="browser"] .code-editor { flex: 0 0 clamp(150px, 22vh, 260px); height: clamp(150px, 22vh, 260px); min-height: 150px; }
+.lab[data-runtime="browser"] #output { flex: 0 0 clamp(100px, 12vh, 150px); height: clamp(100px, 12vh, 150px); max-height: none; }
+.lab[data-runtime="browser"] #preview { display: block; flex: 1 1 auto; height: auto; min-height: 260px; background: #fff; }
 footer { color: #898989; }
 @media (max-width: 1050px) { body { grid-template-columns: 300px 1fr; } aside { width: 300px; } .workspace { grid-template-columns: 1fr; } }
 
@@ -85,10 +95,16 @@ body.light article code:not([class]) { color: #795e26; background: #e8e8e8; }
 #file:not([hidden]) + #filename { display: none; }
 #catalog details details summary { padding-left: 34px; }
 #catalog details details button { padding-left: 48px; }
+#catalog details details.homework-menu { margin: 0; }
+#catalog details details.homework-menu > summary { padding-left: 48px; color: var(--muted); }
+#catalog details details.homework-menu button { padding-left: 64px; }
 body.light .steps-heading { border-top-color: #d8d8d8; color: var(--muted); }
 body.light nav button { color: var(--fg); }
 body.light nav button.active { color: #fff; }
 #steps .step-group { padding: 12px 16px 6px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+#runner-toast { position: fixed; right: 24px; bottom: 24px; z-index: 20; padding: 9px 16px; border-radius: 5px; background: #087dcc; color: #fff; font-weight: 700; opacity: 0; transform: translateY(6px); pointer-events: none; }
+#runner-toast.show { animation: runner-toast-fade 1.8s ease forwards; }
+@keyframes runner-toast-fade { 0%, 12% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(6px); } }
 .spoiler { padding: 28px; background: var(--panel); border: 1px solid var(--line); margin: 0; }
 .spoiler p { max-width: 58rem; }
 .spoiler-reading { padding: 1rem; border-left: 3px solid var(--accent); background: var(--panel); }

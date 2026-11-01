@@ -1,0 +1,12 @@
+{
+  "title": "Homework: load independent data",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Use Promise.all for independent asynchronous operations",
+  "input": "",
+  "expected": "Both independent values are printed.",
+  "prerequisites": ["part-ii-applied-javascript/ch11-async/04-parallel"],
+  "verify": ["settings", "notifications"]
+}

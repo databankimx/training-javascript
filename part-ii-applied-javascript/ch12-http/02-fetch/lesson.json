@@ -1,0 +1,10 @@
+{
+  "title": "Fetching data",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use fetch-style promise handling to consume a response",
+  "input": "",
+  "expected": "The fetched response is printed after status validation.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-http/01-http-basics"],
+  "verify": ["Ada"]
+}

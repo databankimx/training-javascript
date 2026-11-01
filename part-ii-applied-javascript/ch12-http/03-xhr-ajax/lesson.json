@@ -1,0 +1,10 @@
+{
+  "title": "Legacy AJAX with XMLHttpRequest",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Recognize the older callback-based XMLHttpRequest pattern",
+  "input": "",
+  "expected": "The callback receives the legacy response.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-http/02-fetch"],
+  "verify": ["Legacy response"]
+}

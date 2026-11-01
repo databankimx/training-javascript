@@ -1,0 +1,10 @@
+{
+  "title": "Selecting elements and safe text",
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "Select DOM elements and update text without creating HTML",
+  "input": "",
+  "expected": "Open the preview and see the safe text update.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-browser/01-readiness"],
+  "verify": []
+}

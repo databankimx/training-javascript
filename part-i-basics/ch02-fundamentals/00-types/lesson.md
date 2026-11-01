@@ -29,6 +29,8 @@ number
 boolean
 ```
 
+Now that we have seen JavaScript name the three values, we can connect those labels to the values themselves. The type is not a comment we added for decoration. It affects which operations make sense and how JavaScript will interpret the value when we use it.
+
 ## What the types mean
 
 The types returned make sense when we consider what the variables actually hold.
@@ -48,15 +50,19 @@ We control data type when we assign a value to a variable.
 * Any value that is either `true` or `false` is treated as a `boolean`.
     * e.g.: `let b = true;`
 
+The quotes are important. `"42"` is text, while `42` is a number. They may look similar on the page, but JavaScript stores and uses them differently. A surprising amount of beginner confusion begins when those two values are treated as interchangeable.
+
 ## Types can change
 
-We can change the data type of a variable by assigning it a new value of a different type. For example:
+JavaScript does not permanently attach one type to a variable declaration. We can change the data type of a `let` binding by assigning it a new value of a different type. For example:
 
 ```javascript
 let value = "Hello"; // string
 value = 42;          // now a number
 value = true;        // now a boolean
 ```
+
+That flexibility is useful, but it also means we need to pay attention to what a value is before we operate on it. The next lesson begins with a common case: input that looks numeric but arrives as a string.
 
 ---
 

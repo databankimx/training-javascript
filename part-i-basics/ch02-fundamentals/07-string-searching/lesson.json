@@ -1,0 +1,10 @@
+{
+  "title": "String searching and transformation",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Search, split, trim, replace, and repeat strings",
+  "input": "",
+  "expected": "The output demonstrates common string searches and transformations.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/06-string-inspection"],
+  "verify": ["true", "blue blue", "hahaha"]
+}

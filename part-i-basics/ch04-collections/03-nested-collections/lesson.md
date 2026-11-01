@@ -1,6 +1,6 @@
 # Nested arrays
 
-An array can contain other arrays. This is useful for rows and columns, groups of related values, or any data that naturally has another level. We have not introduced objects yet, so we will keep the example to arrays and positions.
+An array can contain other arrays. This is useful for rows and columns, groups of related values, spreadsheet-like data, or any data that naturally has another level. We have not introduced objects yet, so we will keep the example to arrays and positions.
 
 ```javascript
 const groups = [
@@ -28,7 +28,7 @@ Linus
 changed
 ```
 
-The spread operator protects the outer array, but `copy[0]` and `groups[0]` still refer to the same inner array. That is why pushing into `copy[0]` changes what we see through `groups[0]`. To make independent nested data, copy each inner array as well.
+The spread operator protects the outer array, but `copy[0]` and `groups[0]` still refer to the same inner array. That is why pushing into `copy[0]` changes what we see through `groups[0]`. This is the difference between a shallow copy and a deep enough copy for this particular shape. To make independent nested data, copy each inner array as well.
 
 ---
 

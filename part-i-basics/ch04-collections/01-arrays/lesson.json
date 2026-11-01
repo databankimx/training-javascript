@@ -5,6 +5,6 @@
   "objective": "Create, read, and change an ordered collection",
   "input": "",
   "expected": "The output demonstrates indexing, length, and adding an item.",
-  "prerequisites": ["part-i-basics/ch03-numbers/08-summary/03-base-converter"],
+  "prerequisites": ["part-i-basics/ch03-numbers/08-homework/03-base-converter"],
   "verify": ["Ada", "3", "Margaret"]
 }

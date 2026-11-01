@@ -1,0 +1,12 @@
+{
+  "title": "Homework: format a message",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Combine parameters, defaults, and a return value",
+  "input": "",
+  "expected": "Return a formatted message for each call.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/05-default-parameters"],
+  "verify": ["Ada has 3 tasks", "Grace has 0 tasks"]
+}

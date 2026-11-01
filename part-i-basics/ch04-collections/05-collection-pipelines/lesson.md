@@ -1,6 +1,6 @@
 # Collection pipelines
 
-Once a collection is familiar, we often want to describe what should happen to it: keep the passing scores, change each remaining score, add them up, or sort them. These methods make that intent visible without hiding the code inside a mystery loop.
+Once a collection is familiar, we often want to describe what should happen to it: keep the passing scores, change each remaining score, add them up, or sort them. These are the same steps behind filtering search results, transforming API data for a table, and calculating a report total. The methods make that intent visible without hiding the code inside a mystery loop.
 
 ```javascript
 const scores = [10, 2, 8, 4];
@@ -32,6 +32,8 @@ console.log(scores.toSorted((a, b) => a - b).join(","));
 ```
 
 The pipeline reads from left to right: select the passing scores, transform them for display, combine them for a total, and sort a copy of the original data. The original `scores` array is still available because `toSorted()` does not rearrange it.
+
+The order is part of the meaning. Filtering before reducing changes which scores contribute to the total. Mapping before displaying changes the values readers see. A pipeline is not automatically better than a loop, but it gives each transformation a nameable step when the sequence is straightforward.
 
 ---
 

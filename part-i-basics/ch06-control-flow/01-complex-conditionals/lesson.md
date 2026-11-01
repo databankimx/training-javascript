@@ -1,6 +1,8 @@
 # Complex conditions and evaluation order
 
-Once a condition combines comparisons and logical operators, read it in small pieces. Parentheses establish the group to evaluate first. Then `!` reverses a value, `&&` requires both sides, and `||` accepts either side. JavaScript can also stop early when the final answer is already known.
+Real applications rarely ask one simple yes-or-no question. A page might need to decide whether a signed-in user may open a record, whether an order qualifies for a discount, or whether a form needs review. Those decisions combine smaller questions.
+
+The trick is to read a complex condition in pieces instead of treating it as an inexplicably fuzzy wall of punctuation. Parentheses establish the group to evaluate first. Then `!` reverses a value, `&&` requires both sides, and `||` accepts either side.
 
 ```javascript
 const signedIn = true;
@@ -24,13 +26,19 @@ console.log(status);
 >
 > The conditional operator, `condition ? whenTrue : whenFalse`, chooses one of two values. We will give it its own lesson shortly.
 
+Here is the example. It asks three related questions about the same user:
+
 ```text
 true
 false
 approved
 ```
 
-For `canEnter`, JavaScript first confirms that the user is signed in. Inside the parentheses, either administrator status or adulthood is enough. The parentheses matter because `&&` has higher precedence than `||`. Without them, JavaScript would read the expression as `(signedIn && isAdmin) || age >= 18`, allowing an adult to enter even when they are not signed in. With them, the expression means `signedIn && (isAdmin || age >= 18)`, which requires sign-in and then checks the two possible permissions. For `needsReview`, the first side is false, so JavaScript checks the grouped second condition. The status expression chooses a value rather than running a multi-step block.
+`canEnter` is true because the user is signed in and is an adult, even though they are not an administrator. The parentheses matter because `&&` has higher precedence than `||`. Without them, JavaScript would read the expression as `(signedIn && isAdmin) || age >= 18`, allowing an adult to enter without signing in. With them, the expression means `signedIn && (isAdmin || age >= 18)`, which requires sign-in first.
+
+`needsReview` is false. The user is signed in, so the first part of the `||` expression is false. The grouped second part is false as well because the user is neither under 18 nor an administrator. The `status` expression makes a small two-way choice and gives us a label instead of a boolean.
+
+One practical rule is worth keeping: if a condition takes effort to explain, use parentheses even when JavaScript's precedence rules would produce the same result. The next developer should not have to reconstruct your reasoning from memory, and that next developer may be you after lunch.
 
 ---
 

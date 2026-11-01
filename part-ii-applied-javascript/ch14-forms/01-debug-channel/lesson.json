@@ -1,0 +1,10 @@
+{
+  "title": "A visible debug channel",
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Send diagnostic messages to both the console and the page",
+  "input": "",
+  "expected": "The preview displays the debug message while the console receives it too.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-browser/03-events"],
+  "verify": []
+}

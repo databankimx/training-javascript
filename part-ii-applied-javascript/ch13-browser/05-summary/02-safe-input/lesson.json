@@ -1,0 +1,12 @@
+{
+  "title": "Homework: safe input and XSS",
+  "section": "Chapter summary · Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Recognize an XSS risk and display user input safely",
+  "input": "",
+  "expected": "Display input without interpreting it as HTML.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-browser/02-selection"],
+  "verify": []
+}

@@ -20,6 +20,8 @@ false
 approved
 ```
 
-Parentheses make the grouped choice explicit. Since `&&` has higher precedence than `||`, leaving out the parentheses would produce `(signedIn && isAdmin) || age >= 18`. That would allow an adult to enter without being signed in. The written expression requires sign-in and then accepts either an administrator or an adult. The second expression asks whether the user needs review. The conditional operator selects the status label.
+The parentheses are doing real work here. Since `&&` has higher precedence than `||`, leaving them out would produce `(signedIn && isAdmin) || age >= 18`. That version would allow an adult to enter without being signed in, which is a fairly creative access-control policy.
+
+The written expression requires sign-in first, then accepts either an administrator or an adult. The second expression asks whether the user needs review. The conditional operator makes the small status-label choice without needing another block of control flow.
 
 ---

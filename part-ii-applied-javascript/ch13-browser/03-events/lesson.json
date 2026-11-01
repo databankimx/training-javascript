@@ -1,0 +1,10 @@
+{
+  "title": "Events and event handlers",
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Respond to a browser event with an event listener",
+  "input": "",
+  "expected": "Clicking the button updates the visible count.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-browser/02-selection"],
+  "verify": []
+}

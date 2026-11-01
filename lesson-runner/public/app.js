@@ -14,7 +14,7 @@ const report = error => {
   $('status').textContent = error.message;
 };
 const guarded = fn => (...args) => Promise.resolve().then(() => fn(...args)).catch(report);
-let catalog = [], current = null, selectedPart = null, selectedChapter = null, tab = 'lesson', poll = null, generation = 0, busy = false;
+let catalog = [], current = null, selectedPart = null, selectedChapter = null, showHomework = false, tab = 'lesson', poll = null, generation = 0, busy = false;
 let completed = new Set(), revealed = new Set(), drafts = {}, readingState = {}, viewedLessons = new Set(), theme = '';
 const resumeCookie = 'js-training-last-lesson';
 const getResumeLesson = () => {
@@ -150,23 +150,19 @@ function makeSplitter(id, target, minimum, maximum) {
   });
 }
 document.body.classList.toggle('light', theme === 'light');
-const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-projects': 'Part II · Guided projects', 'part-iii-beyond-the-book': 'Part III · Beyond the book' };
-const chapterLabel = id => id.replace(/^(ch|p|s)(\d+)-/, (_, prefix, number) => `${prefix.toUpperCase()}${number} · `).replaceAll('-', ' ');
+const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-beyond-the-book': 'Part III · Beyond the book' };
+const chapterNames = {
+  'ch13-browser': 'CH13 · JavaScript in HTML',
+  'ch14-forms': 'CH14 · JavaScript in Forms'
+};
+const chapterLabel = id => chapterNames[id] || id.replace(/^(ch|p|s)(\d+)-/, (_, prefix, number) => `${prefix.toUpperCase()}${number} · `).replaceAll('-', ' ');
 const stepLabel = title => title.replace(/^(?:\d+|S\d+|Project\s+\d+(?:\.\d+)?)[\s·.-]+/i, '');
 function renderSteps() {
   $('steps').replaceChildren();
   if (!selectedPart || !selectedChapter) return;
   const lessons = catalog.filter(item => item.chapter === selectedChapter && item.part === selectedPart);
-  let lastSection = null;
-  for (const lesson of lessons) {
-    const section = lesson.section || '';
-    if (section && section !== lastSection) {
-      const heading = document.createElement('div');
-      heading.className = 'step-group';
-      heading.textContent = section;
-      $('steps').append(heading);
-      lastSection = section;
-    }
+  const regularLessons = showHomework ? lessons.filter(lesson => lesson.section) : lessons.filter(lesson => !lesson.section);
+  for (const lesson of regularLessons) {
     const button = document.createElement('button');
     button.textContent = `${completed.has(lesson.id) ? '✓ ' : ''}${stepLabel(lesson.title)}`;
     button.classList.toggle('active', current?.id === lesson.id);
@@ -193,14 +189,30 @@ function navigation() {
       chapterGroup.open = (selectedPart === part && selectedChapter === chapter) || Boolean(query);
       const chapterSummary = document.createElement('summary');
       chapterSummary.textContent = chapterLabel(chapter);
-      chapterSummary.classList.toggle('active', selectedPart === part && selectedChapter === chapter);
+      chapterSummary.classList.toggle('active', selectedPart === part && selectedChapter === chapter && !showHomework);
       chapterSummary.addEventListener('click', () => {
         selectedPart = part;
         selectedChapter = chapter;
+        showHomework = false;
         document.querySelectorAll('#catalog details details > summary').forEach(summary => summary.classList.toggle('active', summary === chapterSummary));
-        renderSteps();
+        navigation();
       });
       chapterGroup.append(chapterSummary);
+      const homework = catalog.filter(item => item.part === part && item.chapter === chapter && item.section);
+      if (homework.length) {
+        const homeworkButton = document.createElement('button');
+        homeworkButton.className = 'homework-link';
+        homeworkButton.textContent = 'Homework';
+        homeworkButton.classList.toggle('active', selectedPart === part && selectedChapter === chapter && showHomework);
+        homeworkButton.onclick = guarded(() => {
+          selectedPart = part;
+          selectedChapter = chapter;
+          showHomework = true;
+          renderSteps();
+          navigation();
+        });
+        chapterGroup.append(homeworkButton);
+      }
       group.append(chapterGroup);
     }
     $('catalog').append(group);
@@ -264,9 +276,10 @@ async function select(id) {
   current = await api(`/api/lesson?id=${encodeURIComponent(id)}`);
   selectedPart = current.part;
   selectedChapter = current.chapter;
+  showHomework = Boolean(current.section);
   document.querySelector('.lab').dataset.runtime = current.runtime;
   $('title').textContent = current.title;
-  $('breadcrumb').textContent = `${partNames[current.part]} · ${current.chapter.replace(/^(ch|p|s)(\d+)-/, '$1$2 · ').replaceAll('-', ' ')}`;
+  $('breadcrumb').textContent = `${partNames[current.part]} · ${chapterLabel(current.chapter).replace(/^CH\d+ · /, '')}`;
   $('meta').textContent = `${current.minutes} minutes · ${current.objective}`;
   $('complete').checked = completed.has(id);
   $('file').replaceChildren();
@@ -304,8 +317,8 @@ async function run() {
     $('status').textContent = 'Running';
     if (current.runtime === 'browser') {
       const html = sourceFor('index.html')
-      .replace(/<script\b(?=[^>]*\btype=["']module["'])(?=[^>]*\bsrc=["']\.\/main\.js["'])[^>]*>\s*<\/script>/gi, '')
-      .replace(/<link\b(?=[^>]*\bhref=["']\.\/style\.css["'])[^>]*>/gi, '');
+      .replace(/<script\b[^>]*\bsrc=["'][^"']*main\.js["'][^>]*>\s*<\/script>/gi, '')
+      .replace(/<link\b[^>]*\bhref=["'][^"']*style\.css["'][^>]*>/gi, '');
       const css = sourceFor('style.css') || '';
       
       
@@ -339,6 +352,9 @@ async function run() {
 }
 window.addEventListener('message', event => {
   if (event.source === $('preview').contentWindow && event.data?.trainingOutput) $('output').textContent = ($('output').textContent + String(event.data.text) + '\n').slice(-200000);
+});
+$('preview').addEventListener('load', () => {
+  try { $('preview').contentWindow.scrollTo(0, 0); } catch { /* sandbox navigation can briefly be unavailable */ }
 });
 $('source').addEventListener('input', () => {
   if (current && !$('source').readOnly) {
@@ -417,6 +433,31 @@ $('input-form').onsubmit = guarded(async event => {
 
 // Prevent default synchronously, including when the API is unavailable.
 $('input-form').addEventListener('submit', event => event.preventDefault());
+document.addEventListener('keydown', event => {
+  if (!(event.ctrlKey && event.altKey && event.shiftKey && event.key === 'Backspace')) return;
+  event.preventDefault();
+  completed.clear();
+  revealed.clear();
+  try {
+    localStorage.setItem('js-training-complete', '[]');
+    localStorage.setItem('js-training-revealed', '[]');
+  } catch {
+    /* Storage can be unavailable. */
+  }
+  if (current) $('complete').checked = false;
+  if (current) updateSpoiler();
+  navigation();
+  let toast = $('runner-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'runner-toast';
+    document.body.append(toast);
+  }
+  toast.textContent = 'Progress reset';
+  toast.classList.remove('show');
+  void toast.offsetWidth;
+  toast.classList.add('show');
+});
 $('theme').onclick = () => {
   document.body.classList.toggle('light');
   try {

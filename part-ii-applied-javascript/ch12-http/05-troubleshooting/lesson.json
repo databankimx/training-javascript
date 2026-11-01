@@ -1,0 +1,10 @@
+{
+  "title": "Troubleshooting web service responses",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use response details and network tools to diagnose web service problems",
+  "input": "",
+  "expected": "The diagnostic helper reports the status and response body.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-http/04-local-service"],
+  "verify": ["Status: 404", "Not found"]
+}

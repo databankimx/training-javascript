@@ -1,0 +1,10 @@
+{
+  "title": "Rejected promises",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Handle an asynchronous failure with try and catch",
+  "input": "",
+  "expected": "The rejected promise is reported without an unhandled failure.",
+  "prerequisites": ["part-ii-applied-javascript/ch11-async/02-async-await"],
+  "verify": ["Could not connect"]
+}

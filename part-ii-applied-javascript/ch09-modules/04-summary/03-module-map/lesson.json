@@ -1,0 +1,12 @@
+{
+  "title": "Homework: module map",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Document the responsibilities and exports of a small program",
+  "input": "",
+  "expected": "Print a short module map.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-modules/03-module-design"],
+  "verify": ["main.js uses reports.js"]
+}

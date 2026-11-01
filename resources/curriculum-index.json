@@ -24,76 +24,83 @@
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
     "step": "01-values",
-    "title": "02 · Values, bindings, and coercion",
+    "title": "Values, bindings, and coercion",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "02-strings",
+    "step": "02-arithmetic-operators",
+    "title": "Arithmetic operators",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch02-fundamentals",
+    "step": "03-strings",
     "title": "Strings: cleaning and case",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "03-template-literals",
+    "step": "04-template-literals",
     "title": "Template literals",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "04-string-methods",
+    "step": "05-string-methods",
     "title": "String methods and formatting",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "05-string-inspection",
+    "step": "06-string-inspection",
     "title": "String inspection and extraction",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "06-string-searching",
+    "step": "07-string-searching",
     "title": "String searching and transformation",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "07-escapes-and-raw-strings",
+    "step": "08-escapes-and-raw-strings",
     "title": "Escapes and raw strings",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "08-objects",
+    "step": "09-objects",
     "title": "Objects and name/value pairs",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "08-summary/01-temperature-converter",
+    "step": "10-homework/01-temperature-converter",
     "title": "Homework: temperature converter",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "08-summary/02-string-report",
+    "step": "10-homework/02-string-report",
     "title": "Homework: string report",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch02-fundamentals",
-    "step": "08-summary/03-message-card",
+    "step": "10-homework/03-message-card",
     "title": "Homework: message card",
     "runtime": "node"
   },
@@ -149,21 +156,21 @@
   {
     "part": "part-i-basics",
     "chapter": "ch03-numbers",
-    "step": "08-summary/01-grade-calculator",
+    "step": "08-homework/01-grade-calculator",
     "title": "Homework: grade calculator",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch03-numbers",
-    "step": "08-summary/02-invoice-rounding",
+    "step": "08-homework/02-invoice-rounding",
     "title": "Homework: invoice rounding",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch03-numbers",
-    "step": "08-summary/03-base-converter",
+    "step": "08-homework/03-base-converter",
     "title": "Homework: base converter",
     "runtime": "node"
   },
@@ -240,21 +247,28 @@
   {
     "part": "part-i-basics",
     "chapter": "ch04-collections",
-    "step": "11-summary/01-shopping-list",
+    "step": "11-slices-and-ranges",
+    "title": "Slices and ranges",
+    "runtime": "node"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch04-collections",
+    "step": "12-homework/01-shopping-list",
     "title": "Homework: shopping list",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch04-collections",
-    "step": "11-summary/02-score-report",
+    "step": "12-homework/02-score-report",
     "title": "Homework: nested score report",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch04-collections",
-    "step": "11-summary/03-prefix-dictionary",
+    "step": "12-homework/03-prefix-dictionary",
     "title": "Homework: prefix dictionary",
     "runtime": "node"
   },
@@ -425,6 +439,342 @@
     "step": "09-summary/03-grid",
     "title": "Homework: print a grid",
     "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "01-basics",
+    "title": "Functions: named actions",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "02-parameters",
+    "title": "Parameters and arguments",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "03-return-values",
+    "title": "Return values",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "04-scope",
+    "title": "Function scope",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "05-default-parameters",
+    "title": "Default parameters",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "06-arrow-functions",
+    "title": "Arrow functions",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "07-callbacks",
+    "title": "Callbacks",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "08-summary/01-format-message",
+    "title": "Homework: format a message",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "08-summary/02-apply-callback",
+    "title": "Homework: apply a callback",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch08-functions",
+    "step": "08-summary/03-safe-divide",
+    "title": "Homework: safe division",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-modules",
+    "step": "01-export-import",
+    "title": "Exporting and importing values",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-modules",
+    "step": "02-export-forms",
+    "title": "Named and default exports",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-modules",
+    "step": "03-module-design",
+    "title": "Designing a small module boundary",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-modules",
+    "step": "04-summary/01-math-module",
+    "title": "Homework: build a math module",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-modules",
+    "step": "04-summary/02-report-module",
+    "title": "Homework: split a report module",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-modules",
+    "step": "04-summary/03-module-map",
+    "title": "Homework: module map",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-error-handling",
+    "step": "01-failures",
+    "title": "Errors and failure paths",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-error-handling",
+    "step": "02-try-catch",
+    "title": "try, catch, and finally",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-error-handling",
+    "step": "03-throw-validation",
+    "title": "Throwing validation errors",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-error-handling",
+    "step": "04-summary/01-safe-number",
+    "title": "Homework: safe number conversion",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-error-handling",
+    "step": "04-summary/02-validate-person",
+    "title": "Homework: validate a person",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-error-handling",
+    "step": "04-summary/03-cleanup",
+    "title": "Homework: guarantee cleanup",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "01-promises",
+    "title": "Promises and future values",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "02-async-await",
+    "title": "async and await",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "03-rejections",
+    "title": "Rejected promises",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "04-parallel",
+    "title": "Parallel work with Promise.all",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "05-summary/01-load-data",
+    "title": "Homework: load data in order",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "05-summary/02-parallel-load",
+    "title": "Homework: load independent data",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch11-async",
+    "step": "05-summary/03-safe-request",
+    "title": "Homework: safe asynchronous request",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "01-http-basics",
+    "title": "HTTP requests and responses",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "02-fetch",
+    "title": "Fetching data",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "03-xhr-ajax",
+    "title": "Legacy AJAX with XMLHttpRequest",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "04-summary/01-fetch-json",
+    "title": "Homework: fetch and parse JSON",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "04-summary/02-xhr-comparison",
+    "title": "Homework: compare AJAX styles",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "04-summary/03-safe-http",
+    "title": "Homework: safe HTTP wrapper",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "04-local-service",
+    "title": "A real local service",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch12-http",
+    "step": "05-troubleshooting",
+    "title": "Troubleshooting web service responses",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-browser",
+    "step": "01-readiness",
+    "title": "JavaScript in an HTML page",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-browser",
+    "step": "02-selection",
+    "title": "Selecting elements and safe text",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-browser",
+    "step": "03-events",
+    "title": "Events and event handlers",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-browser",
+    "step": "04-show-hide",
+    "title": "Show, hide, and update the page",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch14-forms",
+    "step": "01-debug-channel",
+    "title": "A visible debug channel",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-browser",
+    "step": "05-summary/01-counter",
+    "title": "Homework: interactive counter",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-browser",
+    "step": "05-summary/02-safe-input",
+    "title": "Homework: safe input display",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch14-forms",
+    "step": "03-summary/03-debug-form",
+    "title": "Homework: debug a form",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch14-forms",
+    "step": "02-validation-formatting",
+    "title": "Form validation and formatting",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch14-forms",
+    "step": "04-xss-vulnerable",
+    "title": "XSS: the vulnerable pattern",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch14-forms",
+    "step": "05-xss-fixed",
+    "title": "XSS: the fixed pattern",
+    "runtime": "browser"
   },
   {
     "part": "part-i-basics",
@@ -777,63 +1127,63 @@
     "runtime": "node"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p01-making-a-game",
     "step": "01-movement",
     "title": "Project 1.1 · Canvas movement",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p01-making-a-game",
     "step": "02-collisions",
     "title": "Project 1.2 · Bullets and collisions",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p01-making-a-game",
     "step": "03-scoring",
     "title": "Project 1.3 · Scoring and restart",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p02-data-visualization",
     "step": "01-transform",
     "title": "Project 2.1 · Validate and summarize data",
     "runtime": "node"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p02-data-visualization",
     "step": "02-chart",
     "title": "Project 2.2 · Draw a scaled bar chart",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p02-data-visualization",
     "step": "03-filter",
     "title": "Project 2.3 · Interactive filtering",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p03-learning-log",
     "step": "01-model",
     "title": "Project 3.1 · A Learning Log model and view",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p03-learning-log",
     "step": "02-persistence",
     "title": "Project 3.2 · Export and import persistence",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-projects",
+    "part": "part-ii-applied-javascript",
     "chapter": "p03-learning-log",
     "step": "03-deletion",
     "title": "Project 3.3 · Deletion, empty states, and review",

@@ -1,0 +1,14 @@
+{
+  "title": "Strings: cleaning and case",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Clean text and change its letter case",
+  "input": "",
+  "expected": "The output shows the cleaned name in three forms.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/02-arithmetic-operators"],
+  "verify": [
+    "Ada",
+    "ADA",
+    "ada"
+  ]
+}

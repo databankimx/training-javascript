@@ -1,6 +1,6 @@
 import { readdir, readFile, realpath } from 'node:fs/promises';
 import path from 'node:path';
-export const parts = ['part-i-basics', 'part-ii-projects', 'part-iii-beyond-the-book'];
+export const parts = ['part-i-basics', 'part-ii-applied-javascript', 'part-iii-beyond-the-book'];
 export async function discover(root) {
   const lessons = [];
   async function walk(folder) {

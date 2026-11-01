@@ -1,7 +1,7 @@
 let attempts = 0;
 
 do {
-  attempts += 1;
+  attempts++;
   console.log("Prompt shown");
 } while (attempts < 1);
 

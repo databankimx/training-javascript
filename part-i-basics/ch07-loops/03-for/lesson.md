@@ -1,6 +1,6 @@
 # `for` loops
 
-A `for` loop puts the counter setup, stopping condition, and update together. It is a common choice when you know the shape of the repetition before it starts.
+A `for` loop puts the counter setup, stopping condition, and update together. It is a common choice when you know the shape of the repetition before it starts, such as visiting indexes from zero up to the length of an array.
 
 ```javascript
 for (let index = 0; index < 3; index += 1) {
@@ -20,7 +20,7 @@ for (let index = 0; index < 3; index += 1) {
 2
 ```
 
-JavaScript starts at zero, prints 0, updates to 1, and continues until the condition is false. The counter is declared inside the loop, so it is available only there.
+JavaScript starts at zero, prints 0, updates to 1, and continues until the condition is false. The counter is declared inside the loop, so it is available only there. Keeping the three moving parts together makes the loop easier to inspect than scattering initialization and updates across unrelated lines.
 
 ---
 

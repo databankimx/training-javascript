@@ -1,0 +1,12 @@
+{
+  "title": "Homework: access check",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Combine strict comparisons, truthiness, and logical operators",
+  "input": "",
+  "expected": "Report whether a user can access an administrator page.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/05-missing-values"],
+  "verify": ["Access granted", "true"]
+}

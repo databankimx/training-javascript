@@ -1,6 +1,6 @@
 # Stacks and queues
 
-Arrays can model several familiar data structures if we choose the operations carefully. A stack removes the newest item first. A queue removes the oldest item first. The computer will not stop us from mixing the rules, so the names are a useful reminder of the contract we intend to keep.
+Arrays can model several familiar data structures if we choose the operations carefully. Browser history, undo actions, print jobs, and web requests all have an order in which items should be removed. A stack removes the newest item first. A queue removes the oldest item first. The computer will not stop us from mixing the rules, so the names are a useful reminder of the contract we intend to keep.
 
 ```javascript
 const stack = [];
@@ -31,6 +31,8 @@ first
 second
 third
 ```
+
+Here is the contract for each structure:
 
 | Structure | Add | Remove | First item removed |
 | --- | --- | --- | --- |

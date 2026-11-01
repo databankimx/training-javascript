@@ -1,0 +1,12 @@
+{
+  "title": "Homework: load data in order",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Await dependent asynchronous operations in sequence",
+  "input": "",
+  "expected": "The second result uses the first result.",
+  "prerequisites": ["part-ii-applied-javascript/ch11-async/02-async-await"],
+  "verify": ["user: Ada", "tasks for Ada"]
+}

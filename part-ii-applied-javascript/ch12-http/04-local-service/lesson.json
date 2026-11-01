@@ -1,0 +1,10 @@
+{
+  "title": "A real local service",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Start a local HTTP service and consume it with fetch",
+  "input": "",
+  "expected": "The real local service returns and the client prints its JSON data.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-http/02-fetch"],
+  "verify": ["Ada", "3"]
+}

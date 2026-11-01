@@ -1,4 +1,6 @@
-# Collection pipelines - exercise solution
+# Exercise solution
+
+Here is one reasonable pipeline for calculating an average without dividing by zero when no score passes.
 
 ```javascript
 const scores = [10, 2, 8, 4];
@@ -15,6 +17,6 @@ console.log(scores.toSorted((a, b) => a - b).join(","));
 2,4,8,10
 ```
 
-The empty-collection check happens before division, so the average has a defined result even when no item passes. `toSorted()` creates a separate ordered result.
+The empty-collection check happens before division, so the average has a defined result even when no item passes. `toSorted()` creates a separate ordered result. The original scores remain available for any later report that needs their original order.
 
 ---

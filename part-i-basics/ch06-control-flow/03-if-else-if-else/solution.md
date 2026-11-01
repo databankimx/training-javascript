@@ -16,7 +16,7 @@ if (signedIn) {
 Access denied
 ```
 
-The two branches provide a complete choice.
+The two branches provide a complete choice. Because `signedIn` is false, the first block is skipped and the `else` block supplies the other outcome.
 
 ### One `else if`
 
@@ -34,7 +34,7 @@ if (score >= 90) {
 Pass
 ```
 
-The missing final `else` is intentional. Scores below 60 have no action in this example.
+The missing final `else` is intentional. Scores below 60 have no action in this example, so the program simply reaches the end of the chain.
 
 ### Multiple `else if` branches
 
@@ -56,7 +56,7 @@ if (score >= 90) {
 B
 ```
 
-The first matching branch wins, so the order of the thresholds matters.
+The first matching branch wins, so the order of the thresholds matters. Starting with the highest boundary keeps a score from being captured by a broader, lower range too early.
 
 ### Optional final `else`
 
@@ -74,7 +74,7 @@ if (orderTotal >= 100) {
 Discount applied
 ```
 
-This chain handles two ranges and intentionally has no final fallback. Smaller orders produce no output.
+This chain handles two ranges and intentionally has no final fallback. Smaller orders produce no output because there is no work to do for them in this particular example. That is a policy choice, not a JavaScript requirement.
 
 ### Independent checks
 
@@ -100,6 +100,6 @@ false
 true
 ```
 
-These are separate facts, so separate `if` statements can update both flags. For a senior adult, both flags would become true.
+These are separate facts, so separate `if` statements can update both flags. For a senior adult, both flags would become true. An `else if` chain would be the wrong tool because it would treat the facts as competing alternatives.
 
 ---

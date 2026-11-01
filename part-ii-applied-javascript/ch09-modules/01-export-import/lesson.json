@@ -1,0 +1,10 @@
+{
+  "title": "Exporting and importing values",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Split reusable code into ES modules",
+  "input": "",
+  "expected": "The imported function returns a greeting.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/07-callbacks"],
+  "verify": ["Hello, Ada"]
+}

@@ -20,6 +20,6 @@ row 2, column 2
 row 2, column 3
 ```
 
-The inner loop completes all columns for each row before the outer loop advances. The nested structure is appropriate because the data has rows and columns, but its cost grows with both dimensions. That is why we should confirm that the data really needs two passes before using nested loops on a large input.
+The inner loop completes all columns for each row before the outer loop advances. The nested structure is appropriate because the data has rows and columns, but its cost grows with both dimensions. That is why we should confirm that the data really needs two passes before using nested loops on a large input. Nested loops are not free merely because the syntax is tidy.
 
 ---

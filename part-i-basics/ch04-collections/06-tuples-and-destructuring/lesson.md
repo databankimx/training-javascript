@@ -1,6 +1,8 @@
 # Tuples and destructuring
 
-JavaScript does not have a separate tuple type. We use an array as a tuple when its positions have a fixed meaning, such as `[name, score]` or `[x, y]`. That convention can be useful, but it is not enforced by the language. If the positions become mysterious, an object is probably the clearer choice.
+A tuple is a small, ordered collection whose positions have fixed meanings. A two-item tuple such as `[name, score]` or `[x, y]` is understood by agreement: the first position always means one thing, and the second position always means another. This is common when a function returns a small, predictable group of values.
+
+JavaScript does not have a separate tuple type, so we usually represent a tuple with an array. The convention can be useful, but it is not enforced by the language. If the positions become mysterious, an object is probably the clearer choice.
 
 ```javascript
 const entry = ["Ada", 42];

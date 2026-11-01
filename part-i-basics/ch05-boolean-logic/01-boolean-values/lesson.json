@@ -5,6 +5,6 @@
   "objective": "Compare values and work with true and false",
   "input": "",
   "expected": "The output demonstrates comparisons and boolean values.",
-  "prerequisites": ["part-i-basics/ch04-collections/11-summary/03-prefix-dictionary"],
+  "prerequisites": ["part-i-basics/ch04-collections/12-homework/03-prefix-dictionary"],
   "verify": ["true", "false"]
 }

@@ -6,5 +6,5 @@
   "input": "",
   "expected": "The output shows a matching case and the default branch.",
   "prerequisites": ["part-i-basics/ch06-control-flow/04-conditional-operator"],
-  "verify": ["Weekday", "Unknown day"]
+  "verify": ["Weekday", "Weekend", "Unknown day"]
 }

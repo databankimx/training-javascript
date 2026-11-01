@@ -1,6 +1,6 @@
 # The Math library
 
-JavaScript’s built-in `Math` object collects common mathematical operations. We do not import it, and we do not create an instance of it. We call its methods directly, which is pleasantly straightforward for once.
+JavaScript’s built-in `Math` object collects common mathematical operations. We use it for distances, limits, powers, roots, angles, and the small calculations that turn business rules into code. We do not import it, and we do not create an instance of it. We call its methods directly, which is pleasantly straightforward for once.
 
 ```javascript
 const difference = Math.abs(18 - 25);
@@ -21,7 +21,7 @@ console.log(Math.PI.toFixed(2));
 >
 > `Math.min()` and `Math.max()` choose the smallest or largest argument.
 >
-> `Math.pow(base, exponent)` raises a number to a power. The `**` operator is the newer, shorter syntax for the same idea.
+> `Math.pow(base, exponent)` raises a number to a power. The `**` operator was added in ECMAScript 2016 as the newer, shorter syntax for the same idea. You are likely to encounter `Math.pow()` in older code.
 >
 > `Math.sqrt()` returns a square root.
 >
@@ -35,6 +35,8 @@ console.log(Math.PI.toFixed(2));
 5
 3.14
 ```
+
+Here is a brief explanation of the `Math` members in the example:
 
 | Method or property | Purpose | Output here |
 | --- | --- | --- |

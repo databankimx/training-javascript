@@ -1,0 +1,10 @@
+{
+  "title": "Parameters and arguments",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Pass multiple values into a function",
+  "input": "",
+  "expected": "The function uses both supplied values.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/01-basics"],
+  "verify": ["Ada has 3 tasks"]
+}

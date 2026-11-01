@@ -16,6 +16,6 @@ Adult
 Hello, guest
 ```
 
-Each expression chooses one value. The empty display name is falsy, so the greeting uses its alternate value.
+Each expression chooses one value. The empty display name is falsy, so the greeting uses its alternate value. This is a good size for the conditional operator. If either branch grew into several lines, the same decision would be easier to follow as an `if` statement.
 
 ---

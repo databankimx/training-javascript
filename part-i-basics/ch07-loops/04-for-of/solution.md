@@ -14,6 +14,6 @@ green
 blue
 ```
 
-`for...of` visits each array value in order and places it in `color`.
+`for...of` visits each array value in order and places it in `color`. If the index becomes important later, switch to a loop form that makes that need visible.
 
 ---

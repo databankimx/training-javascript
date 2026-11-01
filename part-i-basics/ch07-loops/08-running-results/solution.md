@@ -21,6 +21,6 @@ Total: 22
 Passing: 8, 7
 ```
 
-`total` accumulates every score, while `passing` collects only values that meet the condition.
+`total` accumulates every score, while `passing` collects only values that meet the condition. Starting with zero and an empty array gives the loop sensible results even when the input later changes.
 
 ---

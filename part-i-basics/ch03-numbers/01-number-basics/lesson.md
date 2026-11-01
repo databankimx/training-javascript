@@ -1,6 +1,6 @@
 # Number values and checks
 
-JavaScript uses one main `number` type for integers and decimal values. That is convenient, but it means we should check what we actually received before doing work with it. Text that looks numeric is still text until we convert it.
+JavaScript uses one main `number` type for integers and decimal values. That is convenient, but it means we should check what we actually received before doing work with it. A form field, query-string value, or imported spreadsheet cell may look numeric while still being text. Text that looks numeric is still text until we convert it.
 
 ```javascript
 const whole = 42;
@@ -22,6 +22,8 @@ true
 true
 ```
 
+Here is a brief explanation of the checks in the example:
+
 | Method | Purpose | Output here |
 | --- | --- | --- |
 | `typeof` | Identify the value’s JavaScript type | `number` |
@@ -29,7 +31,7 @@ true
 | `Number.isFinite()` | Check for an ordinary finite number | `true` |
 | `Number.isNaN()` | Check for the failed-conversion value `NaN` | `true` |
 
-`Number.isInteger()` answers whether a value is a whole number. `Number.isFinite()` rejects `Infinity`, `-Infinity`, and `NaN`, which is useful when a calculation must produce an ordinary usable number. `Number.isNaN()` checks specifically for the failed-conversion result `NaN`.
+The methods are related, but they answer different questions. Choose the check that matches what the next line of code needs to know: whole number, usable finite number, or failed conversion.
 
 > `NaN` means “Not a Number,” although JavaScript stores it using the `number` type. Naming things is not always the language’s strongest feature.
 >
