@@ -1,0 +1,2 @@
+{"title":"Masks and permission flags","runtime":"node","minutes":35,"objective":"Combine and test named flags with masks.","input":"","expected":"The example combines and tests read, write, and execute permissions.","verify":["Initial: 3","Can read: true","Can execute: false"],"order":5}
+

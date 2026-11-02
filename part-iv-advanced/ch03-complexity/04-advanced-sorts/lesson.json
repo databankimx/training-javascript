@@ -1,0 +1,11 @@
+{
+  "title": "Quicksort, merge sort, heap sort, and shell sort",
+  "order": 4,
+  "runtime": "node",
+  "minutes": 50,
+  "objective": "Compare common O(n log n) sorting strategies and their tradeoffs.",
+  "input": "",
+  "expected": "Each algorithm produces a sorted copy of the same 1,000 values.",
+  "verify": ["Quicksort: 1000 values", "Merge sort: 1000 values", "Heap sort: 1000 values", "Shell sort: 1000 values"],
+  "visualizerAlgorithm": "quick-sort"
+}

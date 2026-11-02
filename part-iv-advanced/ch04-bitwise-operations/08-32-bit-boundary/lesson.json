@@ -1,0 +1,2 @@
+{"title":"The 32-bit boundary","runtime":"node","minutes":30,"objective":"Recognize the 32-bit conversion used by Number bitwise operators.","input":"","expected":"The ordinary Number survives, while the bitwise conversion wraps it.","verify":["ordinary: 4294967296","bitwise: 0"],"order":8}
+

@@ -24,7 +24,11 @@ export class Jobs {
     const job = { id: randomUUID(), child, folder, output: '', done: false, code: null };
     this.current = job;
     const append = chunk => {
-      job.output = (job.output + chunk).slice(-200000);
+      const clearMarker = '\u000c';
+      const text = String(chunk);
+      const lastClear = text.lastIndexOf(clearMarker);
+      if (lastClear >= 0) job.output = '';
+      job.output = (job.output + (lastClear >= 0 ? text.slice(lastClear + 1) : text)).slice(-200000);
     };
     child.stdout.setEncoding('utf8');
     child.stderr.setEncoding('utf8');

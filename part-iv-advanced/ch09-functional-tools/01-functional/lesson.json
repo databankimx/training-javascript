@@ -1,0 +1,14 @@
+{
+  "title": "Function composition and memoization",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "S27 · Function composition and memoization",
+  "input": "",
+  "expected": "Expect HELLO and 25 25 1.",
+  "prerequisites": [],
+  "verify": [
+    "HELLO",
+    "25 25 1"
+  ],
+  "order": 9
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Bits, binary, and bit positions",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Read binary values and identify individual bit positions.",
+  "input": "",
+  "expected": "The example displays a number and several individual bit positions in binary.",
+  "prerequisites": [],
+  "verify": [
+    "1011",
+    "0001",
+    "0010"
+  ],
+  "order": 1
+}

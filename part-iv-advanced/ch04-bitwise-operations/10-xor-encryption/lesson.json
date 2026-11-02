@@ -1,0 +1,11 @@
+{
+  "title": "XOR as a simple encryption idea",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use XOR to encode and decode a small message, and explain why this is not secure encryption.",
+  "input": "",
+  "expected": "The encoded bytes can be XORed with the same key to recover the original message.",
+  "verify": ["encoded:", "decoded: HELLO"],
+  "order": 10
+}
+

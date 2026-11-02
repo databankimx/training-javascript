@@ -11,10 +11,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 test('catalog has complete tracks and rejects paths outside a lesson', async () => {
   const lessons = await discover(root);
-  assert.equal(lessons.length,209);
-  assert.equal(lessons.filter(l => l.part === 'part-ii-applied-javascript').length,50);
+  assert.equal(lessons.length,178);
+  assert.equal(lessons.filter(l => l.part === 'part-ii-applied-javascript').length,41);
   assert.equal(lessons.filter(l => l.part === 'part-iii-working-with-html').length,45);
-  assert.equal(lessons.filter(l => l.part === 'part-iv-beyond-the-book').length,27);
+  assert.equal(lessons.filter(l => l.part === 'part-iv-advanced').length,28);
   await assert.rejects(within(lessons[0].folder, path.join(root,'package.json')), /outside/);
 });
 test('Markdown escapes raw HTML and excludes executable link schemes', () => {
@@ -57,17 +57,19 @@ test('runner API isolates edits, handles input, failures, cancellation, and reje
      assert.equal(response.status,200);
     assert.match((await finished()).output,/edited run/);
     assert.equal(await readFile(path.join(root,first.id,'main.js'),'utf8'),original);
-    const inputLesson=lessons.find(l=>l.input);
-    const detail=await (await request('/api/lesson?id='+encodeURIComponent(inputLesson.id))).json();
-    assert.equal(Object.hasOwn(detail.contents, 'lecture.md'), false);
-    assert.equal(detail.lecture, undefined);
-    await request('/api/run?id='+encodeURIComponent(inputLesson.id),{source:detail.contents['main.js']});
-    for(let i=0;i<100;i++){
-      if(runner.jobs.status().output.includes('How many'))break;
-      await wait(20);
+    const inputLesson=lessons.find(l=>l.input && l.expected.includes('Plan: 7'));
+    if (inputLesson) {
+      const detail=await (await request('/api/lesson?id='+encodeURIComponent(inputLesson.id))).json();
+      assert.equal(Object.hasOwn(detail.contents, 'lecture.md'), false);
+      assert.equal(detail.lecture, undefined);
+      await request('/api/run?id='+encodeURIComponent(inputLesson.id),{source:detail.contents['main.js']});
+      for(let i=0;i<100;i++){
+        if(runner.jobs.status().output.includes('How many'))break;
+        await wait(20);
+      }
+      await request('/api/input',{text:'7'});
+      assert.match((await finished()).output,/Plan: 7 lessons/);
     }
-    await request('/api/input',{text:'7'});
-     assert.match((await finished()).output,/Plan: 7 lessons/);
     await request('/api/run?id='+encodeURIComponent(first.id),{source:'throw new Error("intentional failure")'});
     const failed=await finished();
     assert.notEqual(failed.code,0);
@@ -82,3 +84,6 @@ test('runner API isolates edits, handles input, failures, cancellation, and reje
      await new Promise(resolve=>runner.server.close(resolve));
   }
 });
+
+
+

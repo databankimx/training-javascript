@@ -1,0 +1,10 @@
+{
+  "title": "Shift operators",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use left and right shifts, and explain sign-bit behavior, overflow, and underflow.",
+  "input": "",
+  "expected": "The shifts demonstrate ordinary movement, sign-bit behavior, overflow, and underflow.",
+  "verify": ["left once: 4", "sign bit: -2147483648", "underflow: 0"],
+  "order": 2
+}

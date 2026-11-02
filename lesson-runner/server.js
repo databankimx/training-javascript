@@ -48,6 +48,25 @@ export async function createRunner(repo = root) {
         const vendorFile = await within(vendorRoot, decodeURIComponent(url.pathname.slice('/vendor/highlight/'.length)));
         return send(200, await readFile(vendorFile, 'utf8'), types[path.extname(vendorFile)] || 'text/javascript; charset=utf-8');
       }
+      if (url.pathname === '/api/lesson-file' && req.method === 'GET') {
+        if (url.searchParams.get('token') !== token) return send(403, { error: 'Invalid session token' });
+        const fileLesson = lessons.find(item => item.id === url.searchParams.get('id'));
+        if (!fileLesson) return send(404, { error: 'Lesson not found' });
+        const name = decodeURIComponent(url.searchParams.get('file') || '');
+        const allowed = await filesFor(fileLesson);
+        if (!allowed.includes(name) || name === 'lecture.md') return send(404, { error: 'File not found' });
+        return send(200, await readFile(await within(fileLesson.folder, name), 'utf8'), types[path.extname(name)] || 'text/plain; charset=utf-8');
+      }
+      if (url.pathname.startsWith('/api/lesson-asset/') && req.method === 'GET') {
+        const rawAssetPath = url.pathname.slice('/api/lesson-asset/'.length);
+        const slash = rawAssetPath.indexOf('/');
+        const encodedId = rawAssetPath.slice(0, slash);
+        const decodedId = Buffer.from(encodedId, 'base64url').toString('utf8');
+        const fileLesson = lessons.find(item => item.id === decodedId);
+        const name = decodeURIComponent(rawAssetPath.slice(slash + 1));
+        if (!fileLesson || !(await filesFor(fileLesson)).includes(name)) return send(404, { error: 'File not found' });
+        return send(200, await readFile(await within(fileLesson.folder, name), 'utf8'), types[path.extname(name)] || 'text/plain; charset=utf-8');
+      }
       if (req.headers['x-runner-token'] !== token) return send(403, { error: 'Invalid session token' });
       if (req.headers.origin && req.headers.origin !== `http://${host}`) return send(403, { error: 'Invalid origin' });
       if (req.method === 'GET' && url.pathname === '/api/catalog') return send(200, lessons.map(({ folder, ...item }) => item));

@@ -1,0 +1,10 @@
+{
+  "title": "Recursive factorial",
+  "order": 3,
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Translate a recursive mathematical definition into JavaScript.",
+  "input": "",
+  "expected": "5! = 120\n0! = 1",
+  "verify": ["5! = 120", "0! = 1"]
+}

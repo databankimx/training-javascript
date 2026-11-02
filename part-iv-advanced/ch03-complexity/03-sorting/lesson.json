@@ -1,0 +1,15 @@
+{
+  "title": "Selection, bubble, and insertion sort",
+  "order": 3,
+  "runtime": "node",
+  "minutes": 45,
+  "objective": "Compare three quadratic sorting algorithms and explain their different mechanics.",
+  "input": "",
+  "expected": "Each algorithm reports comparisons, swaps, and elapsed time for 1,000 values.",
+  "verify": [
+    "Selection sort: 1000 values",
+    "Bubble sort: 1000 values",
+    "Insertion sort: 1000 values"
+  ],
+  "visualizerAlgorithm": "selection-sort"
+}

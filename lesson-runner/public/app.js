@@ -175,7 +175,7 @@ function makeSplitter(id, target, minimum, maximum) {
   });
 }
 document.body.classList.toggle('light', theme === 'light');
-const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-working-with-html': 'Part III · Working with HTML', 'part-iv-beyond-the-book': 'Part IV · Beyond the book' };
+const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-working-with-html': 'Part III · Working with HTML', 'part-iv-advanced': 'Part IV · Advanced JavaScript' };
 const chapterNames = {
   'ch13-browser': 'CH13 · JavaScript in HTML',
   'ch14-forms': 'CH14 · JavaScript in Forms',
@@ -286,7 +286,7 @@ async function stop() {
   clearTimeout(poll);
   poll = null;
   await api('/api/stop', {});
-  $('preview').srcdoc = '';
+  $('preview').removeAttribute('srcdoc');
   if ($('preview-dialog').open) $('preview-dialog').close();
   $('run').disabled = false;
   $('status').textContent = 'Stopped';
@@ -317,6 +317,7 @@ async function select(id) {
     $('file').append(option);
   }
   $('file').value = 'main.js';
+  $('visualize').hidden = !Object.keys(current.contents).some(name => name.endsWith('/visualizer.html'));
   $('file').hidden = sourceFiles.length === 1;
   $('filename').hidden = sourceFiles.length !== 1;
   $('filename').textContent = sourceFiles.length === 1 ? sourceFiles[0] : '';
@@ -390,6 +391,16 @@ $('preview').addEventListener('load', () => {
   try { $('preview').contentWindow.scrollTo(0, 0); } catch { /* sandbox navigation can briefly be unavailable */ }
 });
 $('close-preview').addEventListener('click', () => $('preview-dialog').close());
+$('visualize').addEventListener('click', () => {
+  const visualizer = Object.keys(current?.contents || {}).find(name => name.endsWith('/visualizer.html'));
+  if (!visualizer) return;
+  $('preview-title').textContent = 'Algorithm visualizer';
+  $('preview').removeAttribute('srcdoc');
+  const assetId = btoa(current.id).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
+  const algorithm = current.visualizerAlgorithm || 'linear-search';
+  $('preview').src = `/api/lesson-asset/${assetId}/${visualizer}?algo=${encodeURIComponent(algorithm)}`;
+  if (!$('preview-dialog').open) $('preview-dialog').showModal();
+});
 let draggingPreview = false;
 let previewDragOffset = { x: 0, y: 0 };
 $('preview-dialog').querySelector('.preview-dialog-bar').addEventListener('pointerdown', event => {
@@ -537,3 +548,4 @@ try {
 }catch (error) {
   report(error);
 }
+

@@ -1,0 +1,10 @@
+{
+  "title": "Fibonacci and repeated work",
+  "order": 6,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Recognize repeated work in naive recursion and improve it with memoization.",
+  "input": "",
+  "expected": "Naive F(10): 55\nMemoized F(10): 55",
+  "verify": ["Naive F(10): 55", "Memoized F(10): 55"]
+}

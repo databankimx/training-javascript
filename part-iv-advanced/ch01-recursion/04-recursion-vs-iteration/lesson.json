@@ -1,0 +1,10 @@
+{
+  "title": "Recursion versus iteration",
+  "order": 4,
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Compare a recursive solution with a loop-based solution.",
+  "input": "",
+  "expected": "Recursive: 120\nIterative: 120",
+  "verify": ["Recursive: 120", "Iterative: 120"]
+}
