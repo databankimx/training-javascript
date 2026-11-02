@@ -33,6 +33,6 @@ Ada
 3
 ```
 
-The server and client run in one lesson process, but the communication still travels through HTTP. The ephemeral port and `finally` cleanup keep repeated runs reliable.
+The server and client run in one lesson process, but the communication still travels through HTTP. The ephemeral port and `finally` cleanup keep repeated runs reliable instead of leaving a mystery process holding the port.
 
 ---

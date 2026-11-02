@@ -1,6 +1,6 @@
 # Default parameters
 
-A default parameter supplies a value when the caller leaves an argument out. It keeps the ordinary call simple while still allowing an override.
+A default parameter supplies a value when the caller leaves an argument out. It keeps the ordinary call simple while still allowing an override. Defaults are handy for optional labels, page sizes, formatting choices, and other settings where one value is the normal case.
 
 ```javascript
 function label(name, style = "friendly") {
@@ -18,7 +18,7 @@ Ada [formal]
 Grace [friendly]
 ```
 
-The first call supplies its own style. The second call leaves the argument out, so the function uses `"friendly"`.
+The first call supplies its own style. The second call leaves the argument out, so the function uses `"friendly"`. The default applies to `undefined`, including an omitted argument. It does not replace every falsy value, which is an important distinction when `0`, `false`, or an empty string is meaningful.
 
 ---
 

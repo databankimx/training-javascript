@@ -22,6 +22,6 @@ Welcome, Ada
 Name is required
 ```
 
-The function owns the validation rule, while the caller owns the response to the failure.
+The function owns the validation rule, while the caller owns the response to the failure. That division keeps the rule reusable and lets different callers present the problem in different ways.
 
 ---

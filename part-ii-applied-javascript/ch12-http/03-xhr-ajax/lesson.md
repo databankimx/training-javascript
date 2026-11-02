@@ -1,6 +1,6 @@
 # Legacy AJAX with `XMLHttpRequest`
 
-Before `fetch`, browser code commonly used `XMLHttpRequest`, usually called XHR. AJAX is the broader idea of making asynchronous HTTP requests. XHR is one older API used to do it.
+Before `fetch`, browser code commonly used `XMLHttpRequest`, usually called XHR. AJAX is the broader idea of making asynchronous HTTP requests. XHR is one older API used to do it. You may also see jQuery's `$.ajax()` in existing applications, including older DataBank code, because it wrapped this callback-oriented model in a more convenient API.
 
 ```javascript
 const request = new XMLHttpRequest();
@@ -26,7 +26,7 @@ The runnable example uses a small callback-based stand-in because `XMLHttpReques
 Legacy response
 ```
 
-Modern code generally prefers `fetch`, but students are very likely to encounter XHR in older applications. jQuery's `$.ajax()` also builds on the older callback-oriented browser model.
+Modern code generally prefers `fetch`, but students are very likely to encounter XHR in older applications. The important skill is not memorizing which decade introduced the code. It is recognizing where the URL, status check, body parsing, and failure path live.
 
 ---
 

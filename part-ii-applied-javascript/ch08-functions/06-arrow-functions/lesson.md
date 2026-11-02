@@ -1,6 +1,6 @@
 # Arrow functions
 
-Arrow functions are a newer syntax for writing functions. They are especially common when a small function is passed to another function.
+Arrow functions are a newer syntax for writing functions. They are especially common when a small function is passed to another function, such as an array method or an event handler. We will compare the compact form with the traditional declaration before using it in the next lesson.
 
 ```javascript
 function doubleWithKeyword(value) {
@@ -26,7 +26,7 @@ console.log(double(6));
 12
 ```
 
-Both functions do the same work. The traditional form is often easier for a beginner to read, while the arrow form is compact and common in modern JavaScript.
+Both functions do the same work. The traditional form is often easier for a beginner to read, while the arrow form is compact and common in modern JavaScript. Other languages often call this kind of short function a lambda, but JavaScript's usual name is an arrow function. The vocabulary changes slightly; the useful idea does not.
 
 ---
 

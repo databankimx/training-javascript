@@ -1,9 +1,35 @@
+import HighlightJS from '/vendor/highlight/es/core.js';
+import javascript from '/vendor/highlight/es/languages/javascript.js';
+import xml from '/vendor/highlight/es/languages/xml.js';
+import css from '/vendor/highlight/es/languages/css.js';
+import json from '/vendor/highlight/es/languages/json.js';
+import bash from '/vendor/highlight/es/languages/bash.js';
+
+HighlightJS.registerLanguage('javascript', javascript);
+HighlightJS.registerLanguage('xml', xml);
+HighlightJS.registerLanguage('css', css);
+HighlightJS.registerLanguage('json', json);
+HighlightJS.registerLanguage('bash', bash);
 const $ = id => document.getElementById(id);
 const katexStyles = document.createElement('link');
 katexStyles.rel = 'stylesheet';
 katexStyles.href = '/katex.css';
 document.head.append(katexStyles);
 const token = new URLSearchParams(location.search).get('token');
+const previousRunnerToken = sessionStorage.getItem('js-training-runner-token');
+if (token && previousRunnerToken !== token) {
+  // Browser lessons may use localStorage for demonstrations, but those demo
+  // records belong to one runner session rather than the user's curriculum.
+  ['training-xss-comments', 'training-xss-comments-fixed', 'xssDemoNotes_vulnerable', 'xssDemoNotes_fixed']
+    .forEach(key => localStorage.removeItem(key));
+  sessionStorage.setItem('js-training-runner-token', token);
+}
+const heartbeat = () => {
+  if (!token) return;
+  fetch(`/api/heartbeat?token=${encodeURIComponent(token)}`, { method: 'POST', keepalive: true }).catch(() => {});
+};
+heartbeat();
+setInterval(heartbeat, 5000);
 const api = async (url, data) => {
   const response = await fetch(url, { method: data === undefined ? 'GET' : 'POST', headers: { 'X-Runner-Token': token, 'Content-Type': 'application/json' }, body: data === undefined ? undefined : JSON.stringify(data) });
   const payload = await response.json();
@@ -62,19 +88,18 @@ function updateModified() {
   const name = $('file').value;
   modifiedIndicator().hidden = sourceFor(name) === current.contents[name];
 }
-// Quotes are safe in text nodes. Escaping only markup characters keeps source
-// code readable instead of showing the HTML entities used by the renderer.
-const escapeHtml = value => value.replace(/[&<>]/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[character]));
-function highlightSource(source) {
-  const escaped = escapeHtml(source);
-  const pattern = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/|&lt;!--[\s\S]*?--&gt;|'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"|`(?:\\.|[^`\\])*`|&lt;\/?[A-Za-z][^\n]*?&gt;|\b(?:const|let|var|function|return|if|else|for|while|new|class|export|import|from|async|await|throw|try|catch|true|false|null|undefined)\b|\b\d+(?:\.\d+)?\b)/g;
-  return escaped.replace(pattern, token => {
-    const type = /^(\/\/|\/\*|&lt;!--)/.test(token) ? 'comment' : /^&lt;\/?[A-Za-z]/.test(token) ? 'tag' : /^(?:'|"|`)/.test(token) ? 'string' : /^(?:const|let|var|function|return|if|else|for|while|new|class|export|import|from|async|await|throw|try|catch|true|false|null|undefined)$/.test(token) ? 'keyword' : 'number';
-    return `<span class="token-${type}">${token}</span>`;
-  });
+function languageForFile(name = '') {
+  if (name.endsWith('.html')) return 'html';
+  if (name.endsWith('.css')) return 'css';
+  if (name.endsWith('.json')) return 'json';
+  if (name.endsWith('.sh')) return 'bash';
+  return 'javascript';
+}
+function highlightSource(source, language = 'javascript') {
+  return HighlightJS.highlight(source, { language }).value;
 }
 function updateHighlight() {
-  $('highlight').querySelector('code').innerHTML = highlightSource($('source').value) + '\n';
+  $('highlight').querySelector('code').innerHTML = highlightSource($('source').value, languageForFile($('file').value)) + '\n';
 }
 function addCopyButtons() {
   $('reading').querySelectorAll('pre > code').forEach(code => {
@@ -150,10 +175,11 @@ function makeSplitter(id, target, minimum, maximum) {
   });
 }
 document.body.classList.toggle('light', theme === 'light');
-const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-beyond-the-book': 'Part III · Beyond the book' };
+const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-working-with-html': 'Part III · Working with HTML', 'part-iv-beyond-the-book': 'Part IV · Beyond the book' };
 const chapterNames = {
   'ch13-browser': 'CH13 · JavaScript in HTML',
-  'ch14-forms': 'CH14 · JavaScript in Forms'
+  'ch14-forms': 'CH14 · JavaScript in Forms',
+  'ch15-xss': 'CH15 · Cross-site scripting'
 };
 const chapterLabel = id => chapterNames[id] || id.replace(/^(ch|p|s)(\d+)-/, (_, prefix, number) => `${prefix.toUpperCase()}${number} · `).replaceAll('-', ' ');
 const stepLabel = title => title.replace(/^(?:\d+|S\d+|Project\s+\d+(?:\.\d+)?)[\s·.-]+/i, '');
@@ -227,8 +253,9 @@ function reading() {
     ? '<div class="spoiler-reading"><p>The worked solution is behind the spoiler gate. Try the assignment first, then use <strong>Show example (spoiler)</strong> beside the editor when you are ready.</p></div>'
     : current?.[tab === 'lesson' ? 'html' : 'solution'] || '<p>No material yet.</p>';
   $('reading').scrollTop = wasViewed ? Number(readingState[current.id]?.[tab] || 0) : 0;
-  $('reading').querySelectorAll('code.language-javascript').forEach(code => {
-    code.innerHTML = highlightSource(code.textContent);
+  $('reading').querySelectorAll('code[class*="language-"]').forEach(code => {
+    const language = [...code.classList].find(name => name.startsWith('language-'))?.slice('language-'.length) || 'javascript';
+    if (['javascript', 'js', 'html', 'css'].includes(language)) code.innerHTML = highlightSource(code.textContent, language === 'js' ? 'javascript' : language);
   });
   addCopyButtons();
   colorTruthTables();
@@ -260,7 +287,7 @@ async function stop() {
   poll = null;
   await api('/api/stop', {});
   $('preview').srcdoc = '';
-  $('preview').hidden = true;
+  if ($('preview-dialog').open) $('preview-dialog').close();
   $('run').disabled = false;
   $('status').textContent = 'Stopped';
 }
@@ -322,11 +349,12 @@ async function run() {
       const css = sourceFor('style.css') || '';
       
       
-      // Opaque-origin sandbox: preview cannot read runner cookies, storage, or API responses.
+      // The preview is sandboxed, but keeps its same-origin storage available for
+      // lessons that demonstrate persistence with localStorage.
       const bridge = `const send=(...args)=>parent.postMessage({trainingOutput:true,text:args.map(v=>typeof v==='string'?v:JSON.stringify(v)).join(' ')},'*');console.log=send;console.error=send;window.onerror=(message)=>send(message);window.onunhandledrejection=(event)=>send(String(event.reason));`;
       const script = `<script type="module">${bridge}\n${source.replace(/<\/script/gi, '<\\/script')}<` + '/script>';
-      $('preview').hidden = false;
       $('preview').srcdoc = html.replace('</head>', `<style>${css}</style></head>`).replace('</body>', script + '</body>');
+      if (!$('preview-dialog').open) $('preview-dialog').showModal();
       $('status').textContent = 'Browser preview running';
       $('run').disabled = false;
       return;
@@ -356,6 +384,27 @@ window.addEventListener('message', event => {
 $('preview').addEventListener('load', () => {
   try { $('preview').contentWindow.scrollTo(0, 0); } catch { /* sandbox navigation can briefly be unavailable */ }
 });
+$('close-preview').addEventListener('click', () => $('preview-dialog').close());
+let draggingPreview = false;
+let previewDragOffset = { x: 0, y: 0 };
+$('preview-dialog').querySelector('.preview-dialog-bar').addEventListener('pointerdown', event => {
+  if (event.target.closest('button')) return;
+  const dialog = $('preview-dialog');
+  const rect = dialog.getBoundingClientRect();
+  draggingPreview = true;
+  previewDragOffset = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+  dialog.style.margin = '0';
+  dialog.style.left = `${rect.left}px`;
+  dialog.style.top = `${rect.top}px`;
+  event.currentTarget.setPointerCapture(event.pointerId);
+});
+$('preview-dialog').querySelector('.preview-dialog-bar').addEventListener('pointermove', event => {
+  if (!draggingPreview) return;
+  const dialog = $('preview-dialog');
+  dialog.style.left = `${Math.max(0, event.clientX - previewDragOffset.x)}px`;
+  dialog.style.top = `${Math.max(0, event.clientY - previewDragOffset.y)}px`;
+});
+$('preview-dialog').querySelector('.preview-dialog-bar').addEventListener('pointerup', () => { draggingPreview = false; });
 $('source').addEventListener('input', () => {
   if (current && !$('source').readOnly) {
     drafts[current.id] = {...editsFor(),[$('file').value]:$('source').value};

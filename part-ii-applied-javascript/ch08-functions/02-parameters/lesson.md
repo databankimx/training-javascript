@@ -1,6 +1,6 @@
 # Parameters and arguments
 
-Functions can receive more than one value. The names in the declaration are parameters. The actual values supplied by a call are arguments.
+Functions become much more useful when the caller can supply details. A task-reporting function should not need a new copy for every person or every count. The names in the declaration are parameters. The actual values supplied by a call are arguments.
 
 ```javascript
 function describeTasks(name, count) {
@@ -18,7 +18,7 @@ describeTasks("Ada", 3);
 Ada has 3 tasks
 ```
 
-The call passes `"Ada"` into `name` and `3` into `count`. The parameter order matters because JavaScript matches arguments by position.
+The call passes `"Ada"` into `name` and `3` into `count`. The parameter order matters because JavaScript matches arguments by position. JavaScript will not look at the values and politely infer that we meant to swap them. It simply uses the first argument for the first parameter and so on.
 
 ---
 

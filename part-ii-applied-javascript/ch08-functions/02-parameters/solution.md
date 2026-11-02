@@ -12,6 +12,6 @@ describeTasks("Ada", 3);
 Ada has 3 tasks
 ```
 
-The arguments are matched to the parameters by position.
+The arguments are matched to the parameters by position. The function stays reusable because the caller supplies the details instead of the declaration hard-coding them.
 
 ---

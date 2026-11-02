@@ -17,6 +17,6 @@ Ada is reviewing JavaScript
 Training app
 ```
 
-`label` is local to the function, while `applicationName` is read from the outer scope.
+`label` is local to the function, while `applicationName` is read from the outer scope. The local name stays safely inside `report`; passing the application name as a parameter would make the dependency more visible.
 
 ---

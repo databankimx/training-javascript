@@ -16,6 +16,6 @@ console.log(greet("Ada"));
 Hello, Ada
 ```
 
-The export creates the module boundary, and the import gives `main.js` access to the named function.
+The export creates the module boundary, and the import gives `main.js` access to the named function. `main.js` can use the function without knowing how the greeting is assembled, which is the beginning of useful separation.
 
 ---

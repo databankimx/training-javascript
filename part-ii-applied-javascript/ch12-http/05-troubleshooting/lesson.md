@@ -1,6 +1,6 @@
 # Troubleshooting web service responses
 
-When a service call fails, do not guess. Inspect the URL, method, status, headers, response body, and browser network entry. The response often tells us whether the problem belongs to the client, the server, authentication, or the network boundary.
+When a service call fails, do not guess. Inspect the URL, method, status, headers, response body, and browser network entry. The response often tells us whether the problem belongs to the client, the server, authentication, or the network boundary. “It did not work” is a starting point, not a diagnosis.
 
 ```javascript
 const response = { status: 404, url: "https://api.example.com/v1/missing", body: "Not found" };
@@ -28,7 +28,7 @@ console.log(response.url, response.status);
 console.log(await response.text());
 ```
 
-That URL is illustrative and is not called by the runnable script. In a browser, first check whether the request appears in Network. If it does not, inspect the URL, protocol, certificate, and CORS boundary. If it does appear, compare the status and response body with the service documentation. A 404 is different from a CORS error, and both are different from a 500.
+That URL is illustrative and is not called by the runnable script. In a browser, first check whether the request appears in Network. If it does not, inspect the URL, protocol, certificate, and CORS boundary. If it does appear, compare the status and response body with the service documentation. A 404 is different from a CORS error, and both are different from a 500. Fiddler is particularly useful when you need to compare what the browser sent with what another client, such as Postman or a server-side tool, sent.
 
 ---
 

@@ -19,6 +19,6 @@ Could not read settings
 Cleanup complete
 ```
 
-`catch` handles the thrown `Error`, and `finally` runs regardless of the failure.
+`catch` handles the thrown `Error`, and `finally` runs regardless of the failure. The cleanup message is deliberately after the error message because cleanup is the last part of this operation.
 
 ---

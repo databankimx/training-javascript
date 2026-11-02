@@ -22,6 +22,6 @@ console.log(multiply(3, 4));
 12
 ```
 
-The braces distinguish the named import from the default import.
+The braces distinguish the named import from the default import. `add` keeps its exported name, while the default function is assigned to the local name `multiply`.
 
 ---

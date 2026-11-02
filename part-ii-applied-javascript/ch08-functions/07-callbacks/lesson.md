@@ -1,6 +1,6 @@
 # Callbacks
 
-Functions are values in JavaScript, so one function can receive another function as an argument. A function passed this way is called a callback because the receiving function calls it later.
+Functions are values in JavaScript, so one function can receive another function as an argument. A function passed this way is called a callback because the receiving function calls it later. This lets one piece of code own the repetition while the caller supplies the action, which is useful for collections, timers, browser events, and asynchronous work.
 
 ```javascript
 function visitNames(names, action) {
@@ -23,7 +23,7 @@ Grace
 Linus
 ```
 
-`visitNames` controls the loop. The caller supplies the action, so the same loop could print, collect, or validate the names without changing `visitNames` itself. We will use this idea heavily with array methods and browser events.
+`visitNames` controls the loop. The caller supplies the action, so the same loop could print, collect, or validate the names without changing `visitNames` itself. We will use this idea heavily with array methods and browser events. The callback is not magic. It is simply a function value that gets called at the appropriate moment.
 
 ---
 

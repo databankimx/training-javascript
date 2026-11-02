@@ -1,6 +1,6 @@
 # Designing a small module boundary
 
-Modules are most useful when each file has a clear responsibility. A report module can format data without knowing where the data came from or how the application will display it.
+Modules are most useful when each file has a clear responsibility. A report module can format data without knowing where the data came from or how the application will display it. That separation gives us smaller pieces to test and fewer reasons for one change to disturb three unrelated features.
 
 ```javascript
 // reports.js
@@ -23,7 +23,7 @@ console.log(formatTaskReport(person));
 Ada: 3 tasks
 ```
 
-`reports.js` formats a person, while `main.js` owns the application data and decides what to print. Separating those responsibilities makes each file easier to test and replace.
+`reports.js` formats a person, while `main.js` owns the application data and decides what to print. Separating those responsibilities makes each file easier to test and replace. If a different screen later needs the same report, it can import the formatter rather than copy it.
 
 ---
 

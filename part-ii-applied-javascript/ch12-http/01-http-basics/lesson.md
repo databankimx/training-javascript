@@ -1,6 +1,6 @@
 # HTTP requests and responses
 
-When JavaScript consumes a web service, it sends an HTTP request and receives an HTTP response. An HTTP response has a status line, headers, and usually a body containing data. The status tells us what happened before we try to interpret the body.
+When JavaScript consumes a web service, it sends an HTTP request and receives an HTTP response. That exchange is the boundary between our code and somebody else's system, which is why it deserves a little more respect than “call URL, hope.” An HTTP response has a status line, headers, and usually a body containing data. The status tells us what happened before we try to interpret the body.
 
 ```javascript
 const response = { status: 200, ok: true, body: "OK" };
@@ -42,6 +42,8 @@ console.log(response.status);
 ```
 
 That URL is illustrative, not part of the runnable script. In a real application, the host, path, authentication, and request method come from the service documentation.
+
+The status families are worth learning because they tell us where to look next. A `4xx` response usually means the request needs attention. A `5xx` response usually means the server failed while handling it. A redirect may be perfectly normal, but it still changes where the client should look.
 
 ---
 

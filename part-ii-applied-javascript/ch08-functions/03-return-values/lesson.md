@@ -1,6 +1,6 @@
 # Return values
 
-A function can send a value back to its caller with `return`. That lets the caller decide what to do with the result.
+A function can send a value back to its caller with `return`. That lets the caller decide what to do with the result. This separation is useful when the same calculation might be printed in one place, compared in another, and included in a larger calculation somewhere else.
 
 ```javascript
 function add(left, right) {
@@ -19,7 +19,7 @@ console.log(`Total: ${total}`);
 Total: 7
 ```
 
-`add` does not print anything itself. It returns 7, and the caller stores that result in `total` before printing it.
+`add` does not print anything itself. It returns 7, and the caller stores that result in `total` before printing it. A function that returns a value is often easier to test because it produces an answer without committing to a particular display method.
 
 ---
 

@@ -1,6 +1,6 @@
 # Rejected promises
 
-A rejected promise is the asynchronous equivalent of a thrown error. With `await`, handle it using the same `try` and `catch` structure we already know.
+A rejected promise is the asynchronous equivalent of a thrown error. With `await`, handle it using the same `try` and `catch` structure we already know. The failure did not disappear because the operation happened later. It merely arrived through a Promise.
 
 ```javascript
 function connect() {
@@ -26,7 +26,7 @@ start();
 Could not connect
 ```
 
-Without the `catch`, the rejection would remain unhandled. Asynchronous code still needs an explicit failure path. It has simply moved through a promise instead of a direct function call.
+Without the `catch`, the rejection would remain unhandled. Asynchronous code still needs an explicit failure path. It has simply moved through a promise instead of a direct function call, which is a longer route for the same responsibility.
 
 ---
 

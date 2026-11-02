@@ -1,6 +1,6 @@
 # Promises and future values
 
-Some work finishes later. A Promise represents a value that is not ready yet. It eventually fulfills with a result or rejects with a failure.
+Some work finishes later. A network request, a file read, and a timer all take time while the program may still have other work to do. A Promise represents a value that is not ready yet. It eventually fulfills with a result or rejects with a failure.
 
 ```javascript
 function loadSettings() {
@@ -18,7 +18,7 @@ loadSettings().then(message => console.log(message));
 Loaded settings
 ```
 
-`Promise.resolve` gives us an already-successful promise for this first example. Real work might read a file or wait for a network response before fulfilling it.
+`Promise.resolve` gives us an already-successful promise for this first example. Real work might read a file or wait for a network response before fulfilling it. The example is immediate so we can focus on the shape of the code before introducing a clock and the inevitable question of why the output arrived “later” when later was only two lines away.
 
 ---
 

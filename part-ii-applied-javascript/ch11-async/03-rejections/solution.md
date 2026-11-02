@@ -20,6 +20,6 @@ start();
 Could not connect
 ```
 
-The rejected promise becomes a catchable error at the `await` expression.
+The rejected promise becomes a catchable error at the `await` expression. Once it reaches `catch`, the asynchronous failure can use the same reporting style as a synchronous error.
 
 ---

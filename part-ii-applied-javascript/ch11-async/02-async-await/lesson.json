@@ -6,5 +6,5 @@
   "input": "",
   "expected": "The awaited result is printed after the asynchronous function runs.",
   "prerequisites": ["part-ii-applied-javascript/ch11-async/01-promises"],
-  "verify": ["Loaded profile"]
+  "verify": ["Loaded settings", "Loaded profile"]
 }

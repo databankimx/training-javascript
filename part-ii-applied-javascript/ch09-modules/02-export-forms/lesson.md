@@ -1,6 +1,6 @@
 # Named and default exports
 
-A module can provide several named exports and one default export. The import syntax tells the reader which kind is being used.
+A module can provide several named exports and one default export. The import syntax tells the reader which kind is being used. This is a small amount of punctuation with a surprisingly large effect on how quickly a reader can understand a file's dependencies.
 
 ```javascript
 // math.js
@@ -28,7 +28,7 @@ console.log(multiply(3, 4));
 12
 ```
 
-`add` is named, while `multiply` is the module's default. Naming imports consistently makes a multi-file program easier to navigate.
+`add` is named, while `multiply` is the module's default. Naming imports consistently makes a multi-file program easier to navigate. A default import may be given any local name, while a named import normally keeps the exported name unless we explicitly rename it.
 
 ---
 

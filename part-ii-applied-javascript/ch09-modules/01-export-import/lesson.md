@@ -1,6 +1,6 @@
 # Exporting and importing values
 
-As programs grow, keeping every function in one file becomes awkward. ES modules let us define reusable code in one file and import it where we need it.
+As programs grow, keeping every function in one file becomes awkward. A file that started as a tidy little script can become the place where calculations, formatting, data, and unrelated emergency fixes all live together. ES modules let us define reusable code in one file and import it where we need it.
 
 ```javascript
 // greetings.js
@@ -24,7 +24,7 @@ console.log(greet("Ada"));
 Hello, Ada
 ```
 
-The function lives in `greetings.js`, while `main.js` imports and calls it. The files are separate, but the exported function behaves like any other function.
+The function lives in `greetings.js`, while `main.js` imports and calls it. The files are separate, but the exported function behaves like any other function. The module boundary tells us what `greetings.js` is willing to share instead of making every name in the file everyone's business.
 
 ---
 

@@ -15,6 +15,6 @@ console.log(parseScore("twelve"));
 Invalid number
 ```
 
-The function converts valid text and returns a clear failure result for text that is not numeric.
+The function converts valid text and returns a clear failure result for text that is not numeric. The caller can display or log that ordinary result without needing a `try` block for this particular kind of invalid input.
 
 ---

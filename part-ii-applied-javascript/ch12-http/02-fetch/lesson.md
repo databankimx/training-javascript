@@ -1,6 +1,6 @@
 # Fetching data
 
-`fetch` is the modern browser API for making HTTP requests. It returns a promise for a response, and reading a JSON body is another asynchronous step.
+`fetch` is the modern browser API for making HTTP requests. It returns a promise for a response, and reading a JSON body is another asynchronous step. The request succeeding at the network level does not automatically mean the application operation succeeded. We still have to inspect the response.
 
 ```javascript
 async function loadPerson() {
@@ -31,7 +31,7 @@ That URL is a teaching example only and is intentionally not used by the runnabl
 Ada
 ```
 
-Check the status before trusting the body. A response can arrive successfully at the network level while still reporting an HTTP error such as 404.
+Check the status before trusting the body. A response can arrive successfully at the network level while still reporting an HTTP error such as 404. `fetch` does not reject merely because the server returned 404 or 500, so the `response.ok` check is part of the normal pattern rather than an optional flourish.
 
 ---
 

@@ -1,6 +1,6 @@
 # Functions: named actions
 
-A function gives a group of statements a name. We can call that name whenever we need the action, instead of copying the same code everywhere.
+Functions are how we give a useful action a name. A greeting, a calculation, a validation check, and a piece of formatting logic may all need to run more than once. We can define each action once and call it whenever we need it instead of copying the same code everywhere and hoping the copies stay in agreement.
 
 ```javascript
 function greet(name) {
@@ -22,7 +22,7 @@ Hello, Ada
 Hello, Grace
 ```
 
-The function is declared once, then called twice with different names. Each call creates a new pass through the function body.
+The function is declared once, then called twice with different names. Each call creates a new pass through the function body. The function does not run merely because JavaScript has read its declaration. The calls are the instructions that actually perform the work.
 
 ---
 

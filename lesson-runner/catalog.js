@@ -1,6 +1,6 @@
 import { readdir, readFile, realpath } from 'node:fs/promises';
 import path from 'node:path';
-export const parts = ['part-i-basics', 'part-ii-applied-javascript', 'part-iii-beyond-the-book'];
+export const parts = ['part-i-basics', 'part-ii-applied-javascript', 'part-iii-working-with-html', 'part-iv-beyond-the-book'];
 export async function discover(root) {
   const lessons = [];
   async function walk(folder) {
@@ -17,6 +17,12 @@ export async function discover(root) {
     }
   }
   for (const part of parts) await walk(path.join(root, part));
+  lessons.sort((a, b) => {
+    if (a.part !== b.part || a.chapter !== b.chapter) return 0;
+    const orderA = Number.isFinite(a.order) ? a.order : Number.MAX_SAFE_INTEGER;
+    const orderB = Number.isFinite(b.order) ? b.order : Number.MAX_SAFE_INTEGER;
+    return orderA - orderB || a.id.localeCompare(b.id);
+  });
   return lessons;
 }
 export async function within(root, filename) {

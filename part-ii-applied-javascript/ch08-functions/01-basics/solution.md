@@ -14,6 +14,6 @@ Hello, Ada
 Hello, Grace
 ```
 
-The declaration supplies the reusable action, and each call supplies a different argument for `name`.
+The declaration supplies the reusable action, and each call supplies a different argument for `name`. One definition gives us two greetings without duplicating the formatting logic.
 
 ---

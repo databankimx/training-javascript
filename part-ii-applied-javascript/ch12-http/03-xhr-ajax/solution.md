@@ -18,6 +18,6 @@ legacyAjax("/api/person", (error, response) => {
 Legacy response
 ```
 
-The callback receives either an error or a response, which is the older pattern that promises and `fetch` made easier to compose.
+The callback receives either an error or a response, which is the older pattern that promises and `fetch` made easier to compose. Recognizing the shape still matters when maintaining older applications.
 
 ---

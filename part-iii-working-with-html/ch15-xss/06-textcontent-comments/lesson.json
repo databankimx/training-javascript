@@ -1,0 +1,11 @@
+{
+  "title": "Persistent XSS: comments form (textContent fix)",
+  "order": 6,
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "Prefer textContent when a page needs to display plain text",
+  "input": "",
+  "expected": "Markup-shaped comments remain ordinary text.",
+  "prerequisites": ["part-iii-working-with-html/ch15-xss/05-persistent-comments-fixed"],
+  "verify": []
+}

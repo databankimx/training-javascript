@@ -1,6 +1,6 @@
 # A real local service
 
-The earlier examples used local promises to keep one idea isolated. Now we can connect the pieces for real: start a tiny HTTP service, call it with `fetch`, read its JSON response, and close the service when we are finished.
+The earlier examples used local promises to keep one idea isolated. Now we can connect the pieces for real: start a tiny HTTP service, call it with `fetch`, read its JSON response, and close the service when we are finished. No simulated response is hiding behind the curtain this time. The request crosses a real local HTTP boundary.
 
 ```javascript
 import { createServer } from "node:http";
@@ -41,7 +41,7 @@ Ada
 3
 ```
 
-This is a real request to a real local service. The server returns JSON, `fetch` receives it, and `response.json()` turns the body back into an object. The service is deliberately tiny, but the boundary is genuine.
+This is a real request to a real local service. The server returns JSON, `fetch` receives it, and `response.json()` turns the body back into an object. The service is deliberately tiny, but the boundary is genuine. The `finally` block matters because a training example that leaves a server running after every test is a fine way to rediscover port conflicts.
 
 ---
 

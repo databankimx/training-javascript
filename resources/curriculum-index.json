@@ -625,21 +625,21 @@
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch11-async",
-    "step": "05-summary/01-load-data",
+    "step": "05-homework/01-load-data",
     "title": "Homework: load data in order",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch11-async",
-    "step": "05-summary/02-parallel-load",
+    "step": "05-homework/02-parallel-load",
     "title": "Homework: load independent data",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch11-async",
-    "step": "05-summary/03-safe-request",
+    "step": "05-homework/03-safe-request",
     "title": "Homework: safe asynchronous request",
     "runtime": "node"
   },
@@ -700,80 +700,108 @@
     "runtime": "node"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
     "step": "01-readiness",
     "title": "JavaScript in an HTML page",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
     "step": "02-selection",
     "title": "Selecting elements and safe text",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
     "step": "03-events",
     "title": "Events and event handlers",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
     "step": "04-show-hide",
     "title": "Show, hide, and update the page",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch14-forms",
     "step": "01-debug-channel",
     "title": "A visible debug channel",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
-    "step": "05-summary/01-counter",
+    "step": "05-homework/01-counter",
     "title": "Homework: interactive counter",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
-    "chapter": "ch13-browser",
-    "step": "05-summary/02-safe-input",
-    "title": "Homework: safe input display",
-    "runtime": "browser"
-  },
-  {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch14-forms",
-    "step": "03-summary/03-debug-form",
+    "step": "03-homework/03-debug-form",
     "title": "Homework: debug a form",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
+    "part": "part-iii-working-with-html",
     "chapter": "ch14-forms",
     "step": "02-validation-formatting",
     "title": "Form validation and formatting",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
-    "chapter": "ch14-forms",
-    "step": "04-xss-vulnerable",
-    "title": "XSS: the vulnerable pattern",
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "01-reflected-vulnerable",
+    "title": "XSS: the reflected vulnerable pattern",
     "runtime": "browser"
   },
   {
-    "part": "part-ii-applied-javascript",
-    "chapter": "ch14-forms",
-    "step": "05-xss-fixed",
-    "title": "XSS: the fixed pattern",
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "02-reflected-fixed",
+    "title": "XSS: reflected input (sanitization fix)",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "03-textcontent-reflected",
+    "title": "XSS: reflected input (textContent fix)",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "04-persistent-comments-vulnerable",
+    "title": "Persistent XSS: a vulnerable comments form",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "05-persistent-comments-fixed",
+    "title": "Persistent XSS: comments form (sanitization fix)",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "06-textcontent-comments",
+    "title": "Persistent XSS: comments form (textContent fix)",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-xss",
+    "step": "07-testing-xss",
+    "title": "Testing XSS safely",
     "runtime": "browser"
   },
   {
@@ -938,189 +966,189 @@
     "runtime": "browser"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s01-command-line-arguments",
     "step": "01-cli",
     "title": "S01 · Command-line arguments",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s02-recursion",
     "step": "01-recursion",
     "title": "S02 · Recursion and termination",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s03-regular-expressions",
     "step": "01-regex",
     "title": "S03 · Regular expressions",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s04-big-o-complexity",
     "step": "01-complexity",
     "title": "S04 · Complexity and data structures",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s05-bitwise-operations",
     "step": "01-bits",
     "title": "S05 · Bitwise flags",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s06-records-and-validation",
     "step": "01-records",
     "title": "S06 · Records and validation (dataclasses counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s07-string-formatting",
     "step": "01-intl",
     "title": "S07 · Internationalized formatting",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s08-closures",
     "step": "01-closures",
     "title": "S08 · Closures and captured state",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s09-enumerations",
     "step": "01-enums",
     "title": "S09 · Enumerations and explicit states",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s10-web-scraping",
     "step": "01-scraping",
     "title": "S10 · DOM extraction and scraping boundaries",
     "runtime": "browser"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s11-lambdas",
     "step": "01-arrows",
     "title": "S11 · Arrow functions and higher-order behavior",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s12-sql-databases",
     "step": "01-sql",
     "title": "S12 · Relational databases and parameterized SQL",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s13-publish-a-library",
     "step": "01-package",
     "title": "S13 · Design and package a library",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s14-typed-arrays",
     "step": "01-numeric",
     "title": "S14 · Typed arrays (NumPy counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s15-tabular-data",
     "step": "01-tables",
     "title": "S15 · Tabular transformations (pandas counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s16-numerical-methods",
     "step": "01-numerical",
     "title": "S16 · Numerical methods (SciPy counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s17-document-databases",
     "step": "01-documents",
     "title": "S17 · Document queries (MongoDB counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s18-trie",
     "step": "01-trie",
     "title": "S18 · Tries and prefix lookup",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s19-browser-ui",
     "step": "01-ui",
     "title": "S19 · Browser forms (Tkinter counterpart)",
     "runtime": "browser"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s20-card-games",
     "step": "01-cards",
     "title": "S20 · Cards and unbiased shuffling",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s21-morse-code",
     "step": "01-codec",
     "title": "S21 · Morse code and codecs",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s22-rochambeau",
     "step": "01-game",
     "title": "S22 · Rock, paper, scissors and rule tables",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s23-game-of-life",
     "step": "01-life",
     "title": "S23 · Game of Life and simultaneous updates",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s24-built-ins",
     "step": "01-builtins",
     "title": "S24 · Built-in objects and serialization limits",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s25-node-web-app",
     "step": "01-web",
     "title": "S25 · Node HTTP routing (Flask counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s26-iterators",
     "step": "01-generators",
     "title": "S26 · Iterators and generators (itertools counterpart)",
     "runtime": "node"
   },
   {
-    "part": "part-iii-beyond-the-book",
+    "part": "part-iv-beyond-the-book",
     "chapter": "s27-functional-tools",
     "step": "01-functional",
     "title": "S27 · Function composition and memoization",

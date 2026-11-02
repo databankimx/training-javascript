@@ -1,6 +1,6 @@
 # `try`, `catch`, and `finally`
 
-When an operation can throw an error, put the risky call in `try`. A matching `catch` handles the failure, and `finally` runs whether the operation succeeded or failed.
+When an operation can throw an error, put the risky call in `try`. A matching `catch` handles the failure, and `finally` runs whether the operation succeeded or failed. This is useful around file access, network requests, parsing, and other work where failure is possible even when the code is perfectly reasonable.
 
 ```javascript
 function readSettings() {
@@ -29,7 +29,7 @@ Could not read settings
 Cleanup complete
 ```
 
-The function throws an `Error`. The `catch` block prints its message instead of letting the program stop without a useful explanation. The `finally` block still runs afterward.
+The function throws an `Error`. The `catch` block prints its message instead of letting the program stop without a useful explanation. The `finally` block still runs afterward, which is where cleanup belongs when it must happen after either outcome.
 
 ---
 

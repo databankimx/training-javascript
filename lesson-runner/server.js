@@ -21,6 +21,7 @@ export async function createRunner(repo = root) {
   const lessons = await discover(repo);
   const jobs = new Jobs(repo);
   const token = randomBytes(24).toString('hex');
+  let lastHeartbeat = Date.now();
   let starting = false;
   const server = http.createServer(async (req, res) => {
     const send = (status, data, type = 'application/json; charset=utf-8') => {
@@ -36,7 +37,17 @@ export async function createRunner(repo = root) {
         if (url.searchParams.get('token') !== token) return send(403, { error: 'Open the full URL printed in the terminal' });
         return send(200, await readFile(path.join(here, 'public/index.html'), 'utf8'), types['.html']);
       }
+      if (url.pathname === '/api/heartbeat' && req.method === 'POST') {
+        if (url.searchParams.get('token') !== token) return send(403, { error: 'Invalid session token' });
+        lastHeartbeat = Date.now();
+        return send(200, { ok: true });
+      }
       if (['/app.js', '/style.css', '/katex.css', '/databank-d.svg'].includes(url.pathname) && req.method === 'GET') return send(200, await readFile(path.join(here, 'public', url.pathname.slice(1)), 'utf8'), types[path.extname(url.pathname)]);
+      if (url.pathname.startsWith('/vendor/highlight/') && req.method === 'GET') {
+        const vendorRoot = path.join(here, 'public', 'vendor', 'highlight');
+        const vendorFile = await within(vendorRoot, decodeURIComponent(url.pathname.slice('/vendor/highlight/'.length)));
+        return send(200, await readFile(vendorFile, 'utf8'), types[path.extname(vendorFile)] || 'text/javascript; charset=utf-8');
+      }
       if (req.headers['x-runner-token'] !== token) return send(403, { error: 'Invalid session token' });
       if (req.headers.origin && req.headers.origin !== `http://${host}`) return send(403, { error: 'Invalid origin' });
       if (req.method === 'GET' && url.pathname === '/api/catalog') return send(200, lessons.map(({ folder, ...item }) => item));
@@ -85,24 +96,29 @@ export async function createRunner(repo = root) {
       return send(400, { error: error.message });
     }
   });
-  return { server, jobs, token };
+  return { server, jobs, token, lastHeartbeat: () => lastHeartbeat };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   if (Number(process.versions.node.split('.')[0]) < 24) throw new Error('Install Node.js 24 or later');
   const runner = await createRunner();
   const port = Number(process.env.PORT || 4173);
+  let closing = false;
+  const shutdown = async reason => {
+    if (closing) return;
+    closing = true;
+    if (reason) console.log(reason);
+    clearInterval(heartbeatTimer);
+    await runner.jobs.close();
+    runner.server.close();
+  };
+  const heartbeatTimer = setInterval(() => {
+    if (Date.now() - runner.lastHeartbeat() > 30000) shutdown('No browser heartbeat received; shutting down.');
+  }, 5000);
   runner.server.listen(port, '127.0.0.1', () => console.log(`JavaScript Training\nOpen http://127.0.0.1:${runner.server.address().port}/?token=${runner.token}\nCtrl+C to stop. Lessons run with your user account; use trusted local code.`));
   runner.server.on('error', error => {
     console.error(error.message);
      process.exitCode = 1;
   });
-  let closing = false;
-  const shutdown = async () => {
-    if (closing) return;
-    closing = true;
-    await runner.jobs.close();
-    runner.server.close();
-  };
   process.on('SIGINT', shutdown);
   process.on('SIGTERM', shutdown);
 }

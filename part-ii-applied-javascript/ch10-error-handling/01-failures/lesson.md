@@ -1,6 +1,6 @@
 # Errors and failure paths
 
-Programs do not receive perfect input. A function can return an ordinary value for a valid input and a deliberate failure result for an invalid one.
+Programs do not receive perfect input. Users mistype values, files go missing, and systems return data that is technically valid JavaScript but useless for the next operation. A function can return an ordinary value for valid input and a deliberate failure result for invalid input.
 
 ```javascript
 function parseScore(text) {
@@ -21,7 +21,7 @@ console.log(parseScore("twelve"));
 Invalid number
 ```
 
-This function chooses a readable result instead of allowing an invalid numeric value to travel farther into the program. Returning a failure message is appropriate when the caller can handle it as an ordinary result.
+This function chooses a readable result instead of allowing an invalid numeric value to travel farther into the program. Returning a failure message is appropriate when the caller can handle it as an ordinary result, such as displaying a validation message beside a form field. Not every problem needs to be thrown like a tiny theatrical emergency.
 
 ---
 

@@ -1,6 +1,6 @@
 # Throwing validation errors
 
-A function should reject invalid input close to where the problem appears. Throwing an `Error` lets the caller decide whether to show a message, retry, or stop.
+A function should reject invalid input close to where the problem appears. Throwing an `Error` lets the caller decide whether to show a message, retry, or stop. The function knows what counts as invalid; the caller knows what response makes sense for the application.
 
 ```javascript
 function welcome(person) {
@@ -28,7 +28,7 @@ Welcome, Ada
 Name is required
 ```
 
-The function accepts the first object and rejects the second. The caller handles both cases in one loop, keeping the validation rule inside the function that needs it.
+The function accepts the first object and rejects the second. The caller handles both cases in one loop, keeping the validation rule inside the function that needs it. Throwing does not mean the whole program must collapse. It means control moves to a caller that is prepared to handle the problem.
 
 ---
 

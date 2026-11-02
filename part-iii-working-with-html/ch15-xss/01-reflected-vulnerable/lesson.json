@@ -1,0 +1,11 @@
+{
+  "title": "XSS: the reflected vulnerable pattern",
+  "order": 1,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Recognize how untrusted URL input becomes executable page content",
+  "input": "",
+  "expected": "The demo renders the message as HTML, which is the vulnerability.",
+  "prerequisites": ["part-iii-working-with-html/ch13-browser/02-selection"],
+  "verify": []
+}

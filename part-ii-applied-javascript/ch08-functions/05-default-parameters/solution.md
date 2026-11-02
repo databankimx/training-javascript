@@ -14,6 +14,6 @@ Ada [formal]
 Grace [friendly]
 ```
 
-The omitted second argument lets the default parameter supply `friendly`.
+The omitted second argument lets the default parameter supply `friendly`. Supplying `formal` still overrides the default, so one function handles both the ordinary and exceptional wording.
 
 ---

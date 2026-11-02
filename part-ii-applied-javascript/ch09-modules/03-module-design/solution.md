@@ -17,6 +17,6 @@ console.log(formatTaskReport(person));
 Ada: 3 tasks
 ```
 
-The report module owns formatting, while the main module owns the data and application flow.
+The report module owns formatting, while the main module owns the data and application flow. Keeping those responsibilities separate means another caller can reuse the formatter without borrowing the entire application script.
 
 ---

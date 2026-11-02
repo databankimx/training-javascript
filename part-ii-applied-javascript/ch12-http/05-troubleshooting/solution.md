@@ -12,6 +12,6 @@ Status: 404
 Not found
 ```
 
-The diagnostic output makes the status and body visible. In a real browser, the Network panel and a traffic inspector such as Fiddler provide the surrounding request and header details.
+The diagnostic output makes the status and body visible. In a real browser, the Network panel and a traffic inspector such as Fiddler provide the surrounding request and header details. Those details are usually more useful than refreshing repeatedly and hoping the server develops a conscience.
 
 ---

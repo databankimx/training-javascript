@@ -16,6 +16,6 @@ console.log(double(6));
 12
 ```
 
-The arrow function implicitly returns its one expression, so it matches the traditional function. Other languages often call this kind of function a lambda, while JavaScript usually calls it an arrow function.
+The arrow function implicitly returns its one expression, so it matches the traditional function. Other languages often call this kind of function a lambda, while JavaScript usually calls it an arrow function. The short syntax is useful, but the traditional form remains perfectly valid.
 
 ---

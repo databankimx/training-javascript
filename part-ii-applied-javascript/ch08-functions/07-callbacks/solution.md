@@ -17,6 +17,6 @@ Grace
 Linus
 ```
 
-The callback is called once for each value, while `visitNames` remains responsible for traversal.
+The callback is called once for each value, while `visitNames` remains responsible for traversal. Changing the callback changes the action without changing the loop, which is the point of passing behavior as a value.
 
 ---

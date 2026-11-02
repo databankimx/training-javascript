@@ -1,6 +1,6 @@
 # Function scope
 
-Variables declared inside a function belong to that function. A function can also read values declared outside it, which is useful, but should be done deliberately.
+As programs grow, names need boundaries. Variables declared inside a function belong to that function. A function can also read values declared outside it, which is useful, but should be done deliberately because hidden dependencies make code harder to reuse and test.
 
 ```javascript
 const applicationName = "Training app";
@@ -25,7 +25,7 @@ Ada is reviewing JavaScript
 Training app
 ```
 
-Keeping temporary names local prevents unrelated code from accidentally changing them. Prefer passing a value as a parameter when that makes a function easier to understand and test.
+Keeping temporary names local prevents unrelated code from accidentally changing them. Prefer passing a value as a parameter when that makes a function easier to understand and test. A function that quietly depends on several outer variables may work today and become a small detective story tomorrow.
 
 ---
 
