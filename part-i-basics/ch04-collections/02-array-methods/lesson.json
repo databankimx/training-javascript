@@ -1,5 +1,6 @@
 {
   "title": "Array methods",
+  "order": 2,
   "runtime": "node",
   "minutes": 30,
   "objective": "Add, remove, and copy array items deliberately",

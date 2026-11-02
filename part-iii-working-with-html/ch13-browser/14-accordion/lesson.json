@@ -1,0 +1,11 @@
+{
+  "title": "Accordions",
+  "order": 14,
+  "runtime": "browser",
+  "minutes": 40,
+  "objective": "Build an accordion with buttons, panels, and accessible state",
+  "input": "",
+  "expected": "Clicking a heading reveals its panel and updates aria-expanded.",
+  "prerequisites": ["part-iii-working-with-html/ch13-browser/10-tabbed-pages"],
+  "verify": []
+}

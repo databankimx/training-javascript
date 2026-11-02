@@ -1,5 +1,6 @@
 {
   "title": "Tuples and destructuring",
+  "order": 6,
   "runtime": "node",
   "minutes": 30,
   "objective": "Use fixed-position arrays and unpack their values clearly",

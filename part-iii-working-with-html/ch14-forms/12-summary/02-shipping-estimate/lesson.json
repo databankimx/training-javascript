@@ -1,0 +1,12 @@
+{
+  "title": "Homework: shipping estimate",
+  "order": 14,
+  "section": "Chapter summary · Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 50,
+  "objective": "Build a shipping estimate from a select list and form values",
+  "input": "",
+  "expected": "The estimate changes when weight or shipping speed changes.",
+  "verify": []
+}

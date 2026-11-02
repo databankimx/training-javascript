@@ -1,5 +1,6 @@
 {
   "title": "Homework: nested score report",
+  "order": 13,
   "section": "Chapter summary · Homework",
   "runtime": "node",
   "spoiler": true,

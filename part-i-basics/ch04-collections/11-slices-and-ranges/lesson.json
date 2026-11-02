@@ -1,5 +1,6 @@
 {
   "title": "Slices and ranges",
+  "order": 11,
   "runtime": "node",
   "minutes": 30,
   "objective": "Copy array ranges and generate sequences of values",

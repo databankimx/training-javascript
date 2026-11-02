@@ -1,5 +1,25 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Persistent XSS textContent example</title><link rel="stylesheet" href="style.css"><script src="main.js" defer></script></head>
-<body><main><p class="success">Comments are displayed as text.</p><h1>Comments</h1><label for="comment">Add a comment</label><textarea id="comment" rows="4"></textarea><div><button id="save" type="button">Save comment</button><button id="clear" type="button">Clear comments</button></div><section><h2>Saved comments</h2><div id="comments"></div></section></main></body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Persistent XSS textContent example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <p class="success">Comments are displayed as text.</p>
+        <h1>Comments</h1><label for="comment">Add a comment</label><textarea id="comment" rows="4"></textarea>
+        <div><button id="save" type="button">Save comment</button><button id="clear" type="button">Clear
+                comments</button></div>
+        <section>
+            <h2>Saved comments</h2>
+            <div id="comments"></div>
+        </section>
+    </main>
+</body>
+
 </html>

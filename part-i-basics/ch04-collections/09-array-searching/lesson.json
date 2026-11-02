@@ -1,5 +1,6 @@
 {
   "title": "Searching and testing arrays",
+  "order": 9,
   "runtime": "node",
   "minutes": 35,
   "objective": "Find values and test whether array items meet a condition",

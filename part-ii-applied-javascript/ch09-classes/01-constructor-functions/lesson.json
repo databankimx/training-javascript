@@ -1,0 +1,11 @@
+{
+  "title": "Classic constructor functions",
+  "order": 1,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Create objects with constructor functions and prototypes",
+  "input": "",
+  "expected": "The constructor creates a learner and the prototype method reports progress.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/05-homework/03-function-composition"],
+  "verify": []
+}

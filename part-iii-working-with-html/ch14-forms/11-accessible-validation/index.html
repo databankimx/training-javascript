@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Profile</h1>
+        <p>Leave the field blank and choose Save profile to see the accessible error state. Then enter a name and submit
+            again.</p>
+        <form id="profile-form" novalidate>
+            <label for="display-name">Display name</label>
+            <input id="display-name" name="display-name" aria-label="Display name" aria-describedby="name-error">
+            <p id="name-error" class="error-message" role="alert"></p>
+            <button type="submit">Save profile</button>
+        </form>
+        <p id="status" role="status" aria-live="polite">Ready to validate the profile.</p>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form-control properties</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Contact preferences</h1>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" aria-label="Email address" value="ada@example.com">
+        <label><input id="updates" name="updates" type="checkbox" aria-label="Receive updates" checked> Receive
+            updates</label>
+        <fieldset>
+            <legend>Contact method</legend>
+            <label><input type="radio" name="contact" value="email" aria-label="Email contact" checked> Email</label>
+            <label><input type="radio" name="contact" value="phone" aria-label="Phone contact"> Phone</label>
+        </fieldset>
+        <label for="timezone">Time zone</label>
+        <select id="timezone" name="timezone" aria-label="Time zone">
+            <option value="central">Central</option>
+            <option value="eastern">Eastern</option>
+        </select>
+        <button id="inspect" type="button">Inspect controls</button>
+        <button id="toggle-email" type="button">Disable email</button>
+        <p id="status" role="status" aria-live="polite">Nothing inspected yet.</p>
+    </main>
+</body>
+
+</html>

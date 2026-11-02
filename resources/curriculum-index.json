@@ -177,6 +177,41 @@
   {
     "part": "part-i-basics",
     "chapter": "ch04-collections",
+    "step": "12-maps-and-sets",
+    "title": "Maps and sets",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "14-accordion",
+    "title": "Accordions",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "15-dialogs",
+    "title": "Dialogs, focus, and note entry",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "12-conditional-fields",
+    "title": "Conditional form sections",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch16-dynamic-forms",
+    "step": "05-sort-filter",
+    "title": "Sort and filter dynamic rows",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-i-basics",
+    "chapter": "ch04-collections",
     "step": "01-arrays",
     "title": "Arrays",
     "runtime": "node"
@@ -512,6 +547,34 @@
   },
   {
     "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "01-constructor-functions",
+    "title": "Classic constructor functions",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "02-modern-class",
+    "title": "Modern class syntax",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "03-compare-patterns",
+    "title": "Classic and modern patterns compared",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "04-homework/01-library-model",
+    "title": "Homework: library model",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
     "chapter": "ch09-modules",
     "step": "01-export-import",
     "title": "Exporting and importing values",
@@ -793,8 +856,36 @@
   {
     "part": "part-iii-working-with-html",
     "chapter": "ch14-forms",
-    "step": "01-debug-channel",
+    "step": "01-reading-properties",
+    "title": "Reading form-control properties",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "02-writing-properties",
+    "title": "Writing form-control properties",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "03-debug-channel",
     "title": "A visible debug channel",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "04-calculating-form-values",
+    "title": "Calculating form values",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "05-submit-validation",
+    "title": "Submit-time validation choices",
     "runtime": "browser"
   },
   {
@@ -807,15 +898,64 @@
   {
     "part": "part-iii-working-with-html",
     "chapter": "ch14-forms",
-    "step": "03-homework/03-debug-form",
-    "title": "Homework: debug a form",
+    "step": "12-summary/01-profile-draft",
+    "title": "Homework: profile draft",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
     "chapter": "ch14-forms",
-    "step": "02-validation-formatting",
+    "step": "12-summary/02-shipping-estimate",
+    "title": "Homework: shipping estimate",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "12-summary/03-appointment-scheduler",
+    "title": "Homework: appointment scheduler",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "06-validation-formatting",
     "title": "Form validation and formatting",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "07-data-attributes",
+    "title": "Working with data attributes",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "08-select-options",
+    "title": "Populating select options",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "09-formatting-values",
+    "title": "Formatting dates and currency",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "10-reset-event",
+    "title": "Resetting a form",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-forms",
+    "step": "11-accessible-validation",
+    "title": "Accessible validation messages",
     "runtime": "browser"
   },
   {
@@ -823,6 +963,34 @@
     "chapter": "ch15-xss",
     "step": "01-reflected-vulnerable",
     "title": "XSS: the reflected vulnerable pattern",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch16-dynamic-forms",
+    "step": "01-dynamic-table",
+    "title": "Adding rows to a table",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch16-dynamic-forms",
+    "step": "02-pseudo-dynamic",
+    "title": "Pseudo-dynamic rows for OnBase",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch16-dynamic-forms",
+    "step": "03-serialized-rows",
+    "title": "Serialized dynamic rows",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch16-dynamic-forms",
+    "step": "04-vue-rows",
+    "title": "Dynamic rows with Vue",
     "runtime": "browser"
   },
   {

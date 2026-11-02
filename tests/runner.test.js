@@ -11,9 +11,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 test('catalog has complete tracks and rejects paths outside a lesson', async () => {
   const lessons = await discover(root);
-  assert.equal(lessons.length,185);
-  assert.equal(lessons.filter(l => l.part === 'part-ii-applied-javascript').length,46);
-  assert.equal(lessons.filter(l => l.part === 'part-iii-working-with-html').length,26);
+  assert.equal(lessons.length,209);
+  assert.equal(lessons.filter(l => l.part === 'part-ii-applied-javascript').length,50);
+  assert.equal(lessons.filter(l => l.part === 'part-iii-working-with-html').length,45);
   assert.equal(lessons.filter(l => l.part === 'part-iv-beyond-the-book').length,27);
   await assert.rejects(within(lessons[0].folder, path.join(root,'package.json')), /outside/);
 });

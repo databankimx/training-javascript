@@ -1,5 +1,6 @@
 {
   "title": "Arrays",
+  "order": 1,
   "runtime": "node",
   "minutes": 25,
   "objective": "Create, read, and change an ordered collection",

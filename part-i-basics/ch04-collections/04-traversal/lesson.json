@@ -1,5 +1,6 @@
 {
   "title": "Traversing collections",
+  "order": 4,
   "runtime": "node",
   "minutes": 35,
   "objective": "Visit every value in flat and nested arrays",

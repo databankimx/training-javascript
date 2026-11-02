@@ -1,5 +1,6 @@
 {
   "title": "Trees and tries",
+  "order": 8,
   "runtime": "node",
   "minutes": 35,
   "objective": "Recognize tree-shaped data and the prefix-sharing idea behind tries",

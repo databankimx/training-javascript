@@ -1,0 +1,12 @@
+{
+  "title": "Homework: profile draft",
+  "order": 13,
+  "section": "Chapter summary · Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 50,
+  "objective": "Build a form that saves, resets, and reports draft state",
+  "input": "",
+  "expected": "Save and reset update the form's visible status.",
+  "verify": []
+}

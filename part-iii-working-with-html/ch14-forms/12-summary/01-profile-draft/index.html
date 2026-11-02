@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile draft homework</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Profile draft</h1>
+        <form id="profile-form">
+            <label for="display-name">Display name</label>
+            <input id="display-name" name="display-name" aria-label="Display name">
+            <label for="timezone">Time zone</label>
+            <select id="timezone" name="timezone" aria-label="Time zone">
+                <option value="central">Central</option>
+                <option value="eastern">Eastern</option>
+            </select>
+            <button type="submit">Save draft</button>
+            <button type="reset">Discard draft</button>
+        </form>
+        <p id="status" role="status" aria-live="polite">No draft saved.</p>
+    </main>
+</body>
+
+</html>

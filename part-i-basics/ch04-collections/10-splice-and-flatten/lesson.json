@@ -1,5 +1,6 @@
 {
   "title": "Splicing and flattening arrays",
+  "order": 10,
   "runtime": "node",
   "minutes": 35,
   "objective": "Insert and remove items while choosing whether to mutate or copy",

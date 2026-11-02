@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data attributes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Choose a product</h1>
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" aria-label="Quantity" value="2" min="1">
+        <button class="product" data-product-id="A12" data-price="19.99" type="button">Notebook</button>
+        <button class="product" data-product-id="B07" data-price="5.50" type="button">Pen set</button>
+        <p id="status" role="status" aria-live="polite">Nothing selected.</p>
+    </main>
+</body>
+
+</html>

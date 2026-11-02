@@ -1,0 +1,11 @@
+{
+  "title": "Form validation and formatting",
+  "order": 6,
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Validate several fields and show clear invalid states",
+  "input": "",
+  "expected": "Invalid fields are highlighted and focus moves to the first one.",
+  "prerequisites": ["part-iii-working-with-html/ch14-forms/05-submit-validation"],
+  "verify": []
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conditional form sections</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Account setup</h1><label for="type">Account type</label><select id="type" aria-label="Account type">
+            <option value="personal">Personal</option>
+            <option value="business">Business</option>
+        </select>
+        <section id="business-details" hidden>
+            <label for="company">Company name</label>
+            <input id="company" aria-label="Company name">
+            <label for="tax-id">Tax ID</label>
+            <input id="tax-id" aria-label="Tax ID">
+        </section>
+        <p id="status" role="status" aria-live="polite">Personal account selected.</p>
+    </main>
+</body>
+
+</html>

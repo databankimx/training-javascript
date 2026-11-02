@@ -1,5 +1,6 @@
 {
   "title": "Nested arrays",
+  "order": 3,
   "runtime": "node",
   "minutes": 30,
   "objective": "Read, traverse, and copy arrays that contain other arrays",

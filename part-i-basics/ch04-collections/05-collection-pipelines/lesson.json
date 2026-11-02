@@ -1,5 +1,6 @@
 {
   "title": "Collection pipelines",
+  "order": 5,
   "runtime": "node",
   "minutes": 35,
   "objective": "Transform, select, combine, and sort array data",

@@ -1,0 +1,11 @@
+{
+  "title": "Maps and sets",
+  "order": 12,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Choose Map and Set when keyed lookup or uniqueness matters",
+  "input": "",
+  "expected": "The map retrieves a value and the set removes duplicates.",
+  "prerequisites": ["part-i-basics/ch04-collections/11-slices-and-ranges"],
+  "verify": []
+}

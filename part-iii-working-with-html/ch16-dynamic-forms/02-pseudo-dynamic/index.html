@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pseudo-dynamic GL form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>GL Coding Form</h1>
+        <fieldset class="invoice-header">
+            <legend>Invoice Header</legend>
+            <div class="field-group"><label for="invoice-date">Invoice date</label><input id="invoice-date" type="date"
+                    aria-label="Invoice date"></div>
+            <div class="field-group"><label for="invoice-amount">Invoice amount</label><input id="invoice-amount"
+                    type="number" aria-label="Invoice amount"></div>
+            <div class="field-group"><label for="vendor">Vendor name</label><input id="vendor" aria-label="Vendor name">
+            </div>
+            <div class="field-group"><label for="vendor-id">Vendor ID</label><input id="vendor-id"
+                    aria-label="Vendor ID"></div>
+        </fieldset>
+        <p>This version has five rows in the HTML before JavaScript runs.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>PO Number</th>
+                    <th>GL Code</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="gl-body">
+                <tr class="dyn-row">
+                    <td><input name="OBKey__384_1" aria-label="PO number 1"></td>
+                    <td><input name="OBKey__367_1" aria-label="GL code 1"></td>
+                    <td><input class="amount" name="OBKey__368_1" aria-label="GL amount 1"></td>
+                    <td><input name="OBKey__324_1" aria-label="GL description 1"></td>
+                </tr>
+                <tr class="dyn-row">
+                    <td><input name="OBKey__384_2" aria-label="PO number 2"></td>
+                    <td><input name="OBKey__367_2" aria-label="GL code 2"></td>
+                    <td><input class="amount" name="OBKey__368_2" aria-label="GL amount 2"></td>
+                    <td><input name="OBKey__324_2" aria-label="GL description 2"></td>
+                </tr>
+                <tr class="dyn-row">
+                    <td><input name="OBKey__384_3" aria-label="PO number 3"></td>
+                    <td><input name="OBKey__367_3" aria-label="GL code 3"></td>
+                    <td><input class="amount" name="OBKey__368_3" aria-label="GL amount 3"></td>
+                    <td><input name="OBKey__324_3" aria-label="GL description 3"></td>
+                </tr>
+                <tr class="dyn-row">
+                    <td><input name="OBKey__384_4" aria-label="PO number 4"></td>
+                    <td><input name="OBKey__367_4" aria-label="GL code 4"></td>
+                    <td><input class="amount" name="OBKey__368_4" aria-label="GL amount 4"></td>
+                    <td><input name="OBKey__324_4" aria-label="GL description 4"></td>
+                </tr>
+                <tr class="dyn-row">
+                    <td><input name="OBKey__384_5" aria-label="PO number 5"></td>
+                    <td><input name="OBKey__367_5" aria-label="GL code 5"></td>
+                    <td><input class="amount" name="OBKey__368_5" aria-label="GL amount 5"></td>
+                    <td><input name="OBKey__324_5" aria-label="GL description 5"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="add" type="button">Add row</button><button id="remove" type="button">Remove row</button>
+        <p id="status" role="status" aria-live="polite"></p>
+        <fieldset class="approval-fields">
+            <legend>Invoice Approvals</legend>
+            <div class="field-group"><label for="requested-by">Requester confirmation</label><input id="requested-by"
+                    aria-label="Requester confirmation"></div>
+            <div class="field-group"><label for="approved-by">Accounting approval</label><input id="approved-by"
+                    aria-label="Accounting approval"></div>
+        </fieldset>
+        <fieldset class="notes-section">
+            <legend>Accounting Notes</legend>
+            <label for="notes">Enter notes below</label>
+            <textarea id="notes" aria-label="Accounting notes"></textarea>
+            <button id="add-note" type="button">Add Note</button>
+            <ul id="note-list" aria-label="Saved accounting notes"></ul>
+        </fieldset>
+    </main>
+</body>
+
+</html>

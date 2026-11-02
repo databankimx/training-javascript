@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculating form values</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Order total</h1>
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" aria-label="Quantity" value="2" min="0">
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number" aria-label="Price" value="19.99" min="0" step="0.01">
+        <button id="calculate" type="button">Calculate total</button>
+        <p id="total" role="status" aria-live="polite">Total: $0.00</p>
+    </main>
+</body>
+
+</html>

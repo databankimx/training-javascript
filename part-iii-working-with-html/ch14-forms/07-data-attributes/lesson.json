@@ -1,0 +1,11 @@
+{
+  "title": "Working with data attributes",
+  "order": 7,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Store and read small pieces of element-specific data",
+  "input": "",
+  "expected": "The selected product's data attributes appear in the status message.",
+  "prerequisites": ["part-iii-working-with-html/ch14-forms/06-validation-formatting"],
+  "verify": []
+}

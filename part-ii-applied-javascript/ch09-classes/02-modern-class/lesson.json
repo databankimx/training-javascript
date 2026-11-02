@@ -1,0 +1,11 @@
+{
+  "title": "Modern class syntax",
+  "order": 2,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use class syntax to define constructors and methods",
+  "input": "",
+  "expected": "A class instance reports its completed lessons.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/01-constructor-functions"],
+  "verify": []
+}

@@ -1,5 +1,6 @@
 {
   "title": "Stacks and queues",
+  "order": 7,
   "runtime": "node",
   "minutes": 30,
   "objective": "Model last-in-first-out and first-in-first-out collections",

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submit-time validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Request access</h1>
+        <form id="access-form">
+            <label for="requester">Name</label>
+            <input id="requester" name="requester" aria-label="Name" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" aria-label="Email" required>
+            <p id="message" role="status" aria-live="polite"></p>
+            <button id="check" type="button">Validate request</button>
+            <button id="real-submit" type="submit" hidden>Submit request</button>
+        </form>
+    </main>
+</body>
+
+</html>

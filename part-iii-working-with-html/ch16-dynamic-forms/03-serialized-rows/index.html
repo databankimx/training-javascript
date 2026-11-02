@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Serialized dynamic rows</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>GL Coding Form</h1>
+        <fieldset class="invoice-header">
+            <legend>Invoice Header</legend>
+            <div class="field-group"><label for="invoice-date">Invoice date</label><input id="invoice-date" type="date"
+                    aria-label="Invoice date"></div>
+            <div class="field-group"><label for="invoice-amount">Invoice amount</label><input id="invoice-amount"
+                    type="number" aria-label="Invoice amount"></div>
+            <div class="field-group"><label for="vendor">Vendor name</label><input id="vendor" aria-label="Vendor name">
+            </div>
+            <div class="field-group"><label for="vendor-id">Vendor ID</label><input id="vendor-id"
+                    aria-label="Vendor ID"></div>
+        </fieldset>
+        <input type="hidden" id="mikgData" name="mikgData"
+            value="[{&quot;poNumber&quot;:&quot;81991&quot;,&quot;glCode&quot;:&quot;24&quot;,&quot;amount&quot;:&quot;300&quot;,&quot;description&quot;:&quot;Furnace Filters&quot;}]">
+        <table>
+            <thead>
+                <tr>
+                    <th>PO Number</th>
+                    <th>GL Code</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="gl-body"></tbody>
+        </table>
+        <button id="add" type="button">Add row</button><button id="save" type="button">Save row data</button>
+        <pre id="debug" aria-live="polite"></pre>
+        <fieldset class="approval-fields">
+            <legend>Invoice Approvals</legend>
+            <div class="field-group"><label for="requested-by">Requester confirmation</label><input id="requested-by"
+                    aria-label="Requester confirmation"></div>
+            <div class="field-group"><label for="approved-by">Accounting approval</label><input id="approved-by"
+                    aria-label="Accounting approval"></div>
+        </fieldset>
+        <fieldset class="notes-section">
+            <legend>Accounting Notes</legend>
+            <label for="notes">Enter notes below</label>
+            <textarea id="notes" aria-label="Accounting notes"></textarea>
+            <button id="add-note" type="button">Add Note</button>
+            <ul id="note-list" aria-label="Saved accounting notes"></ul>
+        </fieldset>
+    </main>
+</body>
+
+</html>
