@@ -1,5 +1,6 @@
 {
   "title": "Events and event handlers",
+  "order": 5,
   "runtime": "browser",
   "minutes": 35,
   "objective": "Respond to a browser event with an event listener",

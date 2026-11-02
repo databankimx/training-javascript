@@ -1,5 +1,6 @@
 {
   "title": "Selecting elements and safe text",
+  "order": 2,
   "runtime": "browser",
   "minutes": 30,
   "objective": "Select DOM elements and update text without creating HTML",

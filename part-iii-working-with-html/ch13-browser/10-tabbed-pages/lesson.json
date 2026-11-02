@@ -1,0 +1,11 @@
+{
+  "title": "Real-world example: tabbed pages",
+  "order": 10,
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Show one selected panel while hiding the other tabbed content",
+  "input": "",
+  "expected": "Selecting a tab updates the visible panel and selected-tab message.",
+  "prerequisites": ["part-iii-working-with-html/ch13-browser/09-show-hide"],
+  "verify": []
+}

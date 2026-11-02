@@ -1,0 +1,11 @@
+{
+  "title": "Legacy browser code: document.write",
+  "order": 4,
+  "runtime": "browser",
+  "minutes": 25,
+  "objective": "Recognize document.write and explain why new code should avoid it",
+  "input": "",
+  "expected": "The page writes a message while the document is loading.",
+  "prerequisites": ["part-iii-working-with-html/ch13-browser/03-load-timing"],
+  "verify": []
+}

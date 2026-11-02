@@ -716,15 +716,78 @@
   {
     "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
-    "step": "03-events",
+    "step": "05-events",
     "title": "Events and event handlers",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
-    "step": "04-show-hide",
+    "step": "09-show-hide",
     "title": "Show, hide, and update the page",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "10-tabbed-pages",
+    "title": "Real-world example: tabbed pages",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "03-load-timing",
+    "title": "Script timing: defer, DOMContentLoaded, and onload",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "04-document-write",
+    "title": "Legacy browser code: document.write",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "08-timed-events",
+    "title": "Timed events with setInterval",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "06-inline-events",
+    "title": "Inline events versus event binding",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "07-dynamic-events",
+    "title": "Dynamically binding events",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "11-keyboard-tabs",
+    "title": "Keyboard navigation for tabs",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "12-dom-elements",
+    "title": "Creating and adding elements",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch13-browser",
+    "step": "13-css-classes",
+    "title": "Changing CSS classes",
     "runtime": "browser"
   },
   {
@@ -737,7 +800,7 @@
   {
     "part": "part-iii-working-with-html",
     "chapter": "ch13-browser",
-    "step": "05-homework/01-counter",
+    "step": "14-homework/01-counter",
     "title": "Homework: interactive counter",
     "runtime": "browser"
   },

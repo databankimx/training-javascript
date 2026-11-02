@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible tabs</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Product details</h1>
+    <div role="tablist" aria-label="Product details">
+      <button id="overview" role="tab" aria-selected="true" aria-controls="overview-panel" type="button">Overview</button>
+      <button id="delivery" role="tab" aria-selected="false" aria-controls="delivery-panel" type="button">Delivery</button>
+    </div>
+    <section id="overview-panel" role="tabpanel" aria-labelledby="overview"><p>Overview content.</p></section>
+    <section id="delivery-panel" role="tabpanel" aria-labelledby="delivery" hidden><p>Delivery content.</p></section>
+  </main>
+</body>
+</html>

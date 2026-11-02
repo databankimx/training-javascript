@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inline events versus binding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Two ways to handle events</h1>
+        <section>
+            <h2>Inline attributes</h2><button type="button" onclick="showMessage('inline click')">Click</button><input
+                aria-label="Inline focus example" onfocus="showMessage('inline focus')"
+                onblur="showMessage('inline blur')"><select aria-label="Inline change example"
+                onchange="showMessage('inline change')">
+                <option>Choose one</option>
+                <option>Alpha</option>
+                <option>Beta</option>
+            </select>
+        </section>
+        <section>
+            <h2>Bound in JavaScript</h2><button id="bound-button" type="button">Click</button><input id="bound-input"
+                aria-label="Bound focus example"><select id="bound-select" aria-label="Bound change example">
+                <option>Choose one</option>
+                <option>Alpha</option>
+                <option>Beta</option>
+            </select>
+        </section>
+        <p id="message" aria-live="polite">Interact with either section.</p>
+    </main>
+</body>
+
+</html>

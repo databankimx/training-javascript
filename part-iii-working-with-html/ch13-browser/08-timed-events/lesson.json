@@ -1,0 +1,11 @@
+{
+  "title": "Timed events with setInterval",
+  "order": 8,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Schedule repeated browser work and stop it safely",
+  "input": "",
+  "expected": "The counter updates once a second until stopped.",
+  "prerequisites": ["part-iii-working-with-html/ch13-browser/03-events"],
+  "verify": []
+}

@@ -1,5 +1,6 @@
 {
   "title": "Show, hide, and update the page",
+  "order": 9,
   "runtime": "browser",
   "minutes": 35,
   "objective": "Use JavaScript to show, hide, and update page content",

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabbed pages</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Tabbed information</h1>
+    <div class="tabs" role="tablist" aria-label="Information sections">
+      <button id="tab-overview" type="button" role="tab" aria-selected="true" aria-controls="panel-overview">Overview</button>
+      <button id="tab-details" type="button" role="tab" aria-selected="false" aria-controls="panel-details">Details</button>
+      <button id="tab-notes" type="button" role="tab" aria-selected="false" aria-controls="panel-notes">Notes</button>
+    </div>
+    <section id="panel-overview" role="tabpanel" aria-labelledby="tab-overview"><h2>Overview</h2><p>This panel introduces the topic.</p></section>
+    <section id="panel-details" role="tabpanel" aria-labelledby="tab-details" hidden><h2>Details</h2><p>This panel contains the useful particulars.</p></section>
+    <section id="panel-notes" role="tabpanel" aria-labelledby="tab-notes" hidden><h2>Notes</h2><p>This panel contains reminders and follow-up information.</p></section>
+    <p id="selected" aria-live="polite">Selected tab: Overview</p>
+  </main>
+</body>
+</html>

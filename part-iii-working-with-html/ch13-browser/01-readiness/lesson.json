@@ -1,5 +1,6 @@
 {
   "title": "JavaScript in an HTML page",
+  "order": 1,
   "runtime": "browser",
   "minutes": 30,
   "objective": "Run JavaScript after the page is ready",

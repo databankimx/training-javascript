@@ -1,0 +1,12 @@
+{
+  "title": "Homework: live status panel",
+  "order": 15,
+  "section": "Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 45,
+  "objective": "Combine DOM creation, events, and CSS classes",
+  "input": "",
+  "expected": "The page adds a status message and applies an error class when requested.",
+  "verify": []
+}

@@ -344,7 +344,6 @@ async function run() {
     $('status').textContent = 'Running';
     if (current.runtime === 'browser') {
       const html = sourceFor('index.html')
-      .replace(/<script\b[^>]*\bsrc=["'][^"']*main\.js["'][^>]*>\s*<\/script>/gi, '')
       .replace(/<link\b[^>]*\bhref=["'][^"']*style\.css["'][^>]*>/gi, '');
       const css = sourceFor('style.css') || '';
       
@@ -352,8 +351,14 @@ async function run() {
       // The preview is sandboxed, but keeps its same-origin storage available for
       // lessons that demonstrate persistence with localStorage.
       const bridge = `const send=(...args)=>parent.postMessage({trainingOutput:true,text:args.map(v=>typeof v==='string'?v:JSON.stringify(v)).join(' ')},'*');console.log=send;console.error=send;window.onerror=(message)=>send(message);window.onunhandledrejection=(event)=>send(String(event.reason));`;
-      const script = `<script type="module">${bridge}\n${source.replace(/<\/script/gi, '<\\/script')}<` + '/script>';
-      $('preview').srcdoc = html.replace('</head>', `<style>${css}</style></head>`).replace('</body>', script + '</body>');
+      const sourceTag = html.match(/<script\b([^>]*?)\bsrc=["'][^"']*main\.js["']([^>]*)>\s*<\/script>/i);
+      const defer = sourceTag && /\bdefer\b/i.test(`${sourceTag[1]} ${sourceTag[2]}`) ? ' defer' : '';
+      const script = `<script${defer}>${bridge}\n${source.replace(/<\/script/gi, '<\\/script')}<` + '/script>';
+      const scriptPattern = /<script\b[^>]*\bsrc=["'][^"']*main\.js["'][^>]*>\s*<\/script>/i;
+      const page = defer
+        ? html.replace(scriptPattern, '').replace('</body>', script + '</body>')
+        : html.replace(scriptPattern, script);
+      $('preview').srcdoc = page.replace('</head>', `<style>${css}</style></head>`);
       if (!$('preview-dialog').open) $('preview-dialog').showModal();
       $('status').textContent = 'Browser preview running';
       $('run').disabled = false;
