@@ -1,9 +1,22 @@
-# S14 · Typed arrays (NumPy counterpart)  -  exercise solution
+# Solution
 
-A working solution should handle the ordinary input and the awkward one. Here’s how we can do that.
+```javascript
+const values = new Float64Array([1, 2, 3]);
+const view = values.subarray(0, 2);
 
-values.slice(0,2) copies the selected values. Return null for an empty buffer before dividing by length. A mean of no observations is undefined as an application result, not zero.
+view[0] = 10;
 
-## Review
+console.log("values: " + [...values].join(", "));
 
-Now try the original input and the boundary case you chose. If both work, explain which operations make them work. That explanation is what we want to keep; the output window is happy to print all sorts of things.
+const sum = values.reduce((total, value) => total + value, 0);
+console.log("mean: " + sum / values.length);
+```
+
+```text
+values: 10, 2, 3
+mean: 5
+```
+
+The important detail is that `subarray()` creates a shared view. Changing the first value through `view` also changes the original `values` array. The mean is then calculated from `10`, `2`, and `3`.
+
+---

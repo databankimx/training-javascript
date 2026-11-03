@@ -1,0 +1,10 @@
+{
+  "title": "Lists, units, and relative time",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use Intl formatters for lists, units, and human-readable relative time.",
+  "input": "",
+  "expected": "The same values become natural text for a reader.",
+  "verify": ["Ada, Grace, and Alan", "3 items", "in 2 days"],
+  "order": 3
+}

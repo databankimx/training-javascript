@@ -2,13 +2,13 @@
   "title": "Typed arrays",
   "runtime": "node",
   "minutes": 30,
-  "objective": "S14 · Typed arrays (NumPy counterpart)",
+  "objective": "Use typed arrays when fixed-width numeric storage matters, and distinguish shared views from copied values.",
   "input": "",
-  "expected": "Expect [10,2,3] and 5. The view changes the original buffer.",
+  "expected": "The shared view changes the original values, so the output is values: 10, 2, 3 and mean: 5.",
   "prerequisites": [],
   "verify": [
-    "10, 2, 3",
+    "values: 10, 2, 3",
     "5"
   ],
-  "order": 7
+  "order": 1
 }

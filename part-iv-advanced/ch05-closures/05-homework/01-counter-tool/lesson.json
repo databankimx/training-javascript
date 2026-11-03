@@ -1,0 +1,12 @@
+{
+  "title": "Homework: private counter tool",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Build a closure-based counter with private state and public operations.",
+  "input": "",
+  "expected": "The complete example increments, reads, and resets private counter state.",
+  "verify": ["count: 2", "after reset: 0"],
+  "order": 5
+}

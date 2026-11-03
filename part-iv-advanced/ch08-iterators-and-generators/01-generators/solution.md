@@ -1,9 +1,37 @@
-# S26 · Iterators and generators (itertools counterpart)  -  exercise solution
+# Solution
 
-A working solution should handle the ordinary input and the awkward one. Here’s how we can do that.
+```javascript
+function* range(start, end) {
+  for (let value = start; value < end; value += 1) {
+    yield value;
+  }
+}
 
-Validate n as a nonnegative integer. Return immediately when n === 0. Otherwise yield each value, increment a count, and return when count === n. An early guard avoids consuming a source value for a zero-item request.
+function* squares(values) {
+  for (const value of values) {
+    yield value * value;
+  }
+}
 
-## Review
+console.log([...squares(range(1, 5))].join(","));
 
-Now try the original input and the boundary case you chose. If both work, explain which operations make them work. That explanation is what we want to keep; the output window is happy to print all sorts of things.
+const iterator = range(10, 12);
+const first = iterator.next();
+const second = iterator.next();
+const finished = iterator.next();
+
+console.log("value: " + first.value + ", done: " + first.done);
+console.log("value: " + second.value + ", done: " + second.done);
+console.log("value: " + finished.value + ", done: " + finished.done);
+```
+
+```text
+1,4,9,16
+value: 10, done: false
+value: 11, done: false
+value: undefined, done: true
+```
+
+The generator pauses at each `yield`, so the caller controls how far the sequence advances. The spread expression consumes the bounded square sequence completely, while the explicit calls make the iterator protocol visible.
+
+---

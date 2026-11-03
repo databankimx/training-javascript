@@ -1,62 +1,64 @@
 # Typed arrays
 
-## Learning goal
+Ordinary JavaScript arrays are flexible containers. They can hold mixed values, grow as needed, and store numbers without asking us to choose a width. Sometimes that flexibility is not what a program needs.
 
-S14 · Typed arrays (NumPy counterpart): by the end, we should be able to change the example and explain why it behaves as it does.
-
-## Before you start
-
-Keep the Source and Output panes handy, and work through the earlier lessons when a concept is unfamiliar. Everything we need for this example is already in the repository.
-
-## Understand the idea
-
-A numeric buffer is useful when we care about how values are stored. It does not automatically bring along the rest of NumPy, much as I might appreciate that arrangement.
-
-Typed arrays store fixed-width numeric values backed by an ArrayBuffer. Float64Array is useful for numeric buffers, but it does not supply NumPy broadcasting, multidimensional indexing, or linear algebra. subarray creates a view over shared memory; slice copies values. Choose a JavaScript numeric library separately if those broader operations are needed.
-
-## Predict, then run
-
-Before we press Run, read main.js and make a prediction. Include the order of the output. Use a quick trace on paper if that helps.
-
-Expect [10,2,3] and 5. The view changes the original buffer.
-
-## Example code
+Typed arrays store fixed-width numeric values in a binary buffer. They are useful for image data, audio samples, network packets, WebGL, and other work where the representation matters.
 
 ```javascript
-const values = new Float64Array([1,2,3]);
-const view = values.subarray(0,2);
+const values = new Float64Array([1, 2, 3]);
+const view = values.subarray(0, 2);
+
 view[0] = 10;
+
 console.log([...values]);
-const sum = values.reduce((a,b) => a+b,0);
+const sum = values.reduce((total, value) => total + value, 0);
 console.log(sum / values.length);
 ```
 
-## Expected output
-
 ```text
-10, 2, 3
+[ 10, 2, 3 ]
 5
 ```
 
-## Walk through the example
+`Float64Array` stores each value as a 64-bit floating-point number. `subarray()` creates a view over the same memory, so changing `view[0]` changes `values[0]`. The mean is calculated from the modified values.
 
-subarray exposes the first two values through the same backing buffer. Writing through that view changes values[0]. reduce then reads the modified numeric values and the mean becomes five. Changing to slice gives an independent buffer and a different result for the original collection.
+| Type | Storage | Typical use |
+| --- | --- | --- |
+| `Int8Array` | Signed 8-bit integers | Small signed samples |
+| `Uint8Array` | Unsigned 8-bit integers | Bytes and color channels |
+| `Int32Array` | Signed 32-bit integers | Fixed-width whole numbers |
+| `Float32Array` | 32-bit floating point | Graphics and audio data |
+| `Float64Array` | 64-bit floating point | Numeric buffers needing more precision |
 
-## Try it yourself
+> A typed array is a view over binary storage with a fixed element type. It is still an array-like object, but it does not have the unrestricted type and resizing behavior of an ordinary Array.
 
-Use slice instead of subarray and show that the original remains unchanged. Compute the mean of an empty buffer safely.
+## Views versus copies
 
-Give this a try before opening Solution. Keep the changes in the editor, or download the source you want to save. Reset brings back the original selected file.
+`subarray()` creates another view over the same buffer. `slice()` creates a new typed array with copied values.
 
-## Check your understanding
+```javascript
+const original = new Uint8Array([10, 20, 30, 40]);
+const shared = original.subarray(1, 3);
+const copied = original.slice(1, 3);
 
-Point to the code that does the important work and explain it in your own words. Then choose a boundary case that makes the first solution uncomfortable. What happens, and what should we change?
+shared[0] = 99;
+copied[1] = 88;
 
-## Completion checkpoint
+console.log([...original]);
+console.log([...shared]);
+console.log([...copied]);
+```
 
-We’re ready to move on when we can explain the example, complete the exercise, and show both an ordinary case and an edge case. Getting the output once is a start; knowing why it is right is the useful part.
+```text
+[ 10, 99, 30, 40 ]
+[ 99, 30 ]
+[ 20, 88 ]
+```
 
-## Further reading
+The shared view changes the original. The copied array does not. That distinction matters when a function receives a region of a large buffer and is expected either to edit the source or to work independently.
 
-[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) and [Eloquent JavaScript](https://eloquentjavascript.net/). Use the section that matches this lesson. We do not need to finish two books before changing a button.
+## Try it Yourself
 
+Use an `Int16Array` and try assigning a value outside its range. Then replace `subarray()` with `slice()` and predict which values change. Compute the mean of an empty typed array safely instead of returning `NaN`.
+
+---

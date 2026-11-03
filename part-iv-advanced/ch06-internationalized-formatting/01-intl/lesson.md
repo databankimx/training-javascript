@@ -1,58 +1,65 @@
 # Internationalized formatting
 
-## Learning goal
+The value we store and the way we display that value are different concerns. A price should remain a number while we calculate with it. It becomes formatted text only when we show it to a person.
 
-S07 · Internationalized formatting: by the end, we should be able to change the example and explain why it behaves as it does.
-
-## Before you start
-
-Keep the Source and Output panes handy, and work through the earlier lessons when a concept is unfamiliar. Everything we need for this example is already in the repository.
-
-## Understand the idea
-
-An amount and the way we display that amount are separate concerns. Mixing them together works beautifully right up until we need a different currency, locale, or calculation.
-
-Intl.NumberFormat and Intl.DateTimeFormat separate values from locale-specific display. Always specify the locale and time zone when an example requires reproducible output. Store timestamps in a standard form and format them at the boundary. A formatted amount is text and must not be parsed back with Number when it contains currency symbols or grouping.
-
-## Predict, then run
-
-Before we press Run, read main.js and make a prediction. Include the order of the output. Use a quick trace on paper if that helps.
-
-Expect 01/15/2026 and a German-formatted euro amount. Exact spacing can depend on the ICU version.
-
-## Example code
+JavaScript's `Intl` APIs handle locale-specific display rules for us. They know that the United States and Germany use different grouping and decimal separators, and that currencies belong before or after the amount depending on the locale.
 
 ```javascript
-const date = new Date('2026-01-15T12:00:00Z');
-console.log(new Intl.DateTimeFormat('en-US',{timeZone:'UTC',year:'numeric',month:'2-digit',day:'2-digit'}).format(date));
-console.log(new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(1234.5));
-```
+const amount = 1234.5;
 
-## Expected output
+const us = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD"
+});
+const german = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR"
+});
+
+console.log(us.format(amount));
+console.log(german.format(amount));
+```
 
 ```text
-Expect 01/15/2026 and a German-formatted euro amount. Exact spacing can depend on the ICU version.
+$1,234.50
+1.234,50 €
 ```
 
-## Walk through the example
+The number is still `1234.5`. The formatter returns text, including the currency symbol and grouping separators. Do not parse that formatted text back into a number. Keep the original numeric value for calculations.
 
-The date string identifies an instant in UTC. DateTimeFormat receives an explicit UTC zone for reproducibility. NumberFormat receives a different locale and currency for the amount. The stored number does not change when the display conventions change.
+| Option | Purpose |
+| --- | --- |
+| `style: "currency"` | Display a monetary amount |
+| `currency: "USD"` | Choose the currency rules and symbol |
+| `minimumFractionDigits` | Control the minimum decimal places |
+| `useGrouping` | Enable or disable thousands separators |
 
-## Try it yourself
+> A locale is not just a language. It carries conventions for decimal separators, grouping, currency placement, dates, and more. Specify the locale when output must be predictable.
 
-Format the same instant in America/Chicago with a time component. Explain why the calendar date can differ between time zones.
+## Dates need a time zone
 
-Give this a try before opening Solution. Keep the changes in the editor, or download the source you want to save. Reset brings back the original selected file.
+Date values represent an instant. `Intl.DateTimeFormat` decides how that instant should look in a particular locale and time zone.
 
-## Check your understanding
+```javascript
+const date = new Date("2026-01-15T12:00:00Z");
+const formatDate = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+});
 
-Point to the code that does the important work and explain it in your own words. Then choose a boundary case that makes the first solution uncomfortable. What happens, and what should we change?
+console.log(formatDate.format(date));
+```
 
-## Completion checkpoint
+```text
+01/15/2026
+```
 
-We’re ready to move on when we can explain the example, complete the exercise, and show both an ordinary case and an edge case. Getting the output once is a start; knowing why it is right is the useful part.
+The explicit UTC zone makes the example reproducible. If we formatted the same instant in a time zone several hours behind UTC, the local calendar date could be the previous day.
 
-## Further reading
+## Try it Yourself
 
-[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) and [Eloquent JavaScript](https://eloquentjavascript.net/). Use the section that matches this lesson. We do not need to finish two books before changing a button.
+Format the same amount as Japanese yen and Canadian dollars. Format the same instant in `America/Chicago` with a time component. Explain why the amount and the instant did not change, even though their display did.
 
+---

@@ -1,0 +1,10 @@
+{
+  "title": "Dates, time zones, and calendars",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Format one instant for different time zones and explain date changes.",
+  "input": "",
+  "expected": "The same instant can display as different local dates.",
+  "verify": ["Chicago:", "Tokyo:"],
+  "order": 2
+}

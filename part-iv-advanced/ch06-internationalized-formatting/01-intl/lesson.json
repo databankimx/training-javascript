@@ -1,10 +1,10 @@
 {
   "title": "Internationalized formatting",
   "runtime": "node",
-  "minutes": 30,
-  "objective": "S07 · Internationalized formatting",
+  "minutes": 35,
+  "objective": "Format currency and dates without changing the underlying values.",
   "input": "",
-  "expected": "Expect 01/15/2026 and a German-formatted euro amount. Exact spacing can depend on the ICU version.",
-  "prerequisites": [],
-  "order": 6
+  "expected": "The script formats one amount for two locales and formats a UTC date.",
+  "verify": ["$1,234.50", "01/15/2026"],
+  "order": 1
 }

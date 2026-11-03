@@ -2,12 +2,14 @@
   "title": "Iterators and generators",
   "runtime": "node",
   "minutes": 30,
-  "objective": "S26 · Iterators and generators (itertools counterpart)",
+  "objective": "Use generators to produce values on demand and explain the iterator protocol.",
   "input": "",
-  "expected": "Expect [1,4,9,16], then values 10 and 11 with done false, followed by done true.",
+  "expected": "The generator produces squares lazily, then next() reports values and the final done state.",
   "prerequisites": [],
   "verify": [
-    "1, 4, 9, 16"
+    "1,4,9,16",
+    "value: 10, done: false",
+    "value: undefined, done: true"
   ],
   "order": 8
 }

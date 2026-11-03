@@ -1,0 +1,12 @@
+{
+  "title": "Homework: build a reusable pipeline",
+  "section": "Chapter summary · Homework",
+  "spoiler": true,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Build and use a pipeline helper that applies functions from left to right.",
+  "input": "",
+  "expected": "The pipeline trims, converts, and labels the supplied text.",
+  "verify": ["INFO: READY", "INFO: SAVED"],
+  "order": 4
+}

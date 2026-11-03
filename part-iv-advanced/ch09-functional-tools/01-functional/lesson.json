@@ -1,14 +1,13 @@
 {
-  "title": "Function composition and memoization",
+  "title": "Function composition and pipelines",
   "runtime": "node",
   "minutes": 30,
-  "objective": "S27 · Function composition and memoization",
+  "objective": "Compose small functions into a readable pipeline and explain the order in which values move through it.",
   "input": "",
-  "expected": "Expect HELLO and 25 25 1.",
+  "expected": "Whitespace is removed first, then the remaining text is converted to uppercase.",
   "prerequisites": [],
   "verify": [
-    "HELLO",
-    "25 25 1"
+    "HELLO"
   ],
   "order": 9
 }

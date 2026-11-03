@@ -1219,6 +1219,34 @@
   },
   {
     "part": "part-iv-advanced",
+    "chapter": "ch05-closures",
+    "step": "02-private-state",
+    "title": "Private state with closures",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch05-closures",
+    "step": "03-callbacks",
+    "title": "Closures in callbacks",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch05-closures",
+    "step": "04-memoization",
+    "title": "Memoization with a closure",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch05-closures",
+    "step": "05-homework/01-counter-tool",
+    "title": "Homework: private counter tool",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
     "chapter": "ch06-internationalized-formatting",
     "step": "01-intl",
     "title": "Internationalized formatting",
@@ -1226,9 +1254,72 @@
   },
   {
     "part": "part-iv-advanced",
+    "chapter": "ch06-internationalized-formatting",
+    "step": "02-dates",
+    "title": "Dates, time zones, and calendars",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch06-internationalized-formatting",
+    "step": "03-lists-and-relative-time",
+    "title": "Lists, units, and relative time",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch06-internationalized-formatting",
+    "step": "04-homework/01-format-report",
+    "title": "Homework: internationalized report",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
     "chapter": "ch07-typed-arrays",
     "step": "01-numeric",
     "title": "Typed arrays",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch07-typed-arrays",
+    "step": "02-buffers-and-views",
+    "title": "Buffers, offsets, and byte order",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch07-typed-arrays",
+    "step": "03-text-and-bytes",
+    "title": "Text, bytes, and encodings",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch07-typed-arrays",
+    "step": "04-homework/01-byte-packet",
+    "title": "Homework: inspect a byte packet",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch08-iterators-and-generators",
+    "step": "02-custom-iterables",
+    "title": "Custom iterables",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch08-iterators-and-generators",
+    "step": "03-async-iterators",
+    "title": "Asynchronous iteration",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch08-iterators-and-generators",
+    "step": "04-homework/01-windowed-iterator",
+    "title": "Homework: a windowed iterator",
     "runtime": "node"
   },
   {
@@ -1241,8 +1332,29 @@
   {
     "part": "part-iv-advanced",
     "chapter": "ch09-functional-tools",
+    "step": "02-partial-application",
+    "title": "Partial application and reusable functions",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch09-functional-tools",
+    "step": "03-memoization",
+    "title": "Memoization and cache keys",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch09-functional-tools",
+    "step": "04-homework/01-pipeline-builder",
+    "title": "Homework: build a reusable pipeline",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch09-functional-tools",
     "step": "01-functional",
-    "title": "Function composition and memoization",
+    "title": "Function composition and pipelines",
     "runtime": "node"
   }
 ]

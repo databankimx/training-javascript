@@ -27,14 +27,14 @@ The editor saves drafts in this browser's storage for this local origin. Reset r
 
 ## Curriculum
 
-There are 178 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
+There are 194 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
 
 | Track | Coverage |
 |---|---|
 | Part I  -  Fundamentals (94) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, loops, functions, input, modules, classes, files, tests, promises, HTTP, DOM readiness, selection, delegation, and practical HTML interaction |
 | Part II  -  Applied JavaScript (41 lessons) | Functions, classes, modules, error handling, asynchronous JavaScript, and HTTP |
 | Part III  -  Working with HTML (45 lessons) | Browser JavaScript, forms, validation, dynamic forms, debugging, and XSS prevention |
-| Part IV  -  Advanced JavaScript (28 lessons) | Recursion, regular expressions, complexity, bitwise operations, closures, internationalized formatting, typed arrays, iterators, and functional tools |
+| Part IV  -  Advanced JavaScript (44 lessons) | Recursion, regular expressions, complexity, bitwise operations, closures, internationalized formatting, typed arrays, iterators, and functional tools |
 
 The HTML chapter covers script integration, hide/show, accordions, conditional controls, validation, dynamic tables, sorting/filtering, templates, dialogs, and an invoice coding form. It draws on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.
 

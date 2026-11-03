@@ -1,0 +1,10 @@
+{
+  "title": "Text, bytes, and encodings",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Convert text to bytes and back while recognizing that character encoding is part of the data format.",
+  "input": "",
+  "expected": "The encoded bytes round-trip back to the original text.",
+  "verify": ["bytes:", "decoded: café", "byte count:"],
+  "order": 3
+}

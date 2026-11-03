@@ -1,0 +1,12 @@
+{
+  "title": "Homework: inspect a byte packet",
+  "section": "Chapter summary · Homework",
+  "spoiler": true,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Use a buffer, a typed array, and a DataView to inspect a small binary packet.",
+  "input": "",
+  "expected": "The complete example prints the raw bytes and reads the packet fields with explicit byte order.",
+  "verify": ["bytes: 7, 44, 1, 0", "version: 7", "count: 300"],
+  "order": 4
+}

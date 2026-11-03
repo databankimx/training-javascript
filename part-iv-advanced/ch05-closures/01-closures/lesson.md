@@ -1,62 +1,71 @@
 # Closures and captured state
 
-## Learning goal
+A function normally uses the variables available while it runs. JavaScript also lets a function remember variables from the place where it was created. That remembered connection is a closure.
 
-S08 · Closures and captured state: by the end, we should be able to change the example and explain why it behaves as it does.
-
-## Before you start
-
-Keep the Source and Output panes handy, and work through the earlier lessons when a concept is unfamiliar. Everything we need for this example is already in the repository.
-
-## Understand the idea
-
-The outer function has finished, yet the inner function still remembers its variables. This is intentional. For once, the thing hanging around after a function returns is useful.
-
-A closure is a function together with access to its lexical environment. The environment survives after the outer function returns. Closures capture bindings, not frozen snapshots. Factory calls create independent environments, which makes closures useful for private state and configuration. Avoid accidentally sharing one outer mutable variable among unrelated callbacks.
-
-## Predict, then run
-
-Before we press Run, read main.js and make a prediction. Include the order of the output. Use a quick trace on paper if that helps.
-
-Expect 11 12 1. a and b close over different value bindings.
-
-## Example code
+This is useful when a function needs a small private piece of state. It is also one of those ideas that sounds mystical until we trace the bindings carefully. Nothing supernatural is happening. The function simply keeps access to the environment it was born into.
 
 ```javascript
 function makeCounter(start = 0) {
   let value = start;
   return () => ++value;
 }
+
 const a = makeCounter(10);
 const b = makeCounter();
+
 console.log(a(), a(), b());
 ```
-
-## Expected output
 
 ```text
 11 12 1
 ```
 
-## Walk through the example
+`makeCounter()` creates a local binding named `value`, then returns an arrow function that uses it. The outer call finishes, but the returned function still has access to that binding. Calling `a()` changes the `value` belonging to the first call. Calling `b()` changes a different `value` belonging to the second call.
 
-makeCounter creates a new value binding each time it is called. The returned arrow increments that binding later. a is invoked twice within the same log, while b is invoked once from a different environment. Trace the bindings rather than assuming all counters share the same start value.
+| Name | Created by | First result | Later result |
+| --- | --- | ---: | ---: |
+| `a` | `makeCounter(10)` | `11` | `12` |
+| `b` | `makeCounter()` | `1` | independent of `a` |
 
-## Try it yourself
+> A closure is a function together with access to the lexical environment where it was created. Closures capture bindings, not frozen snapshots. If the binding changes, later calls see the new value.
 
-Return an object with increment and reset functions that share the same private value.
+---
 
-Give this a try before opening Solution. Keep the changes in the editor, or download the source you want to save. Reset brings back the original selected file.
+## Functions are values, too
 
-## Check your understanding
+JavaScript functions can be stored in variables, placed in object properties, put in arrays, and passed as arguments to other functions. A closure is still a function, so it can travel around the program in exactly the same way.
 
-Point to the code that does the important work and explain it in your own words. Then choose a boundary case that makes the first solution uncomfortable. What happens, and what should we change?
+Here is a useful example: one closure raises a value to the second power, and another raises it to the third power.
 
-## Completion checkpoint
+```javascript
+function generatePower(exponent) {
+  return base => base ** exponent;
+}
 
-We’re ready to move on when we can explain the example, complete the exercise, and show both an ordinary case and an edge case. Getting the output once is a start; knowing why it is right is the useful part.
+const square = generatePower(2);
+const cube = generatePower(3);
 
-## Further reading
+function report(name, operation, value) {
+  console.log(name + " " + value + ": " + operation(value));
+}
 
-[MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) and [Eloquent JavaScript](https://eloquentjavascript.net/). Use the section that matches this lesson. We do not need to finish two books before changing a button.
+report("square", square, 2);
+report("cube", cube, 3);
+```
 
+```text
+square 2: 4
+cube 3: 27
+```
+
+`square` and `cube` are ordinary variables whose values happen to be functions. Each function remembers a different `exponent` binding. `report()` receives one of those functions as its `operation` parameter and calls it later. The closure does not care whether we call it directly through a variable or pass it through another function first.
+
+The `**` operator raises a number to a power. We introduced it in the arithmetic lessons, but the closure is the new idea here: `generatePower(2)` creates a function with the exponent already remembered.
+
+## Try it Yourself
+
+Change `makeCounter()` so it returns an object with `increment()` and `reset()` methods. Both methods should share the same private `value` binding. Create two counters and prove that resetting one does not reset the other.
+
+Then change `generatePower()` so it can create a fourth-power function. Store the resulting function in a variable and pass it to `report()`.
+
+---

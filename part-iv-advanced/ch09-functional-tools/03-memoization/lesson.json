@@ -1,0 +1,10 @@
+{
+  "title": "Memoization and cache keys",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Memoize a pure function and explain when a cache key is safe.",
+  "input": "",
+  "expected": "The repeated square uses the cached result, so the calculation runs once.",
+  "verify": ["25", "25", "calls: 1"],
+  "order": 3
+}
