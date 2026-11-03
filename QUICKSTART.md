@@ -4,13 +4,13 @@ Let’s get the runner open before discussing all the things it can do. There ar
 
 ## Requirements
 
-Node.js 24 or later, a current Edge/Chrome/Firefox browser, and optionally VS Code. Check node --version in a new terminal after installing Node. This repository uses ES modules. Install its dependencies once:
+Node.js 24 or later, a current Edge/Chrome/Firefox browser, and optionally VS Code. Check `node --version` in a new terminal after installing Node. This repository uses ES modules. Install its dependencies once:
 
 ```powershell
 npm install
 ```
 
-## Launch
+## Launch in the foreground
 
 ```powershell
 cd C:\Development\training\training-javascript
@@ -18,6 +18,31 @@ npm start
 ```
 
 Copy the entire http://127.0.0.1:4173/?token=... URL from the terminal into the browser. Each launch creates a new token. Keep the terminal open; Ctrl+C shuts down the runner and its active Node lesson. If you are using another directory, substitute that path in the command.
+
+## Launch with the Windows helper scripts
+
+From the repository root:
+
+```powershell
+.\start-training.ps1
+```
+
+This starts the runner in a hidden background process and opens the new tokenized URL in your default browser. While the page is open, it sends a heartbeat every five seconds. Closing the browser tab stops those heartbeats, and the runner shuts itself down after 30 seconds without one. In other words, you normally do not need to run the stop script after closing the tab.
+
+Use the stop script when you want an immediate shutdown, or when you are restarting the runner before the heartbeat timeout:
+
+```powershell
+.\stop-training.ps1
+```
+
+The stop script terminates the runner and its child processes. The launcher writes startup output and errors to:
+
+```text
+%TEMP%\javascript-training-<PID>.out.log
+%TEMP%\javascript-training-<PID>.err.log
+```
+
+If startup reports that port 4173 is already in use, use `netstat -ano | findstr ":4173"` to identify the process. Stop an earlier training runner with `.\stop-training.ps1` before using `taskkill` on a process you recognize.
 
 If port 4173 is occupied, stop your own earlier runner or choose another port:
 
@@ -47,10 +72,10 @@ Open the repository root in VS Code. A Node lesson can be run directly:
 node part-i-basics/ch01-hello/01-runtime/main.js
 ```
 
-For a browser lesson, open its index.html in a regular local development server. It already links style.css and main.js. A simple server is included:
+For a browser lesson, open its `index.html` in a regular local development server. It already links `style.css` and `main.js`. A simple server is included:
 
 ```powershell
-node scripts/serve-browser-lesson.js part-i-basics/ch27-interactive-html/06-dynamic-tables
+node scripts/serve-browser-lesson.js part-iii-working-with-html/ch16-dynamic-forms/01-dynamic-table
 ```
 
 Open the printed loopback URL. This serves the on-disk source, not browser-editor drafts; use Download and save your chosen files before moving between modes. Ctrl+C stops this server. Standalone mode has a normal origin and is useful for DevTools or storage experiments. The built-in iframe intentionally has an opaque origin.
@@ -64,3 +89,8 @@ Open the printed loopback URL. This serves the on-disk source, not browser-edito
 - SQLite experimental warning: some Node 24 versions label node:sqlite experimental. The local example may still run normally.
 - Browser state disappears: storage is specific to browser/profile/origin, and private browsing may discard it. Download important edits.
 - HTML changes are invisible: the runner injects code before the closing body tag. Retain a complete head/body structure. External assets and multi-file browser imports are not bundled by the runner; use standalone mode for those extensions.
+- The browser opens but the runner is stale: stop the background process with `.\stop-training.ps1`, then start it again. If the stop script cannot find its PID file, inspect the launcher log files under `%TEMP%` and check port 4173 with `netstat`.
+
+## Reset local progress
+
+The runner stores progress, drafts, and the last location in browser storage for the local origin. A new token does not clear it. For instructor or test resets, press Ctrl+Alt+Shift+Backspace. A small toast reports `progress reset`, and revealed homework spoilers are reset as well.

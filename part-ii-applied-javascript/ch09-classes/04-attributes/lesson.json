@@ -1,0 +1,11 @@
+{
+  "title": "Class and instance attributes",
+  "order": 4,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Initialize, read, and protect state on class instances",
+  "input": "",
+  "expected": "The class gives each car its own odometer and validates updates.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/03-compare-patterns"],
+  "verify": ["2024 Dodge Challenger", "Miles: 0", "Miles: 15000", "Cannot roll back"]
+}

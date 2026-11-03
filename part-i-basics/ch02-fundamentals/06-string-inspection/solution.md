@@ -17,6 +17,6 @@ l
 useful
 ```
 
-The indexes are zero-based, and the ending index is excluded from `slice()`. `at(-1)` is a convenient way to ask for the final character without calculating `length - 1` yourself.
+The indexes are zero-based, and the ending index is excluded from `slice()`. `at(-1)` is a convenient way to ask for the final character without calculating `length - 1` yourself. `slice()` accepts negative indexes, while `substring()` treats negative values as zero and swaps its arguments when the first is larger. `charAt()` and `charCodeAt()` use older, stricter out-of-range results, so the choice of method affects how a boundary case behaves.
 
 ---

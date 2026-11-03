@@ -1,10 +1,10 @@
 {
   "title": "break and continue",
   "runtime": "node",
-  "minutes": 25,
+  "minutes": 35,
   "objective": "Stop a loop early or skip one iteration",
   "input": "",
-  "expected": "The loop skips 3 and stops after finding 5.",
+  "expected": "The output demonstrates skipping an iteration, stopping a loop, and safely continuing a while loop.",
   "prerequisites": ["part-i-basics/ch07-loops/05-for-in"],
-  "verify": ["1", "2", "4", "5", "1", "2", "Found 5"]
+  "verify": ["1", "2", "4", "Found 5", "3"]
 }

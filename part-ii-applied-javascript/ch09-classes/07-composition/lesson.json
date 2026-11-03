@@ -1,0 +1,11 @@
+{
+  "title": "Composition: classes as properties",
+  "order": 7,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Build a class from cooperating class instances",
+  "input": "",
+  "expected": "An electric car delegates battery work to a Battery object.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/06-overriding"],
+  "verify": ["2024 Nissan Leaf", "Battery: 75 kWh", "Range: 260 miles"]
+}

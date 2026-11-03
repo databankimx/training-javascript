@@ -17,6 +17,8 @@ The values changed, but the structure of the program did not. `greeting` is decl
 
 The `+` operators concatenate the four pieces into one string. JavaScript reads the current value of each binding when it evaluates the `console.log` argument. If we changed `greeting` later, the next call would use the new value.
 
+The names follow JavaScript's usual `camelCase` convention, and the comment would be ignored by the host if we added one. Naming is not decoration: a clear name gives the next reader a chance to understand the code without reconstructing the author's intentions from the punctuation.
+
 ---
 
 Run the original and your changed version. Explain which bindings were read, which one was reassigned, and why `const` is appropriate for values that should not be rebound. Then try the invalid reassignment and describe the error in plain language. The goal is not merely to see an error. The goal is to understand which declaration rule produced it.

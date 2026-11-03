@@ -1,10 +1,10 @@
 {
   "title": "Errors and failure paths",
   "runtime": "node",
-  "minutes": 25,
-  "objective": "Recognize the difference between an ordinary result and a runtime error",
+  "minutes": 40,
+  "objective": "Recognize syntax, runtime, and logic errors and choose a failure path",
   "input": "",
-  "expected": "The program reports a valid result and an invalid result separately.",
+  "expected": "The output demonstrates a deliberate failure result and a caught JSON parsing exception.",
   "prerequisites": ["part-ii-applied-javascript/ch09-modules/03-module-design"],
-  "verify": ["12", "Invalid number"]
+  "verify": ["12", "Invalid number", "Before parsing", "SyntaxError", "After parsing"]
 }

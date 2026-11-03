@@ -1,10 +1,10 @@
 {
   "title": "Parameters and arguments",
   "runtime": "node",
-  "minutes": 25,
-  "objective": "Pass multiple values into a function",
+  "minutes": 40,
+  "objective": "Use positional, rest, and options-object parameters",
   "input": "",
-  "expected": "The function uses both supplied values.",
+  "expected": "The output demonstrates positional arguments, rest parameters, spread calls, and options objects.",
   "prerequisites": ["part-ii-applied-javascript/ch08-functions/01-basics"],
-  "verify": ["Ada has 3 tasks"]
+  "verify": ["Ada has 3 tasks", "Ada: 27", "Grace: 13", "Rover is an outdoor dog"]
 }

@@ -1,10 +1,10 @@
 {
   "title": "try, catch, and finally",
   "runtime": "node",
-  "minutes": 30,
-  "objective": "Catch a thrown error and run cleanup code",
+  "minutes": 40,
+  "objective": "Handle failures with try, catch, finally, and continued processing",
   "input": "",
-  "expected": "The error is reported and cleanup runs afterward.",
+  "expected": "The output demonstrates success, failure, cleanup, and continuing after malformed input.",
   "prerequisites": ["part-ii-applied-javascript/ch10-error-handling/01-failures"],
-  "verify": ["Could not read settings", "Cleanup complete"]
+  "verify": ["Theme: dark", "Could not read settings: SyntaxError", "Attempt complete"]
 }

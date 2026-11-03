@@ -28,6 +28,20 @@ The order matters. JavaScript evaluates the expression from left to right, build
 
 Change `greeting` to `"Welcome"` and the same structure produces a different greeting. That is the useful bit: the instruction stays mostly the same while the named values change.
 
+## Naming variables
+
+JavaScript variable names may contain letters, digits, underscores, and dollar signs, but they cannot begin with a digit or contain spaces. Names are case-sensitive, so `name`, `Name`, and `NAME` are three different names. That is technically convenient and practically a reliable source of typos.
+
+Use names that tell the reader what the value represents. `studentName` is more useful than `n`, and `totalWithTax` tells us more than `answer`. JavaScript convention uses `camelCase` for variables and functions. Names such as `student_name` are legal, but they look like they wandered in from a different language community.
+
+Comments can explain a choice that is not obvious from the code. They do not create a value or change the program's behavior:
+
+```javascript
+const name = "JavaScript"; // The value will not be rebound.
+```
+
+The comment is for the reader. JavaScript ignores everything after `//` on that line.
+
 ## Choosing a declaration
 
 The declaration is the word at the beginning of each line: `var`, `let`, or `const`. Those words are not interchangeable decoration. They tell JavaScript how the binding may be used later.
@@ -47,6 +61,8 @@ For this example, `let greeting` makes sense because we are going to change the 
 > JavaScript is dynamically typed. A binding does not have a permanent declared type, so the value can be a string at one point and a number at another.
 >
 > JavaScript is also often called weakly typed because it performs some implicit conversions. Those conversions can be convenient, confusing, or both. We will examine them in the data types and coercion lessons.
+
+The data types, conversions, and `typeof` checks belong to the next fundamentals chapter, so we will not duplicate their full treatment here. The point for this lesson is simply that a binding gives a name to whatever value it currently holds, and the declaration controls whether that binding may be reassigned.
 
 ---
 

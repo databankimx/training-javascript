@@ -1,0 +1,11 @@
+{
+  "title": "Overriding inherited methods",
+  "order": 6,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Replace inherited behavior when a subclass needs a different rule",
+  "input": "",
+  "expected": "The electric car overrides fuel-related behavior.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/05-inheritance"],
+  "verify": ["Gas tank: full", "Electric cars do not use a gas tank", "Battery: charging"]
+}

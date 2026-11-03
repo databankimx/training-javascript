@@ -19,6 +19,8 @@ report("Ada");
 > `label` is local to `report`; code outside the function cannot use that name.
 >
 > `applicationName` is outside the function, so `report` can read it.
+>
+> Assignment to a local binding does not change an outer binding with the same name.
 
 ```text
 Ada is reviewing JavaScript
@@ -29,14 +31,55 @@ Keeping temporary names local prevents unrelated code from accidentally changing
 
 ---
 
+## Local assignment versus shared objects
+
+JavaScript passes an object value to a function. The parameter is a local binding, but the object it refers to can still be changed:
+
+```javascript
+function addTag(tags, tag) {
+  tags.push(tag);
+}
+
+const tags = ["javascript"];
+addTag(tags, "beginner");
+console.log(tags.join(", "));
+```
+
+```text
+javascript, beginner
+```
+
+The function did not replace the caller's `tags` binding. It used the same array object and changed that object in place. If the original must stay untouched, pass a copy or return a new array:
+
+```javascript
+function withTag(tags, tag) {
+  return [...tags, tag];
+}
+
+const original = ["javascript"];
+const updated = withTag(original, "beginner");
+console.log(original.join(", "));
+console.log(updated.join(", "));
+```
+
+```text
+javascript
+javascript, beginner
+```
+
+This is the JavaScript version of the mutable-list surprise that appears in many languages. Decide whether a function is allowed to mutate its input, and make that choice visible in its name, documentation, or return value.
+
+---
+
 ## Try it Yourself
 
-Try to print `label` after the function call and observe the error. Then pass `applicationName` as a parameter instead of reading it from the outer scope.
+Create a local variable inside a function and try to read it outside. Then write one function that mutates an array and a second function that returns a changed copy. Print both original arrays and explain the difference.
 
 ---
 
 ## More background
 
-See [MDN: Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope).
+See [MDN: Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope), [MDN: Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), and [MDN: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
 
 ---
+

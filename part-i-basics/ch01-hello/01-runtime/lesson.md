@@ -29,6 +29,12 @@ There are a few small pieces here, and beginners are allowed to notice all of th
 
 The punctuation inside the quotation marks is part of the string. The parentheses and semicolon are JavaScript punctuation. They do different jobs, despite all looking like small marks that have wandered into the sentence.
 
+## Running the program
+
+The lesson runner gives us the equivalent of a small, friendly command line. The source file is shown in the Source pane, and the Run button asks the JavaScript host to execute it. The output appears in the Console pane. This separation is useful: the source is the instruction, and the console is the evidence that the host carried it out.
+
+JavaScript can run in more than one host. The browser supplies objects for pages and user interaction, while other hosts supply their own APIs. This first example deliberately uses only `console.log`, which is available in the lesson runner and in browser developer tools. We will introduce host-specific behavior after the language fundamentals have had a chance to introduce themselves.
+
 ---
 
 ## Try it Yourself

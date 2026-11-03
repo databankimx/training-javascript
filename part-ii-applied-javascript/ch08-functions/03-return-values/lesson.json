@@ -1,10 +1,10 @@
 {
   "title": "Return values",
   "runtime": "node",
-  "minutes": 25,
-  "objective": "Return a value from a function and use it in another expression",
+  "minutes": 40,
+  "objective": "Return scalar, structured, and early results from functions",
   "input": "",
-  "expected": "The returned total is printed by the caller.",
+  "expected": "The output demonstrates a scalar return, an object return, and an early null result.",
   "prerequisites": ["part-ii-applied-javascript/ch08-functions/02-parameters"],
-  "verify": ["Total: 7"]
+  "verify": ["Total: 7", "Ada", "36", "50", "null"]
 }

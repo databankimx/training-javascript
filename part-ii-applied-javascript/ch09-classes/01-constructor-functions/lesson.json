@@ -2,10 +2,10 @@
   "title": "Classic constructor functions",
   "order": 1,
   "runtime": "node",
-  "minutes": 35,
-  "objective": "Create objects with constructor functions and prototypes",
+  "minutes": 45,
+  "objective": "Explain OOP and create objects with constructor functions and prototypes",
   "input": "",
-  "expected": "The constructor creates a learner and the prototype method reports progress.",
+  "expected": "The lesson explains OOP, then uses a constructor and prototype method to report learner progress.",
   "prerequisites": ["part-ii-applied-javascript/ch08-functions/05-homework/03-function-composition"],
   "verify": []
 }

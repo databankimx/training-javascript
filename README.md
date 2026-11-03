@@ -6,14 +6,23 @@ We’ll start with the language, then make it do useful things in HTML: show a s
 
 ## Start here
 
-Install Node.js 24 or later and a current browser. From this directory:
+Install Node.js 24 or later and a current browser. From this directory, install dependencies once:
 
 ```powershell
 node --version
-npm start
+npm install
 ```
 
-Open the complete local URL printed in the terminal, including its session token. The default port is 4173. The runner uses a few small npm packages for Markdown and math rendering; install them once with `npm install`. No Python, build tool, account, or internet connection is needed after that. See [QUICKSTART.md](QUICKSTART.md) for details.
+For a foreground session, run `npm start`, then open the complete local URL printed in the terminal, including its session token. Press Ctrl+C when you are finished. The default port is 4173.
+
+On Windows, the more convenient release workflow is:
+
+```powershell
+.\start-training.ps1
+.\stop-training.ps1
+```
+
+The start script launches the runner in the background, opens the tokenized URL in the default browser, and prints the runner PID. The browser sends a heartbeat every five seconds. When the tab is closed, the runner receives no heartbeat and shuts itself down after 30 seconds, so using the stop script is normally unnecessary after a normal session. Use the stop script when you want to stop the runner immediately or when the browser did not close cleanly. Startup and error output is written to `%TEMP%\javascript-training-<PID>.out.log` and `.err.log`. See [QUICKSTART.md](QUICKSTART.md) for details and troubleshooting.
 
 ## Learning workflow
 
@@ -31,14 +40,14 @@ There are 194 lesson packages, each with notes, runnable source, a worked exerci
 
 | Track | Coverage |
 |---|---|
-| Part I  -  Fundamentals (94) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, loops, functions, input, modules, classes, files, tests, promises, HTTP, DOM readiness, selection, delegation, and practical HTML interaction |
+| Part I  -  Fundamentals (64 lessons) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, and loops |
 | Part II  -  Applied JavaScript (41 lessons) | Functions, classes, modules, error handling, asynchronous JavaScript, and HTTP |
 | Part III  -  Working with HTML (45 lessons) | Browser JavaScript, forms, validation, dynamic forms, debugging, and XSS prevention |
 | Part IV  -  Advanced JavaScript (44 lessons) | Recursion, regular expressions, complexity, bitwise operations, closures, internationalized formatting, typed arrays, iterators, and functional tools |
 
-The HTML chapter covers script integration, hide/show, accordions, conditional controls, validation, dynamic tables, sorting/filtering, templates, dialogs, and an invoice coding form. It draws on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.
+The HTML chapters cover script integration, the DOM, selectors, events, keyboard access, hide/show, accordions, tabs, validation, debugging, dynamic tables, XSS prevention, formatting, templates, dialogs, and invoice-style forms. They draw on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.
 
-See [the Python topic crosswalk](resources/python-topic-crosswalk.md), [the jQuery comparison guide](resources/jquery-comparisons.md), [the teaching guide](resources/teaching-guide.md), and [the writing-style guide](resources/writing-style.md).
+See [the jQuery comparison guide](resources/jquery-comparisons.md), [the teaching guide](resources/teaching-guide.md), and [the writing-style guide](resources/writing-style.md).
 
 ## Textbook and references
 
@@ -59,6 +68,10 @@ npm run check
 The tests exercise discovery, local API access controls, scratch execution, interactive input, errors, cancellation, and path boundaries. The curriculum check parses every JavaScript file and executes every Node example in a disposable directory. Expected-output fragments supplement process exit checks for selected examples. Browser interactions require browser QA; see [VALIDATION.md](VALIDATION.md) for the initial run.
 
 The GitHub workflow runs these checks on Windows and Linux. It has not been run on a remote CI service. Enterprise policy/security scanning is not configured here; use the organization's required workflows before any client delivery.
+
+## Progress and reset
+
+Progress, completion marks, drafts, and the last location are stored in browser storage for the local runner origin. A new token does not erase that progress. If you need a clean slate, press Ctrl+Alt+Shift+Backspace in the runner. A brief toast confirms that progress was reset; revealed homework spoilers reset with it. This shortcut is intentionally undocumented in the student-facing lesson interface, but is included here for instructors and testers.
 
 ## Runner design and limits
 

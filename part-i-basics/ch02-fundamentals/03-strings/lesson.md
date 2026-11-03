@@ -145,6 +145,32 @@ The second comparison creates uppercase copies of both values before comparing t
 
 Do not apply this blindly to every piece of text. A password, a case-sensitive identifier, or a piece of prose may need its original case. Normalize when the business rule says that `AdaLovelace` and `adalovelace` should count as the same value.
 
+### Sentence case and title case
+
+Python includes `capitalize()` and `title()` methods. JavaScript does not provide direct built-in methods with those names, so we have to write the rule ourselves if an application needs those formats:
+
+```javascript
+const sentenceCase = text =>
+  text.length === 0 ? text : text[0].toUpperCase() + text.slice(1).toLowerCase();
+
+const titleCase = text =>
+  text.replace(/\b\w/g, letter => letter.toUpperCase());
+
+console.log(sentenceCase("javascript makes forms useful"));
+console.log(titleCase("javascript makes forms useful"));
+```
+
+```text
+Javascript makes forms useful
+Javascript Makes Forms Useful
+```
+
+The sentence-case function uppercases the first character and lowercases the rest. The title-case function uppercases the first word character after each word boundary. Both are simple formatting rules, not language experts. That distinction matters more than the code makes it look.
+
+Automatic title casing does not know which words should remain lowercase in a title, and it does not know how a person spells their name. A quick formatter can turn `McLean` into `Mclean` or `van Gogh` into `Van Gogh`. That is not tidying the data. It is changing somebody's name and hoping nobody notices.
+
+Use case conversion for a clearly defined matching or display rule. If the exact spelling matters, preserve the original value and ask the person or the source system for the correct display form. The computer cannot infer personal names from capitalization with any dependable wisdom, which is a shame because it is very confident about trying.
+
 > A string is an immutable sequence of text. String methods return new strings rather than changing the original string.
 >
 > A method is a function attached to a value. We call one with a dot, as in `name.trim()`.
@@ -153,11 +179,13 @@ Do not apply this blindly to every piece of text. A password, a case-sensitive i
 >
 > `.toUpperCase()` returns a new string with its letters converted to uppercase. `.toLowerCase()` does the same thing with lowercase letters.
 
+> JavaScript has no built-in `capitalize()` or `title()` string method. If we implement those formats, the rule belongs in a named function that we can test against ordinary words, acronyms, titles, and names.
+
 ---
 
 ## Try it Yourself
 
-Try a name with extra spaces, clean it with `.trim()`, and then display it in uppercase and lowercase. Then create a padded value such as `"  ADA       "` and compare it with `"ADA"` before and after trimming. Finally, compare `"ADA LOVELACE"` with `"Ada Lovelace"` by normalizing both values first. Run each small change, and explain what each method returns and why the cleanup matters to a comparison.
+Try a name with extra spaces, clean it with `.trim()`, and then display it in uppercase and lowercase. Then create a padded value such as `"  ADA       "` and compare it with `"ADA"` before and after trimming. Finally, compare `"ADA LOVELACE"` with `"Ada Lovelace"` by normalizing both values first. Add sentence-case and title-case helpers, then test them with an acronym and a name such as `"Scott McLean"`. Run each small change, and explain what each method returns and why the cleanup matters to a comparison.
 
 If you can explain the difference between changing a value and creating a new string, you are ready for template literals.
 
