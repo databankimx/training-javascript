@@ -1,0 +1,11 @@
+{
+  "title": "Inline events versus event binding",
+  "order": 6,
+  "runtime": "browser",
+  "minutes": 40,
+  "objective": "Recognize inline event attributes and replace them with script-based bindings",
+  "input": "",
+  "expected": "Both examples respond to events, but the bound version keeps behavior in JavaScript.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/05-events"],
+  "verify": []
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Calculating form values",
+  "order": 4,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Read numeric form values and calculate a total",
+  "input": "",
+  "expected": "The subtotal and total update from the entered quantities and prices.",
+  "prerequisites": ["part-iii-working-with-html/ch15-forms/03-debug-channel"],
+  "verify": []
+}

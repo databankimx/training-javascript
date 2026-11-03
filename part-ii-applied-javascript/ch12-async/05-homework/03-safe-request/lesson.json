@@ -1,0 +1,13 @@
+{
+  "title": "Homework: safe asynchronous request",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 45,
+  "objective": "Combine async, await, and catch in a reusable function",
+  "input": "",
+  "expected": "Print a result for success and a message for failure.",
+  "prerequisites": ["part-ii-applied-javascript/ch12-async/03-rejections"],
+  "verify": ["Loaded", "Request failed"]
+}
+

@@ -1,0 +1,11 @@
+{
+  "title": "What modules are and why they help",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Keep module responsibilities small and explicit",
+  "input": "",
+  "expected": "The report module formats the supplied data.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-modules/03-export-forms"],
+  "verify": ["Ada: 3 tasks"]
+}
+

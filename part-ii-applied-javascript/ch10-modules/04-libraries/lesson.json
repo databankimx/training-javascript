@@ -1,0 +1,9 @@
+{
+  "title": "Modules and purpose-based libraries",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Separate reusable functionality by purpose and distinguish libraries from modules",
+  "expected": "The library functions validate and format the supplied record.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-modules/01-module-design"],
+  "verify": ["Valid", "Ada Lovelace"]
+}

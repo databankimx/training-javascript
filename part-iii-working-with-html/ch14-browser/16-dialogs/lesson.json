@@ -1,0 +1,11 @@
+{
+  "title": "Dialogs, focus, and note entry",
+  "order": 15,
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Use a dialog for note entry and return focus to the opener",
+  "input": "",
+  "expected": "A note entered in the dialog appears safely in the page.",
+  "prerequisites": ["part-iii-working-with-html/ch16-xss/06-textcontent-comments"],
+  "verify": []
+}

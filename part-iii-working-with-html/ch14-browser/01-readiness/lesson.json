@@ -1,0 +1,12 @@
+{
+  "title": "JavaScript in an HTML page",
+  "order": 1,
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "Run JavaScript after the page is ready",
+  "input": "",
+  "expected": "Open the preview and see the ready message in the page.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-http/09-troubleshooting"],
+  "verify": []
+}
+

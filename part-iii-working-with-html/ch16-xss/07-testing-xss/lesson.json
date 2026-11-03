@@ -1,0 +1,11 @@
+{
+  "title": "Testing XSS safely",
+  "order": 7,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Compare vulnerable and fixed behavior without turning a training page into an attack kit",
+  "input": "",
+  "expected": "The same markup-shaped value is rendered as HTML in one panel and text in the other.",
+  "prerequisites": ["part-iii-working-with-html/ch16-xss/06-textcontent-comments"],
+  "verify": []
+}

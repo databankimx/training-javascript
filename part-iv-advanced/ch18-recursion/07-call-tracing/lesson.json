@@ -1,0 +1,11 @@
+{
+  "title": "Tracing recursive calls",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Trace recursive calls as they descend and return through the call stack.",
+  "order": 7,
+  "input": "",
+  "expected": "enter 3\nenter 2\nenter 1\nreturn 1\nreturn 2\nreturn 3",
+  "prerequisites": ["part-iv-advanced/ch18-recursion/02-stopping-recursion"],
+  "verify": ["enter 3", "return 3"]
+}

@@ -547,189 +547,189 @@
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch09-modules",
+    "chapter": "ch10-modules",
     "step": "01-export-import",
     "title": "Exporting and importing values",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch09-modules",
+    "chapter": "ch10-modules",
     "step": "02-export-forms",
     "title": "Named and default exports",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch09-modules",
+    "chapter": "ch10-modules",
     "step": "03-module-design",
     "title": "Designing a small module boundary",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch09-modules",
+    "chapter": "ch10-modules",
     "step": "04-homework/01-math-module",
     "title": "Homework: build a math module",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch09-modules",
+    "chapter": "ch10-modules",
     "step": "04-homework/02-report-module",
     "title": "Homework: split a report module",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch09-modules",
+    "chapter": "ch10-modules",
     "step": "04-homework/03-module-map",
     "title": "Homework: module map",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch10-error-handling",
+    "chapter": "ch11-error-handling",
     "step": "01-failures",
     "title": "Errors and failure paths",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch10-error-handling",
+    "chapter": "ch11-error-handling",
     "step": "02-try-catch",
     "title": "try, catch, and finally",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch10-error-handling",
+    "chapter": "ch11-error-handling",
     "step": "03-throw-validation",
     "title": "Throwing validation errors",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch10-error-handling",
+    "chapter": "ch11-error-handling",
     "step": "04-homework/01-safe-number",
     "title": "Homework: safe number conversion",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch10-error-handling",
+    "chapter": "ch11-error-handling",
     "step": "04-homework/02-validate-person",
     "title": "Homework: validate a person",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch10-error-handling",
+    "chapter": "ch11-error-handling",
     "step": "04-homework/03-cleanup",
     "title": "Homework: guarantee cleanup",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "01-promises",
     "title": "Promises and future values",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "02-async-await",
     "title": "async and await",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "03-rejections",
     "title": "Rejected promises",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "04-parallel",
     "title": "Parallel work with Promise.all",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "05-homework/01-load-data",
     "title": "Homework: load data in order",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "05-homework/02-parallel-load",
     "title": "Homework: load independent data",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch11-async",
+    "chapter": "ch12-async",
     "step": "05-homework/03-safe-request",
     "title": "Homework: safe asynchronous request",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "01-http-basics",
     "title": "HTTP requests and responses",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "02-fetch",
     "title": "Fetching data",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "03-xhr-ajax",
     "title": "Legacy AJAX with XMLHttpRequest",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "04-homework/01-fetch-json",
     "title": "Homework: fetch and parse JSON",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "04-homework/02-xhr-comparison",
     "title": "Homework: compare AJAX styles",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "04-homework/03-safe-http",
     "title": "Homework: safe HTTP wrapper",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "04-local-service",
     "title": "A real local service",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
-    "chapter": "ch12-http",
+    "chapter": "ch13-http",
     "step": "05-troubleshooting",
     "title": "Troubleshooting web service responses",
     "runtime": "node"
@@ -1358,3 +1358,5 @@
     "runtime": "node"
   }
 ]
+
+

@@ -6,6 +6,6 @@
   "objective": "Explain OOP and create objects with constructor functions and prototypes",
   "input": "",
   "expected": "The lesson explains OOP, then uses a constructor and prototype method to report learner progress.",
-  "prerequisites": ["part-ii-applied-javascript/ch08-functions/05-homework/03-function-composition"],
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/08-homework/03-safe-divide"],
   "verify": []
 }

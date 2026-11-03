@@ -1,0 +1,11 @@
+{
+  "title": "Named and default exports",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Use named, default, aliased, and namespace imports",
+  "input": "",
+  "expected": "The output demonstrates named, default, aliased, and namespace imports.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-modules/02-export-import"],
+  "verify": ["12", "12", "12"]
+}
+

@@ -5,6 +5,6 @@
   "objective": "Read compound conditions by following grouping, negation, and short-circuit evaluation",
   "input": "",
   "expected": "The output shows how grouped comparisons and logical operators resolve.",
-  "prerequisites": ["part-i-basics/ch05-boolean-logic/07-summary/03-grade-label"],
+  "prerequisites": ["part-i-basics/ch06-control-flow/06-homework/03-grade-label"],
   "verify": ["true", "false", "approved"]
 }

@@ -1,0 +1,11 @@
+{
+  "title": "XSS: reflected input (sanitization fix)",
+  "order": 2,
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "Escape reflected input before placing it in an HTML sink",
+  "input": "",
+  "expected": "The demo displays angle brackets as ordinary text.",
+  "prerequisites": ["part-iii-working-with-html/ch16-xss/01-reflected-vulnerable"],
+  "verify": []
+}
