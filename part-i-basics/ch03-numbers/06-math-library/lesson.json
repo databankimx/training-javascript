@@ -1,0 +1,10 @@
+{
+  "title": "The Math library",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use common Math methods for distances, limits, powers, and roots",
+  "input": "",
+  "expected": "The output demonstrates common deterministic Math methods and the Math object.",
+  "prerequisites": ["part-i-basics/ch03-numbers/05-number-parsing"],
+  "verify": ["7", "3", "25", "5", "3.14"]
+}

@@ -147,3 +147,11 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+.npm-cache/
+.training-work/
+
+# Local resource notes and generated Markdown
+/resources/**/*.md
+AGENTS.md
+.vscode/

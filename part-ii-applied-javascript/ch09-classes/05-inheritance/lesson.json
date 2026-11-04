@@ -1,0 +1,11 @@
+{
+  "title": "Inheritance",
+  "order": 5,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Extend a class with inherited state and behavior",
+  "input": "",
+  "expected": "An electric car reuses car behavior and adds battery behavior.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/04-attributes"],
+  "verify": ["2024 Nissan Leaf", "Battery: 75 kWh", "Miles: 0"]
+}

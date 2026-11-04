@@ -1,0 +1,9 @@
+{
+  "title": "Processing a collection of API results",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Loop over returned records and calculate a useful summary",
+  "expected": "The script prints each repository and the average star count.",
+  "prerequisites": ["part-i-basics/ch04-collections/05-collection-pipelines", "part-ii-applied-javascript/ch13-http/04-response-data"],
+  "verify": ["Ada: 120", "Grace: 95", "Average stars: 107.5"]
+}

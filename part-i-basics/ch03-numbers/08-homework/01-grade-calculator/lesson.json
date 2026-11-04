@@ -1,0 +1,12 @@
+{
+  "title": "Homework: grade calculator",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 30,
+  "objective": "Combine arithmetic, rounding, and conditional labels",
+  "input": "",
+  "expected": "Calculate a percentage and print a rounded percentage with a grade label.",
+  "prerequisites": ["part-i-basics/ch03-numbers/05-number-parsing"],
+  "verify": ["82.5%", "B"]
+}

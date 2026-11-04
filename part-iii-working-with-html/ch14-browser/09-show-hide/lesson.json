@@ -1,0 +1,11 @@
+{
+  "title": "Show, hide, and update the page",
+  "order": 9,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Use JavaScript to show, hide, and update page content",
+  "input": "",
+  "expected": "The button toggles the details and updates the status message.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/05-events"],
+  "verify": []
+}

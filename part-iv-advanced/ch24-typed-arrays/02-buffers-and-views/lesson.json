@@ -1,0 +1,10 @@
+{
+  "title": "Buffers, offsets, and byte order",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use ArrayBuffer and DataView to inspect binary storage and control byte order.",
+  "input": "",
+  "expected": "The same bytes can be read as different numeric values depending on the type and byte order.",
+  "verify": ["bytes: 52, 18", "little-endian: 4660", "big-endian: 13330"],
+  "order": 2
+}

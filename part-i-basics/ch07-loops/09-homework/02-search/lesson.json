@@ -1,0 +1,12 @@
+{
+  "title": "Homework: search a list",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Search for a value and stop when it is found",
+  "input": "",
+  "expected": "Print the index of the first matching item.",
+  "prerequisites": ["part-i-basics/ch07-loops/06-break-continue"],
+  "verify": ["Found at index: 2"]
+}

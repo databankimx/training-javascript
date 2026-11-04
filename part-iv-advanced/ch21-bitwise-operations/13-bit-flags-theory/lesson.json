@@ -1,0 +1,1 @@
+{"title":"Bit flags","runtime":"node","minutes":25,"objective":"Use AND to test named product licenses stored in one bit mask.","order": 13,"input":"","expected":"The example lists the licensed products represented by license value 11.","verify":["wordProcessing","spreadsheets","emailClient"]}

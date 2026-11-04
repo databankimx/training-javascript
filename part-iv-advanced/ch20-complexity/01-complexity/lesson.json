@@ -1,0 +1,14 @@
+{
+  "title": "Understanding Big O",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Explain how algorithmic work grows as the input grows.",
+  "input": "",
+  "expected": "The script counts how many operations each simple algorithm performs.",
+  "prerequisites": [],
+  "verify": [
+    "Linear: 5",
+    "Nested: 15"
+  ],
+  "order": 1
+}

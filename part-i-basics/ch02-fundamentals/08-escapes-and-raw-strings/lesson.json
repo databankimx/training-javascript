@@ -1,0 +1,10 @@
+{
+  "title": "Escapes and raw strings",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Use escape sequences and preserve backslashes in strings",
+  "input": "",
+  "expected": "The output demonstrates quotes, line breaks, file paths, and String.raw.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/07-string-searching"],
+  "verify": ["She said, \"Hello.\"", "First line", "Second line", "C:\\Users\\Ada\\notes.txt"]
+}

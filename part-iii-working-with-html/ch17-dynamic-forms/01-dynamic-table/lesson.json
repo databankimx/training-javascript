@@ -1,0 +1,11 @@
+{
+  "title": "Adding rows to a table",
+  "order": 1,
+  "runtime": "browser",
+  "minutes": 40,
+  "objective": "Create, remove, and total dynamic table rows",
+  "input": "",
+  "expected": "Rows can be added and removed and the subtotal updates.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/13-dom-elements"],
+  "verify": []
+}

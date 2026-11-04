@@ -1,0 +1,10 @@
+{
+  "title": "Arrow functions",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Read and write the concise arrow-function form",
+  "input": "",
+  "expected": "Both function forms return the same result.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/05-default-parameters"],
+  "verify": ["12", "12"]
+}

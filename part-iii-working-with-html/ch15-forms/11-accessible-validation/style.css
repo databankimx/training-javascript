@@ -1,0 +1,8 @@
+:root { font-family: system-ui, sans-serif; color: #243447; background: #f4f7fa; }
+body { margin: 0; padding: 2rem; }
+main { max-width: 42rem; margin: auto; padding: 2rem; background: white; border: 1px solid #d5dee7; border-radius: .75rem; }
+form { display: grid; gap: .6rem; max-width: 22rem; }
+input, button { font: inherit; padding: .5rem; }
+.invalid { border: 2px solid #b42318; background: #fff1f0; }
+.error-message { color: #9b1c1c; min-height: 1.4rem; }
+#status { padding: .75rem; background: #eef3f7; border-radius: .4rem; }

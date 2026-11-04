@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue dynamic rows</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main id="app">
+        <h1>GL Coding Form with Vue</h1>
+        <fieldset class="invoice-header">
+            <legend>Invoice Header</legend>
+            <div class="field-group"><label for="invoice-date">Invoice date</label><input id="invoice-date" type="date"
+                    aria-label="Invoice date"></div>
+            <div class="field-group"><label for="invoice-amount">Invoice amount</label><input id="invoice-amount"
+                    type="number" aria-label="Invoice amount"></div>
+            <div class="field-group"><label for="vendor">Vendor name</label><input id="vendor" aria-label="Vendor name">
+            </div>
+            <div class="field-group"><label for="vendor-id">Vendor ID</label><input id="vendor-id"
+                    aria-label="Vendor ID"></div>
+        </fieldset>
+        <input type="hidden" id="glLines" name="glLines" :value="JSON.stringify(lines)">
+        <table>
+            <thead>
+                <tr>
+                    <th>PO Number</th>
+                    <th>GL Code</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(line, index) in lines" :key="index">
+                    <td><input :name="'OBKey__384_' + (index + 1)" :aria-label="'PO number ' + (index + 1)"
+                            v-model="line.poNumber"></td>
+                    <td><input :name="'OBKey__367_' + (index + 1)" :aria-label="'GL code ' + (index + 1)"
+                            v-model="line.glCode"></td>
+                    <td><input type="number" step="0.01" :name="'OBKey__368_' + (index + 1)"
+                            :aria-label="'GL amount ' + (index + 1)" v-model="line.amount"></td>
+                    <td><input :name="'OBKey__324_' + (index + 1)" :aria-label="'GL description ' + (index + 1)"
+                            v-model="line.description"></td>
+                    <td><button type="button" @click="removeLine(index)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" @click="addLine">Add line</button>
+        <p>Total: ${{ total.toFixed(2) }}</p>
+        <pre>{{ JSON.stringify(lines, null, 2) }}</pre>
+        <fieldset class="approval-fields">
+            <legend>Invoice Approvals</legend>
+            <div class="field-group"><label for="requested-by">Requester confirmation</label><input id="requested-by"
+                    aria-label="Requester confirmation"></div>
+            <div class="field-group"><label for="approved-by">Accounting approval</label><input id="approved-by"
+                    aria-label="Accounting approval"></div>
+        </fieldset>
+        <fieldset class="notes-section">
+            <legend>Accounting Notes</legend>
+            <label for="notes">Enter notes below</label>
+            <textarea id="notes" aria-label="Accounting notes" v-model="noteDraft"></textarea>
+            <button type="button" @click="addNote">Add Note</button>
+            <ul aria-label="Saved accounting notes">
+                <li v-for="(note, index) in notes" :key="index">{{ note }}</li>
+            </ul>
+        </fieldset>
+    </main>
+</body>
+
+</html>

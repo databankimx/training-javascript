@@ -1,0 +1,12 @@
+{
+  "title": "Homework: feature-flag mask",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Build and explain a small feature-flag mask.",
+  "input": "",
+  "expected": "The complete example reports the initial features, changes the mask, and prints its final decimal and binary values.",
+  "verify": ["dark: true", "after changes: 5", "binary: 0101", "notifications: true"],
+  "order": 24
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Homework: fetch and parse JSON",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Validate a fetch response and parse its JSON body",
+  "input": "",
+  "expected": "Print the name from the JSON response.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-http/02-fetch"],
+  "verify": ["Ada"]
+}
+

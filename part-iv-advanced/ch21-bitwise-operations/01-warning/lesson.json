@@ -1,0 +1,1 @@
+{"title":"A deeper dive into bits","runtime":"node","minutes":20,"objective":"Understand why this chapter revisits binary representation before using bitwise operators.","order": 1,"input":"","expected":"Theory first: bits are small, but the rules are not.","verify":["Theory first"]}

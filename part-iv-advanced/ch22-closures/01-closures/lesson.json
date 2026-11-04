@@ -1,0 +1,10 @@
+{
+  "title": "Closures and captured state",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Explain captured state and pass closure functions as values.",
+  "input": "",
+  "expected": "Two counters retain independent values, and square and cube closures are passed to report.",
+  "verify": ["11 12 1", "square 2: 4", "cube 3: 27"],
+  "order": 1
+}

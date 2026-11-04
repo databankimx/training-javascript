@@ -1,0 +1,11 @@
+{
+  "title": "Accessors and encapsulation",
+  "order": 9,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Expose calculated properties and validate class state",
+  "input": "",
+  "expected": "A getter formats a name and a setter validates a score.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/08-importing-classes"],
+  "verify": ["Ada Lovelace", "Score: 95", "Score must be between 0 and 100"]
+}

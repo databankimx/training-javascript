@@ -1,0 +1,10 @@
+{
+  "title": "The conditional operator",
+  "runtime": "node",
+  "minutes": 20,
+  "objective": "Choose one of two values with the conditional operator",
+  "input": "",
+  "expected": "The output shows the value selected by a conditional expression.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/03-if-else-if-else"],
+  "verify": ["Adult", "Hello, guest"]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "What recursion is",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Recognize a recursive function and explain why it must have a stopping condition.",
+  "order": 1,
+  "input": "",
+  "expected": "3\n2\n1\nLiftoff!",
+  "prerequisites": [],
+  "verify": [
+    "Liftoff!"
+  ]
+}

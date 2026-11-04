@@ -1,0 +1,11 @@
+{
+  "title": "Quicksort",
+  "order": 4,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Explain how quicksort partitions around a pivot and why pivot choice affects its complexity.",
+  "input": "",
+  "expected": "Quicksort: 1000 values",
+  "verify": ["Quicksort: 1000 values"],
+  "visualizerAlgorithm": "quick-sort"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Internationalized formatting",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Format currency and dates without changing the underlying values.",
+  "input": "",
+  "expected": "The script formats one amount for two locales and formats a UTC date.",
+  "verify": ["$1,234.50", "01/15/2026"],
+  "order": 1
+}

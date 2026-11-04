@@ -1,0 +1,12 @@
+{
+  "title": "Homework: temperature converter",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 30,
+  "objective": "Combine numeric conversion, arithmetic, and formatted output",
+  "input": "",
+  "expected": "Convert a Fahrenheit value to Celsius and print the result.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/09-objects"],
+  "verify": ["68°F is 20.0°C"]
+}

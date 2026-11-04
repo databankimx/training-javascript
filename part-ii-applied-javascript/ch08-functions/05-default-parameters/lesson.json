@@ -1,0 +1,10 @@
+{
+  "title": "Default parameters",
+  "runtime": "node",
+  "minutes": 20,
+  "objective": "Supply a fallback value when an argument is omitted",
+  "input": "",
+  "expected": "The first call uses the supplied format and the second uses the default.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/04-scope"],
+  "verify": ["Ada [formal]", "Grace [friendly]"]
+}

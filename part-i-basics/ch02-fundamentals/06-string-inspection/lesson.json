@@ -1,0 +1,10 @@
+{
+  "title": "String inspection and extraction",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Inspect string length and characters, then extract text with slice() and substring().",
+  "input": "",
+  "expected": "The output demonstrates length, character access, character codes, and substring extraction.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/05-string-methods"],
+  "verify": ["10", "J", "t", "Java", "Script"]
+}

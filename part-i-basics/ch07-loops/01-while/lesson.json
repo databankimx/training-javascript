@@ -1,0 +1,10 @@
+{
+  "title": "while loops",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Repeat work with counters, flags, and changing collections",
+  "input": "",
+  "expected": "The output demonstrates a counter, a flag-based stopping condition, and draining an array safely.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/05-switch"],
+  "verify": ["1", "2", "3", "first message", "Loop active: false", "Remaining: 0"]
+}

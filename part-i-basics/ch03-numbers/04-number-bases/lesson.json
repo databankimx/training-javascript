@@ -1,0 +1,10 @@
+{
+  "title": "Binary, octal, and hexadecimal",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Read and display numbers in binary, octal, decimal, and hexadecimal",
+  "input": "",
+  "expected": "The output demonstrates base-prefixed literals and base conversion for display.",
+  "prerequisites": ["part-i-basics/ch03-numbers/03-floating-point"],
+  "verify": ["10", "255", "1010", "377", "ff"]
+}

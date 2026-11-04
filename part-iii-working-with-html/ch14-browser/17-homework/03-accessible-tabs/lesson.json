@@ -1,0 +1,12 @@
+{
+  "title": "Homework: accessible tabs",
+  "order": 16,
+  "section": "Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 50,
+  "objective": "Combine tab selection, keyboard events, and ARIA state",
+  "input": "",
+  "expected": "Mouse and keyboard navigation keep tabs and panels synchronized.",
+  "verify": []
+}

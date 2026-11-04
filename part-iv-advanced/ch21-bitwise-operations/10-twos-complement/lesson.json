@@ -1,0 +1,1 @@
+{"title":"Two's complement","runtime":"node","minutes":30,"objective":"Explain how two's complement represents negative integers by inverting bits and adding one.","order": 10,"input":"","expected":"0101 -> 1011","verify":["0101 -> 1011"]}

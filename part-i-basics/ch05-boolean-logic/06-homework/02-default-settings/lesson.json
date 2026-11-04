@@ -1,0 +1,12 @@
+{
+  "title": "Homework: default settings",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Choose sensible defaults without replacing meaningful zero values",
+  "input": "",
+  "expected": "Report settings while preserving a retry count of zero.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/05-missing-values"],
+  "verify": ["0", "Guest", "false"]
+}

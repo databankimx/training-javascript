@@ -1,0 +1,10 @@
+{
+  "title": "Logical operators and short-circuiting",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Combine conditions with and, or, and not",
+  "input": "",
+  "expected": "The output demonstrates &&, ||, !, and short-circuit results.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/03-truthiness"],
+  "verify": ["true", "false", "Guest"]
+}

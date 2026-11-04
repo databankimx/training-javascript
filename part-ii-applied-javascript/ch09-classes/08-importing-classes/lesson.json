@@ -1,0 +1,11 @@
+{
+  "title": "Importing classes from modules",
+  "order": 8,
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Import classes from a module and use their inherited behavior",
+  "input": "",
+  "expected": "The imported class exposes its own and inherited methods.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/07-composition"],
+  "verify": ["2024 Nissan Leaf", "Battery: 75 kWh"]
+}

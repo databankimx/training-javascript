@@ -1,0 +1,1 @@
+{"title":"Base two in depth","runtime":"node","minutes":25,"objective":"Convert between binary and decimal using powers of two.","order": 4,"input":"","expected":"101101 = 45","verify":["101101", "45"]}

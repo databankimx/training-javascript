@@ -1,0 +1,10 @@
+{
+  "title": "Callbacks",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Pass a function to another function as a callback",
+  "input": "",
+  "expected": "The callback runs once for each array value.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/06-arrow-functions"],
+  "verify": ["Ada", "Grace", "Linus"]
+}

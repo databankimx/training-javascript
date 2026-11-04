@@ -1,0 +1,11 @@
+{
+  "title": "Traversing collections",
+  "order": 4,
+  "runtime": "node",
+  "minutes": 45,
+  "objective": "Traverse flat, parallel, and nested arrays safely",
+  "input": "",
+  "expected": "The output demonstrates simple, indexed, entries(), parallel, nested, and mutation-warning traversals.",
+  "prerequisites": ["part-i-basics/ch04-collections/03-nested-collections"],
+  "verify": ["Simple loop:", "Index 0: Ada", "A: 10", "0,0: Ada", "Remaining after mutation: 2, 4"]
+}

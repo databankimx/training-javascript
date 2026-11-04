@@ -1,0 +1,9 @@
+{
+  "title": "Building an HTTP request",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Build a request from a URL, query parameters, method, and headers",
+  "expected": "The script shows the request details without contacting a service.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-http/02-fetch"],
+  "verify": ["GET", "language=javascript", "application/json"]
+}

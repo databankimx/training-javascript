@@ -1,0 +1,10 @@
+{
+  "title": "for...of and array values",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Iterate through the values in an array",
+  "input": "",
+  "expected": "The loop prints each color.",
+  "prerequisites": ["part-i-basics/ch07-loops/03-for"],
+  "verify": ["red", "green", "blue"]
+}

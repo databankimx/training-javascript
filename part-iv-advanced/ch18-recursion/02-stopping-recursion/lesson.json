@@ -1,0 +1,10 @@
+{
+  "title": "Base cases and progress",
+  "order": 2,
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Design a recursive function that reaches a base case.",
+  "input": "",
+  "expected": "3\n2\n1\nLiftoff!",
+  "verify": ["Liftoff!"]
+}

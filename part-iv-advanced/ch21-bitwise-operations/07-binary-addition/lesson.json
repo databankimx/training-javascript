@@ -1,0 +1,1 @@
+{"title":"Binary addition","runtime":"node","minutes":25,"objective":"Add binary values and identify carries between bit positions.","order": 7,"input":"","expected":"0101 + 0011 = 1000","verify":["0101 + 0011 = 1000"]}

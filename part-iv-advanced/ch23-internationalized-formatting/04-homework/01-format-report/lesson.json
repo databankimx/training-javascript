@@ -1,0 +1,12 @@
+{
+  "title": "Homework: internationalized report",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Format a small report using locale-aware currency, dates, and units.",
+  "input": "",
+  "expected": "The complete example formats an order total, date, and item count.",
+  "verify": ["$59.97", "3 items", "01/15/2026"],
+  "order": 4
+}

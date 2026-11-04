@@ -1,0 +1,10 @@
+{
+  "title": "Strict and loose equality",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Recognize coercing equality and choose strict comparisons",
+  "input": "",
+  "expected": "The output contrasts == with === and != with !==.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/01-boolean-values"],
+  "verify": ["true", "false"]
+}

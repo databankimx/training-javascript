@@ -1,0 +1,10 @@
+{
+  "title": "Data types",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Recognize common JavaScript data types",
+  "input": "",
+  "expected": "The output identifies a string, number, and boolean.",
+  "prerequisites": ["part-i-basics/ch01-hello/02-variables"],
+  "verify": ["string", "number", "boolean"]
+}

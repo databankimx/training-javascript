@@ -1,0 +1,10 @@
+{
+  "title": "Recursing through nested arrays",
+  "order": 5,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Traverse an irregular nested array recursively.",
+  "input": "",
+  "expected": "Adam\nBob\nChet\nDana\nEve",
+  "verify": ["Adam", "Chet", "Eve"]
+}

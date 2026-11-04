@@ -1,0 +1,1 @@
+{"title":"Bitwise OR","runtime":"node","minutes":25,"objective":"Understand OR as a way to combine bits and flags.","order": 14,"input":"","expected":"OR produces 1 when either input bit is 1.","verify":["0 | 1 = 1","1010 | 0101 = 1111"]}

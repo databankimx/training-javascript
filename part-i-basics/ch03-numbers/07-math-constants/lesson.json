@@ -1,0 +1,10 @@
+{
+  "title": "Math constants",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Use the built-in mathematical constants provided by Math",
+  "input": "",
+  "expected": "The output demonstrates common Math constants and formatted values.",
+  "prerequisites": ["part-i-basics/ch03-numbers/06-math-library"],
+  "verify": ["3.14", "2.72", "1.41", "0.71", "0.69", "2.30", "1.44", "0.43"]
+}

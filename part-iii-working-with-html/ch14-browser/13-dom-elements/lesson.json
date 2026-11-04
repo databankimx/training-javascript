@@ -1,0 +1,11 @@
+{
+  "title": "Creating and adding elements",
+  "order": 12,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Create DOM elements and add them to a page",
+  "input": "",
+  "expected": "A new list item appears when the button is clicked.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/02-selection"],
+  "verify": []
+}

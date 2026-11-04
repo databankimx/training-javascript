@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing XSS safely</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Vulnerable versus fixed</h1><label for="test-value">Test value</label><input id="test-value"
+            value="&lt;strong&gt;Important&lt;/strong&gt;"><button id="show" type="button">Render both</button>
+        <div class="grid">
+            <section>
+                <h2>Vulnerable sink</h2>
+                <div id="unsafe" class="result"></div>
+            </section>
+            <section>
+                <h2>Fixed sink</h2>
+                <div id="safe" class="result"></div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "title": "Throwing validation errors",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Validate function inputs and throw a useful Error",
+  "input": "",
+  "expected": "Valid input produces a result and invalid input is caught by the caller.",
+  "prerequisites": ["part-i-basics/ch06-control-flow/03-if-else-if-else", "part-i-basics/ch02-fundamentals/09-objects"],
+  "verify": ["Welcome, Ada", "Name is required"]
+}

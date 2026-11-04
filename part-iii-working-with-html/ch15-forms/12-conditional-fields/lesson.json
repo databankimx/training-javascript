@@ -1,0 +1,11 @@
+{
+  "title": "Conditional form sections",
+  "order": 12,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Show and hide form sections based on a selected option",
+  "input": "",
+  "expected": "The extra details section appears only for business accounts.",
+  "prerequisites": ["part-iii-working-with-html/ch15-forms/02-writing-properties"],
+  "verify": []
+}

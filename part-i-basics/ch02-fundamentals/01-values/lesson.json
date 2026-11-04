@@ -1,0 +1,14 @@
+{
+  "title": "02 · Values, bindings, and coercion",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "02 · Values, bindings, and coercion",
+  "input": "",
+  "expected": "Expect 52, then 7, then true. The first result is a string.",
+  "prerequisites": [],
+  "verify": [
+    "52",
+    "7",
+    "true"
+  ]
+}

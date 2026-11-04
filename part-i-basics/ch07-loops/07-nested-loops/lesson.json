@@ -1,0 +1,10 @@
+{
+  "title": "Nested loops",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use one loop inside another to process nested data",
+  "input": "",
+  "expected": "The loops print every coordinate in a two-row, three-column grid.",
+  "prerequisites": ["part-i-basics/ch07-loops/06-break-continue"],
+  "verify": ["row 1, column 1", "row 2, column 3"]
+}

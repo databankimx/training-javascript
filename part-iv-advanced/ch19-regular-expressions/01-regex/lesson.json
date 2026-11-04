@@ -1,0 +1,14 @@
+{
+  "title": "Regular expressions: from pattern to phone number",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Build and explain a regular expression for a realistic, varied text format.",
+  "input": "\n\n\n\n",
+  "expected": "The final pattern matches six phone formats, including an extension, and rejects the bad line.",
+  "prerequisites": [],
+  "verify": [
+    "(713) 483-3111 ext: 42",
+    "Matches: 6"
+  ],
+  "order": 1
+}

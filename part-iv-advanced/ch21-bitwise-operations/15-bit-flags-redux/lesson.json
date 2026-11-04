@@ -1,0 +1,1 @@
+{"title":"Bit flags, revisited","runtime":"node","minutes":25,"objective":"Compose product licenses into reusable Personal, Work, and Ultra Deluxe package masks.","order": 15,"input":"","expected":"The Work package enables six product licenses.","verify":["wordProcessing","spreadsheets","presentations","emailClient","notebook","collaboration"]}

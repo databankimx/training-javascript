@@ -1,0 +1,12 @@
+{
+  "title": "Homework: appointment scheduler",
+  "order": 15,
+  "section": "Chapter summary · Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 55,
+  "objective": "Combine date, time, radio, checkbox, validation, and formatted output",
+  "input": "",
+  "expected": "A valid appointment produces a readable confirmation.",
+  "verify": []
+}

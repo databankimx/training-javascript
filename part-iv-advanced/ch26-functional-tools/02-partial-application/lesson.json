@@ -1,0 +1,10 @@
+{
+  "title": "Partial application and reusable functions",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Create specialized functions by fixing some arguments ahead of time.",
+  "input": "",
+  "expected": "The specialized formatter reuses its fixed prefix for both messages.",
+  "verify": ["INFO: ready", "INFO: saved"],
+  "order": 2
+}

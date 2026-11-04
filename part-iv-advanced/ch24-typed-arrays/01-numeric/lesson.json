@@ -1,0 +1,14 @@
+{
+  "title": "Typed arrays",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use typed arrays when fixed-width numeric storage matters, and distinguish shared views from copied values.",
+  "input": "",
+  "expected": "The shared view changes the original values, so the output is values: 10, 2, 3 and mean: 5.",
+  "prerequisites": [],
+  "verify": [
+    "values: 10, 2, 3",
+    "5"
+  ],
+  "order": 1
+}

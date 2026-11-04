@@ -1,0 +1,11 @@
+{
+  "title": "Tuples and destructuring",
+  "order": 6,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Use tuple-like arrays, destructuring, unpacking, and swapping",
+  "input": "",
+  "expected": "The output demonstrates tuple-like conventions, looping, swapping, rest destructuring, and replacement.",
+  "prerequisites": ["part-i-basics/ch04-collections/05-collection-pipelines"],
+  "verify": ["Ada", "42", "Dimension: 3", "blue, red", "analyst", "Grace, 42"]
+}

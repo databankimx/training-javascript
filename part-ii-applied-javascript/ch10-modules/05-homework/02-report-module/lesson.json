@@ -1,0 +1,13 @@
+{
+  "title": "Homework: split a report module",
+  "section": "Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Move formatting responsibility into a separate module",
+  "input": "",
+  "expected": "Two imported report functions format the object.",
+  "prerequisites": ["part-ii-applied-javascript/ch10-modules/01-module-design"],
+  "verify": ["Grace: 5 tasks", "Grace completed 2 of 5 tasks"]
+}
+

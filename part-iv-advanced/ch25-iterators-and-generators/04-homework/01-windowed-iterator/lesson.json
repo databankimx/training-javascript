@@ -1,0 +1,12 @@
+{
+  "title": "Homework: a windowed iterator",
+  "section": "Chapter summary · Homework",
+  "spoiler": true,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Build a generator that yields a sliding window over an array.",
+  "input": "",
+  "expected": "The complete example prints each three-value window in order.",
+  "verify": ["1,2,3", "2,3,4", "3,4,5"],
+  "order": 4
+}

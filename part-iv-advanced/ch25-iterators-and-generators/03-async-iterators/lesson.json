@@ -1,0 +1,10 @@
+{
+  "title": "Asynchronous iteration",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use an async generator and for await...of to consume values that arrive over time.",
+  "input": "",
+  "expected": "Each delayed value is printed in arrival order.",
+  "verify": ["received: first", "received: second", "received: third"],
+  "order": 3
+}

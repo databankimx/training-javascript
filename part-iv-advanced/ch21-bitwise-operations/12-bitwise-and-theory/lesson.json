@@ -1,0 +1,1 @@
+{"title":"Bitwise AND","runtime":"node","minutes":25,"objective":"Understand AND one bit pair at a time and connect it to masks.","order": 12,"input":"","expected":"AND keeps a bit only when both input bits are 1.","verify":["0 & 0 = 0","1 & 1 = 1"]}

@@ -1,0 +1,10 @@
+{
+  "title": "Truthiness",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Recognize falsy values and values that are truthy in conditions",
+  "input": "",
+  "expected": "The output demonstrates common falsy values and empty collection behavior.",
+  "prerequisites": ["part-i-basics/ch05-boolean-logic/02-strict-equality"],
+  "verify": ["false", "true"]
+}

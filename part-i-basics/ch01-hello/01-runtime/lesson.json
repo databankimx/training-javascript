@@ -1,0 +1,12 @@
+{
+  "title": "01 · Hello, world!",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "01 · Hello, world!",
+  "input": "",
+  "expected": "The output is Hello, world! on one line.",
+  "prerequisites": [],
+  "verify": [
+    "Hello, world!"
+  ]
+}

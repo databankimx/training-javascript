@@ -1,0 +1,10 @@
+{
+  "title": "Memoization with a closure",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use a closure to cache expensive results.",
+  "input": "",
+  "expected": "The second request uses the cached result.",
+  "verify": ["calculated: 9", "cached: 9"],
+  "order": 4
+}

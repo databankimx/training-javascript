@@ -1,0 +1,10 @@
+{
+  "title": "Closures in callbacks",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Recognize closures when callbacks retain values from a surrounding function.",
+  "input": "",
+  "expected": "Each callback remembers the label supplied when it was created.",
+  "verify": ["Ada: saved", "Grace: saved"],
+  "order": 3
+}

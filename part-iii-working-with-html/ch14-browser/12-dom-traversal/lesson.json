@@ -1,0 +1,9 @@
+{
+  "title": "Traversing the DOM",
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Move through an existing DOM structure and manage event subscriptions",
+  "expected": "The page reports the selected row, its parent, and its child count.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/02-selection", "part-iii-working-with-html/ch14-browser/05-events"],
+  "verify": ["Selected: Ada", "Parent: people", "Children: 2"]
+}

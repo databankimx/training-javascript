@@ -1,0 +1,11 @@
+{
+  "title": "Reading form-control properties",
+  "order": 1,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Read common form-control properties",
+  "input": "",
+  "expected": "The page reports the current value and checkbox state.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/14-css-classes"],
+  "verify": []
+}

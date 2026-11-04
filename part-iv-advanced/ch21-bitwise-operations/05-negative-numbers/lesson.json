@@ -1,0 +1,1 @@
+{"title":"Negative numbers","runtime":"node","minutes":30,"objective":"Explain why signed bit patterns need a sign bit and why JavaScript bitwise work uses fixed-width representations.","order": 5,"input":"","expected":"-1 as 32-bit bits: 11111111111111111111111111111111","verify":["-1 as 32-bit bits"]}

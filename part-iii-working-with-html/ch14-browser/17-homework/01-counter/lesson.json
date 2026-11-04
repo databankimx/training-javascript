@@ -1,0 +1,13 @@
+{
+  "title": "Homework: interactive counter",
+  "order": 14,
+  "section": "Homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Combine selection, events, and text updates",
+  "input": "",
+  "expected": "Build a working counter in the preview.",
+  "prerequisites": ["part-iii-working-with-html/ch14-browser/05-events"],
+  "verify": []
+}

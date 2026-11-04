@@ -1,0 +1,10 @@
+{
+  "title": "Objects and name/value pairs",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Create, read, change, and serialize objects with named properties.",
+  "input": "",
+  "expected": "The example demonstrates property access, mutation, deletion, missing values, nested objects, and JSON round-tripping.",
+  "prerequisites": ["part-i-basics/ch02-fundamentals/08-escapes-and-raw-strings"],
+  "verify": ["Ada", "analyst", "Chicago"]
+}

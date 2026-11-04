@@ -1,0 +1,10 @@
+{
+  "title": "for loops",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use initialization, condition, and update in a for loop",
+  "input": "",
+  "expected": "The loop prints the values from 0 through 2.",
+  "prerequisites": ["part-i-basics/ch07-loops/02-do-while"],
+  "verify": ["0", "1", "2"]
+}

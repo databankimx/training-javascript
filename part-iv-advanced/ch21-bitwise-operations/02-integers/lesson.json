@@ -1,0 +1,1 @@
+{"title":"Integers and bit positions","runtime":"node","minutes":25,"objective":"Explain how an integer is represented as weighted bit positions.","order": 2,"input":"","expected":"Binary: 1011\nDecimal: 11","verify":["Binary: 1011"]}

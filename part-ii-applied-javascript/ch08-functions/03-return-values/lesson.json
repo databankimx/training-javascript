@@ -1,0 +1,10 @@
+{
+  "title": "Return values",
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Return scalar, structured, and early results from functions",
+  "input": "",
+  "expected": "The output demonstrates a scalar return, an object return, and an early null result.",
+  "prerequisites": ["part-ii-applied-javascript/ch08-functions/02-parameters"],
+  "verify": ["Total: 7", "Ada", "36", "50", "null"]
+}

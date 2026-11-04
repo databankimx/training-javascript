@@ -1,0 +1,11 @@
+{
+  "title": "Linear and binary search",
+  "order": 2,
+  "visualizerAlgorithm": "linear-search",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Compare linear search with binary search and explain why binary search requires sorted data.",
+  "input": "",
+  "expected": "Both searches report an index, step count, and elapsed time.",
+  "verify": ["Linear search: index", "Binary search: index"]
+}

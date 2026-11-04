@@ -1,0 +1,10 @@
+{
+  "title": "Private state with closures",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Use closures to expose operations while keeping state private.",
+  "input": "",
+  "expected": "The returned methods share one private balance.",
+  "verify": ["balance: 25", "after deposit: 40"],
+  "order": 2
+}

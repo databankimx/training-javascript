@@ -1,0 +1,10 @@
+{
+  "title": "Custom iterables",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Implement the iterable protocol so a custom object works with for...of and spread.",
+  "input": "",
+  "expected": "The custom collection can be traversed by for...of and expanded with spread.",
+  "verify": ["Ada", "Grace", "Alan", "count: 3"],
+  "order": 2
+}

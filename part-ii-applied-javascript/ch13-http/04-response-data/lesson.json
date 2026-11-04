@@ -1,0 +1,9 @@
+{
+  "title": "Inspecting JSON response data",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Inspect response metadata, nested values, and returned records",
+  "expected": "The script reports the result count and selected repository information.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-http/03-request-details"],
+  "verify": ["Total matches: 2", "Ada", "Stars: 120"]
+}

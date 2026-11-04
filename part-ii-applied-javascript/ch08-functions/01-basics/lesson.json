@@ -1,0 +1,10 @@
+{
+  "title": "Functions: named actions",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Declare, call, and explain a JavaScript function",
+  "input": "",
+  "expected": "The function prints a greeting each time it is called.",
+  "prerequisites": ["part-i-basics/ch07-loops/08-running-results"],
+  "verify": ["Hello, Ada", "Hello, Grace"]
+}

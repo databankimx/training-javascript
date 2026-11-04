@@ -1,0 +1,11 @@
+{
+  "title": "Classic and modern patterns compared",
+  "order": 3,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Choose and recognize classic and modern object patterns",
+  "input": "",
+  "expected": "Both patterns produce equivalent learner objects.",
+  "prerequisites": ["part-ii-applied-javascript/ch09-classes/02-modern-class"],
+  "verify": []
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Iterators and generators",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use generators to produce values on demand and explain the iterator protocol.",
+  "input": "",
+  "expected": "The generator produces squares lazily, then next() reports two values and the final done state.",
+  "prerequisites": [],
+  "verify": [
+    "1,4,9,16",
+    "value: 10, done: false",
+    "value: undefined, done: true"
+  ],
+  "order": 1
+}

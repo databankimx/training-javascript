@@ -1,0 +1,11 @@
+{
+  "title": "Collection pipelines",
+  "order": 5,
+  "runtime": "node",
+  "minutes": 40,
+  "objective": "Compare collection loops with filter, map, reduce, sorting, and nested pipelines",
+  "input": "",
+  "expected": "The output demonstrates an explicit loop, collection transformations, non-mutating sorting, and nested mapping.",
+  "prerequisites": ["part-i-basics/ch04-collections/04-traversal"],
+  "verify": ["Loop: 10, 8", "Map: 100, 80", "Reduce: 18", "Nested map: [[2,4,6],[8,10,12]]"]
+}

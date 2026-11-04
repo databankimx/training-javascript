@@ -1,0 +1,9 @@
+{
+  "title": "API limits and response metadata",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Read rate-limit metadata and explain why service limits matter",
+  "expected": "The script reports the remaining requests and the percentage available.",
+  "prerequisites": ["part-ii-applied-javascript/ch13-http/04-response-data"],
+  "verify": ["Remaining: 42", "70% available"]
+}
