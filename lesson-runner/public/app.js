@@ -101,7 +101,9 @@ function highlightSource(source, language = 'javascript') {
   return HighlightJS.highlight(source, { language }).value;
 }
 function updateHighlight() {
-  $('highlight').querySelector('code').innerHTML = highlightSource($('source').value, languageForFile($('file').value)) + '\n';
+  const source = $('source').value;
+  $('highlight').querySelector('code').innerHTML = highlightSource(source, languageForFile($('file').value)) + '\n';
+  $('line-numbers').textContent = Array.from({ length: Math.max(1, source.split('\n').length) }, (_, index) => index + 1).join('\n');
 }
 function addCopyButtons() {
   $('reading').querySelectorAll('pre > code').forEach(code => {
@@ -128,6 +130,52 @@ function addCopyButtons() {
     };
     pre.append(button);
   });
+}
+function paneButton(label, glyph, action) {
+  const button = document.createElement('button');
+  button.className = 'glyph-button';
+  button.type = 'button';
+  button.textContent = glyph;
+  button.title = label;
+  button.setAttribute('aria-label', label);
+  button.onclick = action;
+  return button;
+}
+async function copyPaneText(text, button) {
+  try {
+    await navigator.clipboard.writeText(text);
+    const original = button.textContent;
+    button.textContent = '✓';
+    setTimeout(() => { button.textContent = original; }, 1200);
+  } catch {
+    $('status').textContent = 'Copy unavailable; select the text manually.';
+  }
+}
+function installPaneActions() {
+  const tablist = document.querySelector('[role="tablist"]');
+  if (!tablist.querySelector('.pane-copy-lesson')) {
+    const button = paneButton('Copy lesson Markdown', '⧉', () => {
+      const filename = tab === 'solution' ? 'solution.md' : 'lesson.md';
+      copyPaneText(current?.contents?.[filename] || '', button);
+    });
+    button.classList.add('pane-copy-lesson');
+    tablist.append(button);
+  }
+  const editorbar = document.querySelector('.editorbar');
+  if (!editorbar.querySelector('.pane-copy-source')) {
+    const button = paneButton('Copy source', '⧉', () => copyPaneText($('source').value, button));
+    button.classList.add('pane-copy-source');
+    editorbar.append(button);
+  }
+  const label = $('console-label');
+  if (!label.querySelector('.pane-actions')) {
+    const actions = document.createElement('span');
+    actions.className = 'pane-actions';
+    const copy = paneButton('Copy console output', '⧉', () => copyPaneText($('output').textContent, copy));
+    const clear = paneButton('Clear console output', '⌫', () => { $('output').textContent = ''; });
+    actions.append(copy, clear);
+    label.append(actions);
+  }
 }
 function colorTruthTables() {
   $('reading').querySelectorAll('table').forEach(table => {
@@ -197,7 +245,7 @@ function makeSplitter(id, target, minimum, maximum, axis = 'vertical') {
   });
 }
 document.body.classList.toggle('light', theme === 'light');
-const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-working-with-html': 'Part III · Working with HTML', 'part-iv-advanced': 'Part IV · Advanced JavaScript' };
+const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-working-with-html': 'Part III · Working with HTML', 'part-iv-advanced': 'Part IV · Advanced JavaScript', 'part-v-jquery': 'Part V · jQuery' };
 const chapterNames = {
   'ch13-browser': 'CH13 · JavaScript in HTML',
   'ch14-forms': 'CH14 · JavaScript in Forms',
@@ -454,6 +502,7 @@ $('source').addEventListener('input', () => {
 $('source').addEventListener('scroll', () => {
   $('highlight').scrollTop = $('source').scrollTop;
   $('highlight').scrollLeft = $('source').scrollLeft;
+  $('line-numbers').scrollTop = $('source').scrollTop;
 });
 $('file').onchange = loadFile;
 $('search').oninput = navigation;
@@ -520,6 +569,65 @@ $('input-form').onsubmit = guarded(async event => {
 
 // Prevent default synchronously, including when the API is unavailable.
 $('input-form').addEventListener('submit', event => event.preventDefault());
+function findInSource() {
+  const source = $('source');
+  const input = $('source-find-input');
+  const status = $('source-find-status');
+  const term = input.value;
+  if (!term) {
+    status.textContent = '';
+    return;
+  }
+  const text = source.value.toLocaleLowerCase();
+  const query = term.toLocaleLowerCase();
+  const from = source.selectionEnd > source.selectionStart ? source.selectionEnd : source.selectionStart;
+  let index = text.indexOf(query, from);
+  if (index < 0) index = text.indexOf(query, 0);
+  if (index < 0) {
+    status.textContent = 'Not found';
+    return;
+  }
+  status.textContent = 'Found';
+  source.focus();
+  source.setSelectionRange(index, index + term.length);
+  const line = source.value.slice(0, index).split('\n').length;
+  const lineHeight = Number.parseFloat(getComputedStyle(source).lineHeight) || 21;
+  source.scrollTop = Math.max(0, (line - 2) * lineHeight);
+}
+function openSourceFind() {
+  $('source-find').hidden = false;
+  const input = $('source-find-input');
+  input.focus();
+  input.select();
+}
+function closeSourceFind() {
+  $('source-find').hidden = true;
+  $('source').focus();
+}
+$('source-find-input').addEventListener('keydown', event => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    findInSource();
+  }
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeSourceFind();
+  }
+});
+$('source-find-next').addEventListener('click', findInSource);
+$('source-find-close').addEventListener('click', closeSourceFind);
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !$('source-find').hidden) {
+    event.preventDefault();
+    closeSourceFind();
+    return;
+  }
+  const sourceFocused = document.activeElement === $('source');
+  if (sourceFocused && (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'f') {
+    event.preventDefault();
+    openSourceFind();
+  }
+});
 document.addEventListener('keydown', event => {
   if (!(event.ctrlKey && event.altKey && event.shiftKey && event.key === 'Backspace')) return;
   event.preventDefault();
@@ -555,6 +663,7 @@ $('theme').onclick = () => {
 makeSplitter('nav-gripper', 'catalog', 120, 700, 'horizontal');
 makeSplitter('lab-gripper', 'code-editor', 180, 900, 'horizontal');
 makeSplitter('workspace-gripper', 'reading', 320, 1100);
+installPaneActions();
 document.addEventListener('keydown', event => {
   if (event.key === 'F5') {
     event.preventDefault();

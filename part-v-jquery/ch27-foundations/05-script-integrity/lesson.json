@@ -1,0 +1,1 @@
+{"title":"Script integrity and cross-origin loading","subtitle":"Use Subresource Integrity when loading shared libraries","minutes":25,"order":5,"runtime":"browser","files":["index.html","main.js","style.css"]}

@@ -1,0 +1,6 @@
+body { font-family: system-ui, sans-serif; background: #eef4f8; color: #18324b; padding: 2rem; }
+.card { max-width: 32rem; margin: auto; padding: 2rem; background: white; border-radius: .75rem; }
+label, input, button { display: block; margin: .5rem 0; }
+input { padding: .5rem; width: 100%; box-sizing: border-box; }
+button { padding: .5rem .8rem; }
+.invalid { border: 2px solid #b94a48; background: #fff0ef; }

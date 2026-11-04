@@ -1,0 +1,16 @@
+body {
+margin: 0;
+padding: 2rem;
+color: #24364b;
+background: #eef3f8;
+font: 1rem/1.5 system-ui, sans-serif;
+}
+.card {
+max-width: 42rem;
+margin: 0 auto;
+padding: 2rem;
+background: white;
+border: 1px solid #cad6e2;
+border-radius: 0.75rem;
+box-shadow: 0 0.5rem 1.5rem rgb(36 54 75 / 12%);
+}

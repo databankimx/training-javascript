@@ -1,0 +1,1 @@
+{"title":"Homework: status loader","section":"Chapter summary · Homework","runtime":"browser","spoiler":true,"minutes":40,"objective":"Show loading, success, and failure states for an asynchronous request.","expected":"The user sees a loading message followed by a successful status.","verify":["Loading...","Status: ready"],"order":5,"files":["index.html","main.js","style.css"]}

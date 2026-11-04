@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Building a jQuery plugin</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<main class="card">
+		<h1>Links</h1>
+		<button id="apply" type="button">Apply link-location plugin</button>
+		<a class="resource" href="#guide">Training guide</a>
+		<a class="resource" href="#reference">Reference page</a>
+		<section id="guide">
+			<h2>Training guide</h2>
+			<p>This section contains the short training guide.</p>
+			<p>
+				Good training material gives each idea enough room to breathe. A reader should be able to follow the example, change one detail, and still understand why the result changed. That is more useful than a page that merely demonstrates how quickly a widget can be initialized.
+			</p>
+			<p>
+				As you move through the guide, notice the relationship between the visible link and its destination. The link text explains the destination in human terms, while the fragment identifies the section in the document.
+			</p>
+			<p>
+				There is no hidden server route behind this example. Everything is already in the page, which means the plugin can improve the presentation without fetching another document.
+			</p>
+		</section>
+		<section id="reference">
+			<h2>Reference page</h2>
+			<p>This section contains the reference material.</p>
+			<p>
+				Reference pages tend to be denser than lessons. They collect option names, defaults, callback signatures, and lifecycle methods in one place. A good navigation aid helps the reader understand where a link will take them before they click.
+			</p>
+			<p>
+				Imagine this section continued for several screens. The plugin's small annotation would still be useful because the target remains visible beside the link, even when the actual destination is far below the current viewport.
+			</p>
+			<p>
+				When you build a plugin for a real application, start with that user need. The code should serve the design, not the other way around. Otherwise we are just adding another method to `$.fn` because we had a quiet afternoon.
+			</p>
+		</section>
+		<p id="output"></p>
+	</main>
+</body>
+</html>
+

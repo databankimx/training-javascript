@@ -1,0 +1,1 @@
+{"title":"Keep a namespace safe","subtitle":"Practice jQuery.noConflict()","minutes":30,"order":2,"runtime":"browser","files":["index.html","main.js","style.css"],"homework":true}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vue GL rows</title>
+        <link rel="stylesheet" href="style.css">
+        <script 
+            src="https://unpkg.com/vue@3.5.13/dist/vue.global.js" 
+            integrity="sha384-G++pO/TtP6SeNEBuO/CYuppmlcEhA0Rj9IcY5feVJXhyYraEA8CKVZV38iDXLTyJ" 
+            crossorigin="anonymous">
+        </script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <main id="app" class="shell">
+            <header class="brand-bar">
+                <svg class="brand-mark" viewBox="0 0 340 340" aria-hidden="true" focusable="false">
+                    <path d="M281 41.8501C250.161 14.8344 210.548 -0.0405153 169.55 8.28843e-05H0V216.89L281 41.8501Z" fill="#427DFF"></path>
+                    <path d="M281 41.8496L0 339.16H169.55C214.525 339.16 257.659 321.293 289.461 289.491
+                    C321.264 257.688 339.13 214.555 339.13 169.58C339.147 145.369 333.966 121.437 323.937
+                    99.4014C313.909 77.3655 299.266 57.7394 281 41.8496Z"
+                    fill="#427DFF"></path>
+                </svg>
+                <div>
+                    <p class="eyebrow">Capstone extension</p>
+                    <h1>Vue GL rows</h1>
+                </div>
+            </header>
+            <p class="intro">The jQuery capstone manages rows by creating and removing DOM elements. This version lets Vue render the rows from a reactive array.</p>
+            <section class="panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Reactive table</p>
+                        <h2>GL distribution</h2>
+                    </div>
+                    <button type="button" @click="addRow">Add row</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">GL code</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">
+                                    <span class="sr-only">Action</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(row, index) in rows" :key="row.id" :class="{ 'invalid-row': row.invalid }">
+                                <td>
+                                    <input v-model.trim="row.code" @blur="lookup(row)" :aria-label="`GL code ${index + 1}`" placeholder="6100">
+                                </td>
+                                <td>
+                                    <input v-model="row.description" readonly :aria-label="`GL description ${index + 1}`">
+                                </td>
+                                <td>
+                                    <input v-model="row.amount"
+                                           @input="refresh"
+                                           @blur="formatAmount(row)"
+                                           :aria-label="`GL amount ${index + 1}`"
+                                           inputmode="decimal"
+                                           placeholder="0.00">
+                                </td>
+                                <td>
+                                    <button class="icon-button" type="button" @click="removeRow(index)" :aria-label="`Remove GL row ${index + 1}`">×</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="2">GL subtotal</th>
+                                <td>{{ currency(subtotal) }}</td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <p class="lookup-help">
+                    Valid GL codes: <code>6100</code> Office supplies, <code>6200</code>
+                    Professional services, <code>6300</code> Facilities and maintenance,
+                    <code>6400</code> Travel and lodging.
+                </p>
+                <p class="form-message" role="status">{{ message }}</p>
+            </section>
+        </main>
+    </body>
+</html>

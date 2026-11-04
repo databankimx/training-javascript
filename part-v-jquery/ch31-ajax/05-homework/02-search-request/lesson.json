@@ -1,0 +1,1 @@
+{"title":"Homework: serialized search request","section":"Chapter summary · Homework","runtime":"browser","spoiler":true,"minutes":40,"objective":"Serialize named form controls and display the request data.","expected":"The page reports the encoded search term and category.","verify":["term=invoice","category=open"],"order":6,"files":["index.html","main.js","style.css"]}

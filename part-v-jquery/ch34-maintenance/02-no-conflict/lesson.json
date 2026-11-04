@@ -1,0 +1,1 @@
+{"title":"$.noConflict and library coexistence","subtitle":"Use jQuery safely when another library owns the dollar sign","minutes":30,"order":2,"runtime":"browser","files":["index.html","main.js","style.css"]}
