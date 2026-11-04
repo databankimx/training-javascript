@@ -1,6 +1,6 @@
 # DataBank IMX  -  JavaScript Developer Training
 
-A self-teaching repository for developers learning modern JavaScript, with optional lecture support. All executable examples and the lesson runner use vanilla JavaScript. jQuery comparisons help DataBank developers connect familiar code to language and browser fundamentals; jQuery is not a runtime dependency. A separate jQuery course is planned.
+A self-teaching repository for developers learning modern JavaScript, with optional lecture support. The language and browser foundations use vanilla JavaScript. jQuery comparisons help DataBank developers connect familiar code to language and browser fundamentals, and Part V provides a separate jQuery track for the code our team actually encounters.
 
 We’ll start with the language, then make it do useful things in HTML: show a section, validate an amount, add a coding row, and keep the totals honest. If a convenient shortcut produces a less convenient surprise, we’ll stop and explain it. The aim is to understand the code well enough to change it, rather than persuade it to run once and quietly move on.
 
@@ -36,14 +36,15 @@ The editor saves drafts in this browser's storage for this local origin. Reset r
 
 ## Curriculum
 
-There are 194 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
+There are 289 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
 
 | Track | Coverage |
 |---|---|
-| Part I  -  Fundamentals (64 lessons) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, and loops |
-| Part II  -  Applied JavaScript (41 lessons) | Functions, classes, modules, error handling, asynchronous JavaScript, and HTTP |
-| Part III  -  Working with HTML (45 lessons) | Browser JavaScript, forms, validation, dynamic forms, debugging, and XSS prevention |
-| Part IV  -  Advanced JavaScript (44 lessons) | Recursion, regular expressions, complexity, bitwise operations, closures, internationalized formatting, typed arrays, iterators, and functional tools |
+| Part I  -  Fundamentals (63 lessons) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, and loops |
+| Part II  -  Applied JavaScript (52 lessons) | Functions, classes, modules, error handling, asynchronous JavaScript, and HTTP |
+| Part III  -  Working with HTML (46 lessons) | Browser JavaScript, forms, validation, dynamic forms, debugging, and XSS prevention |
+| Part IV  -  Advanced JavaScript (71 lessons) | Recursion, regular expressions, complexity, bitwise operations, closures, internationalized formatting, typed arrays, iterators, and functional tools |
+| Part V  -  jQuery (57 lessons) | jQuery foundations, selectors, events, DOM work, AJAX, plugins, maintenance, and GL-form patterns |
 
 The HTML chapters cover script integration, the DOM, selectors, events, keyboard access, hide/show, accordions, tabs, validation, debugging, dynamic tables, XSS prevention, formatting, templates, dialogs, and invoice-style forms. They draw on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.
 
@@ -75,7 +76,7 @@ Progress, completion marks, drafts, and the last location are stored in browser 
 
 ## Runner design and limits
 
-The runner is a Node HTTP server bound to 127.0.0.1, with a dependency-free browser interface. Node examples execute in child processes from copies under .training-work; output is capped and runs stop after 60 seconds. Only one Node run is active at a time. Stop, lesson navigation, and Ctrl+C stop the active example. Browser previews run in an opaque-origin iframe with script, form, dialog, and download support. They cannot use localStorage or make same-origin calls to the runner API. These examples do not spawn descendant processes; process-tree management for arbitrary learner programs is outside this runner's scope.
+The runner is a Node HTTP server bound to 127.0.0.1, with a dependency-free browser interface. Node examples execute in child processes from copies under .training-work; output is capped and runs stop after 60 seconds. Only one Node run is active at a time. Stop, lesson navigation, and Ctrl+C stop the active example. Browser previews run in an opaque-origin iframe with script, form, dialog, and download support. They cannot use localStorage or make same-origin calls to the runner API. Markdown supports optional TeX/LaTeX rendering through KaTeX, while raw HTML remains disabled. These examples do not spawn descendant processes; process-tree management for arbitrary learner programs is outside this runner's scope.
 
 Node execution uses your account and is **not an operating-system sandbox**. Run trusted lesson code. The runner does not need elevated privileges and is intended for one local learner, not network hosting or multi-user deployment. Its Markdown renderer supports headings, paragraphs, bullets, fenced code, simple emphasis, and HTTP links; it escapes raw HTML. It does not include mathematical typesetting, a debugger, full editor completion, or the Python runner's full desktop feature set.
 
