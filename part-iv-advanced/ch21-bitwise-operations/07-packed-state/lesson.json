@@ -1,2 +1,0 @@
-{"title":"Packed state and feature flags","runtime":"node","minutes":35,"objective":"Use a bit mask for compact application state.","input":"","expected":"The script reports enabled features from one packed state value.","verify":["dark mode: true","beta search: false","compact view: true"],"order":7}
-

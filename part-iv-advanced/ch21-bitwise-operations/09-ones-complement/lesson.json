@@ -1,0 +1,1 @@
+{"title":"One's complement","runtime":"node","minutes":25,"objective":"Describe bit inversion and distinguish one's complement from two's complement.","order": 9,"input":"","expected":"0101 -> 1010","verify":["0101"]}

@@ -1,2 +1,0 @@
-{"title":"AND, OR, XOR, and NOT","runtime":"node","minutes":35,"objective":"Explain the four basic bitwise logic operators.","input":"","expected":"The example prints the results of AND, OR, XOR, and NOT.","verify":["AND: 0","OR: 15","XOR: 15"],"order":3}
-

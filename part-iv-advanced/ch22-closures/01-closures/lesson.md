@@ -29,6 +29,58 @@ console.log(a(), a(), b());
 
 > A closure is a function together with access to the lexical environment where it was created. Closures capture bindings, not frozen snapshots. If the binding changes, later calls see the new value.
 
+## Reading and changing an outer binding
+
+The scope lesson showed that a function can read a value from outside itself. A closure takes that one step further: the returned function can keep using an enclosing binding after the outer function has finished.
+
+JavaScript does not have Python's `nonlocal` keyword. If an enclosing binding was declared with `let`, a closure can read it and assign to it directly. A local declaration with the same name is different. It shadows the outer binding and disappears when the function returns.
+
+```javascript
+let adjective = "awesome";
+
+function describe() {
+  return `JavaScript is ${adjective}`;
+}
+
+function describeWithLocalAdjective() {
+  const adjective = "fantastic";
+  return `JavaScript is ${adjective}`;
+}
+
+function makeDescription() {
+  let modifier = "really";
+
+  return {
+    show() {
+      return `JavaScript is ${modifier} useful`;
+    },
+    change(nextModifier) {
+      modifier = nextModifier;
+    }
+  };
+}
+
+const description = makeDescription();
+console.log(describe());
+console.log(describeWithLocalAdjective());
+console.log(describe());
+console.log(description.show());
+description.change("extremely");
+console.log(description.show());
+```
+
+```text
+JavaScript is awesome
+JavaScript is fantastic
+JavaScript is awesome
+JavaScript is really useful
+JavaScript is extremely useful
+```
+
+The local `adjective` changes only the result of `describeWithLocalAdjective()`. It does not change the outer `adjective`, so the next call to `describe()` still says `awesome`. The two methods returned by `makeDescription()` share the same private `modifier` binding, and `change()` updates the value that `show()` reads later.
+
+This is the useful JavaScript equivalent of changing an enclosing variable from a nested function. In ordinary application code, prefer parameters, return values, modules, or a small closure like this over changing a true global variable behind the rest of the program's back.
+
 ---
 
 ## Functions are values, too

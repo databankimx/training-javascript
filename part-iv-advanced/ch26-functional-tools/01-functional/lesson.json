@@ -4,10 +4,10 @@
   "minutes": 30,
   "objective": "Compose small functions into a readable pipeline and explain the order in which values move through it.",
   "input": "",
-  "expected": "Whitespace is removed first, then the remaining text is converted to uppercase.",
+  "expected": "Both composition and a left-to-right pipeline remove whitespace before converting the text to uppercase.",
   "prerequisites": [],
   "verify": [
     "HELLO"
   ],
-  "order": 9
+  "order": 1
 }

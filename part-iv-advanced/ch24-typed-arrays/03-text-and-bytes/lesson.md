@@ -4,6 +4,8 @@ Computers store text as bytes. The text looks obvious to us, but a byte is just 
 
 UTF-8 is the common encoding used by web pages and many files. ASCII characters usually take one byte, while characters outside the ASCII range can take several. That is why counting characters and counting bytes are not always the same thing.
 
+JavaScript strings use UTF-16 code units internally, while `TextEncoder` writes UTF-8 bytes. Those are two different representations of the same text. For simple ASCII they often appear to agree, which is why the difference can hide until an accented character or emoji arrives.
+
 ```javascript
 const message = "café";
 const encoder = new TextEncoder();
@@ -11,12 +13,14 @@ const decoder = new TextDecoder();
 const bytes = encoder.encode(message);
 
 console.log("bytes: " + [...bytes].join(", "));
+console.log("JavaScript length: " + message.length);
 console.log("byte count: " + bytes.length);
 console.log("decoded: " + decoder.decode(bytes));
 ```
 
 ```text
 bytes: 99, 97, 102, 195, 169
+JavaScript length: 4
 byte count: 5
 decoded: café
 ```

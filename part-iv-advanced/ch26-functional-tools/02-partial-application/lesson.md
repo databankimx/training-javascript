@@ -17,6 +17,11 @@ INFO: saved
 
 `label` accepts two arguments. The `info` function fixes the first argument as `"INFO"` and leaves `message` for the caller. This is called partial application because we apply part of the argument list now and the rest later.
 
+| Function | Fixed now | Supplied later |
+| --- | --- | --- |
+| `label` | nothing | `prefix`, `message` |
+| `info` | `prefix = "INFO"` | `message` |
+
 The arrow function `message => label("INFO", message)` closes over the fixed prefix. It is not magic, and it is not a new kind of variable. It is an ordinary function value that remembers the value it needs from its surrounding scope.
 
 > Partial application creates a new function by supplying some arguments to an existing function ahead of time. The new function usually has fewer arguments and a narrower job.

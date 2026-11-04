@@ -1,2 +1,0 @@
-{"title":"BigInt bitwise operations","runtime":"node","minutes":30,"objective":"Use BigInt when bit flags need more than Number's 32-bit bitwise range.","input":"","expected":"BigInt preserves a high flag that Number bitwise conversion cannot.","verify":["high flag: true","combined: 1099511627777"],"order":9}
-

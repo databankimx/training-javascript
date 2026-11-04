@@ -16,11 +16,21 @@ $59.97
 01/15/2026
 ```
 
+The total stays a number until `NumberFormat` turns it into display text. The item count stays a number until `PluralRules` tells us whether to use `item` or `items`. The order date stays a `Date` until `DateTimeFormat` presents it for the reader.
+
 ## Try it Yourself
 
 Create the formatters yourself, run the report, and then add a second locale. Explain which values remain numbers or Date objects and which values become display text.
 
 The spoiler contains a complete solution.
+
+## Expected output
+
+```text
+$59.97
+3 items
+01/15/2026
+```
 
 ---
 

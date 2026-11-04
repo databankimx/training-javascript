@@ -154,3 +154,4 @@ vite.config.ts.timestamp-*
 # Local resource notes and generated Markdown
 /resources/**/*.md
 AGENTS.md
+.vscode/

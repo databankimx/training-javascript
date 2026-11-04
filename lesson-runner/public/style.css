@@ -17,6 +17,8 @@ aside > label { display: block; margin-top: 18px; }
 .gripper { flex: 0 0 8px; position: relative; background: transparent; touch-action: none; cursor: row-resize; }
 .gripper::after { content: ''; position: absolute; left: 25%; right: 25%; top: 3px; height: 2px; border-radius: 2px; background: #555; }
 .gripper:hover::after, .gripper.dragging::after { background: var(--accent); }
+.gripper.vertical { cursor: col-resize; }
+.gripper.vertical::after { left: 3px; right: auto; top: 25%; bottom: 25%; width: 2px; height: auto; }
 details { margin: 0; }
 summary { padding: 9px 18px; color: #c9c9c9; }
 summary.active { background: #087dcc; color: #fff; }
@@ -30,7 +32,8 @@ main { padding: 0 18px 14px; background: #1e1e1e; }
 h1 { margin: 10px 0 2px; font-size: 28px; }
 #meta { margin-bottom: 10px; color: #919191; }
 .toolbar { margin-bottom: 12px; }
-.workspace { grid-template-columns: minmax(390px, 1fr) minmax(520px, 1.35fr); gap: 0; }
+.workspace { display: grid; grid-template-columns: minmax(320px, 1fr) 8px minmax(330px, 1.35fr); gap: 0; }
+.workspace > .reading, .workspace > .lab { min-width: 0; }
 .reading, .lab { border-radius: 0; border-color: #3e3e3e; background: #202020; }
 article { max-height: calc(100vh - 240px); }
 .lab { display: flex; flex-direction: column; }
@@ -53,7 +56,7 @@ dialog#preview-dialog::backdrop { background: #0009; }
 .preview-dialog-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--panel); cursor: move; user-select: none; }
 dialog#preview-dialog iframe { display: block; flex: 1; width: 100%; height: auto; min-height: 0; border: 0; background: #fff; }
 footer { color: #898989; }
-@media (max-width: 1050px) { body { grid-template-columns: 300px 1fr; } aside { width: 300px; } .workspace { grid-template-columns: 1fr; } }
+@media (max-width: 1050px) { body { grid-template-columns: 300px 1fr; } aside { width: 300px; } .workspace { display: block; } .workspace-gripper { display: none; } }
 
 /* Python-runner palette: blue actions, neutral panels, and readable light mode. */
 :root { color-scheme: dark; --bg: #1e1e1e; --panel: #242424; --raised: #303030; --fg: #dedede; --muted: #999; --line: #3a3a3a; --accent: #087dcc; --link: #6eb5ed; }
@@ -85,6 +88,8 @@ article th, article td { padding: .55em .7em; border: 1px solid var(--line); tex
 article th { background: var(--raised); color: var(--fg); }
 article code:not([class]) { color: #d4ba72; background: #333; }
 body.light article code:not([class]) { color: #795e26; background: #e8e8e8; }
+article .katex { color: #c7b875; }
+body.light article .katex { color: #806d28; }
 .code-editor pre { position: absolute; inset: 0; overflow: hidden; pointer-events: none; color: var(--fg); }
 .code-editor code { background: transparent; padding: 0; }
 .code-editor textarea { position: relative; display: block; resize: vertical; border: 0; background: transparent; color: transparent; caret-color: var(--fg); outline: 0; }

@@ -4,6 +4,8 @@ Typed arrays make fixed-width numbers convenient, but sometimes we need to see t
 
 An `ArrayBuffer` reserves raw bytes. It does not know whether those bytes represent integers, decimals, text, or anything else. A typed array or a `DataView` gives those bytes a point of view.
 
+> `ArrayBuffer` is the storage. A typed array is a convenient view with one fixed element type. `DataView` is the flexible view: each read or write can choose its type, offset, and byte order.
+
 ```javascript
 const buffer = new ArrayBuffer(2);
 const bytes = new Uint8Array(buffer);
@@ -23,6 +25,8 @@ big-endian: 13330
 ```
 
 The number `0x1234` is 4660 in decimal. We write it into two bytes in little-endian order, so the lower byte comes first: `0x34` is 52 and `0x12` is 18. Reading those same bytes in big-endian order produces a different number. The bytes did not change. Our interpretation did.
+
+The offset is the byte position where an operation starts. Here the value begins at offset `0` and occupies two bytes. If the buffer held several values, the next operation could begin at offset `2`, provided the buffer was large enough. An offset is a count of bytes, not a count of typed-array elements.
 
 | API | What it provides |
 | --- | --- |

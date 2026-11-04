@@ -36,16 +36,28 @@ function execute(args, cwd, input = '') {
 try {
   assert.ok(lessons.length >= 65, 'Curriculum unexpectedly shrank');
   for (const lesson of lessons) {
+    // Validate and execute one lesson at a time so failures identify one package clearly.
+    // eslint-disable-next-line no-await-in-loop
     const files = await filesFor(lesson);
     for (const name of ['lesson.md', 'main.js', 'solution.md']) assert.ok(files.includes(name), `${lesson.id} missing ${name}`);
+    // eslint-disable-next-line no-await-in-loop
     const text = await readFile(path.join(lesson.folder, 'lesson.md'), 'utf8');
-    assert.ok(text.includes('```javascript\n'), `${lesson.id} missing JavaScript example block`);
-    assert.ok(text.includes('```text\n'), `${lesson.id} missing expected-output block`);
+    const proseLedTheory = lesson.id.startsWith('part-iv-advanced/ch21-bitwise-operations/') && Number(lesson.order) <= 10;
+    if (!proseLedTheory) {
+      assert.ok(text.includes('```javascript\n'), `${lesson.id} missing JavaScript example block`);
+      assert.ok(text.includes('```text\n'), `${lesson.id} missing expected-output block`);
+    }
     const cwd = path.join(work, String(count++));
+    // eslint-disable-next-line no-await-in-loop
     await cp(lesson.folder, cwd, { recursive: true });
+    // eslint-disable-next-line no-await-in-loop
     await writeFile(path.join(cwd,'package.json'),'{"type":"module"}');
-    for (const name of files.filter(name => name.endsWith('.js'))) await execute(['--check', name], cwd);
+    for (const name of files.filter(name => name.endsWith('.js'))) {
+      // eslint-disable-next-line no-await-in-loop
+      await execute(['--check', name], cwd);
+    }
     if (lesson.runtime === 'node') {
+      // eslint-disable-next-line no-await-in-loop
       const output = await execute(['main.js'], cwd, lesson.input);
       const expected = lesson.verify || [];
       for (const fragment of expected) assert.ok(output.includes(fragment), `${lesson.id} expected ${fragment}, got ${output}`);

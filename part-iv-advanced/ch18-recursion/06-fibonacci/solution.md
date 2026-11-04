@@ -1,22 +1,27 @@
 # Solution
 
-The memoized version keeps the same recursive definition but caches results:
+The solution adds a small input guard and prints the next values in the sequence.
 
 ```javascript
-const memo = new Map([[0, 0], [1, 1]]);
-
-function fibonacciMemoized(n) {
-  if (memo.has(n)) return memo.get(n);
-  const value = fibonacciMemoized(n - 1) + fibonacciMemoized(n - 2);
-  memo.set(n, value);
-  return value;
+function fibonacci(n) {
+  if (!Number.isInteger(n) || n < 0) {
+    throw new RangeError("Use a non-negative integer.");
+  }
+  if (n < 2) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-console.log(fibonacciMemoized(35));
+for (const n of [6, 7, 8]) {
+  console.log(`F(${n}) = ${fibonacci(n)}`);
+}
 ```
 
 ```text
-9227465
+F(6) = 8
+F(7) = 13
+F(8) = 21
 ```
 
-The `Map` changes the performance dramatically because each Fibonacci value is calculated once and then reused.
+The guard makes the function's accepted input explicit. It does not solve the repeated-work problem. That is the subject of the complexity chapter.
+
+---

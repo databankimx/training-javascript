@@ -1,0 +1,1 @@
+{"title":"Bitwise XOR","runtime":"node","minutes":25,"objective":"Understand XOR as the exactly-one operator and as a reversible transformation.","order": 19,"input":"","expected":"XOR returns 1 when the input bits differ.","verify":["0 ^ 1 = 1","1010 ^ 0101 = 1111"]}

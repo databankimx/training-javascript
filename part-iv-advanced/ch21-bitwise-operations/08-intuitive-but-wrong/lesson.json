@@ -1,0 +1,1 @@
+{"title":"The intuitive answer that is wrong","runtime":"node","minutes":25,"objective":"See why familiar decimal reasoning can mislead us with fixed-width binary values.","order": 8,"input":"","expected":"The example exposes the gap between mathematical integers and fixed-width representations.","verify":["fixed-width","0000"]}

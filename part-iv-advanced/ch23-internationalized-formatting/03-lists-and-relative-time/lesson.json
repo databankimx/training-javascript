@@ -4,7 +4,7 @@
   "minutes": 35,
   "objective": "Use Intl formatters for lists, units, and human-readable relative time.",
   "input": "",
-  "expected": "The same values become natural text for a reader.",
-  "verify": ["Ada, Grace, and Alan", "3 items", "in 2 days"],
+  "expected": "The same values become natural text for a reader, including a localized unit.",
+  "verify": ["Ada, Grace, and Alan", "3 items", "88 kilometers per hour", "in 2 days"],
   "order": 3
 }

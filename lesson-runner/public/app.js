@@ -4,12 +4,14 @@ import xml from '/vendor/highlight/es/languages/xml.js';
 import css from '/vendor/highlight/es/languages/css.js';
 import json from '/vendor/highlight/es/languages/json.js';
 import bash from '/vendor/highlight/es/languages/bash.js';
+import c from '/vendor/highlight/es/languages/c.js';
 
 HighlightJS.registerLanguage('javascript', javascript);
 HighlightJS.registerLanguage('xml', xml);
 HighlightJS.registerLanguage('css', css);
 HighlightJS.registerLanguage('json', json);
 HighlightJS.registerLanguage('bash', bash);
+HighlightJS.registerLanguage('c', c);
 const $ = id => document.getElementById(id);
 const katexStyles = document.createElement('link');
 katexStyles.rel = 'stylesheet';
@@ -142,22 +144,35 @@ function colorTruthTables() {
     });
   });
 }
-function makeSplitter(id, target, minimum, maximum) {
+function makeSplitter(id, target, minimum, maximum, axis = 'vertical') {
   const grip = $(id);
   const element = $(target);
+  const horizontal = axis === 'horizontal';
+  const parent = grip.parentElement;
+  const getMaximum = () => {
+    if (horizontal) return maximum;
+    const gripWidth = grip.getBoundingClientRect().width;
+    const minimumSibling = 330;
+    return Math.max(minimum, Math.min(maximum, parent.getBoundingClientRect().width - gripWidth - minimumSibling));
+  };
   let start = 0;
   let size = 0;
   grip.addEventListener('pointerdown', event => {
     event.preventDefault();
     grip.setPointerCapture(event.pointerId);
-    start = event.clientY;
-    size = element.getBoundingClientRect().height;
+    start = horizontal ? event.clientY : event.clientX;
+    size = horizontal ? element.getBoundingClientRect().height : element.getBoundingClientRect().width;
     grip.classList.add('dragging');
   });
   grip.addEventListener('pointermove', event => {
     if (!grip.hasPointerCapture(event.pointerId)) return;
-    const next = Math.max(minimum, Math.min(maximum, size + event.clientY - start));
-    element.style.flex = `0 0 ${next}px`;
+    const current = horizontal ? event.clientY : event.clientX;
+    const next = Math.max(minimum, Math.min(getMaximum(), size + current - start));
+    if (horizontal) {
+      element.style.flex = `0 0 ${next}px`;
+    } else {
+      parent.style.gridTemplateColumns = `${next}px 8px minmax(330px, 1fr)`;
+    }
   });
   const stopDragging = event => {
     if (!grip.hasPointerCapture(event.pointerId)) return;
@@ -167,11 +182,18 @@ function makeSplitter(id, target, minimum, maximum) {
   grip.addEventListener('pointerup', stopDragging);
   grip.addEventListener('pointercancel', stopDragging);
   grip.addEventListener('keydown', event => {
-    if (!['ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    const keys = horizontal ? ['ArrowUp', 'ArrowDown'] : ['ArrowLeft', 'ArrowRight'];
+    if (!keys.includes(event.key)) return;
     event.preventDefault();
-    const delta = event.key === 'ArrowDown' ? 24 : -24;
-    const next = Math.max(minimum, Math.min(maximum, element.getBoundingClientRect().height + delta));
-    element.style.flex = `0 0 ${next}px`;
+    const positive = horizontal ? event.key === 'ArrowDown' : event.key === 'ArrowRight';
+    const delta = positive ? 24 : -24;
+    const current = horizontal ? element.getBoundingClientRect().height : element.getBoundingClientRect().width;
+    const next = Math.max(minimum, Math.min(getMaximum(), current + delta));
+    if (horizontal) {
+      element.style.flex = `0 0 ${next}px`;
+    } else {
+      parent.style.gridTemplateColumns = `${next}px 8px minmax(330px, 1fr)`;
+    }
   });
 }
 document.body.classList.toggle('light', theme === 'light');
@@ -255,7 +277,7 @@ function reading() {
   $('reading').scrollTop = wasViewed ? Number(readingState[current.id]?.[tab] || 0) : 0;
   $('reading').querySelectorAll('code[class*="language-"]').forEach(code => {
     const language = [...code.classList].find(name => name.startsWith('language-'))?.slice('language-'.length) || 'javascript';
-    if (['javascript', 'js', 'html', 'css'].includes(language)) code.innerHTML = highlightSource(code.textContent, language === 'js' ? 'javascript' : language);
+    if (['javascript', 'js', 'html', 'css', 'c'].includes(language)) code.innerHTML = highlightSource(code.textContent, language === 'js' ? 'javascript' : language);
   });
   addCopyButtons();
   colorTruthTables();
@@ -530,8 +552,9 @@ $('theme').onclick = () => {
   }catch {
   }
 };
-makeSplitter('nav-gripper', 'catalog', 120, 700);
-makeSplitter('lab-gripper', 'code-editor', 180, 900);
+makeSplitter('nav-gripper', 'catalog', 120, 700, 'horizontal');
+makeSplitter('lab-gripper', 'code-editor', 180, 900, 'horizontal');
+makeSplitter('workspace-gripper', 'reading', 320, 1100);
 document.addEventListener('keydown', event => {
   if (event.key === 'F5') {
     event.preventDefault();

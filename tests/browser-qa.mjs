@@ -20,9 +20,14 @@ async function select(fragment){const l=lessons.find(l=>l.id.includes(fragment))
 async function run(){await page.locator('#run').click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('Browser preview running'));await page.locator('#preview').scrollIntoViewIfNeeded();await page.waitForTimeout(150);await page.screenshot();return page.frameLocator('#preview');}
 try{
  await page.goto(`http://127.0.0.1:${runner.server.address().port}/?token=${runner.token}`);await page.locator('#source').waitFor();
- for(const l of lessons.filter(l=>l.runtime==='browser')){
-  await select(l.id);await run();
-  const output=await page.locator('#output').innerText();
+  for(const l of lessons.filter(l=>l.runtime==='browser')){
+   // Each lesson must finish before the next lesson is selected.
+   // eslint-disable-next-line no-await-in-loop
+   await select(l.id);
+   // eslint-disable-next-line no-await-in-loop
+   await run();
+   // eslint-disable-next-line no-await-in-loop
+   const output=await page.locator('#output').innerText();
   if(/ReferenceError|TypeError|SyntaxError|SecurityError|is not defined/.test(output))failures.push(l.id+': '+output);
   passed.push('Browser smoke: '+l.title);
  }

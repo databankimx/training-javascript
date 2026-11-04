@@ -6,6 +6,14 @@ Searching is where complexity becomes practical. We will answer the same questio
 
 A linear search checks one value at a time. It works on sorted or unsorted data, but its worst case is `O(n)` because it may inspect every value.
 
+The algorithm is straightforward:
+
+```text
+For each index from 0 through n - 1:
+    If the value at that index is the target, return the index.
+Return -1 when every value has been checked.
+```
+
 ```javascript
 const values = Array.from({ length: 20 }, (_, index) => index + 1);
 const shuffled = [...values];
@@ -27,6 +35,20 @@ The script prints the shuffled array and target before it runs the search. The s
 ## Binary search
 
 Binary search checks the middle value and discards half of the remaining range after every comparison. Its search work is `O(log n)`, but it requires sorted data. Sorting costs time, so binary search is most useful when the data is already sorted or reused often.
+
+Its decision process is:
+
+```text
+Set low to the first index and high to the last index.
+While low is not greater than high:
+    Check the middle value.
+    If it is the target, return its index.
+    If it is too small, discard the lower half.
+    Otherwise, discard the upper half.
+Return -1 when the range is empty.
+```
+
+For the sorted values `1` through `20`, searching for `17` checks a middle value near `10`, then a value near `15`, then `18`, and finally `17`. The range is cut down each time rather than moving one position at a time.
 
 ```javascript
 function binarySearch(items, target) {

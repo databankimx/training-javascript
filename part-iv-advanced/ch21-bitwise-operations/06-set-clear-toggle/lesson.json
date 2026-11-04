@@ -1,2 +1,0 @@
-{"title":"Set, clear, and toggle flags","runtime":"node","minutes":35,"objective":"Grant, remove, and toggle individual bit flags.","input":"","expected":"The script shows a flag being granted, cleared, and toggled.","verify":["Granted execute: 7","Removed write: 5","Toggled execute: 1"],"order":6}
-

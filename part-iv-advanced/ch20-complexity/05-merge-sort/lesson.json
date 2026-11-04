@@ -1,0 +1,11 @@
+{
+  "title": "Merge sort",
+  "order": 5,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Explain how merge sort divides an array and merges sorted halves.",
+  "input": "",
+  "expected": "Merge sort: 1000 values",
+  "verify": ["Merge sort: 1000 values"],
+  "visualizerAlgorithm": "merge-sort"
+}

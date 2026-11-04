@@ -2,6 +2,8 @@
 
 Functional code often starts with small functions that each do one job. The next question is how to connect those jobs without turning the main program into a knot of temporary variables.
 
+This lesson assumes that a function can be stored in a variable and passed to another function. That is not a special functional-programming trick. Functions are ordinary JavaScript values, which means we can build tools that accept functions and return new functions.
+
 ```javascript
 const compose = (first, second) => value => first(second(value));
 const trim = text => text.trim();
@@ -16,6 +18,14 @@ HELLO
 ```
 
 `trim` removes whitespace and returns a new string. `upper` receives a string and returns its uppercase form. `compose` accepts two functions and returns a new function. When that returned function is called, it sends the value through `second` first and then sends the result through `first`.
+
+Here is the path through the example:
+
+| Stage | Value |
+| --- | --- |
+| Input | `"  hello  "` |
+| After `trim` | `"hello"` |
+| After `upper` | `"HELLO"` |
 
 That order is worth tracing carefully. `cleanGreeting("  hello  ")` calls `trim` first, producing `"hello"`. It then passes that result to `upper`, producing `"HELLO"`. The name `compose(upper, trim)` reads from the outside in, while the data flows from the right-hand function to the left-hand function.
 
@@ -33,7 +43,13 @@ const cleanGreeting = pipe(trim, upper);
 console.log(cleanGreeting("  hello  "));
 ```
 
+```text
+HELLO
+```
+
 The two examples produce the same result. `compose` is often written right to left because of its mathematical tradition. `pipe` follows the order most people read a set of instructions. Neither one is automatically more correct. The useful choice is the one that makes the data flow obvious to the next person who has to maintain it.
+
+These helpers expect unary functions: each stage receives one value and returns the next value. A function that needs several unrelated arguments needs a little preparation first, such as partial application from the next lesson. They also run synchronously. An asynchronous pipeline needs a different design based on promises.
 
 ## Try it Yourself
 

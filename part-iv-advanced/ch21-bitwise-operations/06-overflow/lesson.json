@@ -1,0 +1,1 @@
+{"title":"Integer overflow","runtime":"node","minutes":30,"objective":"Explain overflow when a fixed-width representation cannot hold the next result.","order": 6,"input":"","expected":"The example compares ordinary Number arithmetic with unsigned and signed 8-bit storage.","verify":["stored as 8 bits: 00000000","signed interpretation: -128","after bitwise conversion: 0"]}

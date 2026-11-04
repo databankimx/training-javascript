@@ -1,0 +1,12 @@
+{
+  "title": "Homework: validate email addresses",
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 35,
+  "objective": "Build a whole-value email validation pattern and explain why the domain period must be escaped.",
+  "input": "",
+  "expected": "Valid: ada@example.com\nValid: grace.hopper@navy.mil\nValid: team+training@example.co.uk\nRejected: ada@exampleXcom\nRejected: missing-at.example.com\nRejected: user@example",
+  "verify": ["Valid: ada@example.com", "Valid: grace.hopper@navy.mil", "Rejected: ada@exampleXcom", "Rejected: user@example"],
+  "order": 2
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Shell sort",
+  "order": 7,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Explain how Shell sort improves insertion sort with decreasing gaps and why its complexity depends on the gap sequence.",
+  "input": "",
+  "expected": "Shell sort: 1000 values",
+  "verify": ["Shell sort: 1000 values"],
+  "visualizerAlgorithm": "shell-sort"
+}

@@ -1,0 +1,1 @@
+{"title":"Bitwise NOT","runtime":"node","minutes":25,"objective":"Explain why bitwise NOT flips every 32-bit position and why a mask is often needed.","order": 18,"input":"","expected":"NOT 00001111 (low 8 bits): 11110000","verify":["11110000"]}

@@ -1,10 +1,11 @@
 {
-  "title": "Fibonacci and repeated work",
-  "order": 6,
+  "title": "A small Fibonacci example",
   "runtime": "node",
-  "minutes": 40,
-  "objective": "Recognize repeated work in naive recursion and improve it with memoization.",
+  "minutes": 25,
+  "objective": "Recognize how a recursive definition can translate directly into a short JavaScript function.",
+  "order": 6,
   "input": "",
-  "expected": "Naive F(10): 55\nMemoized F(10): 55",
-  "verify": ["Naive F(10): 55", "Memoized F(10): 55"]
+  "expected": "F(0) = 0\nF(1) = 1\nF(5) = 5",
+  "prerequisites": ["part-iv-advanced/ch18-recursion/05-nested-arrays"],
+  "verify": ["F(0) = 0", "F(5) = 5"]
 }

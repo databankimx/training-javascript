@@ -4,6 +4,8 @@ Ordinary JavaScript arrays are flexible containers. They can hold mixed values, 
 
 Typed arrays store fixed-width numeric values in a binary buffer. They are useful for image data, audio samples, network packets, WebGL, and other work where the representation matters.
 
+> A typed array is not a faster spelling of every ordinary array. It is a view that says, "interpret this storage as values of this particular width and type." That promise is useful when another system expects bytes or fixed-width numbers.
+
 ```javascript
 const values = new Float64Array([1, 2, 3]);
 const view = values.subarray(0, 2);
@@ -21,6 +23,8 @@ console.log(sum / values.length);
 ```
 
 `Float64Array` stores each value as a 64-bit floating-point number. `subarray()` creates a view over the same memory, so changing `view[0]` changes `values[0]`. The mean is calculated from the modified values.
+
+Typed arrays also apply the limits of their element type. Assigning `128` to an `Int8Array` does not create a magical ninth bit. The value wraps into the signed 8-bit range. That behavior can be useful when reading binary data, but it is a poor substitute for validating ordinary user input.
 
 | Type | Storage | Typical use |
 | --- | --- | --- |

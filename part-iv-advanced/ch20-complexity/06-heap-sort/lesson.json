@@ -1,0 +1,11 @@
+{
+  "title": "Heap sort",
+  "order": 6,
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Explain how heap sort uses a max heap to place values in order.",
+  "input": "",
+  "expected": "Heap sort: 1000 values",
+  "verify": ["Heap sort: 1000 values"],
+  "visualizerAlgorithm": "heap-sort"
+}

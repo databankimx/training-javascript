@@ -2,6 +2,8 @@
 
 Some calculations are expensive, while the same input appears repeatedly. Memoization stores a result and returns it when the same input arrives again. The cache is useful only when the function is predictable: equal inputs must produce equal outputs.
 
+> Memoization is not merely "run it less often." It trades memory for repeated speed. The program keeps a key and its result so the next equal request can skip the calculation.
+
 ```javascript
 function memoize(fn) {
   const cache = new Map();

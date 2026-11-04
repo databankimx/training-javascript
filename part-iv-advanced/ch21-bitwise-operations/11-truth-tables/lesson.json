@@ -1,0 +1,2 @@
+{"title":"Bitwise truth tables","runtime":"node","minutes":30,"objective":"Trace bitwise logic one position at a time.","input":"","expected":"The script prints truth-table results for AND, OR, and XOR.","verify":["AND 1,1: 1","OR 0,0: 0","XOR 1,0: 1"],"order": 11}
+

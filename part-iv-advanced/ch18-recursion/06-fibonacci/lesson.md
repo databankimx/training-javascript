@@ -1,8 +1,10 @@
-# Fibonacci and repeated work
+# A small Fibonacci example
 
-Fibonacci is a useful warning because its definition invites a recursive solution:
+Fibonacci is a familiar sequence in which each value is the sum of the two values before it:
 
-`F(0) = 0`, `F(1) = 1`, and `F(n) = F(n - 1) + F(n - 2)`.
+`0, 1, 1, 2, 3, 5, 8, 13, ...`
+
+The definition already contains a recursive shape. `F(0)` and `F(1)` are base cases. Every later value is the sum of two smaller Fibonacci values.
 
 ```javascript
 function fibonacci(n) {
@@ -10,31 +12,33 @@ function fibonacci(n) {
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-const memo = new Map([[0, 0], [1, 1]]);
-function fibonacciMemoized(n) {
-  if (memo.has(n)) return memo.get(n);
-  const value = fibonacciMemoized(n - 1) + fibonacciMemoized(n - 2);
-  memo.set(n, value);
-  return value;
-}
-
-console.log(`Naive F(10): ${fibonacci(10)}`);
-console.log(`Memoized F(10): ${fibonacciMemoized(10)}`);
+console.log(`F(0) = ${fibonacci(0)}`);
+console.log(`F(1) = ${fibonacci(1)}`);
+console.log(`F(5) = ${fibonacci(5)}`);
 ```
 
 ```text
-Naive F(10): 55
-Memoized F(10): 55
+F(0) = 0
+F(1) = 1
+F(5) = 5
 ```
 
-Both functions are correct. The naive version recalculates the same earlier values repeatedly. The memoized version stores each result in a `Map` and reuses it.
+The base case handles the first two values. For `F(5)`, the recursive case asks for `F(4)` and `F(3)`, then adds their results. This is a neat illustration of recursion because the code mirrors the mathematical definition almost line for line.
 
-> **Memoization** means saving a function's previous results so later calls can reuse them instead of doing the same work again.
+There is a catch. The simple version calculates the same earlier values repeatedly, so it becomes a poor choice for larger inputs. We will measure that inefficiency, compare memoization and iteration, and discuss a formula-based alternative in Chapter 20.
 
-The lesson is not that recursion is bad. It is that a mathematically elegant definition can still produce an impractical algorithm if it repeats expensive work.
+> This lesson uses Fibonacci to show the recursive shape. It is not recommending the naive implementation for production work.
 
 ---
 
 ## Try it Yourself
 
-Change `n` to 20, then 35. Compare the time it takes. Keep the naive call small enough that your browser or terminal does not become a hostage situation.
+Print `F(6)`, `F(7)`, and `F(8)`. Before you run the program, predict each value from the two values before it. Then add a base-case guard that rejects negative input with a clear message.
+
+---
+
+## More background
+
+The Chapter 20 complexity lessons measure the repeated calls and compare four ways to calculate Fibonacci values.
+
+---

@@ -1,0 +1,1 @@
+{"title":"Reconstructing integers from bytes","runtime":"node","minutes":35,"objective":"Group a little-endian byte stream and reconstruct each unsigned 32-bit integer with shifts.","order": 22,"input":"","expected":"0\n1,234,567,890\n123,456,789\n4,294,967,295","verify":["1,234,567,890","123,456,789","4,294,967,295"]}
