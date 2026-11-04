@@ -1,0 +1,11 @@
+# Default owners for the entire repository.
+* @bbutler-databank @smclean-databank
+
+# CI/CD and repository automation.
+.github/ @bbutler-databank
+.github/workflows/ @bbutler-databank
+package.json @bbutler-databank
+package-lock.json @bbutler-databank
+
+# Test suite ownership.
+tests/ @bbutler-databank @smclean-databank
