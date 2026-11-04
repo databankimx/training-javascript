@@ -1,0 +1,9 @@
+# DataBank Standards Policy Configuration
+# See Custom-Dev-Developer-Guide.md for full rule documentation.
+#
+# Vendored third-party browser assets are not first-party code and are
+# excluded from standards enforcement.
+javascript:
+  excluded_globs:
+    - "**/node_modules/**"
+    - "**/lesson-runner/public/vendor/**"
