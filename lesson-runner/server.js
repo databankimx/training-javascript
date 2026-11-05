@@ -67,6 +67,27 @@ export async function createRunner(repo = root) {
         if (!fileLesson || !(await filesFor(fileLesson)).includes(name)) return send(404, { error: 'File not found' });
         return send(200, await readFile(await within(fileLesson.folder, name), 'utf8'), types[path.extname(name)] || 'text/plain; charset=utf-8');
       }
+      if (req.method === 'GET' && url.pathname.startsWith('/api/capstone/invoices/')) {
+        const invoiceNumber = decodeURIComponent(url.pathname.slice('/api/capstone/invoices/'.length));
+        const invoices = {
+          'INV-1001': { invoiceNumber: 'INV-1001', invoiceDate: '2026-11-02', invoiceAmount: 1250, freight: 25, tax: 100, vendorName: 'Northwind Office Supply', vendorId: 'V-1042' },
+          'INV-1002': { invoiceNumber: 'INV-1002', invoiceDate: '2026-11-05', invoiceAmount: 840, freight: 0, tax: 67.2, vendorName: 'Contoso Facilities', vendorId: 'V-2088' },
+          'INV-1003': { invoiceNumber: 'INV-1003', invoiceDate: '2026-11-08', invoiceAmount: 2100, freight: 45.5, tax: 168, vendorName: 'Fabrikam Services', vendorId: 'V-3177' }
+        };
+        const invoice = invoices[invoiceNumber];
+        return invoice ? send(200, invoice) : send(404, { error: 'Invoice not found' });
+      }
+      if (req.method === 'GET' && url.pathname.startsWith('/api/capstone/gl-codes/')) {
+        const code = decodeURIComponent(url.pathname.slice('/api/capstone/gl-codes/'.length));
+        const codes = {
+          '6100': { code: '6100', description: 'Office supplies', active: true },
+          '6200': { code: '6200', description: 'Professional services', active: true },
+          '6300': { code: '6300', description: 'Facilities and maintenance', active: true },
+          '6400': { code: '6400', description: 'Travel and lodging', active: true }
+        };
+        const glCode = codes[code];
+        return glCode ? send(200, glCode) : send(404, { error: 'GL code not found or inactive' });
+      }
       if (req.headers['x-runner-token'] !== token) return send(403, { error: 'Invalid session token' });
       if (req.headers.origin && req.headers.origin !== `http://${host}`) return send(403, { error: 'Invalid origin' });
       if (req.method === 'GET' && url.pathname === '/api/catalog') return send(200, lessons.map(({ folder, ...item }) => item));

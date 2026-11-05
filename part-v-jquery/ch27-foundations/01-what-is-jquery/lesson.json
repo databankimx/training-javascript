@@ -1,0 +1,8 @@
+{
+  "title": "What is jQuery?",
+  "subtitle": "Recognize the jQuery library and its role alongside vanilla JavaScript",
+  "minutes": 25,
+  "order": 1,
+  "runtime": "browser",
+  "files": ["index.html", "main.js", "style.css"]
+}

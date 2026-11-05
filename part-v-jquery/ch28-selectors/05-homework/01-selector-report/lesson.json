@@ -1,0 +1,1 @@
+{"title":"Homework: selector report","section":"Chapter summary · Homework","runtime":"browser","spoiler":true,"minutes":35,"objective":"Use ID, class, descendant, and attribute selectors to summarize a page.","expected":"The report identifies two urgent items and three total tasks.","verify":["Urgent: 2","Total tasks: 3"],"order":5,"files":["index.html","main.js","style.css"]}

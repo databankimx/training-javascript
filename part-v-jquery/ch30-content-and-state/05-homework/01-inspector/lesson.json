@@ -1,0 +1,1 @@
+{"title":"Homework: value inspector","section":"Chapter summary · Homework","runtime":"browser","spoiler":true,"minutes":35,"objective":"Use getter and setter methods to inspect and update several controls.","expected":"The page reports the original and updated values.","verify":["Updated name: Grace","Updated region: West"],"order":5,"files":["index.html","main.js","style.css"]}

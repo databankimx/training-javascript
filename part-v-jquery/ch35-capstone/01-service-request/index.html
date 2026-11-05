@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GL service request</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css" integrity="sha256-8I0prl0EXe7lj+6vlcqXn4mMvZdibijLQ4hi+7nvtyI=" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js" integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M=" crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <main class="shell">
+            <header class="brand-bar">
+                <svg class="brand-mark" viewBox="0 0 340 340" aria-hidden="true" focusable="false">
+                    <path d="M281 41.8501C250.161 14.8344 210.548 -0.0405153 169.55 8.28843e-05H0V216.89L281 41.8501Z" fill="#427DFF"></path>
+                    <path d="M281 41.8496L0 339.16H169.55C214.525 339.16 257.659 321.293 289.461 289.491
+                    C321.264 257.688 339.13 214.555 339.13 169.58C339.147 145.369 333.966 121.437 323.937
+                    99.4014C313.909 77.3655 299.266 57.7394 281 41.8496Z"
+                    fill="#427DFF"></path>
+                </svg>
+                <div>
+                    <p class="eyebrow">DataBank training capstone</p>
+                    <h1>GL service request</h1>
+                </div>
+            </header>
+            <p class="intro">Look up the invoice, distribute its cost, and submit a clean request. The server is local, but the workflow is real.</p>
+            <form id="request-form" novalidate>
+                <section class="panel">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">Step 1</p>
+                            <h2>Invoice header</h2>
+                        </div>
+                        <span id="lookup-status" class="status" role="status">
+                    </span>
+                </div>
+                <div class="field-grid header-grid">
+                    <div class="field">
+                        <label for="invoice-number">Invoice number</label>
+                        <input id="invoice-number" name="invoiceNumber" aria-label="Invoice number" autocomplete="off" placeholder="INV-1001">
+                        <small>Try a listed value such as INV-1001, or enter an invalid value to test the error path.</small>
+                    </div>
+                    <div class="field">
+                        <label for="invoice-date">Invoice date</label>
+                        <input id="invoice-date" name="invoiceDate" type="date" aria-label="Invoice date" readonly>
+                    </div>
+                    <div class="field">
+                        <label for="invoice-amount">Invoice total</label>
+                        <input id="invoice-amount" name="invoiceAmount" aria-label="Invoice total" readonly>
+                    </div>
+                    <div class="field">
+                        <label for="vendor-name">Vendor name</label>
+                        <input id="vendor-name" name="vendorName" aria-label="Vendor name" readonly>
+                    </div>
+                    <div class="field">
+                        <label for="vendor-id">Vendor ID</label>
+                        <input id="vendor-id" name="vendorId" aria-label="Vendor ID" readonly>
+                    </div>
+                    <div class="field">
+                        <label for="freight">Freight</label>
+                        <input id="freight" name="freight" aria-label="Freight" readonly>
+                    </div>
+                    <div class="field">
+                        <label for="tax">Tax</label>
+                        <input id="tax" name="tax" aria-label="Tax" readonly>
+                    </div>
+                </div>
+            </section>
+            <section class="panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Step 2</p>
+                        <h2>GL distribution</h2>
+                    </div>
+                    <button id="add-row" class="secondary" type="button">Add row</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">GL code</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">
+                                    <span class="sr-only">Action</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="distribution-body">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="2">GL subtotal</th>
+                                <td id="gl-subtotal">$0.00</td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <p class="lookup-help">
+                    Valid GL codes: <code>6100</code> Office supplies, <code>6200</code>
+                    Professional services, <code>6300</code> Facilities and maintenance,
+                    <code>6400</code> Travel and lodging.
+                </p>
+                <p id="distribution-status" class="form-message" role="status">
+                </p>
+            </section>
+            <section class="panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Step 3</p>
+                        <h2>Notes and submit</h2>
+                    </div>
+                </div>
+                <label for="review-date">Review date</label>
+                <input id="review-date" name="reviewDate" aria-label="Review date" autocomplete="off">
+                <label for="notes">Accounting notes</label>
+                <textarea id="notes" name="notes" aria-label="Accounting notes" maxlength="500" rows="4" readonly placeholder="No notes have been added.">
+                </textarea>
+                <button id="add-note" class="secondary" type="button">Add note</button>
+                <p id="message" class="form-message" role="status">
+                </p>
+                <button class="primary" type="submit">Validate and submit</button>
+            </section>
+        </form>
+    </main>
+    <dialog id="note-dialog" aria-labelledby="note-title">
+        <div class="dialog-card">
+            <div class="section-heading">
+                <h2 id="note-title">Add accounting note</h2>
+                <button id="close-note" class="icon-button" type="button" aria-label="Close note dialog">×</button>
+            </div>
+            <label for="note-input">Note</label>
+            <input id="note-input" aria-label="New accounting note" maxlength="250">
+            <div class="dialog-actions">
+                <button id="cancel-note" class="secondary" type="button">Cancel</button>
+                <button id="save-note" type="button">Add note</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="summary-dialog" aria-labelledby="summary-title">
+        <div class="dialog-card">
+            <div class="section-heading">
+                <h2 id="summary-title">Submission summary</h2>
+                <button id="close-summary" class="icon-button" type="button" aria-label="Close submission summary">×</button>
+            </div>
+            <div id="summary-content">
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>

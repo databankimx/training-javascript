@@ -1,0 +1,4 @@
+body { font-family: system-ui, sans-serif; background: #eef4f8; color: #18324b; padding: 2rem; }
+.card { max-width: 32rem; margin: auto; padding: 2rem; background: white; border-radius: .75rem; }
+button { padding: .5rem .8rem; }
+.updated { color: #087f5b; font-weight: 700; }

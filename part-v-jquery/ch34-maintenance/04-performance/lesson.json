@@ -1,0 +1,1 @@
+{"title":"Selector and event performance","subtitle":"Avoid repeated work and oversubscribed handlers","minutes":35,"order":4,"runtime":"browser","files":["index.html","main.js","style.css"]}

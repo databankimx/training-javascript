@@ -1,0 +1,1 @@
+{"title":"Homework: form-state summary","section":"Chapter summary · Homework","runtime":"browser","spoiler":true,"minutes":40,"objective":"Use jQuery form selectors to summarize live control state.","expected":"The page reports one checked choice and the selected region.","verify":["Checked: 1","Region: Central"],"order":7,"files":["index.html","main.js","style.css"]}

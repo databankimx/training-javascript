@@ -1,0 +1,1 @@
+{"title":"Make a performance pass","subtitle":"Reduce repeated selectors and handlers","minutes":35,"order":3,"runtime":"browser","files":["index.html","main.js","style.css"],"homework":true}

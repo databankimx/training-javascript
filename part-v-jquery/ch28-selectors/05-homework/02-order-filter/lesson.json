@@ -1,0 +1,1 @@
+{"title":"Homework: filter an order list","section":"Chapter summary · Homework","runtime":"browser","spoiler":true,"minutes":35,"objective":"Combine children, filter, not, closest, and find to summarize orders.","expected":"The page reports two active orders in the order panel.","verify":["Active orders: 2"],"order":6,"files":["index.html","main.js","style.css"]}

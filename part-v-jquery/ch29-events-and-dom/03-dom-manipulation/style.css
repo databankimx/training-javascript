@@ -1,0 +1,26 @@
+body{
+margin:0;
+padding:2rem;
+color:#24364b;
+background:#eef3f8;
+font:1rem/1.5 system-ui,sans-serif
+}
+.card{
+max-width:42rem;
+margin:0 auto;
+padding:2rem;
+background:#fff;
+border:1px solid #cad6e2;
+border-radius:.75rem
+}
+.note{
+display:flex;
+justify-content:space-between;
+max-width:20rem;
+margin:.5rem 0;
+padding:.5rem;
+background:#eef3f8
+}
+.delete{
+margin-left:1rem
+}

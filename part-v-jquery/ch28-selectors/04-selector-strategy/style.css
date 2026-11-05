@@ -1,0 +1,23 @@
+body{
+margin:0;
+padding:2rem;
+color:#24364b;
+background:#eef3f8;
+font:1rem/1.5 system-ui,sans-serif
+}
+.card{
+max-width:42rem;
+margin:0 auto;
+padding:2rem;
+background:#fff;
+border:1px solid #cad6e2;
+border-radius:.75rem
+}
+.panel{
+margin:1rem 0;
+padding:1rem;
+border:1px solid #cad6e2
+}
+.preferred{
+outline:.2rem solid #2676c9
+}

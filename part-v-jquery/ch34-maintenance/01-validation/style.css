@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 2rem;
+	font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+	line-height: 1.5;
+	color: #24364b;
+	background: #eef3f8;
+}
+
+.card {
+	max-width: 32rem;
+	margin: 0 auto;
+	padding: 2rem;
+	background: white;
+	border-radius: 0.75rem;
+}
+
+label,
+input,
+button {
+	display: block;
+	margin: 0.5rem 0;
+}
+
+input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.5rem;
+}
+
+button {
+	padding: 0.5rem 0.8rem;
+}
+
+.invalid {
+	border: 2px solid #b84b4b;
+	background: #fff0f0;
+}

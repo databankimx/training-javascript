@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Form selectors</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<main class="card">
+		<h1>Form selectors</h1>
+		<label for="email">Email</label>
+		<input id="email" name="email" type="email" value="ada@example.com">
+		<label>
+			<input type="checkbox" name="updates" checked> Receive updates</label>
+			<label for="region">Region</label>
+			<select id="region">
+				<option>Central</option>
+				<option selected>West</option>
+			</select>
+			<p id="output"></p>
+		</main>
+	</body>
+</html>
+

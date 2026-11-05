@@ -1,12 +1,12 @@
 # Initial validation
 
-Validated on Windows with Node.js 24.16.0 and installed Microsoft Edge on October 27, 2026.
+Validated on Windows with Node.js 24.16.0 and installed Microsoft Edge on November 4, 2026.
 
 ## Automated checks
 
 - npm test: all three test groups passed. Assertions cover curriculum discovery, path containment, Markdown escaping, session/Origin rejection, source isolation, stdin, errors, active-run rejection, and cancellation.
-- npm run check: all 170 lesson packages validated; every JavaScript source parsed and all 135 Node examples executed successfully. Selected deterministic results are also checked against expected output fragments.
-- Browser harness: all 24 browser lessons loaded and ran without page errors. Functional assertions covered hide/show and ARIA state, accordions, conditional disabled fields, validation, row add/remove and 0.10+0.20 currency totals, sorting/filtering, unique template IDs, note dialogs, literal HTML-looking text, invoice reconciliation, delegation, Learning Log deletion/import/export, HTML/CSS edits and per-file reset, editable Node support modules, terminal input, and completion persistence.
+- npm run check: all 289 lesson packages validated; every JavaScript source parsed and all 186 Node examples executed successfully. The remaining 103 browser packages were validated for structure and source parsing. Selected deterministic results are also checked against expected output fragments.
+- Browser harness: representative browser lessons and the GL-form capstone loaded and ran without page errors. Functional assertions cover hide/show and ARIA state, accordions, conditional disabled fields, validation, row add/remove and 0.10+0.20 currency totals, sorting/filtering, unique template IDs, note dialogs, literal HTML-looking text, invoice reconciliation, delegation, Learning Log deletion/import/export, HTML/CSS edits and per-file reset, editable Node support modules, terminal input, and completion persistence. This is representative browser QA, not a claim that every browser lesson has been manually exercised.
 - Desktop and narrow-viewport screenshots were inspected. Narrow layout did not introduce document horizontal overflow.
 
 The three groups in npm test contain several assertions each. They are integration checks of behavior, not a claim that every possible input has been tested. Learner exercise solutions still need the boundary-case review described in their lessons.

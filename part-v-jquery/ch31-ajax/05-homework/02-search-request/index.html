@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Search request</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<main class="card">
+		<h1>Search records</h1>
+		<form id="search">
+			<label for="term">Term</label>
+			<input id="term" name="term" value="invoice">
+			<label for="category">Category</label>
+			<select id="category" name="category">
+				<option selected>open</option>
+				<option>closed</option>
+			</select>
+			<button type="submit">Build request</button>
+		</form>
+		<pre id="output">
+		</pre>
+	</main>
+</body>
+</html>
+

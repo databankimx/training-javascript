@@ -1,0 +1,1 @@
+{"title":"Migrating older jQuery code","subtitle":"Recognize version-sensitive patterns and safer replacements","minutes":35,"order":3,"runtime":"browser","files":["index.html","main.js","style.css"]}
