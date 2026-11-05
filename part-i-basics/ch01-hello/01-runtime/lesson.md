@@ -4,11 +4,27 @@ No matter what language you learn, your first program is almost always an instru
 
 For now, we are deliberately keeping the program plain. No variables, no browser page, no framework, and no cleverness that needs its own footnote. We will earn the cleverness later.
 
+## Creating our first program
+
+1. Open VS Code.
+2. Choose **File > Open Folder...**.
+3. Create a new folder named `hello`, then open that folder in VS Code.
+4. In the Explorer, click **New File** and name the file `hello.js`.
+5. Click in the editor and type in the following code.
+
 ```javascript
 console.log("Hello, world!");
 ```
 
-The line calls `console.log` with a string. That call writes the string to the runner’s console:
+The line calls `console.log` with a string. That call writes the string to the runner’s console.
+
+To execute the code, save `hello.js`, choose **Terminal > New Terminal**, and run this command:
+
+```powershell
+node hello.js
+```
+
+Press Enter. The result will appear in the terminal below the editor.
 
 ```text
 Hello, world!
