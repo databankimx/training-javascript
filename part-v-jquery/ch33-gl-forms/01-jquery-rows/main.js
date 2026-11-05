@@ -472,9 +472,9 @@ function addNoteText() {
 // Sanitize values being added to the DOM to avoid cross-site scripting
 function sanitizeText(text) {
     try {
-        text = text.replace(/</g, "&lt;")
+        text = text.replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;")
-            .replace(/&/g, "&amp;")
             .replace(/'/g, "&#39;")
             .replace(/"/g, "&quot;");
         return text;
