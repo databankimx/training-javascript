@@ -346,9 +346,9 @@ function addNoteText() {
 
 function sanitizeText(text) {
     try {
-        text = text.replace(/</g, "&lt;")
+        text = text.replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;")
-            .replace(/&/g, "&amp;")
             .replace(/'/g, "&#39;")
             .replace(/"/g, "&quot;");
         return text;
