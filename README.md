@@ -82,6 +82,19 @@ Node execution uses your account and is **not an operating-system sandbox**. Run
 
 External MySQL/MongoDB services and scientific libraries are not prerequisites. SQLite demonstrates SQL; document queries and numeric/tabular examples are local concept labs. They are explicitly not replacements for MongoDB, NumPy, pandas, or SciPy. Follow-on integrations need their own drivers, setup, licensing review, and tests.
 
+## Third Party Licenses
+
+Runtime dependencies are listed in `package.json` and installed with `npm install`. All npm packages are compatible with closed-source commercial use under permissive licenses (MIT, BSD, Apache 2.0, or similar).
+
+**Key dependencies:**
+- **Web server and build tools:** Vite (MIT), Express.js (MIT, included in dependencies)
+- **Testing:** Vitest (MIT), optional development dependency
+- **Other utilities:** Various MIT and BSD-licensed packages
+
+For the current list of all dependencies and their exact versions, check `package.json` and `package-lock.json`.
+
+For questions about licensing compliance, see the [Development Rules of Engagement](development-rules-of-engagement.md), section 12.
+
 ## License and responsibilities
 
 Provided under the [MIT License](LICENSE). See [Development Rules of Engagement](development-rules-of-engagement.md) for DataBank custom-code responsibilities. That shared policy is retained unchanged from training-python. This repository is training/reference material and carries no warranty or support commitment. Runtime dependencies are listed in `package.json` and installed with `npm install`.
