@@ -2,9 +2,34 @@
 
 Let’s get the runner open before discussing all the things it can do. There are only a few packages to install for Markdown and math rendering, which is still fewer opportunities for the setup instructions to become a separate hobby than most JavaScript projects manage.
 
+## Quick setup with the script
+
+`setup.ps1` checks for Git and Node.js, clones the repository if you don't have it yet, installs the npm packages exactly as recorded in `package-lock.json`, and runs the course checks. It's safe to run more than once.
+
+Open **PowerShell as Administrator**, go to the folder where you saved `setup.ps1`, and run:
+
+```pwsh
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallMissing
+```
+
+The `-ExecutionPolicy Bypass` part lets this one script run. It doesn't change any setting on your machine.
+
+With `-InstallMissing`, the script:
+
+- installs **Git** and **Node.js LTS** with winget, if they're missing
+- clones the repository into `C:\Development\training\training-javascript`, if the script isn't already inside it, and continues from the clone
+- checks that Node.js is version 24 or later
+- runs `npm ci`, and then the course's tests and curriculum check
+
+An Administrator window is needed for the installs. Without `-InstallMissing`, the script doesn't install anything. It stops and shows what's missing, and the command to fix it. Winget must be available. If it isn't, install **App Installer** from the Microsoft Store first. Company policy can block installs, in which case the script says so, and you'll need IT.
+
+When the script finishes, it prints a summary and the command to start the runner. **Check:** every line of the summary says `ok`.
+
 ## Requirements
 
-Node.js 24 or later, a current Edge/Chrome/Firefox browser, and optionally VS Code. Check `node --version` in a new terminal after installing Node. This repository uses ES modules. Install its dependencies once:
+Node.js 24 or later, a current Edge/Chrome/Firefox browser, and optionally VS Code. Check `node --version` in a new terminal after installing Node. This repository uses ES modules.
+
+If you installed Node.js yourself, instead of using the script, install the dependencies once:
 
 ```powershell
 npm install
@@ -82,6 +107,10 @@ Open the printed loopback URL. This serves the on-disk source, not browser-edito
 
 ## Troubleshooting
 
+- Setup says Node.js is too old: install the current LTS release from [nodejs.org](https://nodejs.org), open a new terminal, and run the script again. The course needs Node.js 24 or later.
+- Setup says `npm ci` failed: check your network access to the npm registry, then run the script again. Don't delete `package-lock.json` to get past the error.
+- Setup says the repository has no `setup.ps1` yet: the clone is from a version of the repository without the script. The setup carries on with the clone's files, so the summary is still valid. Pull the latest repository to get the script itself.
+- Setup says the tests or the curriculum check failed: the message names the failing check. Report it with the full output, since it means the course's own files need attention.
 - Forbidden: use the exact 127.0.0.1 URL and current token; localhost is a different host.
 - Source errors: read the first error referring to your source. Reset the edited file if you need the original.
 - A program waits: it may be asking for input. Use Send, Stop, or the 60-second timeout.
