@@ -9,25 +9,25 @@ Let’s get the runner open before discussing all the things it can do. There ar
 Open **PowerShell as Administrator**, go to the folder where you saved `setup.ps1`, and run:
 
 ```pwsh
-powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallMissing
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
 ```
 
 The `-ExecutionPolicy Bypass` part lets this one script run. It doesn't change any setting on your machine.
 
-With `-InstallMissing`, the script:
+By default, the script:
 
-- installs **Git** and **Node.js LTS** with winget, if they're missing
+- installs **Git**, **Node.js LTS**, and **VS Code** with winget, if they're missing
 - clones the repository into `C:\Development\training\training-javascript`, if the script isn't already inside it, and continues from the clone
 - checks that Node.js is version 24 or later
 - runs `npm ci`, and then the course's tests and curriculum check
 
-An Administrator window is needed for the installs. Without `-InstallMissing`, the script doesn't install anything. It stops and shows what's missing, and the command to fix it. Winget must be available. If it isn't, install **App Installer** from the Microsoft Store first. Company policy can block installs, in which case the script says so, and you'll need IT.
+An Administrator window is needed, because the script installs by default. To check only, without installing anything, run `powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallMissing:$false`. It stops and shows what's missing, and the command to fix it. Winget must be available. If it isn't, install **App Installer** from the Microsoft Store first. Company policy can block installs, in which case the script says so, and you'll need IT.
 
 When the script finishes, it prints a summary and the command to start the runner. **Check:** every line of the summary says `ok`.
 
 ## Requirements
 
-Node.js 24 or later, a current Edge/Chrome/Firefox browser, and optionally VS Code. Check `node --version` in a new terminal after installing Node. This repository uses ES modules.
+Node.js 24 or later, a current Edge/Chrome/Firefox browser, and VS Code. The setup script installs VS Code if it's missing. Check `node --version` in a new terminal after installing Node. This repository uses ES modules.
 
 If you installed Node.js yourself, instead of using the script, install the dependencies once:
 
