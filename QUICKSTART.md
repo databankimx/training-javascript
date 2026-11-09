@@ -62,20 +62,6 @@ To stop the web server:
 
 Startup and error output is written to `%TEMP%\javascript-training-<PID>.out.log` and `.err.log`.
 
-## Background execution (Electron app only)
-
-To run the Electron app in the background without a visible window:
-
-```powershell
-.\start-training.ps1
-```
-
-To stop it:
-
-```powershell
-.\stop-training.ps1
-```
-
 Progress is automatically saved to disk in `~\.config\training-javascript\progress.json` (Windows path varies by OS).
 
 If you want to reset your progress, delete the progress.json file:
