@@ -1,0 +1,11 @@
+{
+  "title": "Comparing Fibonacci algorithms",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Compare four Fibonacci strategies by calls, time, memory, and numerical reliability.",
+  "order": 13,
+  "input": "",
+  "expected": "Naive recursive: repeated work\nMemoized recursive: linear work\nIterative: constant extra space\nFormula-based: floating-point limitation",
+  "prerequisites": ["part-iv-advanced/ch21-complexity/12-fibonacci-formula"],
+  "verify": ["Naive recursive", "Memoized recursive", "Formula-based"]
+}

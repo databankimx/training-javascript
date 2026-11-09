@@ -1,6 +1,6 @@
 import { createRequire } from 'node:module';
-import { createRunner } from '../lesson-runner/server.js';
-import { discover } from '../lesson-runner/catalog.js';
+import { createRunner } from '../lesson-runner-web/server.js';
+import { discover } from '../lesson-runner-web/catalog.js';
 import { once } from 'node:events';
 import { writeFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';

@@ -1,0 +1,11 @@
+{
+  "title": "Putting the checks together",
+  "order": 6,
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Combine a honeypot, a timing check, and a challenge in one form, order the checks deliberately, and explain what each one contributes",
+  "input": "",
+  "expected": "Thanks for your comment.",
+  "prerequisites": ["part-iii-working-with-html/ch17-anti-bot-strategies/05-server-side-limits"],
+  "verify": []
+}

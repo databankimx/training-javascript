@@ -2,56 +2,74 @@
 
 Let’s get the runner open before discussing all the things it can do. There are only a few packages to install for Markdown and math rendering, which is still fewer opportunities for the setup instructions to become a separate hobby than most JavaScript projects manage.
 
+## Quick setup with the script
+
+`setup.ps1` checks for Git and Node.js, clones the repository if you don't have it yet, installs the npm packages exactly as recorded in `package-lock.json`, and runs the course checks. It's safe to run more than once.
+
+Open **PowerShell as Administrator**, go to the folder where you saved `setup.ps1`, and run:
+
+```pwsh
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
+The `-ExecutionPolicy Bypass` part lets this one script run. It doesn't change any setting on your machine.
+
+By default, the script:
+
+- installs **Git**, **Node.js LTS**, and **VS Code** with winget, if they're missing
+- clones the repository into `C:\Development\training\training-javascript`, if the script isn't already inside it, and continues from the clone
+- checks that Node.js is version 24 or later
+- runs `npm ci`, and then the course's tests and curriculum check
+
+An Administrator window is needed, because the script installs by default. To check only, without installing anything, run `powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallMissing:$false`. It stops and shows what's missing, and the command to fix it. Winget must be available. If it isn't, install **App Installer** from the Microsoft Store first. Company policy can block installs, in which case the script says so, and you'll need IT.
+
+When the script finishes, it prints a summary and the command to start the runner. **Check:** every line of the summary says `ok`.
+
 ## Requirements
 
-Node.js 24 or later, a current Edge/Chrome/Firefox browser, and optionally VS Code. Check `node --version` in a new terminal after installing Node. This repository uses ES modules. Install its dependencies once:
+Node.js 24 or later, a current Edge/Chrome/Firefox browser, and VS Code. The setup script installs VS Code if it's missing. Check `node --version` in a new terminal after installing Node. This repository uses ES modules.
+
+If you installed Node.js yourself, instead of using the script, install the dependencies once:
 
 ```powershell
 npm install
 ```
 
-## Launch in the foreground
+## Launch the Electron app (recommended)
 
 ```powershell
 cd C:\Development\training\training-javascript
 npm start
 ```
 
-Copy the entire http://127.0.0.1:4173/?token=... URL from the terminal into the browser. Each launch creates a new token. Keep the terminal open; Ctrl+C shuts down the runner and its active Node lesson. If you are using another directory, substitute that path in the command.
+The Electron app window opens automatically with the first lesson loaded. The app reads your progress from disk and restores the last lesson you opened on the next run. Close the window normally to stop.
 
-## Launch with the Windows helper scripts
+## Alternative: Launch the web-based runner
 
-From the repository root:
-
-```powershell
-.\start-training.ps1
-```
-
-This starts the runner in a hidden background process and opens the new tokenized URL in your default browser. While the page is open, it sends a heartbeat every five seconds. Closing the browser tab stops those heartbeats, and the runner shuts itself down after 30 seconds without one. In other words, you normally do not need to run the stop script after closing the tab.
-
-Use the stop script when you want an immediate shutdown, or when you are restarting the runner before the heartbeat timeout:
+If you prefer a browser-based interface, use the web training runner instead:
 
 ```powershell
-.\stop-training.ps1
+.\start-training-web.ps1
 ```
 
-The stop script terminates the runner and its child processes. The launcher writes startup output and errors to:
+This starts the web server in the background, automatically opens it in your default browser, and prints the runner PID. The URL includes a security token.
 
-```text
-%TEMP%\javascript-training-<PID>.out.log
-%TEMP%\javascript-training-<PID>.err.log
-```
-
-If startup reports that port 4173 is already in use, use `netstat -ano | findstr ":4173"` to identify the process. Stop an earlier training runner with `.\stop-training.ps1` before using `taskkill` on a process you recognize.
-
-If port 4173 is occupied, stop your own earlier runner or choose another port:
+To stop the web server:
 
 ```powershell
-$env:PORT = '4174'
-npm start
+.\stop-training-web.ps1
 ```
 
-Changing the port changes the browser storage origin. Progress and drafts from 4173 are still stored under 4173, not automatically migrated.
+Startup and error output is written to `%TEMP%\javascript-training-<PID>.out.log` and `.err.log`.
+
+Progress is automatically saved to disk in `~\.config\training-javascript\progress.json` (Windows path varies by OS).
+
+If you want to reset your progress, delete the progress.json file:
+
+```powershell
+Remove-Item $env:APPDATA\..\Local\training-javascript\progress.json -ErrorAction SilentlyContinue
+```
+
 
 ## Explore a lesson
 
@@ -75,13 +93,17 @@ node part-i-basics/ch01-hello/01-runtime/main.js
 For a browser lesson, open its `index.html` in a regular local development server. It already links `style.css` and `main.js`. A simple server is included:
 
 ```powershell
-node scripts/serve-browser-lesson.js part-iii-working-with-html/ch17-dynamic-forms/01-dynamic-table
+node scripts/serve-browser-lesson.js part-iii-working-with-html/ch18-dynamic-forms/01-dynamic-table
 ```
 
 Open the printed loopback URL. This serves the on-disk source, not browser-editor drafts; use Download and save your chosen files before moving between modes. Ctrl+C stops this server. Standalone mode has a normal origin and is useful for DevTools or storage experiments. The built-in iframe intentionally has an opaque origin.
 
 ## Troubleshooting
 
+- Setup says Node.js is too old: install the current LTS release from [nodejs.org](https://nodejs.org), open a new terminal, and run the script again. The course needs Node.js 24 or later.
+- Setup says `npm ci` failed: check your network access to the npm registry, then run the script again. Don't delete `package-lock.json` to get past the error.
+- Setup says the repository has no `setup.ps1` yet: the clone is from a version of the repository without the script. The setup carries on with the clone's files, so the summary is still valid. Pull the latest repository to get the script itself.
+- Setup says the tests or the curriculum check failed: the message names the failing check. Report it with the full output, since it means the course's own files need attention.
 - Forbidden: use the exact 127.0.0.1 URL and current token; localhost is a different host.
 - Source errors: read the first error referring to your source. Reset the edited file if you need the original.
 - A program waits: it may be asking for input. Use Send, Stop, or the 60-second timeout.

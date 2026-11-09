@@ -1,0 +1,11 @@
+{
+  "title": "Naive Fibonacci",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Translate the recursive Fibonacci definition and identify its repeated work.",
+  "order": 9,
+  "input": "",
+  "expected": "Calculated F(20) = 6765\nCall count: 21891",
+  "prerequisites": ["part-iv-advanced/ch21-complexity/08-fibonacci-call-counts"],
+  "verify": ["Calculated F(20) = 6765", "Call count: 21891"]
+}

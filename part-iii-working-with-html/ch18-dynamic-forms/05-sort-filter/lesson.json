@@ -1,0 +1,11 @@
+{
+  "title": "Sort and filter dynamic rows",
+  "order": 5,
+  "runtime": "browser",
+  "minutes": 45,
+  "objective": "Sort and filter row data before rendering a table",
+  "input": "",
+  "expected": "The table can show matching rows in amount order.",
+  "prerequisites": ["part-iii-working-with-html/ch18-dynamic-forms/03-serialized-rows"],
+  "verify": []
+}

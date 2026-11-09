@@ -1,0 +1,11 @@
+{
+  "title": "An arithmetic challenge",
+  "order": 4,
+  "runtime": "browser",
+  "minutes": 35,
+  "objective": "Build a small challenge that asks a question only a person is likely to answer, check the answer, and understand why this kind of challenge has limits",
+  "input": "",
+  "expected": "That answer is not right. Try again.",
+  "prerequisites": ["part-iii-working-with-html/ch17-anti-bot-strategies/03-timing-check"],
+  "verify": []
+}

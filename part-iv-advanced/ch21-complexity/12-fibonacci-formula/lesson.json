@@ -1,0 +1,11 @@
+{
+  "title": "Formula-based Fibonacci",
+  "runtime": "node",
+  "minutes": 30,
+  "objective": "Use the closed-form Fibonacci formula and explain its floating-point limitation.",
+  "order": 12,
+  "input": "",
+  "expected": "Calculated F(40) = 102334155\nFunction calls: 1",
+  "prerequisites": ["part-iv-advanced/ch21-complexity/11-fibonacci-iterative"],
+  "verify": ["Calculated F(40) = 102334155", "Function calls: 1"]
+}

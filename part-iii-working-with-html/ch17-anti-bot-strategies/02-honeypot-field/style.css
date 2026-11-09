@@ -1,0 +1,63 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1f2937;
+    background: #f4f6fa;
+    line-height: 1.5;
+    margin: 0;
+}
+
+main {
+    max-width: 36rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+textarea,
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+/* Moved far off-screen rather than display:none. Some bots skip fields that are display:none, which is the point of the trap either way. */
+.honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+button {
+    background: #475569;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #334155;
+}
+
+#status {
+    color: #334155;
+    font-weight: 600;
+}

@@ -5,6 +5,7 @@
 #      Then runs the cloned copy of this script, so every later step uses the repository's own files.
 #   1. Checks Node.js 24 or later.
 #   2. Installs the npm packages exactly as recorded in package-lock.json (npm ci).
+#      This includes dependencies for both the Electron and web-based runners.
 #   3. Runs the course's own checks: the tests, and the curriculum check.
 #
 # With -InstallMissing, the script installs what's missing: Git and Node.js LTS with winget.
@@ -15,7 +16,7 @@
 #   powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallMissing
 
 param(
-    [switch]$InstallMissing,
+    [bool]$InstallMissing = $true,
     [string]$RepoUrl = "https://github.com/databankimx/training-javascript.git",
     [string]$Branch = "main"
 )
@@ -118,8 +119,7 @@ if (-not (Test-Path (Join-Path $root "package.json"))) {
     $childScript = Join-Path $repoRoot "setup.ps1"
     if (Test-Path $childScript) {
         # The repository has its own copy of this script, so run that copy.
-        $childParams = @{}
-        if ($InstallMissing) { $childParams["InstallMissing"] = $true }
+        $childParams = @{ InstallMissing = $InstallMissing }
         & $childScript @childParams
         exit $LASTEXITCODE
     }
@@ -172,11 +172,36 @@ if (-not (Test-Path $npmCmd)) {
 # 2. npm packages ----------------------------------------------------------------------------------------
 
 Write-Step "2. npm packages (from package-lock.json)"
+Write-Host "   Installing dependencies for both Electron and web runners (including Markdown and math rendering)..."
 & $npmCmd ci
 if ($LASTEXITCODE -ne 0) {
     Stop-Setup "npm ci failed (exit code $LASTEXITCODE). Check the messages above, and your network access to the npm registry."
 }
 $summary["npm packages"] = "ok"
+
+# 2b. Electron binary verification and repair -------------------------------------------------------
+
+Write-Step "2b. Electron binary verification"
+$electronExe = Join-Path $root "node_modules\electron\dist\electron.exe"
+if (-not (Test-Path $electronExe)) {
+    Write-Host "   Electron binary not found. Downloading..."
+    $electronInstall = Join-Path $root "node_modules\electron\install.js"
+    if (Test-Path $electronInstall) {
+        & (Join-Path $nodeDir "node.exe") $electronInstall
+        if ($LASTEXITCODE -ne 0) {
+            Stop-Setup "Electron binary download failed (exit code $LASTEXITCODE). Check your network connection and try again."
+        }
+    } else {
+        Stop-Setup "Electron install.js not found. Run 'npm ci' again and check for errors."
+    }
+}
+
+if (Test-Path $electronExe) {
+    Write-Host "   Electron binary ready"
+    $summary["Electron binary"] = "ok"
+} else {
+    Stop-Setup "Electron binary still not available after download attempt."
+}
 
 # 3. Checks ----------------------------------------------------------------------------------------------
 
@@ -194,6 +219,29 @@ if ($LASTEXITCODE -ne 0) {
 $summary["Curriculum check"] = "ok"
 
 # Summary ------------------------------------------------------------------------------------------------
+
+# VS Code ----------------------------------------------------------------------------------------------
+
+Write-Step "VS Code"
+$codeCommand = Get-Command code -ErrorAction SilentlyContinue
+if (-not $codeCommand -and $InstallMissing) {
+    Write-Note "VS Code isn't on PATH, so it will be installed with winget."
+    & winget install -e --id Microsoft.VisualStudioCode --accept-package-agreements --accept-source-agreements
+    if ($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne -1978335189) {
+        Add-Warning "VS Code couldn't be installed with winget (exit code $LASTEXITCODE). Install it from code.visualstudio.com, then run this script again."
+    }
+    foreach ($folder in @((Join-Path $env:LOCALAPPDATA "Programs\Microsoft VS Code\bin"), (Join-Path $env:ProgramFiles "Microsoft VS Code\bin"))) {
+        if (Test-Path (Join-Path $folder "code.cmd")) { $env:Path = "$folder;$env:Path" }
+    }
+    $codeCommand = Get-Command code -ErrorAction SilentlyContinue
+}
+if (-not $codeCommand) {
+    Add-Warning "VS Code isn't on PATH. Install VS Code (winget install --id Microsoft.VisualStudioCode -e), open a new PowerShell window, and run this script again."
+    $summary["VS Code"] = "missing"
+} else {
+    Write-Note "Found VS Code at $($codeCommand.Source)."
+    $summary["VS Code"] = "ok"
+}
 
 Write-Step "Summary"
 foreach ($item in $summary.GetEnumerator()) {

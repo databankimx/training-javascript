@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # npm dependencies for the lesson-runner app (package.json is at the repo root)
+  # npm dependencies for the lesson-runner-web app (package.json is at the repo root)
   - package-ecosystem: "npm"
     directory: "/"
     schedule:

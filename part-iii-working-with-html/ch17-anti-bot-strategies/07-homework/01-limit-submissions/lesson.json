@@ -1,0 +1,13 @@
+{
+  "title": "Homework: limit submissions",
+  "order": 1,
+  "section": "Chapter homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Limit a form to two submissions in thirty seconds, using timestamps kept in the script, and show a neutral reply when the limit is reached",
+  "input": "",
+  "expected": "Please wait a while before sending another comment.",
+  "prerequisites": ["part-iii-working-with-html/ch17-anti-bot-strategies/06-putting-it-together"],
+  "verify": []
+}

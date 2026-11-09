@@ -1,0 +1,11 @@
+{
+  "title": "Counting recursive calls",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Use call counts to measure recursive work instead of relying on a single timing result.",
+  "order": 8,
+  "input": "",
+  "expected": "F(5) = 5\nCalls: 15",
+  "prerequisites": ["part-iv-advanced/ch21-complexity/03-sorting"],
+  "verify": ["F(5) = 5", "Calls: 15"]
+}

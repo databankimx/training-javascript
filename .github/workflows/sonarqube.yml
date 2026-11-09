@@ -90,9 +90,9 @@ jobs:
           args: >-
             -Dsonar.projectKey=${{ env.SONAR_PROJECT_KEY }}
             -Dsonar.projectVersion=${{ github.run_number }}
-            -Dsonar.sources=lesson-runner,scripts
+            -Dsonar.sources=lesson-runner-web,scripts
             -Dsonar.tests=tests
-            -Dsonar.exclusions=**/node_modules/**,lesson-runner/public/vendor/**
+            -Dsonar.exclusions=**/node_modules/**,lesson-runner-web/public/vendor/**
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             ${{ steps.sonar_args.outputs.extra }}
 

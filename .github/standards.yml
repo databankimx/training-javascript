@@ -6,4 +6,4 @@
 javascript:
   excluded_globs:
     - "**/node_modules/**"
-    - "**/lesson-runner/public/vendor/**"
+    - "**/lesson-runner-web/public/vendor/**"

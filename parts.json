@@ -1,0 +1,65 @@
+{
+  "parts": [
+    {
+      "title": "Part I - Basics",
+      "chapters": [
+        "ch01-hello",
+        "ch02-fundamentals",
+        "ch03-numbers",
+        "ch04-collections",
+        "ch05-boolean-logic",
+        "ch06-control-flow",
+        "ch07-loops"
+      ]
+    },
+    {
+      "title": "Part II - Applied JavaScript",
+      "chapters": [
+        "ch08-functions",
+        "ch09-classes",
+        "ch10-modules",
+        "ch11-error-handling",
+        "ch12-async",
+        "ch13-http"
+      ]
+    },
+    {
+      "title": "Part III - Working with HTML",
+      "chapters": [
+        "ch14-browser",
+        "ch15-forms",
+        "ch16-xss",
+        "ch17-anti-bot-strategies",
+        "ch18-dynamic-forms"
+      ]
+    },
+    {
+      "title": "Part IV - Advanced",
+      "chapters": [
+        "ch19-recursion",
+        "ch20-regular-expressions",
+        "ch21-complexity",
+        "ch22-bitwise-operations",
+        "ch23-closures",
+        "ch24-internationalized-formatting",
+        "ch25-typed-arrays",
+        "ch26-iterators-and-generators",
+        "ch27-functional-tools"
+      ]
+    },
+    {
+      "title": "Part V - jQuery",
+      "chapters": [
+        "ch28-foundations",
+        "ch29-selectors",
+        "ch30-events-and-dom",
+        "ch31-content-and-state",
+        "ch32-ajax",
+        "ch33-plugins",
+        "ch34-gl-forms",
+        "ch35-maintenance",
+        "ch36-capstone"
+      ]
+    }
+  ]
+}
