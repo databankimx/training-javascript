@@ -5,6 +5,7 @@
 #      Then runs the cloned copy of this script, so every later step uses the repository's own files.
 #   1. Checks Node.js 24 or later.
 #   2. Installs the npm packages exactly as recorded in package-lock.json (npm ci).
+#      This includes dependencies for both the Electron and web-based runners.
 #   3. Runs the course's own checks: the tests, and the curriculum check.
 #
 # With -InstallMissing, the script installs what's missing: Git and Node.js LTS with winget.
@@ -171,11 +172,36 @@ if (-not (Test-Path $npmCmd)) {
 # 2. npm packages ----------------------------------------------------------------------------------------
 
 Write-Step "2. npm packages (from package-lock.json)"
+Write-Host "   Installing dependencies for both Electron and web runners (including Markdown and math rendering)..."
 & $npmCmd ci
 if ($LASTEXITCODE -ne 0) {
     Stop-Setup "npm ci failed (exit code $LASTEXITCODE). Check the messages above, and your network access to the npm registry."
 }
 $summary["npm packages"] = "ok"
+
+# 2b. Electron binary verification and repair -------------------------------------------------------
+
+Write-Step "2b. Electron binary verification"
+$electronExe = Join-Path $root "node_modules\electron\dist\electron.exe"
+if (-not (Test-Path $electronExe)) {
+    Write-Host "   Electron binary not found. Downloading..."
+    $electronInstall = Join-Path $root "node_modules\electron\install.js"
+    if (Test-Path $electronInstall) {
+        & (Join-Path $nodeDir "node.exe") $electronInstall
+        if ($LASTEXITCODE -ne 0) {
+            Stop-Setup "Electron binary download failed (exit code $LASTEXITCODE). Check your network connection and try again."
+        }
+    } else {
+        Stop-Setup "Electron install.js not found. Run 'npm ci' again and check for errors."
+    }
+}
+
+if (Test-Path $electronExe) {
+    Write-Host "   Electron binary ready"
+    $summary["Electron binary"] = "ok"
+} else {
+    Stop-Setup "Electron binary still not available after download attempt."
+}
 
 # 3. Checks ----------------------------------------------------------------------------------------------
 

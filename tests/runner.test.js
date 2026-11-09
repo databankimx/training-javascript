@@ -4,9 +4,9 @@ import { once } from 'node:events';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readFile } from 'node:fs/promises';
-import { createRunner } from '../lesson-runner/server.js';
-import { discover, within } from '../lesson-runner/catalog.js';
-import { markdown } from '../lesson-runner/markdown.js';
+import { createRunner } from '../lesson-runner-web/server.js';
+import { discover, within } from '../lesson-runner-web/catalog.js';
+import { markdown } from '../lesson-runner-web/markdown.js';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 test('catalog has complete tracks and rejects paths outside a lesson', async () => {

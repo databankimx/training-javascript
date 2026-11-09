@@ -6,7 +6,7 @@
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { discover } from '../lesson-runner/catalog.js';
+import { discover } from '../lesson-runner-web/catalog.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const lessons = await discover(root);

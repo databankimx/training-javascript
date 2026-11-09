@@ -13,16 +13,16 @@ node --version
 npm install
 ```
 
-For a foreground session, run `npm start`, then open the complete local URL printed in the terminal, including its session token. Press Ctrl+C when you are finished. The default port is 4173.
+Run the Electron app with `npm start`; the window opens automatically and includes progress tracking. Close the window to stop.
 
-On Windows, the more convenient release workflow is:
+Alternatively, on Windows, use the web runner for browser-based training:
 
 ```powershell
-.\start-training.ps1
-.\stop-training.ps1
+.\start-training-web.ps1   # Opens the web runner in your default browser
+.\stop-training-web.ps1    # Stops the background server
 ```
 
-The start script launches the runner in the background, opens the tokenized URL in the default browser, and prints the runner PID. The browser sends a heartbeat every five seconds. When the tab is closed, the runner receives no heartbeat and shuts itself down after 30 seconds, so using the stop script is normally unnecessary after a normal session. Use the stop script when you want to stop the runner immediately or when the browser did not close cleanly. Startup and error output is written to `%TEMP%\javascript-training-<PID>.out.log` and `.err.log`. See [QUICKSTART.md](QUICKSTART.md) for details and troubleshooting.
+The web start script launches the server in the background, opens the tokenized URL in your default browser, and prints the runner PID. Startup and error output is written to `%TEMP%\javascript-training-<PID>.out.log` and `.err.log`. See [QUICKSTART.md](QUICKSTART.md) for details and troubleshooting.
 
 ## Learning workflow
 

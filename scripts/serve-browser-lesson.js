@@ -2,7 +2,7 @@ import http from 'node:http';
 import path from 'node:path';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { within, discover } from '../lesson-runner/catalog.js';
+import { within, discover } from '../lesson-runner-web/catalog.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const id=(process.argv[2] || '').replaceAll('\\','/');
 const lesson=(await discover(root)).find(item=>item.id===id&&item.runtime==='browser');

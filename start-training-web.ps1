@@ -12,7 +12,7 @@ if ($existing) {
 
 $server = Start-Process `
     -FilePath "node.exe" `
-    -ArgumentList "lesson-runner/server.js" `
+    -ArgumentList "lesson-runner-web/server.js" `
     -WorkingDirectory $root `
     -RedirectStandardOutput $stdout `
     -RedirectStandardError $stderr `
@@ -39,7 +39,8 @@ if ($url) {
     Start-Process $url
     Write-Host "Opened $url"
     Write-Host "Runner PID: $($server.Id)"
-    Write-Host "Stop it later with .\stop-training.ps1"
+    Write-Host "Stop it later with .\stop-training-web.ps1"
 } else {
     Write-Error "The runner did not report a URL. Check $stdout and $stderr"
 }
+

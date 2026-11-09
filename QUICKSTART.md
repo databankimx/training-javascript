@@ -35,48 +35,55 @@ If you installed Node.js yourself, instead of using the script, install the depe
 npm install
 ```
 
-## Launch in the foreground
+## Launch the Electron app (recommended)
 
 ```powershell
 cd C:\Development\training\training-javascript
 npm start
 ```
 
-Copy the entire http://127.0.0.1:4173/?token=... URL from the terminal into the browser. Each launch creates a new token. Keep the terminal open; Ctrl+C shuts down the runner and its active Node lesson. If you are using another directory, substitute that path in the command.
+The Electron app window opens automatically with the first lesson loaded. The app reads your progress from disk and restores the last lesson you opened on the next run. Close the window normally to stop.
 
-## Launch with the Windows helper scripts
+## Alternative: Launch the web-based runner
 
-From the repository root:
+If you prefer a browser-based interface, use the web training runner instead:
+
+```powershell
+.\start-training-web.ps1
+```
+
+This starts the web server in the background, automatically opens it in your default browser, and prints the runner PID. The URL includes a security token.
+
+To stop the web server:
+
+```powershell
+.\stop-training-web.ps1
+```
+
+Startup and error output is written to `%TEMP%\javascript-training-<PID>.out.log` and `.err.log`.
+
+## Background execution (Electron app only)
+
+To run the Electron app in the background without a visible window:
 
 ```powershell
 .\start-training.ps1
 ```
 
-This starts the runner in a hidden background process and opens the new tokenized URL in your default browser. While the page is open, it sends a heartbeat every five seconds. Closing the browser tab stops those heartbeats, and the runner shuts itself down after 30 seconds without one. In other words, you normally do not need to run the stop script after closing the tab.
-
-Use the stop script when you want an immediate shutdown, or when you are restarting the runner before the heartbeat timeout:
+To stop it:
 
 ```powershell
 .\stop-training.ps1
 ```
 
-The stop script terminates the runner and its child processes. The launcher writes startup output and errors to:
+Progress is automatically saved to disk in `~\.config\training-javascript\progress.json` (Windows path varies by OS).
 
-```text
-%TEMP%\javascript-training-<PID>.out.log
-%TEMP%\javascript-training-<PID>.err.log
-```
-
-If startup reports that port 4173 is already in use, use `netstat -ano | findstr ":4173"` to identify the process. Stop an earlier training runner with `.\stop-training.ps1` before using `taskkill` on a process you recognize.
-
-If port 4173 is occupied, stop your own earlier runner or choose another port:
+If you want to reset your progress, delete the progress.json file:
 
 ```powershell
-$env:PORT = '4174'
-npm start
+Remove-Item $env:APPDATA\..\Local\training-javascript\progress.json -ErrorAction SilentlyContinue
 ```
 
-Changing the port changes the browser storage origin. Progress and drafts from 4173 are still stored under 4173, not automatically migrated.
 
 ## Explore a lesson
 

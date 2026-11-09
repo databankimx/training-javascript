@@ -1,4 +1,4 @@
-import { discover, filesFor } from '../lesson-runner/catalog.js';
+import { discover, filesFor } from '../lesson-runner-web/catalog.js';
 import { readFile, mkdtemp, cp, rm, writeFile } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { tmpdir } from 'node:os';

@@ -119,7 +119,7 @@ This repository is a **JavaScript training repository** (Node.js 24 or later, ES
 
 - This repository contains training content. Lesson files (`lesson.md`, `main.js`, `solution.md`) are teaching material,
   not production code. Do not apply production hardening standards to them.
-- Do not apply standards enforcement to vendored assets under `lesson-runner/public/vendor/`.
+- Do not apply standards enforcement to vendored assets under `lesson-runner-web/public/vendor/`.
 - Scott's lesson and try-it-yourself files follow the established training conventions for this repository.
 
 ---
