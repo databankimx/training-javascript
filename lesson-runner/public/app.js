@@ -247,9 +247,11 @@ function makeSplitter(id, target, minimum, maximum, axis = 'vertical') {
 document.body.classList.toggle('light', theme === 'light');
 const partNames = { 'part-i-basics': 'Part I · Fundamentals', 'part-ii-applied-javascript': 'Part II · Applied JavaScript', 'part-iii-working-with-html': 'Part III · Working with HTML', 'part-iv-advanced': 'Part IV · Advanced JavaScript', 'part-v-jquery': 'Part V · jQuery' };
 const chapterNames = {
-  'ch13-browser': 'CH13 · JavaScript in HTML',
-  'ch14-forms': 'CH14 · JavaScript in Forms',
-  'ch15-xss': 'CH15 · Cross-site scripting'
+  'ch14-browser': 'CH14 · JavaScript in HTML',
+  'ch15-forms': 'CH15 · JavaScript in Forms',
+  'ch16-xss': 'CH16 · Cross-site scripting',
+  'ch17-anti-bot-strategies': 'CH17 · Anti-bot strategies',
+  'ch18-dynamic-forms': 'CH18 · Dynamic forms'
 };
 const chapterLabel = id => chapterNames[id] || id.replace(/^(ch|p|s)(\d+)-/, (_, prefix, number) => `${prefix.toUpperCase()}${number} · `).replaceAll('-', ' ');
 const stepLabel = title => title.replace(/^(?:\d+|S\d+|Project\s+\d+(?:\.\d+)?)[\s·.-]+/i, '');

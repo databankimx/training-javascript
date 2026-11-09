@@ -1,0 +1,13 @@
+{
+  "title": "Homework: rescue a quadratic algorithm",
+  "order": 14,
+  "section": "Chapter summary · Homework",
+  "runtime": "node",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Measure a quadratic duplicate check, replace it with a linear approach, and explain the time-space trade-off.",
+  "input": "",
+  "expected": "Duplicates: true\nFast duplicates: true",
+  "prerequisites": ["part-iv-advanced/ch21-complexity/13-fibonacci-conclusions"],
+  "verify": ["Duplicates: true", "Fast duplicates: true"]
+}

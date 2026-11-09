@@ -1,0 +1,11 @@
+{
+  "title": "A small Fibonacci example",
+  "runtime": "node",
+  "minutes": 25,
+  "objective": "Recognize how a recursive definition can translate directly into a short JavaScript function.",
+  "order": 6,
+  "input": "",
+  "expected": "F(0) = 0\nF(1) = 1\nF(5) = 5",
+  "prerequisites": ["part-iv-advanced/ch19-recursion/05-nested-arrays"],
+  "verify": ["F(0) = 0", "F(5) = 5"]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Homework: an accessible challenge",
+  "order": 2,
+  "section": "Chapter homework",
+  "runtime": "browser",
+  "spoiler": true,
+  "minutes": 40,
+  "objective": "Connect a challenge's answer field to its hint, and announce a wrong answer to screen readers without moving the visitor's focus",
+  "input": "",
+  "expected": "Type the answer as digits only.",
+  "prerequisites": ["part-iii-working-with-html/ch17-anti-bot-strategies/07-homework/01-limit-submissions"],
+  "verify": []
+}

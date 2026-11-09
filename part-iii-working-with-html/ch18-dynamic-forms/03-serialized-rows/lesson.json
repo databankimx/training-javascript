@@ -1,0 +1,11 @@
+{
+  "title": "Serialized dynamic rows",
+  "order": 3,
+  "runtime": "browser",
+  "minutes": 60,
+  "objective": "Rebuild dynamic rows from serialized data in a hidden field",
+  "input": "",
+  "expected": "Rows restore from hidden JSON and remain editable after add/remove operations.",
+  "prerequisites": ["part-iii-working-with-html/ch18-dynamic-forms/02-pseudo-dynamic"],
+  "verify": []
+}

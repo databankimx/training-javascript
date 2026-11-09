@@ -261,22 +261,15 @@
   {
     "part": "part-i-basics",
     "chapter": "ch04-collections",
-    "step": "12-homework/02-score-report",
+    "step": "13-homework/02-score-report",
     "title": "Homework: nested score report",
     "runtime": "node"
   },
   {
     "part": "part-i-basics",
     "chapter": "ch04-collections",
-    "step": "12-homework/03-prefix-dictionary",
+    "step": "13-homework/03-prefix-dictionary",
     "title": "Homework: prefix dictionary",
-    "runtime": "node"
-  },
-  {
-    "part": "part-i-basics",
-    "chapter": "ch04-collections",
-    "step": "13-homework/01-shopping-list",
-    "title": "Homework: shopping list",
     "runtime": "node"
   },
   {
@@ -541,49 +534,98 @@
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch09-classes",
-    "step": "04-homework/01-library-model",
+    "step": "04-attributes",
+    "title": "Class and instance attributes",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "10-homework/01-library-model",
     "title": "Homework: library model",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "05-inheritance",
+    "title": "Inheritance",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "06-overriding",
+    "title": "Overriding inherited methods",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "07-composition",
+    "title": "Composition: classes as properties",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "08-importing-classes",
+    "title": "Importing classes from modules",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch09-classes",
+    "step": "09-accessors",
+    "title": "Accessors and encapsulation",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
     "chapter": "ch10-modules",
-    "step": "01-export-import",
+    "step": "01-module-design",
+    "title": "What modules are and why they help",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch10-modules",
+    "step": "02-export-import",
     "title": "Exporting and importing values",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch10-modules",
-    "step": "02-export-forms",
+    "step": "03-export-forms",
     "title": "Named and default exports",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch10-modules",
-    "step": "03-module-design",
-    "title": "Designing a small module boundary",
+    "step": "04-libraries",
+    "title": "Modules and purpose-based libraries",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch10-modules",
-    "step": "04-homework/01-math-module",
+    "step": "05-homework/01-math-module",
     "title": "Homework: build a math module",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch10-modules",
-    "step": "04-homework/02-report-module",
+    "step": "05-homework/02-report-module",
     "title": "Homework: split a report module",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch10-modules",
-    "step": "04-homework/03-module-map",
+    "step": "05-homework/03-module-map",
     "title": "Homework: module map",
     "runtime": "node"
   },
@@ -695,668 +737,1345 @@
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch13-http",
-    "step": "03-xhr-ajax",
+    "step": "03-request-details",
+    "title": "Building an HTTP request",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "04-response-data",
+    "title": "Inspecting JSON response data",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "05-processing-results",
+    "title": "Processing a collection of API results",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "06-rate-limits",
+    "title": "API limits and response metadata",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "07-xhr-ajax",
     "title": "Legacy AJAX with XMLHttpRequest",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch13-http",
-    "step": "04-homework/01-fetch-json",
-    "title": "Homework: fetch and parse JSON",
-    "runtime": "node"
-  },
-  {
-    "part": "part-ii-applied-javascript",
-    "chapter": "ch13-http",
-    "step": "04-homework/02-xhr-comparison",
-    "title": "Homework: compare AJAX styles",
-    "runtime": "node"
-  },
-  {
-    "part": "part-ii-applied-javascript",
-    "chapter": "ch13-http",
-    "step": "04-homework/03-safe-http",
-    "title": "Homework: safe HTTP wrapper",
-    "runtime": "node"
-  },
-  {
-    "part": "part-ii-applied-javascript",
-    "chapter": "ch13-http",
-    "step": "04-local-service",
+    "step": "08-local-service",
     "title": "A real local service",
     "runtime": "node"
   },
   {
     "part": "part-ii-applied-javascript",
     "chapter": "ch13-http",
-    "step": "05-troubleshooting",
+    "step": "09-troubleshooting",
     "title": "Troubleshooting web service responses",
     "runtime": "node"
   },
   {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "10-homework/01-fetch-json",
+    "title": "Homework: fetch and parse JSON",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "10-homework/02-xhr-comparison",
+    "title": "Homework: compare AJAX styles",
+    "runtime": "node"
+  },
+  {
+    "part": "part-ii-applied-javascript",
+    "chapter": "ch13-http",
+    "step": "10-homework/03-safe-http",
+    "title": "Homework: safe HTTP wrapper",
+    "runtime": "node"
+  },
+  {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "01-readiness",
     "title": "JavaScript in an HTML page",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "02-selection",
     "title": "Selecting elements and safe text",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "03-load-timing",
     "title": "Script timing: defer, DOMContentLoaded, and onload",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "04-document-write",
     "title": "Legacy browser code: document.write",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "05-events",
     "title": "Events and event handlers",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "06-inline-events",
     "title": "Inline events versus event binding",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "07-dynamic-events",
     "title": "Dynamically binding events",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "08-timed-events",
     "title": "Timed events with setInterval",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "09-show-hide",
     "title": "Show, hide, and update the page",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "10-tabbed-pages",
     "title": "Real-world example: tabbed pages",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
+    "chapter": "ch14-browser",
     "step": "11-keyboard-tabs",
     "title": "Keyboard navigation for tabs",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "12-dom-elements",
+    "chapter": "ch14-browser",
+    "step": "13-dom-elements",
     "title": "Creating and adding elements",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "13-css-classes",
+    "chapter": "ch14-browser",
+    "step": "14-css-classes",
     "title": "Changing CSS classes",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "14-accordion",
+    "chapter": "ch14-browser",
+    "step": "15-accordion",
     "title": "Accordions",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "14-homework/01-counter",
+    "chapter": "ch14-browser",
+    "step": "17-homework/01-counter",
     "title": "Homework: interactive counter",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "14-homework/02-status-panel",
-    "title": "Homework: live status panel",
-    "runtime": "browser"
-  },
-  {
-    "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "15-dialogs",
+    "chapter": "ch14-browser",
+    "step": "16-dialogs",
     "title": "Dialogs, focus, and note entry",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch13-browser",
-    "step": "14-homework/03-accessible-tabs",
+    "chapter": "ch14-browser",
+    "step": "17-homework/02-status-panel",
+    "title": "Homework: live status panel",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch14-browser",
+    "step": "17-homework/03-accessible-tabs",
     "title": "Homework: accessible tabs",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch14-browser",
+    "step": "12-dom-traversal",
+    "title": "Traversing the DOM",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch15-forms",
     "step": "01-reading-properties",
     "title": "Reading form-control properties",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "02-writing-properties",
     "title": "Writing form-control properties",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "03-debug-channel",
     "title": "A visible debug channel",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "04-calculating-form-values",
     "title": "Calculating form values",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "05-submit-validation",
     "title": "Submit-time validation choices",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "06-validation-formatting",
     "title": "Form validation and formatting",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "07-data-attributes",
     "title": "Working with data attributes",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "08-select-options",
     "title": "Populating select options",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "09-formatting-values",
     "title": "Formatting dates and currency",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "10-reset-event",
     "title": "Resetting a form",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "11-accessible-validation",
     "title": "Accessible validation messages",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
+    "chapter": "ch15-forms",
     "step": "12-conditional-fields",
     "title": "Conditional form sections",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
-    "step": "12-summary/01-profile-draft",
+    "chapter": "ch15-forms",
+    "step": "13-homework/01-profile-draft",
     "title": "Homework: profile draft",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
-    "step": "12-summary/02-shipping-estimate",
+    "chapter": "ch15-forms",
+    "step": "13-homework/02-shipping-estimate",
     "title": "Homework: shipping estimate",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch14-forms",
-    "step": "12-summary/03-appointment-scheduler",
+    "chapter": "ch15-forms",
+    "step": "13-homework/03-appointment-scheduler",
     "title": "Homework: appointment scheduler",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "01-reflected-vulnerable",
     "title": "XSS: the reflected vulnerable pattern",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "02-reflected-fixed",
     "title": "XSS: reflected input (sanitization fix)",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "03-textcontent-reflected",
     "title": "XSS: reflected input (textContent fix)",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "04-persistent-comments-vulnerable",
     "title": "Persistent XSS: a vulnerable comments form",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "05-persistent-comments-fixed",
     "title": "Persistent XSS: comments form (sanitization fix)",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "06-textcontent-comments",
     "title": "Persistent XSS: comments form (textContent fix)",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch15-xss",
+    "chapter": "ch16-xss",
     "step": "07-testing-xss",
     "title": "Testing XSS safely",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch16-dynamic-forms",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "01-why-bots-matter",
+    "title": "Why bots matter",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "07-homework/01-limit-submissions",
+    "title": "Homework: limit submissions",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "02-honeypot-field",
+    "title": "A honeypot field",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "07-homework/02-accessible-challenge",
+    "title": "Homework: an accessible challenge",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "03-timing-check",
+    "title": "Timing checks",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "04-arithmetic-challenge",
+    "title": "An arithmetic challenge",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "05-server-side-limits",
+    "title": "Server-side limits",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch17-anti-bot-strategies",
+    "step": "06-putting-it-together",
+    "title": "Putting the checks together",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-iii-working-with-html",
+    "chapter": "ch18-dynamic-forms",
     "step": "01-dynamic-table",
     "title": "Adding rows to a table",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch16-dynamic-forms",
+    "chapter": "ch18-dynamic-forms",
     "step": "02-pseudo-dynamic",
     "title": "Pseudo-dynamic rows for OnBase",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch16-dynamic-forms",
+    "chapter": "ch18-dynamic-forms",
     "step": "03-serialized-rows",
     "title": "Serialized dynamic rows",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch16-dynamic-forms",
+    "chapter": "ch18-dynamic-forms",
     "step": "04-vue-rows",
     "title": "Dynamic rows with Vue",
     "runtime": "browser"
   },
   {
     "part": "part-iii-working-with-html",
-    "chapter": "ch16-dynamic-forms",
+    "chapter": "ch18-dynamic-forms",
     "step": "05-sort-filter",
     "title": "Sort and filter dynamic rows",
     "runtime": "browser"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
+    "chapter": "ch19-recursion",
     "step": "01-recursion",
     "title": "What recursion is",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
+    "chapter": "ch19-recursion",
     "step": "02-stopping-recursion",
     "title": "Base cases and progress",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
+    "chapter": "ch19-recursion",
     "step": "03-factorial",
     "title": "Recursive factorial",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
+    "chapter": "ch19-recursion",
     "step": "04-recursion-vs-iteration",
     "title": "Recursion versus iteration",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
+    "chapter": "ch19-recursion",
     "step": "05-nested-arrays",
     "title": "Recursing through nested arrays",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
+    "chapter": "ch19-recursion",
     "step": "06-fibonacci",
-    "title": "Fibonacci and repeated work",
+    "title": "A small Fibonacci example",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch01-recursion",
-    "step": "07-homework/01-palindrome",
+    "chapter": "ch19-recursion",
+    "step": "07-call-tracing",
+    "title": "Tracing recursive calls",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch19-recursion",
+    "step": "08-iterative-traversal",
+    "title": "Iterative and recursive traversal",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch19-recursion",
+    "step": "09-file-system",
+    "title": "Walking a file system",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch19-recursion",
+    "step": "10-homework/01-palindrome",
     "title": "Homework: recursive palindrome checker",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch02-regular-expressions",
+    "chapter": "ch20-regular-expressions",
     "step": "01-regex",
     "title": "Regular expressions: from pattern to phone number",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch03-complexity",
+    "chapter": "ch20-regular-expressions",
+    "step": "02-homework/01-email-validation",
+    "title": "Homework: validate email addresses",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
     "step": "01-complexity",
     "title": "Understanding Big O",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch03-complexity",
+    "chapter": "ch21-complexity",
     "step": "02-searching",
     "title": "Linear and binary search",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch03-complexity",
+    "chapter": "ch21-complexity",
     "step": "03-sorting",
     "title": "Selection, bubble, and insertion sort",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch03-complexity",
-    "step": "04-advanced-sorts",
-    "title": "Quicksort, merge sort, heap sort, and shell sort",
+    "chapter": "ch21-complexity",
+    "step": "04-quicksort",
+    "title": "Quicksort",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "01-bits",
-    "title": "Bits, binary, and bit positions",
+    "chapter": "ch21-complexity",
+    "step": "05-merge-sort",
+    "title": "Merge sort",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "02-shift-operators",
-    "title": "Shift operators",
+    "chapter": "ch21-complexity",
+    "step": "06-heap-sort",
+    "title": "Heap sort",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "03-bitwise-operators",
-    "title": "AND, OR, XOR, and NOT",
+    "chapter": "ch21-complexity",
+    "step": "07-shell-sort",
+    "title": "Shell sort",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "04-truth-tables",
+    "chapter": "ch21-complexity",
+    "step": "08-fibonacci-call-counts",
+    "title": "Counting recursive calls",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
+    "step": "09-fibonacci-naive",
+    "title": "Naive Fibonacci",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
+    "step": "10-fibonacci-memoized",
+    "title": "Memoized Fibonacci",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
+    "step": "11-fibonacci-iterative",
+    "title": "Iterative Fibonacci",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
+    "step": "12-fibonacci-formula",
+    "title": "Formula-based Fibonacci",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
+    "step": "13-fibonacci-conclusions",
+    "title": "Comparing Fibonacci algorithms",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch21-complexity",
+    "step": "14-homework/01-complexity-rescue",
+    "title": "Homework: rescue a quadratic algorithm",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "01-warning",
+    "title": "A deeper dive into bits",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "02-integers",
+    "title": "Integers and bit positions",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "03-base-ten",
+    "title": "Base ten revisited",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "04-base-two",
+    "title": "Base two in depth",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "05-negative-numbers",
+    "title": "Negative numbers",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "06-overflow",
+    "title": "Integer overflow",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "07-binary-addition",
+    "title": "Binary addition",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "08-intuitive-but-wrong",
+    "title": "The intuitive answer that is wrong",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "09-ones-complement",
+    "title": "One's complement",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "10-twos-complement",
+    "title": "Two's complement",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "11-truth-tables",
     "title": "Bitwise truth tables",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "05-masks-and-permissions",
-    "title": "Masks and permission flags",
+    "chapter": "ch22-bitwise-operations",
+    "step": "12-bitwise-and-theory",
+    "title": "Bitwise AND",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "06-set-clear-toggle",
+    "chapter": "ch22-bitwise-operations",
+    "step": "13-bit-flags-theory",
+    "title": "Bit flags",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "14-bitwise-or-theory",
+    "title": "Bitwise OR",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "15-bit-flags-redux",
+    "title": "Bit flags, revisited",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "16-set-clear-toggle",
     "title": "Set, clear, and toggle flags",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "07-packed-state",
+    "chapter": "ch22-bitwise-operations",
+    "step": "17-packed-state",
     "title": "Packed state and feature flags",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "08-32-bit-boundary",
-    "title": "The 32-bit boundary",
+    "chapter": "ch22-bitwise-operations",
+    "step": "18-bitwise-not",
+    "title": "Bitwise NOT",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "09-bigint",
-    "title": "BigInt bitwise operations",
+    "chapter": "ch22-bitwise-operations",
+    "step": "19-bitwise-xor-theory",
+    "title": "Bitwise XOR",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "10-xor-encryption",
+    "chapter": "ch22-bitwise-operations",
+    "step": "20-xor-encryption",
     "title": "XOR as a simple encryption idea",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch04-bitwise-operations",
-    "step": "10-homework/01-feature-flags",
+    "chapter": "ch22-bitwise-operations",
+    "step": "21-shift-operators",
+    "title": "Shift operators",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "22-reconstructing-integers",
+    "title": "Reconstructing integers from bytes",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "23-bigint",
+    "title": "BigInt bitwise operations",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch22-bitwise-operations",
+    "step": "24-homework/01-feature-flags",
     "title": "Homework: feature-flag mask",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch05-closures",
+    "chapter": "ch23-closures",
     "step": "01-closures",
     "title": "Closures and captured state",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch05-closures",
+    "chapter": "ch23-closures",
     "step": "02-private-state",
     "title": "Private state with closures",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch05-closures",
+    "chapter": "ch23-closures",
     "step": "03-callbacks",
     "title": "Closures in callbacks",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch05-closures",
+    "chapter": "ch23-closures",
     "step": "04-memoization",
     "title": "Memoization with a closure",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch05-closures",
+    "chapter": "ch23-closures",
     "step": "05-homework/01-counter-tool",
     "title": "Homework: private counter tool",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch06-internationalized-formatting",
+    "chapter": "ch24-internationalized-formatting",
     "step": "01-intl",
     "title": "Internationalized formatting",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch06-internationalized-formatting",
+    "chapter": "ch24-internationalized-formatting",
     "step": "02-dates",
     "title": "Dates, time zones, and calendars",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch06-internationalized-formatting",
+    "chapter": "ch24-internationalized-formatting",
     "step": "03-lists-and-relative-time",
     "title": "Lists, units, and relative time",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch06-internationalized-formatting",
+    "chapter": "ch24-internationalized-formatting",
     "step": "04-homework/01-format-report",
     "title": "Homework: internationalized report",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch07-typed-arrays",
+    "chapter": "ch25-typed-arrays",
     "step": "01-numeric",
     "title": "Typed arrays",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch07-typed-arrays",
+    "chapter": "ch25-typed-arrays",
     "step": "02-buffers-and-views",
     "title": "Buffers, offsets, and byte order",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch07-typed-arrays",
+    "chapter": "ch25-typed-arrays",
     "step": "03-text-and-bytes",
     "title": "Text, bytes, and encodings",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch07-typed-arrays",
+    "chapter": "ch25-typed-arrays",
     "step": "04-homework/01-byte-packet",
     "title": "Homework: inspect a byte packet",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch08-iterators-and-generators",
-    "step": "02-custom-iterables",
-    "title": "Custom iterables",
-    "runtime": "node"
-  },
-  {
-    "part": "part-iv-advanced",
-    "chapter": "ch08-iterators-and-generators",
-    "step": "03-async-iterators",
-    "title": "Asynchronous iteration",
-    "runtime": "node"
-  },
-  {
-    "part": "part-iv-advanced",
-    "chapter": "ch08-iterators-and-generators",
-    "step": "04-homework/01-windowed-iterator",
-    "title": "Homework: a windowed iterator",
-    "runtime": "node"
-  },
-  {
-    "part": "part-iv-advanced",
-    "chapter": "ch08-iterators-and-generators",
+    "chapter": "ch26-iterators-and-generators",
     "step": "01-generators",
     "title": "Iterators and generators",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch09-functional-tools",
+    "chapter": "ch26-iterators-and-generators",
+    "step": "02-custom-iterables",
+    "title": "Custom iterables",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch26-iterators-and-generators",
+    "step": "03-async-iterators",
+    "title": "Asynchronous iteration",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch26-iterators-and-generators",
+    "step": "04-homework/01-windowed-iterator",
+    "title": "Homework: a windowed iterator",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch27-functional-tools",
+    "step": "01-functional",
+    "title": "Function composition and pipelines",
+    "runtime": "node"
+  },
+  {
+    "part": "part-iv-advanced",
+    "chapter": "ch27-functional-tools",
     "step": "02-partial-application",
     "title": "Partial application and reusable functions",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch09-functional-tools",
+    "chapter": "ch27-functional-tools",
     "step": "03-memoization",
     "title": "Memoization and cache keys",
     "runtime": "node"
   },
   {
     "part": "part-iv-advanced",
-    "chapter": "ch09-functional-tools",
+    "chapter": "ch27-functional-tools",
     "step": "04-homework/01-pipeline-builder",
     "title": "Homework: build a reusable pipeline",
     "runtime": "node"
   },
   {
-    "part": "part-iv-advanced",
-    "chapter": "ch09-functional-tools",
-    "step": "01-functional",
-    "title": "Function composition and pipelines",
-    "runtime": "node"
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "01-what-is-jquery",
+    "title": "What is jQuery?",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "02-document-ready",
+    "title": "Document ready",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "03-jquery-objects",
+    "title": "jQuery objects",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "04-vanilla-crosswalk",
+    "title": "Vanilla JavaScript crosswalk",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "05-script-integrity",
+    "title": "Script integrity and cross-origin loading",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "06-homework/01-crosswalk",
+    "title": "Homework: vanilla and jQuery crosswalk",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "06-homework/02-ready-investigation",
+    "title": "Homework: readiness investigation",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch28-foundations",
+    "step": "06-homework/03-maintain-legacy",
+    "title": "Homework: maintain a legacy jQuery page",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "01-css-selectors",
+    "title": "CSS selectors in jQuery",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "02-traversal-filtering",
+    "title": "Traversal and filtering",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "03-form-selectors",
+    "title": "Form selectors",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "04-selector-strategy",
+    "title": "Choosing selectors well",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "05-homework/01-selector-report",
+    "title": "Homework: selector report",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "05-homework/02-order-filter",
+    "title": "Homework: filter an order list",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch29-selectors",
+    "step": "05-homework/03-form-summary",
+    "title": "Homework: form-state summary",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "01-events",
+    "title": "Events and handlers",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "02-delegated-events",
+    "title": "Delegated events",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "03-dom-manipulation",
+    "title": "Creating and changing elements",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "04-effects",
+    "title": "Effects and visibility",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "05-homework/01-command-panel",
+    "title": "Homework: command panel",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "05-homework/02-editable-table",
+    "title": "Homework: delegated editable table",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch30-events-and-dom",
+    "step": "05-homework/03-disclosure",
+    "title": "Homework: accessible disclosure",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "01-getters-setters",
+    "title": "Getter and setter methods",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "02-attributes-properties",
+    "title": "Attributes and properties",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "03-classes-styles",
+    "title": "Classes and styles",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "04-text-html",
+    "title": "Text versus HTML",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "05-homework/01-inspector",
+    "title": "Homework: value inspector",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "05-homework/02-live-state",
+    "title": "Homework: live control state",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch31-content-and-state",
+    "step": "05-homework/03-safe-content",
+    "title": "Homework: safe content insertion",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "01-ajax-model",
+    "title": "The jQuery AJAX model",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "02-get-post",
+    "title": "GET and POST requests",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "03-serialize",
+    "title": "Serialize a form",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "04-errors-status",
+    "title": "AJAX errors and status",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "05-homework/01-status-loader",
+    "title": "Homework: status loader",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "05-homework/02-search-request",
+    "title": "Homework: serialized search request",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch32-ajax",
+    "step": "05-homework/03-retry-status",
+    "title": "Homework: retry a failed request",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "01-plugin-ecosystem",
+    "title": "The jQuery plugin ecosystem",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "02-datepicker",
+    "title": "jQuery UI date picker",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "03-accordion-dialog",
+    "title": "Accordion and dialog widgets",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "04-plugin-options",
+    "title": "Plugin options and cleanup",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "05-building-plugin",
+    "title": "Building a jQuery plugin",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "06-homework/01-plugin-method",
+    "title": "Homework: build a plugin method",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "06-homework/02-widget-plan",
+    "title": "Homework: plan a widget integration",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch33-plugins",
+    "step": "06-homework/03-datepicker-config",
+    "title": "Homework: configure a date picker",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch34-gl-forms",
+    "step": "01-jquery-rows",
+    "title": "GL form: jQuery rows",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch34-gl-forms",
+    "step": "02-pseudo-dynamic",
+    "title": "GL form: pseudo-dynamic rows",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch34-gl-forms",
+    "step": "03-serialized-data",
+    "title": "GL form: serialized row data",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch34-gl-forms",
+    "step": "04-vue-comparison",
+    "title": "GL form: Vue comparison",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "01-validation",
+    "title": "jQuery form validation",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "05-homework/01-validation-rebuild",
+    "title": "Rebuild a validation message",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "02-no-conflict",
+    "title": "$.noConflict and library coexistence",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "05-homework/02-namespace-safe",
+    "title": "Keep a namespace safe",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "03-migration",
+    "title": "Migrating older jQuery code",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "05-homework/03-performance-pass",
+    "title": "Make a performance pass",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch35-maintenance",
+    "step": "04-performance",
+    "title": "Selector and event performance",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch36-capstone",
+    "step": "01-service-request",
+    "title": "Build an integrated service request",
+    "runtime": "browser"
+  },
+  {
+    "part": "part-v-jquery",
+    "chapter": "ch36-capstone",
+    "step": "02-vue-row-renderer",
+    "title": "Render GL rows with Vue",
+    "runtime": "browser"
   }
 ]
-
-

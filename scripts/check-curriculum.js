@@ -42,7 +42,7 @@ try {
     for (const name of ['lesson.md', 'main.js', 'solution.md']) assert.ok(files.includes(name), `${lesson.id} missing ${name}`);
     // eslint-disable-next-line no-await-in-loop
     const text = await readFile(path.join(lesson.folder, 'lesson.md'), 'utf8');
-    const proseLedTheory = lesson.id.startsWith('part-iv-advanced/ch21-bitwise-operations/') && Number(lesson.order) <= 10;
+    const proseLedTheory = lesson.id.startsWith('part-iv-advanced/ch22-bitwise-operations/') && Number(lesson.order) <= 10;
     if (!proseLedTheory) {
       assert.ok(text.includes('```javascript\n'), `${lesson.id} missing JavaScript example block`);
       assert.ok(text.includes('```text\n'), `${lesson.id} missing expected-output block`);

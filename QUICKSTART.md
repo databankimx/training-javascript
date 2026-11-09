@@ -100,7 +100,7 @@ node part-i-basics/ch01-hello/01-runtime/main.js
 For a browser lesson, open its `index.html` in a regular local development server. It already links `style.css` and `main.js`. A simple server is included:
 
 ```powershell
-node scripts/serve-browser-lesson.js part-iii-working-with-html/ch17-dynamic-forms/01-dynamic-table
+node scripts/serve-browser-lesson.js part-iii-working-with-html/ch18-dynamic-forms/01-dynamic-table
 ```
 
 Open the printed loopback URL. This serves the on-disk source, not browser-editor drafts; use Download and save your chosen files before moving between modes. Ctrl+C stops this server. Standalone mode has a normal origin and is useful for DevTools or storage experiments. The built-in iframe intentionally has an opaque origin.

@@ -1,0 +1,11 @@
+{
+  "title": "Why bots matter",
+  "order": 1,
+  "runtime": "browser",
+  "minutes": 25,
+  "objective": "Recognize that a script can submit a form exactly as a person does, so a check that runs in the browser cannot prove who sent the data",
+  "input": "",
+  "expected": "Saved 1 comment(s).",
+  "prerequisites": ["part-iii-working-with-html/ch16-xss/07-testing-xss"],
+  "verify": []
+}

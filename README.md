@@ -36,17 +36,17 @@ The editor saves drafts in this browser's storage for this local origin. Reset r
 
 ## Curriculum
 
-There are 289 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
+There are 297 lesson packages, each with notes, runnable source, a worked exercise explanation, and optional lecture notes. This is an initial curriculum with deliberately small examples and substantial extension exercises, rather than a line-for-line port of every Python lesson.
 
 | Track | Coverage |
 |---|---|
 | Part I  -  Fundamentals (63 lessons) | Values, strings, objects, numbers, arrays, collections, Boolean logic, control flow, and loops |
 | Part II  -  Applied JavaScript (52 lessons) | Functions, classes, modules, error handling, asynchronous JavaScript, and HTTP |
-| Part III  -  Working with HTML (46 lessons) | Browser JavaScript, forms, validation, dynamic forms, debugging, and XSS prevention |
+| Part III  -  Working with HTML (54 lessons) | Browser JavaScript, forms, validation, dynamic forms, debugging, XSS prevention, and anti-bot strategies |
 | Part IV  -  Advanced JavaScript (71 lessons) | Recursion, regular expressions, complexity, bitwise operations, closures, internationalized formatting, typed arrays, iterators, and functional tools |
 | Part V  -  jQuery (57 lessons) | jQuery foundations, selectors, events, DOM work, AJAX, plugins, maintenance, and GL-form patterns |
 
-The HTML chapters cover script integration, the DOM, selectors, events, keyboard access, hide/show, accordions, tabs, validation, debugging, dynamic tables, XSS prevention, formatting, templates, dialogs, and invoice-style forms. They draw on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.
+The HTML chapters cover script integration, the DOM, selectors, events, keyboard access, hide/show, accordions, tabs, validation, debugging, dynamic tables, XSS prevention, anti-bot strategies (honeypots, timing checks, challenges, and server-side limits), formatting, templates, dialogs, and invoice-style forms. They draw on patterns inspected in EForms.TrainingNavigator/wwwroot while remaining independent of OnBase, jQuery, jQuery UI, Bootstrap, and Vue.
 
 See [the jQuery comparison guide](resources/jquery-comparisons.md), [the teaching guide](resources/teaching-guide.md), and [the writing-style guide](resources/writing-style.md).
 

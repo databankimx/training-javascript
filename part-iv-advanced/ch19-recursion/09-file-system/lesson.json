@@ -1,0 +1,11 @@
+{
+  "title": "Walking a file system",
+  "runtime": "node",
+  "minutes": 35,
+  "objective": "Model a folder tree and explain why recursive traversal fits it.",
+  "order": 9,
+  "input": "",
+  "expected": "src\n  index.js\n  utils\n    format.js\nREADME.md\npackage.json",
+  "prerequisites": ["part-iv-advanced/ch19-recursion/08-iterative-traversal"],
+  "verify": ["src", "format.js", "package.json"]
+}

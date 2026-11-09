@@ -1,0 +1,11 @@
+{
+  "title": "Timing checks",
+  "order": 3,
+  "runtime": "browser",
+  "minutes": 30,
+  "objective": "Measure how long a form was open before it was submitted, and treat an impossibly fast submission as automated",
+  "input": "",
+  "expected": "Thanks for your comment.",
+  "prerequisites": ["part-iii-working-with-html/ch17-anti-bot-strategies/02-honeypot-field"],
+  "verify": []
+}
