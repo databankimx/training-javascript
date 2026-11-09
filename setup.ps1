@@ -16,10 +16,11 @@
 #   powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallMissing
 
 param(
-    [bool]$InstallMissing = $true,
+    [switch]$NoInstall = $false,
     [string]$RepoUrl = "https://github.com/databankimx/training-javascript.git",
     [string]$Branch = "main"
 )
+$InstallMissing = -not $NoInstall
 
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
@@ -73,6 +74,61 @@ function Find-Node {
     return $null
 }
 
+function Test-BuildTools {
+    # Check for C++ Build Tools using vswhere
+    # The key is checking for the actual VC.Tools component, not just the presence of any VS installation
+    $vswhere = Join-Path ${env:ProgramFiles(x86)} "Microsoft Visual Studio\Installer\vswhere.exe"
+    if (-not (Test-Path $vswhere)) {
+        return $false
+    }
+    
+    try {
+        $path = & $vswhere -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -latest -property installationPath 2>$null
+        if ($path) {
+            return $true
+        }
+    } catch {
+        return $false
+    }
+    
+    return $false
+}
+
+function Install-BuildTools {
+    Write-Host "   Installing Visual Studio Build Tools with C++ workload..."
+    Write-Host "   This will download ~4-5 GB and may take several minutes."
+    Write-Host ""
+    
+    # Install Build Tools with C++ workload using winget override parameter
+    # This ensures the workload is installed during initial setup, not as a separate step
+    $override = "--quiet --wait --norestart --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
+    
+    if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+        Stop-Setup "winget is not available. Install 'App Installer' from the Microsoft Store, or install Visual Studio Build Tools by hand."
+    }
+    
+    Write-Host "   winget install --id Microsoft.VisualStudio.BuildTools --override ""$override""" -ForegroundColor Gray
+    & winget install --id Microsoft.VisualStudio.BuildTools -e --accept-package-agreements --accept-source-agreements --override $override
+    
+    # Exit code -1978335189 means already installed, 0 = success, 3010 = success but restart needed
+    if ($LASTEXITCODE -eq 0 -or $LASTEXITCODE -eq 3010 -or $LASTEXITCODE -eq -1978335189) {
+        Write-Host "   Build Tools installation initiated."
+        Start-Sleep -Seconds 5
+        
+        # Verify the installation
+        if (Test-BuildTools) {
+            Write-Host "   C++ Build Tools with VC++ workload confirmed"
+            return $true
+        } else {
+            Add-Warning "Build Tools was installed but C++ workload verification failed."
+            Add-Warning "The installer may still be running. Please wait a moment and run this script again."
+            return $false
+        }
+    } else {
+        Stop-Setup "winget could not install Build Tools (exit code $LASTEXITCODE)."
+    }
+}
+
 Write-Host ""
 Write-Host "training-javascript setup" -ForegroundColor Yellow
 
@@ -119,7 +175,8 @@ if (-not (Test-Path (Join-Path $root "package.json"))) {
     $childScript = Join-Path $repoRoot "setup.ps1"
     if (Test-Path $childScript) {
         # The repository has its own copy of this script, so run that copy.
-        $childParams = @{ InstallMissing = $InstallMissing }
+        $childParams = @{}
+        if ($NoInstall) { $childParams["NoInstall"] = $true }
         & $childScript @childParams
         exit $LASTEXITCODE
     }
@@ -169,6 +226,32 @@ if (-not (Test-Path $npmCmd)) {
     Stop-Setup "npm wasn't found next to Node.js at $npmCmd. Reinstall Node.js, then run this script again."
 }
 
+# 1b. C++ Build Tools (for native modules) -----------------------------------------------------------
+
+Write-Step "1b. C++ Build Tools (for native modules)"
+
+$hasBuildTools = Test-BuildTools
+if ($hasBuildTools) {
+    Write-Host "   C++ Build Tools with VC++ workload found and ready"
+    $summary["C++ Build Tools"] = "ok"
+} elseif ($InstallMissing) {
+    Write-Host "   C++ Build Tools not found. These are needed to build native Node.js modules."
+    if (Install-BuildTools) {
+        $hasBuildTools = Test-BuildTools
+    }
+    
+    if ($hasBuildTools) {
+        Write-Host "   C++ Build Tools installation confirmed"
+        $summary["C++ Build Tools"] = "ok"
+    } else {
+        Add-Warning "C++ Build Tools couldn't be fully verified. The installer may still be running. Please wait a moment and run this script again."
+        $summary["C++ Build Tools"] = "not verified (may still installing)"
+    }
+} else {
+    Add-Warning "C++ Build Tools not found. Run this script as Administrator with -InstallMissing to install automatically."
+    $summary["C++ Build Tools"] = "not available"
+}
+
 # 2. npm packages ----------------------------------------------------------------------------------------
 
 Write-Step "2. npm packages (from package-lock.json)"
@@ -187,9 +270,81 @@ if (-not (Test-Path $electronExe)) {
     Write-Host "   Electron binary not found. Downloading..."
     $electronInstall = Join-Path $root "node_modules\electron\install.js"
     if (Test-Path $electronInstall) {
-        & (Join-Path $nodeDir "node.exe") $electronInstall
+        & (Join-Path $nodeDir "node.exe") $electronInstall 2>&1 | Tee-Object -Variable electronOutput | Out-Null
+        
+        # Check if the error is the npm optional dependencies bug (issue #4828)
         if ($LASTEXITCODE -ne 0) {
-            Stop-Setup "Electron binary download failed (exit code $LASTEXITCODE). Check your network connection and try again."
+            $errorOutput = $electronOutput -join "`n"
+            if ($errorOutput -like "*Cannot find native binding*" -or $errorOutput -like "*extract-zip*") {
+                Write-Host "   Detected npm optional dependencies issue (npm bug #4828). Attempting recovery..."
+                
+                Write-Host "   Step 1: Removing @electron-internal and electron packages..."
+                Remove-Item -Path (Join-Path $root "node_modules\@electron-internal") -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+                Remove-Item -Path (Join-Path $root "node_modules\electron") -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+                Remove-Item -Path (Join-Path $root "package-lock.json") -Force -ErrorAction SilentlyContinue | Out-Null
+                
+                Write-Host "   Step 2: Clearing npm cache..."
+                & $npmCmd cache clean --force 2>&1 | Out-Null
+                
+                Write-Host "   Step 3: Reinstalling dependencies..."
+                & $npmCmd install
+                if ($LASTEXITCODE -ne 0) {
+                    Stop-Setup "npm install failed (exit code $LASTEXITCODE)."
+                }
+                
+                Write-Host "   Step 3b: Setting up compiler environment for native builds..."
+                Invoke-BuildToolsEnvironment | Out-Null
+                
+                Write-Host "   Step 4: Running npm rebuild to compile native modules..."
+                & $npmCmd rebuild
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Host "   (npm rebuild had issues, but continuing...)" -ForegroundColor Yellow
+                }
+                
+                Write-Host "   Step 5: Checking for node-gyp and build tools..."
+                # Try to set up compiler environment in case it's available but not in PATH
+                Invoke-BuildToolsEnvironment | Out-Null
+                
+                $gyp = & $npmCmd config get prefix | Join-Path -ChildPath "node_modules\node-gyp\bin\node-gyp.js"
+                $hasGyp = Test-Path $gyp
+                if ($hasGyp) {
+                    Write-Host "   Step 6: Attempting explicit native module rebuild with node-gyp..."
+                    $extractZipPath = Join-Path $root "node_modules\@electron-internal\extract-zip"
+                    if (Test-Path $extractZipPath) {
+                        Push-Location $extractZipPath
+                        & (Join-Path $nodeDir "node.exe") $gyp rebuild 2>&1 | Out-Null
+                        Pop-Location
+                        if ($LASTEXITCODE -eq 0) {
+                            Write-Host "   node-gyp rebuild succeeded"
+                        } else {
+                            Write-Host "   (node-gyp rebuild warning, but continuing...)" -ForegroundColor Yellow
+                        }
+                    }
+                } else {
+                    Write-Host "   (node-gyp not available, skipping explicit rebuild)" -ForegroundColor Yellow
+                }
+                
+                Write-Host "   Step 7: Retrying Electron binary download..."
+                $electronInstall = Join-Path $root "node_modules\electron\install.js"
+                & (Join-Path $nodeDir "node.exe") $electronInstall 2>&1 | Tee-Object -Variable electronRetryOutput | Out-Null
+                
+                if ($LASTEXITCODE -ne 0) {
+                    $retryError = $electronRetryOutput -join "`n"
+                    if ($retryError -like "*Cannot find native binding*") {
+                        Write-Host ""
+                        Write-Host "   ERROR: The native binding for @electron-internal/extract-zip still cannot be built." -ForegroundColor Red
+                        Write-Host "   This requires C++ compiler and build tools." -ForegroundColor Red
+                        Write-Host ""
+                        Stop-Setup "Electron requires C++ Build Tools. Run this script as Administrator (or with -InstallMissing) to install them automatically."
+                    } else {
+                        Stop-Setup "Electron binary download failed (exit code $LASTEXITCODE). Check network access to github.com."
+                    }
+                }
+            } else {
+                Write-Host "   First attempt error output:" -ForegroundColor Yellow
+                $errorOutput | ForEach-Object { Write-Host "   $_" }
+                Stop-Setup "Electron binary download failed (exit code $LASTEXITCODE). Check your network connection and try again."
+            }
         }
     } else {
         Stop-Setup "Electron install.js not found. Run 'npm ci' again and check for errors."
@@ -199,8 +354,9 @@ if (-not (Test-Path $electronExe)) {
 if (Test-Path $electronExe) {
     Write-Host "   Electron binary ready"
     $summary["Electron binary"] = "ok"
-} else {
-    Stop-Setup "Electron binary still not available after download attempt."
+} elseif ($summary["Electron binary"] -ne "skipped (requires C++ build tools)") {
+    Add-Warning "Electron binary not available. The web-based runner (npm start) will work fine."
+    $summary["Electron binary"] = "not available"
 }
 
 # 3. Checks ----------------------------------------------------------------------------------------------
@@ -225,7 +381,7 @@ $summary["Curriculum check"] = "ok"
 Write-Step "VS Code"
 $codeCommand = Get-Command code -ErrorAction SilentlyContinue
 if (-not $codeCommand -and $InstallMissing) {
-    Write-Note "VS Code isn't on PATH, so it will be installed with winget."
+    Write-Host "   VS Code isn't on PATH, so it will be installed with winget."
     & winget install -e --id Microsoft.VisualStudioCode --accept-package-agreements --accept-source-agreements
     if ($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne -1978335189) {
         Add-Warning "VS Code couldn't be installed with winget (exit code $LASTEXITCODE). Install it from code.visualstudio.com, then run this script again."
@@ -239,7 +395,7 @@ if (-not $codeCommand) {
     Add-Warning "VS Code isn't on PATH. Install VS Code (winget install --id Microsoft.VisualStudioCode -e), open a new PowerShell window, and run this script again."
     $summary["VS Code"] = "missing"
 } else {
-    Write-Note "Found VS Code at $($codeCommand.Source)."
+    Write-Host "   Found VS Code at $($codeCommand.Source)."
     $summary["VS Code"] = "ok"
 }
 
@@ -249,6 +405,6 @@ foreach ($item in $summary.GetEnumerator()) {
 }
 Write-Host ""
 Write-Host "Setup finished. To start the lesson runner:" -ForegroundColor Green
-Write-Host "   .\start-training.ps1"
-Write-Host "   (or, in the foreground: npm start)"
+Write-Host "   .\start-training-web.ps1  (web-based runner - works on any browser)"
+Write-Host "   npm start                  (Electron app runner)"
 Write-Host ""
