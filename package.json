@@ -21,7 +21,7 @@
     "markdown-it-texmath": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "45.3.2",
+    "electron": "45.4.1",
     "typescript": "^7.0.2"
   }
 }
