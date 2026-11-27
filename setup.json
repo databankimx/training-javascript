@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "name": "Working With JavaScript",
+  "folder": "training-javascript",
+  "repoUrl": "https://github.com/databankimx/training-javascript.git",
+  "branch": "dev",
+  "baseDirectory": "C:\\Development\\training",
+  "runTests": true,
+  "installs": {
+    "git": { "install": true, "winget": "Git.Git" },
+    "powershell7": { "install": true, "pinned": "7", "winget": "Microsoft.PowerShell" },
+    "node": { "install": true, "pinned": "24", "orNewer": true, "winget": "OpenJS.NodeJS.LTS" },
+    "vcRuntime": { "install": true },
+    "vscode": { "install": true, "winget": "Microsoft.VisualStudioCode", "extensions": [] },
+    "notepadPlusPlus": { "install": false, "winget": "Notepad++.Notepad++" },
+    "buildTools": { "install": false }
+  },
+  "steps": [
+    {
+      "name": "npm packages",
+      "type": "npm",
+      "folder": ".",
+      "command": "ci",
+      "requires": [ "node" ]
+    },
+    {
+      "name": "Course tests",
+      "type": "npm-run",
+      "folder": ".",
+      "script": "test",
+      "runTests": true,
+      "requires": [ "node" ]
+    },
+    {
+      "name": "Curriculum check",
+      "type": "npm-run",
+      "folder": ".",
+      "script": "check",
+      "runTests": true,
+      "requires": [ "node" ]
+    }
+  ],
+  "launch": {
+    "ide": "vscode",
+    "kind": "electron",
+    "folder": ".",
+    "main": "lesson-runner/main.js"
+  }
+}
