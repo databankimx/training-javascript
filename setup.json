@@ -3,7 +3,7 @@
   "name": "Working With JavaScript",
   "folder": "training-javascript",
   "repoUrl": "https://github.com/databankimx/training-javascript.git",
-  "branch": "dev",
+  "branch": "main",
   "baseDirectory": "C:\\Development\\training",
   "runTests": true,
   "installs": {
